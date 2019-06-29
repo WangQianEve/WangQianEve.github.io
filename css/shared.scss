@@ -1,0 +1,117 @@
+// for all pages
+@import "variables";
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 200;
+  color: gray;
+}
+
+#navbar {
+  height: 50px;
+  padding: 0 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: background-color 0.3s;
+  font-weight: 400;
+  display: flex;
+  z-index: 100;
+  .roundedNav {
+    height: 25px;
+    border-radius: 30px;
+    background-color: #ffffff00;
+    align-self: center;
+    z-index: -2;
+    .hide {
+      display: none;
+    }
+  }
+  #inpageNav {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    #highlighter {
+      width: 0px;
+      background-color: $primary-color;
+      position: absolute;
+      z-index: -1;
+      transition: left 0.2s, width 0.2s;
+    }
+    a {
+      text-decoration: none;
+      display: flex;
+      .icon{
+        width: 30px;
+        height: 25px;
+        background-color: #999;
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+      .title {
+        width: 80px;
+        display: none;
+        text-align: center;
+        padding-top: 3px;
+      }
+    }
+    a.active {
+      color: white;
+      .icon {
+        background-color: white;
+      }
+      .title {
+        display: inline;
+      }
+    }
+  }
+  .navList {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    a {
+      color: white;
+      opacity: 0.5;
+      text-decoration: none;
+      align-self: center;
+      padding: 0 10px;
+      transition: opacity 0.3s, color 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    a.active {
+      opacity: 1;
+    }
+  }
+  .dark {
+    a {
+      color: grey;
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+#test {
+  height: 2000px;
+}

@@ -1,0 +1,130 @@
+@import "variables";
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+.banner {
+  position: fixed;
+  z-index: -100;
+  width: 100%;
+  height: 56vw;
+}
+.container {
+  margin-top: 56vw;
+  background-color: white;
+}
+.card {
+  width: 700px;
+  max-width: 90%;
+  margin-top: -250px;
+  left: 5vw;
+  position: relative;
+  background-color: white;
+  box-shadow: 2px 2px 2px #00000022;
+  padding: 10px 50px;
+  color: #404040;
+  .title {
+    font-size: 40px;
+    font-weight: 300;
+    color: $primary-color;
+  }
+  .description {
+    font-size: 22px;
+    line-height: 1.5em;
+    color: gray;
+    margin-bottom: 2em;
+  }
+  .details {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0;
+    //line-height: 2em;
+    .item {
+      font-weight: 400;
+      width: 100px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.section-title {
+  background-color: white;
+  display: flex;
+  margin: 80px 0;
+  .section-line {
+    width: 10%;
+    border-bottom: 2px solid black;
+    position: relative;
+    top: -30px;
+  }
+  .section-index {
+    font-size: 40px;
+    font-family: "Playfair Display", "Georgia", serif;
+    padding: 0 10px;
+    position: relative;
+    top: -14px;
+    color: $primary-color;
+  }
+  .section-name {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    text-transform: uppercase;
+  }
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 10vw;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  .section-item {
+    display: flex;
+    margin-bottom: 10vw;
+    margin-left: 8vw;
+    .item {
+      width: 16vw;
+      text-transform: uppercase;
+      font-size: 16px;
+      padding-top: 24px;
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+    .item-content {
+      align-self: center;
+      line-height: 2rem;
+      width: 56vw;
+      .highlight {
+        font-size: 22px;
+        color: $primary-color;
+        padding: 20px 0;
+      }
+    }
+    img {
+      width: 40%;
+      //height: auto;
+      object-fit: contain;
+    }
+  }
+  .title {
+    color: $primary-color;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 0;
+  }
+}
+.right-bg {
+  z-index: -100;
+  width: 32vw;
+  height: 40vw;
+  //max-width: 400px;
+  //max-height: 400px;
+  position: absolute;
+  right: 0;
+  margin-top: 15vw;
+  background-image: url(../images/Circle.svg);
+  background-size: cover;
+}
