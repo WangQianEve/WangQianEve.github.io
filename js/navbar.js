@@ -1,20 +1,3 @@
-function setColor() {
-    var prevScrollpos = window.pageYOffset;
-    var showNavBgTh = 0.26 * window.innerWidth;
-    var currentScrollPos = window.pageYOffset;
-    prevScrollpos = currentScrollPos;
-    // change color
-    var navbarBtns = $('.navList a');
-    var navbar = $('#navbar');
-    if (currentScrollPos > showNavBgTh) {
-        navbarBtns.css({ 'color': 'grey'});
-        navbar.css({ 'background-color': '#ffffffdd' });
-    } else if (currentScrollPos < showNavBgTh) {
-        navbarBtns.css({ 'color': 'white'});
-        navbar.css({ 'background-color': '#ffffff00' });
-    }
-}
-
 function getSections($links) {
     return $(
         $links
@@ -25,15 +8,12 @@ function getSections($links) {
     );
 }
 
-function updateNavColor($anchor, $navbar, $pgBtns) {
+function updateNavColor($anchor, $navbar) {
     yPosition = window.pageYOffset;
-    console.log( yPosition, $anchor.offset().top);
     if (yPosition >= $anchor.offset().top) {
-        $navbar.css({ 'background-color': '#ffffffee', 'box-shadow': '0px 0px 5px #00000022'});
-        $pgBtns.css({ 'color': '#888'});
+        $navbar.addClass('active');
     } else {
-        $navbar.css({ 'background-color': '#ffffff00', 'box-shadow': 'none'});
-        $pgBtns.css({ 'color': 'white'});
+        $navbar.removeClass('active');
     }
 }
 
@@ -41,7 +21,7 @@ function updateNav($sections, $links, $highlighter) {
     yPosition = window.pageYOffset+300;
     if (yPosition >= $sections.eq(0).offset().top) {
         if (!$highlighterShow) {
-            $highlighter.css({'width':110});
+            $highlighter.css({'width':125});
             $highlighterShow = true;
         }
     } else {
@@ -54,7 +34,7 @@ function updateNav($sections, $links, $highlighter) {
     for (let i = $sections.length - 1; i >= 0; i -= 1) {
         $section = $sections.eq(i);
         if (yPosition >= $section.offset().top) {
-            $highlighter.css({'left':i*30+104});
+            $highlighter.css({'left':i*45+150});
             return $links
                 .removeClass('active')
                 .filter(`[href="#${$section.attr('id')}"]`)
@@ -67,15 +47,14 @@ function updateNav($sections, $links, $highlighter) {
 $highlighterShow = false;
 
 $(document).ready(function() {
-    const $links = $('.roundedNav > a');
+    const $links = $('#inpageNav > a');
     const $sections = getSections($links);
     const $highlighter = $('#highlighter');
-    const $navbar = $('#navbar');
+    const $navbar = $('.navbar');
     const $nav_anchor = $('#nav_anchor');
-    const $pgBtns = $('.pg-btn');
     window.onscroll = function() {
-        // updateNav($sections, $links, $highlighter, $navbar);
-        updateNavColor($nav_anchor, $navbar, $pgBtns);
+        updateNav($sections, $links, $highlighter, $navbar);
+        updateNavColor($nav_anchor, $navbar);
     };
-    // updateNav($sections, $links, $highlighter, $navbar);
+    updateNav($sections, $links, $highlighter, $navbar);
 });
