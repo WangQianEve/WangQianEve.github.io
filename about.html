@@ -1,10 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Qian</title>
+    <meta charset="utf-8" />
+    <title>Qian Wang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,500&display=swap" rel="stylesheet">
+<!--    <link href="css/project.css" rel="stylesheet" type="text/css">-->
+    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <link href="css/about.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="images/Q.png"/>
 </head>
 <body>
+<div class="navbar">
+    <img src="images/Qian.svg" alt="qian logo">
+    <div id="inpageNav" class="roundedNav">
+        <div id='highlighter' class="roundedNav"></div>
+        <a href="#sec-summary">
+            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center"></div>
+            <div class="nav-section">Summary</div>
+        </a>
+        <a href="#sec-research">
+            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
+            <div class="nav-section">Research</div>
+        </a>
+        <a href="#sec-ideate">
+            <div class="icon" style="-webkit-mask: url(images/nav/ideate.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Ideate</div>
+        </a>
+        <a href="#sec-design">
+            <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Design</div>
+        </a>
+        <a href="#sec-test">
+            <div class="icon" style="-webkit-mask: url(images/nav/testing.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Test</div>
+        </a>
+        <a href="#sec-next">
+            <div class="icon" style="-webkit-mask: url(images/nav/next.svg) no-repeat center"></div>
+            <div class="nav-section">Next Steps</div>
+        </a>
+    </div>
+    <div class="navList dark">
+        <a href="index.html" class="pg-btn active">Design</a>
+        <a class='pg-btn' href="code.html">Code</a>
+        <a class='pg-btn' href="about.html">About</a>
+    </div>
+</div>
+<div class="about-top"></div>
+<div class="section section-item flex-h">
+    <div class="about-card">
+        <img src="images/about/photo.png"/>
+        <a class="flex-h" target="_blank" href="https://drive.google.com/open?id=1SA05ZK8N9mrDiFYaooG180ZqKMrYbkwF">
+            <img class="icon" src="images/about/resume.svg"/>
+            <div>Resume</div>
+        </a>
+        <a class="flex-h" target="_blank" href="mailto:wangqian.evelyn@gmail.com">
+            <img class="icon" src="images/about/email.svg"/>
+            <div>wangqian.evelyn@gmail.com</div>
+        </a>
+        <a class="flex-h" target="_blank" href="tel:+14125351974">
+            <img class="icon" src="images/about/call.svg"/>
+            <div>412-535-1974</div>
+        </a>
+        <a class="flex-h" target="_blank" href="https://www.linkedin.com/in/qian-wang-11513314a/">
+            <img class="icon" src="images/about/linkedin.svg"/>
+            <div>LinkedIn</div>
+        </a>
+    </div>
+    <div>
+        <div class="about-page-title highlight">Hello Again!</div>
+        <p>My name is <span class="highlight">Qian <i>[tchi’an]</i> Wang</span>. I’m graduating this August from <span class="highlight">Carnegie Mellon University</span> with a Master’s degree of Human-Computer Interaction (<span class="highlight">MHCI</span>), and I’m looking for a full-time job as a <span class="highlight">product/UX designer</span>. </p>
+        <p class="about-highlight first"><i>“ I care about people, and want create products that solve their problem, delight them, and have a true impact!</i></p>
+        <p class="about-highlight"><i>“ I love technology, and want to use the right technology at the right place, to bring maximized value out of them!</i></p>
+    </div>
+</div>
+<div class="color-bg trd">
+    <div class="section section-item">
+        <div class="about-section-title highlight">My Stories</div>
+        <div class="flex-h evenly">
+            <div>
+                <div class="about-title">My journey in HCI</div>
+                <div class="about-story">
+                    <img class="icon" src="images/about/journey1.svg">
+                    <p>I’ve been in the field of HCI for 3 years, and have been working on both the technical side (mainly ubiqutous computing), and the design side.</p>
+                </div>
+                <div class="about-story">
+                    <img class="icon" src="images/about/journey2.svg">
+                    <p>I was a computer science major at Tsinghua University, and I love coding!</p>
+                </div>
+                <div class="about-story">
+                    <img class="icon" src="images/about/journey3.svg">
+                    <p>I’ve always been a big fan of new technologies. I’ve worked in autonomous driving (Pony.ai), and computer vision (Yitu.inc). Both companies are wonderful!</p>
+                </div>
+                <div class="about-story">
+                    <img class="icon" src="images/about/journey4.svg">
+                    <p>I think it’s theatre that drove me to the design side of HCI. (Sounds weird? Contact me to hear the full story~)</p>
+                </div>
+            </div>
+            <div>
+                <div class="about-title">Fun facts</div>
+                <div class="about-story">
+                    <img class="icon" src="images/about/fact1.svg">
+                    <p>I’ve been in the field of HCI for 3 years, and have been working on both the technical side (mainly ubiqutous computing), and the design side.</p>
+                </div>
+                <div class="about-story">
+                    <img class="icon" src="images/about/fact2.svg">
+                    <p>I loving tring out new things in my life! I’ve tried high diving, underwater diving, skiing, marathon, piano, ukelele, etc. Next things on my list includes skateboarding, surfing, rock climbing, parachute, etc.</p>
+                </div>
+                <div class="about-story">
+                    <img class="icon" src="images/about/fact3.svg">
+                    <p>I’ve been to 10 countries, and I want to have a long travel around the world before 30, with a question to answer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-item">
+    <div class="about-section-title highlight">My TOOLS</div>
+    <div class="flex-h evenly">
+        <div>
+            <div class="about-title">Design tools </div>
+            <p>Figma, Sketch, Principle, Adobe CC (Illustrator, Indesign, Photoshop, Audition), iMovie, Final Cut, Balsamiq, Kactus, Axure, Invision, Webflow, Tableau, etc.</p>
+        </div>
+        <div>
+            <div class="about-title">Coding tools</div>
+            <p>python, C++, Java, web-frontend (html, css/sass, javascript, React), web-backend (flask, django), Unity, Arduino, Alexa, OpenCV, Android, Qt, etc.</p>
+        </div>
+    </div>
+</div>
+<div class="footer">Website designed and developed by @ Qian Wang 2019</div>
 
 </body>
 </html>

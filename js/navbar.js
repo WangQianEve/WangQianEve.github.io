@@ -18,18 +18,10 @@ function updateNavColor($anchor, $navbar) {
 }
 
 function updateNav($sections, $links, $highlighter) {
-    yPosition = window.pageYOffset+300;
-    if (yPosition >= $sections.eq(0).offset().top) {
-        if (!$highlighterShow) {
-            $highlighter.css({'width':125});
-            $highlighterShow = true;
-        }
-    } else {
-        if ($highlighterShow) {
-            $highlighter.css({'width':0});
-            $highlighterShow = false;
-        }
+    if ($sections.length === 0) {
+        return;
     }
+    yPosition = window.pageYOffset+300;
     // in page
     for (let i = $sections.length - 1; i >= 0; i -= 1) {
         $section = $sections.eq(i);

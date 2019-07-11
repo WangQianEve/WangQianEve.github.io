@@ -11,6 +11,7 @@
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="js/navbar.js" type="text/javascript"></script>
+    <script src="js/project.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="images/Q.png"/>
 </head>
 <body>
@@ -18,29 +19,39 @@
     <img src="images/Qian.svg" alt="qian logo">
     <div id="inpageNav" class="roundedNav">
         <div id='highlighter' class="roundedNav"></div>
+        <a href="#sec-background">
+            <div class="icon" style="-webkit-mask: url(images/nav/background.svg) no-repeat center">
+            </div>
+            <span class="tooltip">Background</span>
+            <div class="nav-section">Background</div>
+        </a>
         <a href="#sec-summary">
-            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center"></div>
+            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center">
+            </div>
+            <span class="tooltip">Summary</span>
             <div class="nav-section">Summary</div>
         </a>
-        <a href="#sec-research">
-            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
-            <div class="nav-section">Research</div>
+        <a href="#sec-user-research">
+            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center">
+            </div>
+            <span class="tooltip">User Research</span>
+            <div class="nav-section">User Research</div>
         </a>
-        <a href="#sec-ideate">
-            <div class="icon" style="-webkit-mask: url(images/nav/ideate.svg) no-repeat center; mask-size: contain"></div>
-            <div class="nav-section">Ideate</div>
+        <a href="#sec-design-research">
+            <div class="icon" style="-webkit-mask: url('images/nav/design-research.svg') no-repeat center">
+            </div>
+            <span class="tooltip">Design Research</span>
+            <div class="nav-section">Design Research</div>
         </a>
         <a href="#sec-design">
             <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; mask-size: contain"></div>
             <div class="nav-section">Design</div>
+            <span class="tooltip">Design</span>
         </a>
-        <a href="#sec-test">
-            <div class="icon" style="-webkit-mask: url(images/nav/testing.svg) no-repeat center; mask-size: contain"></div>
-            <div class="nav-section">Test</div>
-        </a>
-        <a href="#sec-next">
-            <div class="icon" style="-webkit-mask: url(images/nav/next.svg) no-repeat center"></div>
-            <div class="nav-section">Next Steps</div>
+        <a href="#sec-reflection">
+            <div class="icon" style="-webkit-mask: url(images/nav/reflection.svg) no-repeat center"></div>
+            <div class="nav-section">Reflection</div>
+            <span class="tooltip">Reflection</span>
         </a>
     </div>
     <div class="navList">
@@ -52,7 +63,7 @@
 <div class="banner">
     <img src="images/Capstone/capstone-banner.png" alt=""/>
 </div>
-<div class="container">
+<div class="container flex-v">
     <div id="nav_anchor"></div>
     <div class="intro-card card">
         <div class="details">
@@ -72,48 +83,66 @@
             <div class="content">Figma / Principle / Web Frontend Development</div>
         </div>
     </div>
+    <!--background-->
+    <div id="sec-background" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">00</div>
+        <div class="section-name">Background</div>
+    </div>
+    <div class="section">
+        <div class="section-item flex-h">
+            <div class="tag narrow highlight">Who’s the client?</div>
+            <div><span class="highlight sec">Liquidnet</span> is a global institutional investment network that provides <span class="highlight sec">cutting-edge financial technology</span> like trading algorithms, trading analytics, trading recommendations. It's main users are <span class="highlight sec">institutional traders and asset managers</span>.</div>
+        </div>
+        <div class="section-item flex-h">
+            <div class="tag narrow highlight">Background</div>
+            <div>Liquidnet’s current customers usually <span class="highlight sec">minimize the front-end</span> because order updates can show up as a pop up window. However, this <span class="highlight sec">hides features</span> that can potentially encourage more trades. So, Liquidnet decided to use an <span class="highlight sec">alert system</span> to push both order updates and opportunities to traders.</div>
+        </div>
+        <div class="section-item flex-h">
+            <div class="tag narrow highlight">Project Prompt</div>
+            <div>To explore <span class="highlight sec">design principles</span> and <span class="highlight sec">best practices</span> for alert systems, and apply them to Liquidnet, which provides individualized alerts to traders, along with suggested actions.</div>
+        </div>
+    </div>
+    <div class="background right" style="margin-top: -600px; padding-bottom: 350px">
+        <img src="images/backgrounds/pentagon.svg" style="height: 250px"/>
+    </div>
     <!--summary-->
     <div id="sec-summary" class="section-title">
         <div class="section-line"></div>
-        <div class="section-index">00</div>
+        <div class="section-index">01</div>
         <div class="section-name">Summary</div>
     </div>
     <div class="section">
         <div class="section-item flex-h">
-            <div class="tag narrow2 highlight">Who’s the client?</div>
-            <div><span class="highlight sec">Liquidnet</span> is a global institutional investment network that provides <span class="highlight sec">cutting-edge financial technology</span> like trading algorithms, trading analytics, trading recommendations etc. to its users, who are mainly <span class="highlight sec">institutional traders and asset managers</span>.</div>
-        </div>
-        <div class="section-item flex-h">
-            <div class="tag narrow2 highlight">Project Prompt</div>
-            <div><span class="highlight sec">Re-design Liquidnet's alert system</span>, which provides individualized actionable alerts to traders, to increase product usage. And conclude generalizable <span class="highlight sec">design guidelines</span> for future design of the alert system.</div>
-        </div>
-        <div class="section-item flex-h">
-            <div class="tag narrow2 highlight">Problem Framing</div>
-            <div><span class="highlight sec">We broke down the project prompt into 3 research focuses :</span>
+            <div class="tag narrow highlight">Problem Framing</div>
+            <div>We broke down the project prompt into 3 research focuses :
                 <ul>
-                    <li>How might we <span class="highlight sec">manage attention grabbing</span> at a busy trading desk?</li>
+                    <li>How might we <span class="highlight sec">control attention grabbing</span> at a busy trading desk?</li>
                     <li>How might we guide the user to <span class="highlight sec">take action</span> on the alerts?</li>
                     <li>How might we get users’ <span class="highlight sec">trust</span> for the actions the system suggests?</li>
                 </ul>
             </div>
         </div>
         <div class="section-item flex-h">
-            <div class="tag narrow2 highlight">Solution</div>
+            <div class="tag narrow highlight">Solution</div>
             <div class="flex-v">
-                <div><span class="highlight sec">A comprehensive alert design guidelines with supporting research and validated prototypes as proof of concepts.</span> The guidelines are focused around attention management (through color, sound, and animation), guiding action (through visual hierarchy), gaining trust for an intelligent system (through easy customization and navigation), and other user needs we found critical through research (like report building).</div>
+                <div>A comprehensive set of <span class="highlight sec">alert design guidelines</span>, with supporting research and validated prototypes as proof of concept. The prototypes aim to <span class="highlight sec">increase the usage</span> of Liquidnet’s services and meanwhile <span class="highlight sec">gather data</span> that can be used to build a more personalized system. </div>
                 <div class="btn">View Design Guidelines</div>
             </div>
         </div>
     </div>
-    <div class="block color-bg sec overflow2">
+    <div class="background" style="margin-top: -500px; padding-bottom: 300px">
+        <img src="images/backgrounds/triangle.svg" style="height: 200px"/>
+    </div>
+    <div class="color-bg sec overflow-bottom">
         <div class="section">
             <div class="section-item">
                 <div class="tag highlight">Example guidelines and prototypes</div>
             </div>
             <div class="section-item flex-h">
                 <div>
-                    <div class="title">Mainly use the combination of color and movement to attract different levels of attention.</div>
-                    <div>We tested the effects of different color, animation, and sound with traders at a <span class="highlight sec">simulated trading desk.</span> And decided to mainly use colors to address priority.</div>
+                    <div class="title">Salient color is most effective for attracting attention at a trading desk.</div>
+                    <div>We tested the effects of different combinations of <span class="highlight sec">color, animation, and sound</span> at a simulated trading desk. We discovered that salient color works the best because of higher contrast. So in our prototype, we used <span class="highlight sec">color</span> to show <span class="highlight sec">different levels of priority</span>.</div>
                 </div>
                 <div class="images right">
                     <img src="images/Capstone/feature1.png"/>
@@ -121,8 +150,8 @@
             </div>
             <div class="section-item flex-h">
                 <div>
-                    <div class="title">Use clear visual hierarchy and interaction design to guide action.</div>
-                    <div>Decision making for traders is more complicated than common consumers. So, when an alert comes in, traders need to first quickly understand <span class="highlight sec">what happened</span>, then be convinced by the <span class="highlight sec">reasoning</span>, and lastly, take action. We used visual hierarchy and progressive disclosure interaction to fit this decision making process.</div>
+                    <div class="title">The right information hierarchy and interactions helps initiate actions.</div>
+                    <div><span class="highlight sec">Unlike the commonly used “call to action” design</span>, traders don’t want to see the action immediately because their decision making process needs more evidence. We used <span class="highlight sec">visual hierarchy and progressive disclosure</span> interaction to fit to their thinking process. We also utilized <span class="highlight sec">techniques to gain more user trust</span> for the recommendations.</div>
                 </div>
                 <div class="images right">
                     <img src="images/Capstone/feature1.png"/>
@@ -130,8 +159,8 @@
             </div>
             <div class="section-item flex-h">
                 <div>
-                    <div class="title">Increase trust for personalized alerts using branding, social impact, and easy customization.</div>
-                    <div>Liquidnet uses <span class="highlight sec">machine learning</span> technology to provide <span class="highlight sec">personalized trading recommendations</span>. To increase users’ trust on it, we branded them visually, included other traders’ behavior to build credibility, and designed easy control for customization.</div>
+                    <div class="title">Easier customization helps build a more personalized system.</div>
+                    <div>Previously, Liquidnet’s customization settings are in a separate page, and users hardly use them. To bring the settings more accessible, we designed several <span class="highlight sec">in-context customization</span> methods. The <span class="highlight sec">data</span> generated by these interactions can also be used to build more personalized trading recommendations.</div>
                 </div>
                 <div class="images right">
                     <img src="images/Capstone/feature1.png"/>
@@ -139,8 +168,8 @@
             </div>
             <div class="section-item flex-h">
                 <div>
-                    <div class="title">Support minimized view, alert sharing, and information navigation.</div>
-                    <div>3 other alert-related user needs are revealed through our user testing: need to <span class="highlight sec">minimize the front-end</span> while not missing anything, need to <span class="highlight sec">share information and configuration</span> with teammates, need to quickly <span class="highlight sec">pull relevant alerts and analytics</span>. So we included 3 new features into the alert stream to address these needs.</div>
+                    <div class="title">Supporting alert usage in key workflows brings value.</div>
+                    <div>Through user research, we identified several key workflows related to alerts, like <span class="highlight sec">quickly accessing specific analytics</span>, <span class="highlight sec">building a report</span> to share, and <span class="highlight sec">sharing alert configurations</span>. We built corresponding protoypes as shown on the right, and tested them.</div>
                 </div>
                 <div class="images right">
                     <img src="images/Capstone/feature1.png"/>
@@ -149,64 +178,58 @@
         </div>
     </div>
     <!--process summary card-->
-    <div class="block">
-        <div class="section color-bg sum card sumcard">
-            <div class="large-title first">DESIGN</div>
-            <div class="large-title">PROCESS</div>
-            <div class="flex-h sumcontainer">
-                <div class="flex-h sumsection">
-                    <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
-                    <div>
-                        <b>1 / Research</b><br>
-                        Competitor Analysis<br>
-                        12 Role-Plays<br>
-                        4 Contextual Interviews<br>
-                    </div>
+    <div class="section color-bg color-summary card summary-card">
+        <div class="large-title first">DESIGN</div>
+        <div class="large-title">PROCESS</div>
+        <div class="flex-h summary-container">
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-research"><b>User Research</b></a></div>
+                    <div><a href="#bg-research">Background Research</a></div>
+                    <div><a href="#bg-stakeholder">Stakeholder Interviews</a></div>
+                        <div><a href="#poker-study">Analogous Domain Research</a></div>
+                            <div><a  href="#shadowing">Shadowing</a></div>
                 </div>
-<!--                <div class="line"></div>-->
-                <div class="flex-h sumsection">
-                    <div class="icon" style="-webkit-mask: url(images/nav/ideate.svg) no-repeat center"></div>
-                    <div>
-                        <b>2 / Ideate</b><br>
-                        Personas<br>
-                        Walking the wall<br>
-                    </div>
+            </div>
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/design-research.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-design-research"><b>Design Research</b></a></div>
+                    <div><a href="#case-study">Analogous Domain Research</a></div>
+                    <div><a  href="#experience-prototyping">Experience Prototyping</a></div>
+                        <div><a  href="#feedback-grid">Feedback Grid</a></div>
                 </div>
-<!--                <div class="line"></div>-->
-                <div class="flex-h sumsection">
-                    <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
-                    <div>
-                        <b>3 / Design</b><br>
-                        Technical Experimentss<br>
-                        More researchs<br>
-                        Dialogue Flows<br>
-                    </div>
-                </div>
-<!--                <div class="line"></div>-->
-                <div class="flex-h sumsection">
-                    <div class="icon" style="-webkit-mask: url(images/nav/ideate.svg) no-repeat center"></div>
-                    <div>
-                        <b>4 / Test & Iterate</b><br>
-                        Wizard of Oz<br>
-                        Technical Prototyping<br>
-                    </div>
+            </div>
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-design"><b>Design</b></a></div>
+                    <div><a href="#brainstorming">Brainstorming</a></div>
+                    <div><a href="#storyboarding">Storyboarding</a></div>
+                    <div><a  href="#iterating">Iterating</a></div>
+                    <div><a  href="#final">Final Design</a></div>
                 </div>
             </div>
         </div>
     </div>
     <!--user research-->
-    <div id="sec-research" class="section-title">
+    <div id="sec-user-research" class="section-title">
         <div class="section-line"></div>
-        <div class="section-index">01</div>
+        <div class="section-index">02</div>
         <div class="section-name">User Research</div>
     </div>
     <div class="section">
-        <div class="section-item">
+        <div>
+            <p><span class="highlight sec">Before the project scope was narrowed down to alerts</span>, we did user research to learn about the problem space in general. This section talks about our research methods, challenges, and findings.</p>
+            <p><a class='underline' href="#sec-design-research">Jump to design research</a> if you are more interested in our journey around alerts.</p>
+        </div>
+        <div class="section-item" id="bg-research">
             <div class="tag highlight">Background Research</div>
             <div class="flex-h small-section">
                 <div>
-                    <div class="title">To quickly learn about an unfamiliar domain, use casual methods before formal research.</div>
-                    <p>To quickly get onboard, we started with <span class="highlight sec">talking to friends</span> who has relevant background, and also <span class="highlight sec">online videos</span> introducing trading knowledge on Youtube and Investopedia, movies and documentaries talking about traders, even played <span class="highlight sec">games</span> simulating the experience. </p>
+                    <div class="title">To quickly get onboarded with this unfamiliar domain, we utilized a wide range of resources.</div>
+                    <p>To quickly get onboarded, we started with <span class="highlight sec">talking to friends</span> who has relevant background, <span class="highlight sec">online videos</span> introducing trading knowledge (Youtube, Investopedia, etc.), <span class="highlight sec">movies and documentaries</span> talking about traders, even <span class="highlight sec">games</span> simulating trading experience. This allowed us to study <span class="highlight sec">professional materials</span> provided by our client.</p>
                 </div>
                 <div class="images narrow right flex-v">
                     <img src="images/Capstone/userresearch1.png"/>
@@ -216,78 +239,342 @@
             <div class="flex-h">
                 <div class="images narrow left flex-v">
                     <img src="images/Capstone/competitors.png"/>
-                    <div class="caption">resources we looked into</div>
+                    <div class="caption">products we examined</div>
                 </div>
                 <div>
-                    <div class="title">Learn about design patterns from competitors</div>
-                    <p>Afterwards, we went through <span class="highlight sec">materials</span> our client provided, and looked at their <span class="highlight sec">competitors’ webstie</span> to know about the landscape and design patterns in the field.</p>
+                    <div class="title">To learn about domain-specific design paradigms, we researched on existing products.</div>
+                    <p>We first went through Liquidnet’s <span class="highlight sec">product demo</span> and conducted <span class="highlight sec">heuristic evaluation</span>. Then we examined <span class="highlight sec">competitors’ products</span> to understand the landscape and design patterns in the field.</p>
                 </div>
             </div>
         </div>
-        <div class="section-item">
+        <div class="section-item" id="stakeholder">
             <div class="tag highlight">Stakeholder Interview</div>
             <div class="flex-h small-section">
                 <div>
-                    <div class="title">Talk with 22 stakeholders to learn about target users.</div>
-                    <p>Because we have no access to target users, we instead interviewed stakeholders from client-side and proxy users (other types of traders) from our own network.</p>
-                    <p>One technique we used a lot is to bring pre-made artifacts like customer journey map for interviewees to correct, this way we can make the most of our limited time.</p>
+                    <div class="title">With no direct access to our target users, we interviewed 22 stakeholder and proxy users.</div>
+                    <p>Because we have no access to target users, we instead <span class="highlight sec">interviewed different stakeholders and proxy users</span> from client-side and our own network. A <span class="highlight sec">technique</span> we used with extremely busy interviewees is to bring pre-made artifacts like customer journey map for interviewees to correct. This way we can make the most of our limited time.</p>
                 </div>
                 <div class="images right flex-v">
                     <img src="images/Capstone/interview1.png"/>
-                    <div class="caption">Me interviewing stakeholder</div>
+                    <div class="caption">me interviewing a stakeholder</div>
+                </div>
+            </div>
+            <div class="flex-h">
+                <div class="slides run images left">
+                    <img class='slide active' src="images/Capstone/stakeholder-map.png"/>
+                    <img class='slide' src="images/Capstone/digital-workspace.png"/>
+                    <img class='slide' src="images/Capstone/customer-journey.png"/>
+                    <img class='slide' src="images/Capstone/affinity-mapping.png"/>
+                    <div class="demo">
+                        <div class='active' onclick="currentDiv(this,0)">
+                            <img src="images/Capstone/stakeholder-map.png">
+                        </div>
+                        <div onclick="currentDiv(this,1)">
+                            <img src="images/Capstone/digital-workspace.png">
+                        </div>
+                        <div onclick="currentDiv(this,2)">
+                            <img src="images/Capstone/customer-journey.png">
+                        </div>
+                        <div onclick="currentDiv(this,3)">
+                            <img src="images/Capstone/affinity-mapping.png">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="title">Through the interviews, we gained a basic understanding of a trader’s life and needs.</div>
+                    <p>We learned about trader’s main <span class="highlight sec">stakeholders</span>, the interaction with them, trader’s <span class="highlight sec">daily workflow</span> and <span class="highlight sec">digital workspace</span>. We also used affinity mapping to synthesize our notes, and identified <span class="highlight sec">6 major user needs</span>: </p>
+                    <ol>
+                        <li>Need for customization because traders’ workflow varies a lot</li>
+                        <li>Need for efficient data consumption</li>
+                        <li>Need for design supporting collaboration</li>
+                        <li>Need for closure to learn from failure</li>
+                        <li>Need for being innovative</li>
+                        <li>Need for understanding theories behind tools</li>
+                    </ol>
                 </div>
             </div>
         </div>
-        <div class="section-item">
-            <div class="flex-h small-section">
+        <div id="poker-study" class="section-item">
+            <div class="tag highlight">Analogous Domain Research</div>
+            <div class="flex-h">
                 <div>
-                    <div class="tag highlight">Contextual interview (Online Poker)</div>
                     <div class="flex-h">
-                        <div class="title">Positive reinforcement helps maintain a healthy and rational trading mindset.</div>
+                        <div class="title">To understand traders’ mindset and emotions, we conducted contextual interviews with online poker players.</div>
                         <div class="images left inline-img">
                             <img src="images/Capstone/poker.png">
                         </div>
                     </div>
-                    <p>We discovered that online poker is a very similar domain to trading, and is even often used to train young traders. So we did several contextual interviews to understand their mindset and emotional needs. After interviewing, we plotted our observations on a matrix, and reviewed the reason and resolution of poker players for the bad emotional situations.</p>
+                    <p>We discovered that online poker is a very similar domain to trading, and is even often used to <span class="highlight sec">train young traders</span>. So we did several contextual interviews to understand their mindset and emotional needs. We reviewed our observations on a matrix, which gave us inspirations for potential solutions to emotional problems of traders. One major insight we got is <span class="highlight sec">"Positive reinforcement helps maintain a healthy and rational trading mindset"</span>.</p>
                 </div>
-                <div class="images right flex-v">
-                    <img src="images/Capstone/pokermap.png"/>
-                    <div class="caption">emotion map</div>
+                <div class="slides run images right flex-v">
+                    <img class='slide active' src="images/Capstone/poker-interview.png"/>
+                    <img class='slide' src="images/Capstone/poker-map.png"/>
+                    <div class="demo">
+                        <div class='active' onclick="currentDiv(this,0)">
+                            <img src="images/Capstone/poker-interview.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,1)">
+                            <img src="images/Capstone/poker-map.png"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="section-item">
+        <div id="shadowing" class="section-item">
             <div class="flex-h small-section">
-                <div>
-                    <div class="tag highlight">Shadowing</div>
-                    <div class="title">First hand research: A more vivid and comprehensive understanding of traders’ life and needs.</div>
-                    <p>We observed the trading desk at our client’s company at market opening, mid-day, and market closing time. When observing, we used AEIOU framework to guide us and remind ourselves not to forget certain aspects. AEIOU represent activities (A), events (E), interactions (I), objects (O), and users (U).</p>
+                <div class="slides run images left flex-v">
+                    <img class='slide active' src="images/Capstone/trading-desk.png"/>
+                    <img class='slide' src="images/Capstone/shadowing1.png"/>
+                    <img class='slide' src="images/Capstone/shadowing2.png"/>
+                    <div class="demo">
+                        <div class="active" onclick="currentDiv(this,0)">
+                            <img src="images/Capstone/trading-desk.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,1)">
+                            <img src="images/Capstone/shadowing1.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,2)">
+                            <img src="images/Capstone/shadowing2.png"/>
+                        </div>
+                    </div>
                 </div>
-                <div class="images right flex-v narrow">
-                    <img src="images/Capstone/trading-desk.png"/>
-                    <div class="caption">a typical trading desk (from internet)</div>
+                <div>
+                    <div class="tag highlight">Shadowing / Observation</div>
+                    <div class="title">We gained a more comprehensive understanding of their needs through observing their daily workflow.</div>
+                    <p>We observed the trading desk in our client’s company during market opening, mid-day, and market closing time. While observing, we used <span class="highlight sec">AEIOU</span>  framework to focus around activities (A), events (E), interactions (I), objects (O), and users (U).</p>
+                </div>
+            </div>
+            <div class="insight-title">Key Insights from Shadowing</div>
+            <div class="insight-cards">
+                <div>
+                    <p class="insight-sum">Market closing is the most stressful time</p>
+                    <p>Among these 3 time periods, closing time is the busiest and most stressful, during which traders collaborate more.</p>
+                </div>
+                <div>
+                    <p class="insight-sum">Different preferences for sounds</p>
+                    <p>Not all traders use sounds, and each has different preferences for sounds.</p>
+                </div>
+                <div>
+                    <p class="insight-sum">Report building is repetitive work</p>
+                    <p>Traders communicate with portfolio managers and clients using reports, which requires considerable manual work.</p>
+                </div>
+                <div>
+                    <p class="insight-sum">Scroll-and-click can be cumbersome</p>
+                    <p>Sometimes, when navigating through lots of information, scrolling can be too slow, and even cumbersome.</p>
                 </div>
             </div>
         </div>
     </div>
-
-<!--last section-->
-    <div id="sec-next" class="section-title">
+    <!--design research-->
+    <div id="sec-design-research" class="section-title">
         <div class="section-line"></div>
-        <div class="section-index">05</div>
-        <div class="section-name">Next Steps</div>
+        <div class="section-index">03</div>
+        <div class="section-name">Design Research</div>
     </div>
     <div class="section">
-        <div class="section-item">
-            <b class="highlight sec">The current solution still has flaws. Future steps for this project can be:</b>
-            <ul>
-                <li><span class="highlight sec">Test with more users</span> who have visual impairments to refine current design and scripts.</li>
-                <li><span class="highlight sec">Design a personality</span> for the skill to make it more adorable and memorable.</li>
-                <li>Identify and design for higher-level user needs like <span class="highlight sec">emotional need</span> etc.</li>
-                <li>Explore potential ways to incorporate/tackle more <span class="highlight sec">high-value-high-cost features</span>.</li>
-                <li>Expand target user group and design for <span class="highlight sec">the general crowd.</span></li>
-            </ul>
+        <div>
+            <p>After having a holistic understanding of the domain, users, and product, our <span class="highlight sec">project scope</span> was narrowed down by the client to be <span class="highlight sec">alert system design guidelines</span>.</p>
+            <p>This section talks about our how we generated a set of design guidelines based on analogous domain research and “research through design” method.</p>
+            <p>
         </div>
+        <div id="case-study" class="section-item">
+            <div class="tag highlight">Analogous Domain Research</div>
+            <div class="flex-h">
+                <div>
+                    <div class="title">We learned about general design principles for alert systems through literature review and case studies.</div>
+                    <p>Our research was focused around 3 topics: <span class="highlight sec">attracting attention, guiding action, and gaining user trust</span>. After brainstorming, we investigated various domains including retail, advertisement, emergencies, gaming, notifications, autonomous driving, etc.</p><b><span class="highlight sec">See on the right our major findings.</span></b>
+                </div>
+                <div class="slides run images right flex-v">
+                    <img class='slide active' src="images/Capstone/case-study1.png"/>
+                    <img class='slide' src="images/Capstone/case-study2.png"/>
+                    <img class='slide' src="images/Capstone/case-study3.png"/>
+                    <img class='slide' src="images/Capstone/case-study4.png"/>
+                    <img class='slide' src="images/Capstone/case-study5.png"/>
+                    <img class='slide' src="images/Capstone/case-study6.png"/>
+                    <div class="demo">
+                        <div class='active' onclick="currentDiv(this,0)">
+                            <img src="images/Capstone/case-study1.png"/>
+                        </div>
+                        <div class='' onclick="currentDiv(this,1)">
+                            <img src="images/Capstone/case-study2.png"/>
+                        </div>
+                        <div class='' onclick="currentDiv(this,2)">
+                            <img src="images/Capstone/case-study3.png"/>
+                        </div>
+                        <div class='' onclick="currentDiv(this,3)">
+                            <img src="images/Capstone/case-study4.png"/>
+                        </div>
+                        <div class='' onclick="currentDiv(this,4)">
+                            <img src="images/Capstone/case-study5.png"/>
+                        </div>
+                        <div class='' onclick="currentDiv(this,5)">
+                            <img src="images/Capstone/case-study6.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="experience-prototyping" class="section-item">
+            <div class="flex-h small-section">
+                <div class="images left flex-v">
+                    <img src="images/Capstone/experience-prototyping.png"/>
+                    <div class="caption">simulated trading desk</div>
+                </div>
+                <div>
+                    <div class="tag highlight">Experience Prototyping</div>
+                    <div class="title">In our only chance with target users, we chose "research through design" method.</div>
+                    <p>We only had one chance to talk with our target users in person. This led us to use the <span class="highlight sec">“research through design”</span> approach rather than exploratory research, so that we can gain a more precise understanding of their needs and preferences.</p>
+                </div>
+            </div>
+            <div class="flex-h">
+                <div>
+                    <div class="title">Prototypes were built based our previous research and questions we want answers for.</div>
+                    <p>We <span class="highlight sec">rapidly built prototypes</span> based on previous user research and design research. Then we <span class="highlight sec">tested traders’ reaction</span> to our concepts in a simulated trading environment. This allowed us to generate tailored design principles in the future.</p>
+                    <p><b><span class="highlight sec">See on the right the settings and prototypes we tested.</span></b></p>
+                </div>
+                <div class="slides video16-9 images right flex-v">
+                    <video class='slide active' autoplay loop muted>
+                        <source src="videos/Capstone/prototype1.webm" type="video/webm">
+                    </video>
+                    <video class='slide' autoplay loop muted>
+                        <source src="videos/Capstone/prototype2.webm" type="video/webm">
+                    </video>
+                    <img class='slide' src="images/Capstone/prototype3.png"/>
+                    <video class='slide' autoplay loop muted>
+                        <source src="videos/Capstone/prototype4.webm" type="video/webm">
+                    </video>
+                    <video class='slide' autoplay loop muted>
+                        <source src="videos/Capstone/prototype5.webm" type="video/webm">
+                    </video>
+                    <video class='slide' autoplay loop muted>
+                        <source src="videos/Capstone/prototype6.webm" type="video/webm">
+                    </video>
+                    <div class="demo">
+                        <div class="active" onclick="currentDiv(this,0)">
+                            <img src="images/Capstone/prototype1.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,1)">
+                            <img src="images/Capstone/prototype2.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,2)">
+                            <img src="images/Capstone/prototype3-t.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,3)">
+                            <img src="images/Capstone/prototype4.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,4)">
+                            <img src="images/Capstone/prototype5.png"/>
+                        </div>
+                        <div onclick="currentDiv(this,5)">
+                            <img src="images/Capstone/prototype6.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="feedback-grid" class="section-item flex-v">
+            <div class="tag highlight">Feedback Grid</div>
+            <div class="flex-h small-section">
+                <div>
+                    <div class="title">We synthesized our notes and generated design guidelines tailored for trading alert system.</div>
+                    <p>For synthesizing, we used the feedback grid method, and modified the 4th quadrant to better fit our research. Our feedback grid has four quadrants: <span class="highlight sec">“what worked”</span>, <span class="highlight sec">“what should be changed”</span>, <span class="highlight sec">“new ideas”</span>, and <span class="highlight sec">“general behaviors”</span>. This helped us easily generate design guidelines from each quadrants. For instance, from quadrant 1 and 2, we concluded DOs and DON’Ts, from quadrant 3, we extracted design limits/preferences.</p>
+                </div>
+                <div class="images right flex-v">
+                    <img src="images/Capstone/feedback-grid.png"/>
+                    <div class="caption">us working on feedback grid</div>
+                </div>
+            </div>
+            <div class="insight-title">Example Guidelines</div>
+            <div class="insight-cards">
+                <div>
+                    <p class="insight-sum">A mini window can be useful</p>
+                    <p>Users preferred the un-intrusive feeling and space-saving characteristics of the “Bubble” prototype, though the visual design is too different from the current Liquidnet branding.</p>
+                </div>
+                <div>
+                    <p class="insight-sum">Salient color is the most noticeable</p>
+                    <p>Salient color is the most noticeable, and it’s easy to read. However, care should be exercised to avoid unintentional attention (e.g., when a less important uncolored alert comes in, the colored alerts should not move).</p>
+                </div>
+                <div>
+                    <p class="insight-sum">Hierarchical views are important</p>
+                    <p>Traders are faced with an overwhelming amount of information. A hierarchical view that displays details and quick actions on hover can be less obstrusive.</p>
+                </div>
+                <div>
+                    <p class="insight-sum">Customized grouping is needed</p>
+                    <p>Traders want to group alerts differently based on their current workflow and preferences.</p>
+                </div>
+            </div>
+            <a class="highlight right-link">View All Guidelines</a>
+        </div>
+    </div>
+    <!--design-->
+    <div id="sec-design" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">04</div>
+        <div class="section-name">Design</div>
+    </div>
+    <div class="section">
+        <div>
+            <p>Our next step is to build <span class="highlight sec">prototypes that apply the principles we concluded</span>. This section talks about our ideation, prototyping, and iterating process.</p>
+        </div>
+        <div id='brainstorming' class="section-item">
+            <div class="tag highlight">Brainstorming</div>
+            <div class="flex-h">
+                <div>
+                    <div class="title">Based on key guidelines, we brainstormed new ideas after reviewed all the previous research findings...</div>
+                    <p>We used “walking the wall” method, which means putting up all previous research findings on the wall and reviewing them to generate new ideas. Our ideas were focused around <span class="highlight sec">visual hierarchy and customization</span>. We also have two other in-context features: <span class="highlight sec">report building</span> and <span class="highlight sec">type-to-navigate</span>.</p>
+                </div>
+                <div class="images right flex-v">
+                    <img src="images/Capstone/brainstorming.png"/>
+                    <div class="caption">"walking the wall" and brainstorm</div>
+                </div>
+            </div>
+        </div>
+        <div id='storyboarding' class="section-item">
+            <div class="flex-h">
+                <div class="images narrow left flex-v">
+                    <img src="images/Capstone/storyboarding.png"/>
+                    <div class="caption">some of our storyboards</div>
+                </div>
+                <div>
+                    <div class="tag highlight">Storyboarding</div>
+                    <div class="title">... and sketched our ideas into user stories to validate and refine them.</div>
+                    <p>Then we separately sketched our ideas for each focus and compiled them into a user story. Through an internal critique, we integrated our <span class="highlight sec">parallel designs</span> into one set. Storyboarding not only helped us <span class="highlight sec">validate the ideas in the context</span>, but also helped everyone in the team be <span class="highlight sec">on the same page</span>.</p>
+                </div>
+            </div>
+        </div>
+        <div id='iterating' class="section-item">
+            <div class="tag highlight">Iterating</div>
+            <div class="flex-h">
+                <div>
+                    <div class="title">Embodiment, testing, and iterating.</div>
+                    <p>Ideas were then embodied into digital prototypes. We tested the prototypes with CMU business school students, Liquidnet users from our own network, and relationship managers from Liquidnet.</p>
+                </div>
+                <div class="images right flex-v">
+                    <img src="images/Capstone/brainstorming.png"/>
+                    <div class="caption">"walking the wall" and brainstorm</div>
+                </div>
+            </div>
+        </div>
+        <div id='final' class="section-item">
+            <div class="tag highlight">Final Design</div>
+            <div class="title">This is an on-going project, see recent prototypes in <a href="#sec-summary" class="highlight">Summary</a>. And contact me for the latest design!</div>
+        </div>
+    </div>
+    <!--last section-->
+    <div id="sec-reflection" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">05</div>
+        <div class="section-name">Reflection</div>
+    </div>
+    <div class="section">
+        <p>This is a special project for me, because lots of <span class="highlight sec">challenges</span> we encountered was my first time. I learned a lot, and I feel proud of how we handled them! For instance:
+        </p>
+        <ul>
+            <li>I learned how to quickly learn about an <span class="highlight sec">unfamiliar domain</span>, how to conduct user research with <span class="highlight sec">limited user/limited time</span>, and how to proceed when there’s <span class="highlight sec">no clear direction</span>.</li>
+            <li>I learned how to <span class="highlight sec">try out new research methods</span> under different conditions/with different stakeholders. And after the first trial, I know better how to conduct that method.</li>
+            <li>I learned how to <span class="highlight sec">talk about UX</span> with different people. </li>
+        </ul>
+        <p>Another big takeaway is, through the journey, I learned how to <span class="highlight sec">form a wonderful team with people from totally different backgrounds and mindsets</span>, and became friends!</p>
     </div>
 
     <div class="to-other-projects flex-h">

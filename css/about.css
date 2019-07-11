@@ -1,0 +1,73 @@
+.about-top {
+  height: 50px;
+  width: 100%;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+.about-card > img {
+  width: 180px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+.about-card a {
+  margin: 5px 0;
+  cursor: pointer;
+  color: #888;
+  font-style: normal;
+}
+
+.about-page-title {
+  font-size: 36px;
+  line-height: 2em;
+}
+
+.about-highlight {
+  color: #000;
+  font-weight: 300;
+}
+.about-highlight.first {
+  margin-top: 50px;
+}
+
+.about-section-title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 3em;
+  margin-bottom: 40px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.evenly {
+  justify-content: space-between;
+}
+.evenly > div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about-story {
+  display: flex;
+  align-items: center;
+}
+.about-story .icon {
+  margin-right: 30px;
+}
+
+/*# sourceMappingURL=about.css.map */
