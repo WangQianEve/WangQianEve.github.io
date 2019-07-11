@@ -43,7 +43,27 @@ function createFilter() {
     }
 }
 
+function checkVisibility ($landing_anchor, $landing, $banner) {
+    yPosition = window.pageYOffset;
+    console.log(yPosition,$landing_anchor.offset().top );
+    if (yPosition >= $landing_anchor.offset().top) {
+        $landing.addClass('hidden');
+        $banner.removeClass('static');
+    } else {
+        $landing.removeClass('hidden');
+        $banner.addClass('static');
+    }
+}
+
 $(document).ready(function() {
     filterSelection("featured");
     createFilter();
+    // landing page
+    const $landing_anchor = $('#landing_anchor');
+    const $landing = $('#landing');
+    const $banner = $('.banner');
+    checkVisibility($landing_anchor, $landing, $banner);
+    window.onscroll = function () {
+        checkVisibility($landing_anchor, $landing, $banner);
+    }
 });

@@ -226,10 +226,13 @@ body {
   padding-bottom: 80px;
 }
 
-.banner div {
+.banner {
   position: absolute;
-  left: 5vw;
-  top: 12vw;
+  margin-top: 40vw;
+}
+.banner div {
+  padding-left: 5vw;
+  margin-top: -28vw;
   font-size: 35pt;
 }
 .banner div p {
@@ -237,6 +240,10 @@ body {
 }
 .banner #banner-text1 {
   color: #FD6161;
+}
+.banner.static {
+  position: fixed;
+  margin-top: 0;
 }
 
 .btn {
@@ -312,6 +319,38 @@ body {
 #nav_anchor {
   position: absolute;
   top: 15vw;
+}
+
+#landing {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+#landing.hidden {
+  display: none;
+}
+#landing .bg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+#landing .bg img {
+  width: 100%;
+}
+#landing .bg .white-space {
+  flex-grow: 1;
+  background-color: white;
+}
+
+#landing_space1 {
+  height: 40vw;
+  border: solid black 1px;
+}
+
+#landing_space2 {
+  height: 40vw;
+  border: solid red 1px;
 }
 
 /*# sourceMappingURL=index.css.map */
