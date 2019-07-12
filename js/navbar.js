@@ -9,6 +9,7 @@ function getSections($links) {
 }
 
 function updateNavColor($anchor, $navbar) {
+    console.log('ey');
     yPosition = window.pageYOffset;
     if (yPosition >= $anchor.offset().top) {
         $navbar.addClass('active');

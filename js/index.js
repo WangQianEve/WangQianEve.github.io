@@ -1,3 +1,11 @@
+function updateNavColor($anchor, $navbar, yPosition) {
+    if (yPosition >= $anchor.offset().top) {
+        $navbar.addClass('active');
+    } else {
+        $navbar.removeClass('active');
+    }
+}
+
 function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("filterDiv");
@@ -43,27 +51,52 @@ function createFilter() {
     }
 }
 
-function checkVisibility ($landing_anchor, $landing, $banner) {
-    yPosition = window.pageYOffset;
-    console.log(yPosition,$landing_anchor.offset().top );
+function checkVisibility ($landing_anchor, $landing, $content, yPosition) {
     if (yPosition >= $landing_anchor.offset().top) {
         $landing.addClass('hidden');
-        $banner.removeClass('static');
+        $content.removeClass('static');
+        return false;
     } else {
         $landing.removeClass('hidden');
-        $banner.addClass('static');
+        $content.addClass('static');
+        return true;
     }
 }
 
+$highlighterShow = false;
+
 $(document).ready(function() {
+    yPosition = window.pageYOffset;
     filterSelection("featured");
     createFilter();
     // landing page
     const $landing_anchor = $('#landing_anchor');
     const $landing = $('#landing');
-    const $banner = $('.banner');
-    checkVisibility($landing_anchor, $landing, $banner);
+    const $content = $('.content');
+    const $zoom_anchor = $('#zoom_anchor');
+    let zoom_center = $zoom_anchor.offset();
+    //initial
+    visible = checkVisibility($landing_anchor, $landing, $content, yPosition);
+    if (visible) {
+        $('#landing').css({
+            "transform":"scale("+ (1 + yPosition * 0.04) +")",
+            "transform-origin":zoom_center.left+"px "+zoom_center.top+"px"
+        });
+    }
+    //nav bar
+    const $links = $('#inpageNav > a');
+    const $navbar = $('.navbar');
+    const $nav_anchor = $('#nav_anchor');
+    //initial
     window.onscroll = function () {
-        checkVisibility($landing_anchor, $landing, $banner);
+        yPosition = window.pageYOffset;
+        visible = checkVisibility($landing_anchor, $landing, $content, yPosition);
+        if (visible) {
+            $('#landing').css({
+                "transform":"scale("+ (1 + yPosition * 0.025) +")",
+                "transform-origin":zoom_center.left+"px "+zoom_center.top+"px"
+            });
+        }
+        updateNavColor($nav_anchor, $navbar, yPosition);
     }
 });

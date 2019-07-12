@@ -9,7 +9,6 @@
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/png" href="images/Q.png"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="js/navbar.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
 </head>
 <body>
@@ -22,93 +21,89 @@
             <a class='pg-btn' href="about.html">About</a>
         </div>
     </div>
-    <div id="nav_anchor"></div>
     <div id="landing_space1"></div>
     <div id="landing_anchor"></div>
     <div id="landing_space2"></div>
-    <div class="banner static">
-        <img src="images/telescope.svg" alt="telescope banner">
-        <div>
-            <p id="banner-text1">Product Design</p>
-            <p>Envisioning a better future</p>
+    <div class="content static">
+        <div class="banner">
+            <div id="nav_anchor"></div>
+            <img src="images/telescope.svg" alt="telescope banner">
         </div>
-    </div>
-    <div id="filter">
-        <button class="btn active" onclick="filterSelection('featured')"> Featured</button>
-        <button class="btn" onclick="filterSelection('filterDiv')"> All</button>
-        <button class="btn" onclick="filterSelection('ui')"> UI</button>
-        <button class="btn" onclick="filterSelection('ai')"> AI</button>
-        <button class="btn" onclick="filterSelection('vui')"> VUI</button>
-        <button class="btn" onclick="filterSelection('game')"> Game Design</button>
-        <button class="btn" onclick="filterSelection('research')"> Research</button>
-    </div>
-    <div class="container">
-        <a href="alexa.html" class="filterDiv featured vui ai research">
-            <img src="images/alexa1.png" alt=""/>
-            <div class="title">
-                <div class="t1">Beauty Plus</div>
-                <div class="btn">vui</div>
-                <div class="btn">ai</div>
-                <div class="btn">research</div>
-            </div>
-            <div class="description">A voice assistant to help the visually impaired to do makeup.</div>
-        </a>
-        <a href="capstone.html" class="filterDiv featured ui research">
-            <img src="images/capstone-dark.png" alt=""/>
-            <div class="title">
-                <div class="t1">Trading Platform Redesign</div>
-                <div class="btn">ui</div>
-                <div class="btn">research</div>
-            </div>
-            <div class="description">Adapting Venmo interface with AI</div>
-        </a>
-        <a class="filterDiv featured ai ui">
-            <img src="images/venmo.png" alt=""/>
-            <div class="title">
-                <div class="t1">Venmo</div>
-                <div class="btn">ai</div>
-                <div class="btn">ui</div>
-            </div>
-            <div class="description">Adapting Venmo interface with AI</div>
-        </a>
-        <a class="filterDiv featured ui">
-            <img src="images/brandeis.png" alt=""/>
-            <div class="title">
-                <div class="t1">Brandeis</div>
-                <div class="btn">ui</div>
-            </div>
-            <div class="description">Adapting Venmo interface with AI</div>
-        </a>
-        <a class="filterDiv featured vui ai">
-            <img src="images/morgan1.png" alt=""/>
-            <div class="title">
-                <div class="t1">Morgan</div>
-                <div class="btn">vui</div>
-                <div class="btn">ai</div>
-            </div>
-            <div class="description">Adapting Venmo interface with AI</div>
-        </a>
-        <a class="filterDiv featured research">
-            <img src="images/scotty1.png" alt=""/>
-            <div class="title">
-                <div class="t1">Scotty Stop</div>
-                <div class="btn">research</div>
-            </div>
-            <div class="description">Adapting Venmo interface with AI</div>
-        </a>
-        <a class="filterDiv research ai">DLog</a>
-        <a class="filterDiv game">IML Game</a>
-        <a class="filterDiv game">Sleepy Game</a>
-        <a class="filterDiv ui">Lane</a>
+        <div id="filter">
+            <button class="btn active" onclick="filterSelection('featured')"> Featured</button>
+            <button class="btn" onclick="filterSelection('filterDiv')"> All</button>
+            <button class="btn" onclick="filterSelection('ui')"> UI</button>
+            <button class="btn" onclick="filterSelection('ai')"> AI</button>
+            <button class="btn" onclick="filterSelection('vui')"> VUI</button>
+            <button class="btn" onclick="filterSelection('game')"> Game Design</button>
+            <button class="btn" onclick="filterSelection('research')"> Research</button>
+        </div>
+        <div class="container">
+            <a href="alexa.html" class="filterDiv featured vui ai research">
+                <img src="images/alexa1.png" alt=""/>
+                <div class="title">
+                    <div class="t1">Beauty Plus</div>
+                    <div class="btn">vui</div>
+                    <div class="btn">ai</div>
+                    <div class="btn">research</div>
+                </div>
+                <div class="description">A voice assistant to help the visually impaired to do makeup.</div>
+            </a>
+            <a href="capstone.html" class="filterDiv featured ui research">
+                <img src="images/capstone-dark.png" alt=""/>
+                <div class="title">
+                    <div class="t1">Trading Platform Redesign</div>
+                    <div class="btn">ui</div>
+                    <div class="btn">research</div>
+                </div>
+                <div class="description">Adapting Venmo interface with AI</div>
+            </a>
+            <a class="filterDiv featured ai ui">
+                <img src="images/venmo.png" alt=""/>
+                <div class="title">
+                    <div class="t1">Venmo</div>
+                    <div class="btn">ai</div>
+                    <div class="btn">ui</div>
+                </div>
+                <div class="description">Adapting Venmo interface with AI</div>
+            </a>
+            <a class="filterDiv featured ui">
+                <img src="images/brandeis.png" alt=""/>
+                <div class="title">
+                    <div class="t1">Brandeis</div>
+                    <div class="btn">ui</div>
+                </div>
+                <div class="description">Adapting Venmo interface with AI</div>
+            </a>
+            <a class="filterDiv featured vui ai">
+                <img src="images/morgan1.png" alt=""/>
+                <div class="title">
+                    <div class="t1">Morgan</div>
+                    <div class="btn">vui</div>
+                    <div class="btn">ai</div>
+                </div>
+                <div class="description">Adapting Venmo interface with AI</div>
+            </a>
+            <a class="filterDiv featured research">
+                <img src="images/scotty1.png" alt=""/>
+                <div class="title">
+                    <div class="t1">Scotty Stop</div>
+                    <div class="btn">research</div>
+                </div>
+                <div class="description">Adapting Venmo interface with AI</div>
+            </a>
+            <a class="filterDiv research ai">DLog</a>
+            <a class="filterDiv game">IML Game</a>
+            <a class="filterDiv game">Sleepy Game</a>
+            <a class="filterDiv ui">Lane</a>
+        </div>
     </div>
     <div id="landing">
+        <div id="zoom_anchor"></div>
         <div class="bg">
-            <img src="images/Exclude.svg">
+            <img src="images/Landing.svg">
             <div class="white-space"></div>
         </div>
-        <div>Hello, I’m Qian Wang</div>
-        <div>Thanks for visiting!</div>
-        <div>Studying HCI at Cargenie Mellon Univeristy. Looking for product design positions</div>
     </div>
 </body>
 </html>
