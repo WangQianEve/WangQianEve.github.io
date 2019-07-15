@@ -2,7 +2,7 @@
 @import "shared";
 @import "variables";
 
-$scroll_dist : 80vw;
+$scroll_dist : 30vw;
 
 .content {
   position: absolute;
@@ -14,13 +14,12 @@ $scroll_dist : 80vw;
 }
 
 .banner {
-  div {
+  .slogan {
+    position: absolute;
     padding-left: 5vw;
-    margin-top: -28vw;
-    font-size: 35pt;
-    p {
-      line-height: 40%;
-    }
+    margin-top: -200px;
+    font-size: 44px;
+    color: white;
   }
 }
 
@@ -131,7 +130,6 @@ $scroll_dist : 80vw;
 #landing_space1 {
   height: $scroll_dist;
   width: 100%;
-  //border: solid black 1px;
 }
 
 #landing_space2 {
@@ -141,7 +139,7 @@ $scroll_dist : 80vw;
 }
 
 #zoom_anchor {
-  margin-left: 50vw;
-  margin-top: 30vw;
+  margin-left: 52vw;
+  margin-top: 23vw;
   position: absolute;
 }

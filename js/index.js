@@ -75,16 +75,19 @@ $(document).ready(function() {
     const $content = $('.content');
     const $zoom_anchor = $('#zoom_anchor');
     let zoom_center = $zoom_anchor.offset();
+    const content_scale = 1.5;
     //initial
     visible = checkVisibility($landing_anchor, $landing, $content, yPosition);
     if (visible) {
         $('#landing').css({
-            "transform":"scale("+ (1 + yPosition * 0.04) +")",
+            "transform":"scale("+ (1 + yPosition * 0.1) +")",
             "transform-origin":zoom_center.left+"px "+zoom_center.top+"px"
         });
+        $('.banner img').css({
+            "transform" : "scale(" + content_scale + ")"
+        })
     }
     //nav bar
-    const $links = $('#inpageNav > a');
     const $navbar = $('.navbar');
     const $nav_anchor = $('#nav_anchor');
     //initial
@@ -93,9 +96,13 @@ $(document).ready(function() {
         visible = checkVisibility($landing_anchor, $landing, $content, yPosition);
         if (visible) {
             $('#landing').css({
-                "transform":"scale("+ (1 + yPosition * 0.025) +")",
+                "transform":"scale("+ (1 + yPosition * 0.1) +")",
                 "transform-origin":zoom_center.left+"px "+zoom_center.top+"px"
             });
+            scale = Math.max(1, (content_scale - yPosition * 0.001));
+            $('.banner img').css({
+                "transform" : "scale(" + scale + ")"
+            })
         }
         updateNavColor($nav_anchor, $navbar, yPosition);
     }

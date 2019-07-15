@@ -6,10 +6,10 @@
 .about-card {
   display: flex;
   flex-direction: column;
-  margin-right: 60px;
+  margin-right: 100px;
 }
 .about-card > img {
-  width: 180px;
+  width: 200px;
   align-self: center;
   margin-bottom: 30px;
 }
@@ -23,11 +23,12 @@
 .about-page-title {
   font-size: 36px;
   line-height: 2em;
+  color: #444;
+  font-weight: 300;
 }
 
 .about-highlight {
-  color: #000;
-  font-weight: 300;
+  color: #789CFB;
 }
 .about-highlight.first {
   margin-top: 50px;
@@ -63,11 +64,32 @@
 }
 
 .about-story {
+  padding: 20px;
   display: flex;
   align-items: center;
 }
-.about-story .icon {
-  margin-right: 30px;
+.about-story img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.qian {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.qian .chi-an {
+  background-color: #000000aa;
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: white;
+  position: absolute;
+  margin-top: -32px;
+  margin-left: -40px;
+  display: none;
+}
+.qian:hover .chi-an {
+  display: inline;
 }
 
 /*# sourceMappingURL=about.css.map */

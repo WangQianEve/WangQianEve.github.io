@@ -1,3 +1,5 @@
+@import "variables";
+
 .about-top {
   height: 50px;
   width: 100%;
@@ -6,9 +8,9 @@
 .about-card {
   display: flex;
   flex-direction: column;
-  margin-right: 60px;
+  margin-right: 100px;
   > img {
-    width: 180px;
+    width: 200px;
     align-self: center;
     margin-bottom: 30px;
   }
@@ -23,11 +25,12 @@
 .about-page-title {
   font-size: 36px;
   line-height: 2em;
+  color: #444;
+  font-weight: 300;
 }
 
 .about-highlight {
-  color: #000;
-  font-weight: 300;
+  color: $secondary-color;
   &.first {
     margin-top: 50px;
   }
@@ -63,9 +66,32 @@
 }
 
 .about-story {
+  padding: 20px;
   display: flex;
   align-items: center;
-  .icon {
-    margin-right: 30px;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.qian {
+  cursor: pointer;
+  text-decoration: underline;
+  .chi-an {
+    background-color: #000000aa;
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    margin-top: -32px;
+    margin-left: -40px;
+    display: none;
+  }
+  &:hover {
+    .chi-an {
+      display: inline;
+    }
   }
 }

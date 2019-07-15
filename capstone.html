@@ -16,15 +16,9 @@
 </head>
 <body>
 <div class="navbar">
-    <img src="images/Qian.svg" alt="qian logo">
+    <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
     <div id="inpageNav" class="roundedNav">
         <div id='highlighter' class="roundedNav"></div>
-        <a href="#sec-background">
-            <div class="icon" style="-webkit-mask: url(images/nav/background.svg) no-repeat center">
-            </div>
-            <span class="tooltip">Background</span>
-            <div class="nav-section">Background</div>
-        </a>
         <a href="#sec-summary">
             <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center">
             </div>
@@ -58,6 +52,7 @@
         <a href="index.html" class="pg-btn active">Design</a>
         <a class='pg-btn' href="code.html">Code</a>
         <a class='pg-btn' href="about.html">About</a>
+        <a class='pg-btn' href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
     </div>
 </div>
 <div class="banner">
@@ -83,59 +78,40 @@
             <div class="content">Figma / Principle / Web Frontend Development</div>
         </div>
     </div>
-    <!--background-->
-    <div id="sec-background" class="section-title">
-        <div class="section-line"></div>
-        <div class="section-index">00</div>
-        <div class="section-name">Background</div>
-    </div>
-    <div class="section">
-        <div class="section-item flex-h">
-            <div class="tag narrow highlight">Who’s the client?</div>
-            <div><span class="highlight sec">Liquidnet</span> is a global institutional investment network that provides <span class="highlight sec">cutting-edge financial technology</span> like trading algorithms, trading analytics, trading recommendations. It's main users are <span class="highlight sec">institutional traders and asset managers</span>.</div>
-        </div>
-        <div class="section-item flex-h">
-            <div class="tag narrow highlight">Background</div>
-            <div>Liquidnet’s current customers usually <span class="highlight sec">minimize the front-end</span> because order updates can show up as a pop up window. However, this <span class="highlight sec">hides features</span> that can potentially encourage more trades. So, Liquidnet decided to use an <span class="highlight sec">alert system</span> to push both order updates and opportunities to traders.</div>
-        </div>
-        <div class="section-item flex-h">
-            <div class="tag narrow highlight">Project Prompt</div>
-            <div>To explore <span class="highlight sec">design principles</span> and <span class="highlight sec">best practices</span> for alert systems, and apply them to Liquidnet, which provides individualized alerts to traders, along with suggested actions.</div>
-        </div>
-    </div>
-    <div class="background right" style="margin-top: -600px; padding-bottom: 350px">
-        <img src="images/backgrounds/pentagon.svg" style="height: 250px"/>
-    </div>
     <!--summary-->
     <div id="sec-summary" class="section-title">
         <div class="section-line"></div>
-        <div class="section-index">01</div>
+        <div class="section-index">00</div>
         <div class="section-name">Summary</div>
     </div>
     <div class="section">
-        <div class="section-item flex-h">
-            <div class="tag narrow highlight">Problem Framing</div>
-            <div>We broke down the project prompt into 3 research focuses :
+        <div class="summary section-item flex-h">
+            <div class="tag narrow">Problem Framing</div>
+            <div>
+                <div class="title highlight">Re-design Liquidnet’s alert system to encourage users to fully utilize the advanced features.</div>
+                <div>This project is sponsored by Liquidnet, a company that provides cutting-edge financial technology to institutional traders and asset managers. The challenge is that users often only use Liquidnet’s basic trading features, and even minimize the interface most of the time. This way, the advanced technologies that can identify new trading opportunites are not fully utilized, thus causing less trades than expected within Liquidnet’s network.</div>
+            </div>
+        </div>
+        <div class="summary section-item flex-h">
+            <div class="tag narrow">Solution</div>
+            <div>
+                <div class="title highlight">A comprehensive set of alert design guidelines, along with validated prototypes as proof of concept.</div>
+                <p>Our designs are focused around these 4 aspects:</p>
                 <ul>
-                    <li>How might we <span class="highlight sec">control attention grabbing</span> at a busy trading desk?</li>
-                    <li>How might we guide the user to <span class="highlight sec">take action</span> on the alerts?</li>
-                    <li>How might we get users’ <span class="highlight sec">trust</span> for the actions the system suggests?</li>
+                    <li>Alerts that manage users' attention through color and sound.</li>
+                    <li>Alerts that convince users to take action with a right interactive information hierarchy.</li>
+                    <li>Alerts that bring easy customization to users, and bring data to the AI system.</li>
+                    <li>Alerts that works well in different contexts and workflows.</li>
                 </ul>
+                <div class="flex-h right small-section">
+                    <a href="#solution" class="btn light">View Designs Below</a>
+                    <a href="#" class="btn">View Design Guidelines</a>
+                </div>
             </div>
         </div>
-        <div class="section-item flex-h">
-            <div class="tag narrow highlight">Solution</div>
-            <div class="flex-v">
-                <div>A comprehensive set of <span class="highlight sec">alert design guidelines</span>, with supporting research and validated prototypes as proof of concept. The prototypes aim to <span class="highlight sec">increase the usage</span> of Liquidnet’s services and meanwhile <span class="highlight sec">gather data</span> that can be used to build a more personalized system. </div>
-                <div class="btn">View Design Guidelines</div>
-            </div>
-        </div>
-    </div>
-    <div class="background" style="margin-top: -500px; padding-bottom: 300px">
-        <img src="images/backgrounds/triangle.svg" style="height: 200px"/>
     </div>
     <div class="color-bg sec overflow-bottom">
-        <div class="section">
+        <div id="solution" class="section">
             <div class="section-item">
                 <div class="tag highlight">Example guidelines and prototypes</div>
             </div>
