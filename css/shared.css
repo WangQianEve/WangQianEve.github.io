@@ -13,7 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Prompt", "Helvetica", "Arial", sans-serif;
+  font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;
   font-weight: 200;
   color: #666;
   font-size: 16px;
@@ -43,7 +43,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color .3s, box-shadow .3s;
   font-weight: 400;
   display: flex;
   z-index: 100;
@@ -63,7 +63,7 @@ body {
   color: grey;
 }
 .navbar.active #inpageNav {
-  display: flex;
+  opacity: 1;
 }
 .navbar .roundedNav {
   height: 25px;
@@ -76,10 +76,12 @@ body {
   display: none;
 }
 .navbar #inpageNav {
-  display: none;
+  opacity: 0;
+  display: flex;
   margin-left: 45px;
   align-items: center;
   font-size: 12px;
+  transition: opacity .3s;
 }
 .navbar #inpageNav #highlighter {
   width: 140px;
@@ -165,6 +167,10 @@ body {
 }
 .flex-v.center {
   align-items: center;
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 .flex-h {

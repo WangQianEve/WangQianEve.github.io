@@ -62,7 +62,7 @@ body {
       color: grey;
     }
     #inpageNav {
-      display: flex;
+      opacity: 1;
     }
   }
   .roundedNav {
@@ -76,10 +76,12 @@ body {
     }
   }
   #inpageNav {
-    display: none;
+    opacity: 0;
+    display: flex;
     margin-left: 45px;
     align-items: center;
     font-size: 12px;
+    transition: opacity .3s;
     #highlighter {
       width: 140px;
       background-color: $primary-color;
@@ -174,6 +176,9 @@ body {
   &.center {
     align-items: center;
   }
+}
+.no-wrap {
+  white-space: nowrap;
 }
 .flex-h {
   display: flex;
