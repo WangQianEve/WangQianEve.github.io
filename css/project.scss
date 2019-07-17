@@ -10,19 +10,20 @@ body {
   height: 56vw;
 }
 .container {
+  width: 100%;
   position: relative;
   z-index: 0;
-  margin-top: 70vw;
+  margin-top: calc(56vw + 200px);
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
 }
 
 .intro-card {
+  align-self: flex-start;
   width: 600px;
-  max-width: 90%;
-  margin: -12vw 5vw 50px;
+  margin-left: -50px;
   position: relative;
   background-color: white;
   padding: 20px 50px;
@@ -69,6 +70,10 @@ body {
   }
 }
 .section {
+  &.intro {
+    position: relative;
+    margin-top: -130px;
+  }
   &.summary-card {
     align-items: flex-start;
     padding-top: 80px;
@@ -197,10 +202,16 @@ body {
   }
   .images {
     flex-shrink: 0;
-    width: 30vw;
+    width: 35%;
     align-self: flex-start;
     padding-top: 10px;
     align-items: center;
+    &.demo {
+      width: 30%;
+      video {
+        outline: none;
+      }
+    }
     &.inline-img {
       width: 50px;
     }
@@ -246,7 +257,7 @@ body {
     flex-shrink: 0;
     flex-grow: 0;
     &.narrow {
-      width: 20vw;
+      width: 25%;
     }
   }
   .btn {
@@ -281,6 +292,10 @@ body {
   }
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
 .small-section {
   padding-bottom: 30px;
 }
@@ -299,7 +314,62 @@ a {
 }
 
 .to-other-projects {
+  width: 100%;
   padding: 50px 10vw 30px;
   justify-content: space-between;
   font-weight: 400;
+  a {
+    text-decoration: none;
+  }
+}
+
+.slideshow-button {
+  cursor: pointer;
+  width: 20px;
+  max-width: 4vw;
+  margin: 0 30px;
+  position: absolute;
+  top: 50%;
+  &.left {
+    left: 0;
+  }
+  &.right {
+    right: 0;
+  }
+}
+.slideshow-item {
+  display: none;
+  &.active {
+    display: flex;
+    justify-content: stretch;
+  }
+}
+
+.dots-wrapper {
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.slideshow-dots {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 4px 8px;
+  border: 1px solid $brandeis-color;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  &.small {
+    width: 7px;
+    height: 7px;
+  }
+  &.active{
+    background-color: $brandeis-color;
+  }
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
 }

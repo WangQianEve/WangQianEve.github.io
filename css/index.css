@@ -13,7 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Prompt", "Helvetica", "Arial", sans-serif;
   font-weight: 200;
   color: #666;
   font-size: 16px;
@@ -43,7 +43,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  transition: background-color .3s, box-shadow .3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
   font-weight: 400;
   display: flex;
   z-index: 100;
@@ -81,7 +81,7 @@ body {
   margin-left: 45px;
   align-items: center;
   font-size: 12px;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 .navbar #inpageNav #highlighter {
   width: 140px;
@@ -225,6 +225,9 @@ body {
 .highlight.sec {
   color: #789CFB !important;
 }
+.highlight.brandeis-color {
+  color: #1A73E8 !important;
+}
 
 .section {
   max-width: 1400px;
@@ -270,7 +273,7 @@ body {
 }
 
 #filter {
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   margin: 100px 10vw 0px;
 }
 #filter .btn {
@@ -295,7 +298,7 @@ body {
 }
 
 .container {
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   display: flex;
   flex-wrap: wrap;
   margin: 20px 5vw;
@@ -306,7 +309,7 @@ body {
   /* Hidden by default */
   padding: 3vw 2vw;
   margin: 5vw 4vw;
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
   text-decoration: none;
   color: gray;
 }

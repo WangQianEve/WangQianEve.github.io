@@ -34,6 +34,25 @@ function initCarousels() {
     })
 };
 
+function slideshow(elem, n) {
+    let slideshow = $(elem).parents('.slideshow-sec');
+    slideshow.find('.active').removeClass('active');
+    slideshow.find('.slideshow-item').eq(n).addClass('active');
+    slideshow.find('.slideshow-dots').eq(n).addClass('active');
+}
+
+function changeSlide(elem, n) {
+    let slides = $(elem).parents('.slideshow-sec').find('.slideshow-item');
+    let max_index = slides.length - 1;
+    let target_index = slides.index(slides.filter('.active')) + n;
+    if (target_index < 0) {
+        target_index = max_index;
+    } else if (target_index > max_index) {
+        target_index = 0;
+    }
+    slideshow(elem, target_index);
+}
+
 $(document).ready(function() {
     initCarousels();
     setInterval(carousel, 3000);
