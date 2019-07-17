@@ -46,8 +46,10 @@ body {
   }
 }
 .section-title {
+  align-self: flex-start;
   display: flex;
   padding: 30px 0;
+  width: 50%;
   .section-line {
     width: 10%;
     border-bottom: 2px solid black;
@@ -74,12 +76,15 @@ body {
     position: relative;
     margin-top: -130px;
   }
+  &.slideshow-sec {
+    align-items: center;
+  }
   &.summary-card {
     align-items: flex-start;
     padding-top: 80px;
     padding-bottom: 50px;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 80px;
     line-height: 1.2em;
     a {
@@ -288,7 +293,6 @@ body {
   .right-link {
     font-weight: 400;
     align-self: flex-end;
-    text-decoration: underline;
   }
 }
 
@@ -314,13 +318,13 @@ a {
 }
 
 .to-other-projects {
+  a {
+    text-decoration: none;
+  }
   width: 100%;
   padding: 50px 10vw 30px;
   justify-content: space-between;
   font-weight: 400;
-  a {
-    text-decoration: none;
-  }
 }
 
 .slideshow-button {

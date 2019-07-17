@@ -47,8 +47,10 @@ body {
 }
 
 .section-title {
+  align-self: flex-start;
   display: flex;
   padding: 30px 0;
+  width: 50%;
 }
 .section-title .section-line {
   width: 10%;
@@ -75,12 +77,15 @@ body {
   position: relative;
   margin-top: -130px;
 }
+.section.slideshow-sec {
+  align-items: center;
+}
 .section.summary-card {
   align-items: flex-start;
   padding-top: 80px;
   padding-bottom: 50px;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 80px;
   line-height: 1.2em;
 }
@@ -285,7 +290,6 @@ body {
 .section .right-link {
   font-weight: 400;
   align-self: flex-end;
-  text-decoration: underline;
 }
 
 img {
