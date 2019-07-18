@@ -94,6 +94,9 @@ $(document).ready(function () {
                 "transform": "scale(" + scale + ")"
             })
         }
+        if (yPosition > 100) {
+            $('.scroll_down').addClass('hidden');
+        }
         updateNavColor($navAnchor, $navbar, yPosition);
     }
 

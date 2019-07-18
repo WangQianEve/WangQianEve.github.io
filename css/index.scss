@@ -7,6 +7,9 @@ $scroll_dist : 30vw;
 .content {
   position: absolute;
   margin-top: $scroll_dist;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &.static {
     position: fixed;
     margin-top: 0;
@@ -59,6 +62,7 @@ $scroll_dist : 30vw;
   transition: opacity .3s;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 20px 5vw;
   .filterDiv {
     width: 38%;
@@ -133,6 +137,10 @@ $scroll_dist : 30vw;
   width: 100%;
 }
 
+#landing_anchor {
+  height: 50px;
+}
+
 #landing_space2 {
   height: 2000px;
   width: 100%;
@@ -157,4 +165,39 @@ $scroll_dist : 30vw;
   border-radius: 30px;
   width: fit-content;
   margin-left: 10vw;
+}
+
+.btt {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.scroll_down::before{
+  content: '╲╱';
+  color: #444;
+  position: absolute;
+  opacity: 1;
+  width: 6rem;
+  font-size: 20px;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  bottom: 2rem;
+  margin-left: -3rem;
+  left: 50%;
+  animation: bounce 1s ease infinite;
+  transition: opacity .3s;
+  z-index: 100;
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

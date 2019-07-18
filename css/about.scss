@@ -30,7 +30,8 @@
 }
 
 .about-highlight {
-  color: $secondary-color;
+  color: #222;
+  font-weight: 300;
   &.first {
     margin-top: 50px;
   }

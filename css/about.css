@@ -28,7 +28,8 @@
 }
 
 .about-highlight {
-  color: #789CFB;
+  color: #222;
+  font-weight: 300;
 }
 .about-highlight.first {
   margin-top: 50px;

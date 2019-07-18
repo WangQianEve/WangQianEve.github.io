@@ -242,7 +242,8 @@ body {
 .highlight {
   color: $primary-color !important;
   &.sec {
-    color: $secondary-color !important;
+    font-weight: 300;
+    //color: $secondary-color !important;
   }
   &.brandeis-color {
     color: #1A73E8 !important;
@@ -250,10 +251,15 @@ body {
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
   max-width: 1300px;
   width: 76vw;
   padding: 20px 90px;
   line-height: 2rem;
+  &.center {
+    align-items: center;
+  }
 }
 
 .section-item {
