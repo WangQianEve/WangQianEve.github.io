@@ -185,7 +185,8 @@ body {
 }
 
 .flex-h {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
 }
 .flex-h.right {
   justify-content: flex-end;
@@ -253,6 +254,9 @@ body {
 }
 .section.center {
   align-items: center;
+}
+.section.code {
+  padding: 0;
 }
 
 .section-item {

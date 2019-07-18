@@ -192,7 +192,8 @@ body {
   white-space: nowrap;
 }
 .flex-h {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
   &.right {
     justify-content: flex-end;
   }
@@ -259,6 +260,9 @@ body {
   line-height: 2rem;
   &.center {
     align-items: center;
+  }
+  &.code {
+    padding: 0;
   }
 }
 
