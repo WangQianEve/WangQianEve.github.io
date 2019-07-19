@@ -197,10 +197,17 @@ body {
   &.right {
     justify-content: flex-end;
   }
+  &.center {
+    justify-content: center;
+  }
+  &.around {
+    justify-content: space-around;
+  }
   &.even {
-    div {
+    > div {
       width: 100%;
       padding: 10px;
+      flex-shrink: 1;
     }
   }
 }
@@ -244,7 +251,8 @@ body {
   color: $primary-color !important;
   &.sec {
     font-weight: 300;
-    //color: $secondary-color !important;
+    //border-bottom: 10px solid $secondary-color;
+    color: $secondary-color !important;
   }
   &.brandeis-color {
     color: #1A73E8 !important;

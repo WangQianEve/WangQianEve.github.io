@@ -192,9 +192,16 @@ body {
 .flex-h.right {
   justify-content: flex-end;
 }
-.flex-h.even div {
+.flex-h.center {
+  justify-content: center;
+}
+.flex-h.around {
+  justify-content: space-around;
+}
+.flex-h.even > div {
   width: 100%;
   padding: 10px;
+  flex-shrink: 1;
 }
 
 .card {
@@ -239,7 +246,7 @@ body {
   color: #FD6161 !important;
 }
 .highlight.sec {
-  font-weight: 300;
+  color: #666 !important;
 }
 .highlight.brandeis-color {
   color: #1A73E8 !important;
