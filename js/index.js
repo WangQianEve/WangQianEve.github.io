@@ -11,7 +11,14 @@ function filterSelection(c) {
     x = document.getElementsByClassName("filterDiv");
     for (i = 0; i < x.length; i++) {
         removeClass(x[i], "show");
-        if (x[i].className.split(' ').indexOf(c) > -1) addClass(x[i], "show");
+        removeClass(x[i], "visible");
+        if (x[i].className.split(' ').indexOf(c) > -1) {
+            addClass(x[i], "show");
+            setTimeout(function (param1) {
+                console.log('hey', param1);
+                addClass(param1, "visible");
+            }, 200, x[i]);
+        }
     }
 }
 

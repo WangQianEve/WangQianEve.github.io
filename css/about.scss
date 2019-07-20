@@ -15,6 +15,7 @@
     margin-bottom: 30px;
   }
   a {
+    border: none;
     margin: 5px 0;
     cursor: pointer;
     color: #888;
@@ -29,13 +30,6 @@
   font-weight: 300;
 }
 
-.about-highlight {
-  color: #222;
-  font-weight: 300;
-  &.first {
-    margin-top: 50px;
-  }
-}
 
 .about-section-title {
   font-size: 18px;
@@ -76,9 +70,23 @@
   }
 }
 
+.about-content {
+  a {
+    text-decoration: none;
+    border-bottom: 1.5px solid $link-color;
+    height: 2em;
+    color: $text;
+  }
+  .about-highlight {
+    color: $primary-color;
+    //background-color: #FFEBEB;
+  }
+}
 .qian {
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1.5px solid $link-color;
+  height: 2em;
   .chi-an {
     background-color: #000000aa;
     width: fit-content;

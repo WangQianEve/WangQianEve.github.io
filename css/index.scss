@@ -68,9 +68,10 @@ $scroll_dist : 30vw;
   .filterDiv {
     width: 38%;
     display: none; /* Hidden by default */
+    opacity: 0;
     padding: 3vw 2vw;
     margin: 5vw 4vw;
-    transition: box-shadow .3s;
+    transition: box-shadow .3s, opacity .3s;
     text-decoration: none;
     color: gray;
     &:hover {
@@ -90,6 +91,9 @@ $scroll_dist : 30vw;
   }
   .show {
     display: block;
+  }
+  .visible {
+    opacity: 1;
   }
 }
 
@@ -210,8 +214,12 @@ $scroll_dist : 30vw;
   padding-top: 20px;
   a {
     font-style: italic;
-    color: $secondary-color;
-    padding: 0 20px;
+    text-decoration: none;
+    border-bottom: 1.5px solid $link-color;
+    color: $link-color;
+    font-weight: 300;
+    height: 2em;
+    margin: 0 20px;
   }
   .right {
     margin-left: auto;

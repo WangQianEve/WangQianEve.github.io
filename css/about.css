@@ -14,6 +14,7 @@
   margin-bottom: 30px;
 }
 .about-card a {
+  border: none;
   margin: 5px 0;
   cursor: pointer;
   color: #888;
@@ -25,14 +26,6 @@
   line-height: 2em;
   color: #444;
   font-weight: 300;
-}
-
-.about-highlight {
-  color: #222;
-  font-weight: 300;
-}
-.about-highlight.first {
-  margin-top: 50px;
 }
 
 .about-section-title {
@@ -74,9 +67,21 @@
   width: 100%;
 }
 
+.about-content a {
+  text-decoration: none;
+  border-bottom: 1.5px solid #789CFB;
+  height: 2em;
+  color: #666;
+}
+.about-content .about-highlight {
+  color: #FD6161;
+}
+
 .qian {
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1.5px solid #789CFB;
+  height: 2em;
 }
 .qian .chi-an {
   background-color: #000000aa;
