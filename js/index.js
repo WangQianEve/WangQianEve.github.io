@@ -58,18 +58,6 @@ function createFilter() {
     }
 }
 
-function checkVisibility($landingAnchor, $landing, $content, yPosition) {
-    if (yPosition >= $landingAnchor.offset().top) {
-        $landing.addClass('hidden');
-        $content.removeClass('static');
-        return false;
-    } else {
-        $landing.removeClass('hidden');
-        $content.addClass('static');
-        return true;
-    }
-}
-
 $highlighterShow = false;
 
 $(document).ready(function () {
@@ -86,27 +74,86 @@ $(document).ready(function () {
     const $navbar = $(".navbar");
     const $navAnchor = $("#nav_anchor");
     const $bannerImg = $(".banner img");
+    const $scrollDown = $(".scroll_down");
+    const $slogan = $(".slogan");
+
+    $landing.on("transitionend", function () {
+        if (window.pageYOffset >= $landingAnchor.offset().top) {
+            $landing.css("display", "none");
+        }
+    });
+
+    const bezierFn = cubicBezierGenerator(.44, .01, .82, .47);
+    const finalScale = 20;
+
+    let $landingImg = $("#landing img");
+    let topOffset = 0;
+
+    function handleResize() {
+        topOffset = Math.min(0, ($window.height() - $landingImg.height()) / 2);
+        $landingImg.css("margin-top", topOffset);
+        toggleLandingAndNavbar();
+    }
 
     function toggleLandingAndNavbar() {
         const yPosition = window.pageYOffset;
-        const visible = checkVisibility($landingAnchor, $landing, $content, yPosition);
+        const maxYPos = $landingAnchor.offset().top;
         const zoomCenter = $zoomAnchor.offset();
-        if (visible) {
+
+        if (yPosition <= maxYPos) {
+            // Visible.
+            $landing.css("display", "");
+            $landing.removeClass('hidden');
+            $content.addClass('static');
+            $scrollDown.removeClass('scroll-hidden');
+            $slogan.addClass('hidden');
+
+            const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
             $landing.css({
-                "transform": "scale(" + (1 + yPosition * 0.1) + ")",
-                "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px"
+                "transform": "scale(" + landingScale + ")",
+                "transform-origin": zoomCenter.left + "px " + (zoomCenter.top) + "px"
             });
-            const scale = Math.max(1, (contentScale - yPosition * 0.001));
+            const bannerScale = Math.max(1, (contentScale - yPosition * 0.001));
             $bannerImg.css({
-                "transform": "scale(" + scale + ")"
-            })
+                "transform": "scale(" + bannerScale + ")"
+            });
+
+        } else {
+            // Not visible.
+            $landing.addClass('hidden');
+            $content.removeClass('static');
+            $scrollDown.addClass('scroll-hidden');
+            $slogan.removeClass('hidden');
         }
-        if (yPosition > 100) {
-            $('.scroll_down').addClass('hidden');
-        }
+
         updateNavColor($navAnchor, $navbar, yPosition);
     }
 
-    $(window).scroll(toggleLandingAndNavbar).resize(toggleLandingAndNavbar);
-    toggleLandingAndNavbar();
+    let $window = $(window);
+
+    let lastScrollTop = $window.scrollTop();
+
+    function scrollTrigger() {
+        const scrollTop = $window.scrollTop();
+        // if (lastScrollTop !== scrollTop) {
+        //     lastScrollTop = scrollTop;
+        toggleLandingAndNavbar();
+        // }
+        window.requestAnimationFrame(scrollTrigger);
+    }
+
+    // scrollTrigger();
+    $window.scroll(toggleLandingAndNavbar);
+
+    $window.resize(handleResize);
+    handleResize();
+
+    // const $landingImg = $("#landing img");
+    // $.get($landingImg.attr("src"), function (data) {
+    //     // console.log($(data).find("svg"));
+    //     let $svgElem = $(data).find("svg");
+    //     $svgElem.removeAttr("width").removeAttr("height");
+    //     $landingImg.replaceWith($svgElem);
+    //     handleResize();
+    // });
 });

@@ -32,7 +32,7 @@ function initCarousels() {
     }).on('mouseleave', function () {
         $(this).addClass('run');
     })
-};
+}
 
 function slideshow(elem, n) {
     let slideshow = $(elem).parents('.slideshow-sec');

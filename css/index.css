@@ -14,7 +14,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Prompt", "Helvetica", "Arial", sans-serif;
+  font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;
   font-weight: 200;
   color: #666;
   font-size: 16px;
@@ -44,7 +44,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color .3s, box-shadow .3s;
   font-weight: 400;
   display: flex;
   z-index: 100;
@@ -82,7 +82,7 @@ body {
   margin-left: 45px;
   align-items: center;
   font-size: 12px;
-  transition: opacity 0.3s;
+  transition: opacity .3s;
 }
 .navbar #inpageNav #highlighter {
   width: 140px;
@@ -299,7 +299,7 @@ body {
 
 .content {
   position: absolute;
-  margin-top: 30vw;
+  margin-top: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -315,6 +315,11 @@ body {
   margin-top: -200px;
   font-size: 44px;
   color: white;
+  transition: opacity .3s;
+  transition-delay: .3s;
+}
+.banner .slogan.hidden {
+  transition-delay: .0s;
 }
 
 .btn {
@@ -325,7 +330,7 @@ body {
 }
 
 #filter {
-  transition: opacity 0.3s;
+  transition: opacity .3s;
   margin: 100px 10vw 0px;
 }
 #filter .btn {
@@ -351,7 +356,7 @@ body {
 }
 
 .container {
-  transition: opacity 0.3s;
+  transition: opacity .3s;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -364,7 +369,7 @@ body {
   opacity: 0;
   padding: 3vw 2vw;
   margin: 5vw 4vw;
-  transition: box-shadow 0.3s, opacity 0.3s;
+  transition: box-shadow .3s, opacity .3s;
   text-decoration: none;
   color: gray;
 }
@@ -411,9 +416,7 @@ body {
   width: 100%;
   position: fixed;
   z-index: 100;
-}
-#landing.hidden {
-  display: none;
+  transition: opacity 0.3s;
 }
 #landing .bg {
   display: flex;
@@ -425,14 +428,16 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: 0 0;
+  outline: 2px solid #fff;
 }
 #landing .bg .white-space {
   flex-grow: 1;
   background-color: white;
+  outline: 2px solid #fff;
 }
 
 #landing_space1 {
-  height: 30vw;
+  height: 40vw;
   width: 100%;
 }
 
@@ -447,7 +452,7 @@ body {
 
 #zoom_anchor {
   margin-left: 52vw;
-  margin-top: 23vw;
+  margin-top: calc(50vh - 6vw);
   position: absolute;
   left: 0;
   top: 0;
@@ -471,9 +476,9 @@ body {
 }
 
 .scroll_down::before {
-  content: "╲╱";
+  content: '╲╱';
   color: #444;
-  position: absolute;
+  position: fixed;
   opacity: 1;
   width: 6rem;
   font-size: 20px;
@@ -484,16 +489,17 @@ body {
   margin-left: -3rem;
   left: 50%;
   animation: bounce 1s ease infinite;
-  transition: opacity 0.3s;
+  transition: opacity 0.1s;
   z-index: 100;
 }
-.scroll_down::before.hidden {
+
+.scroll_down.scroll-hidden::before {
   opacity: 0;
 }
 
 @keyframes bounce {
   50% {
-    transform: translateY(-50%);
+    transform: translateY(-20%);
   }
   100% {
     transform: translateY(0);
