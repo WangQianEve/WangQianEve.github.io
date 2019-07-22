@@ -103,7 +103,10 @@ $(document).ready(function () {
         if (yPosition <= maxYPos) {
             // Visible.
             $landing.css("display", "");
-            $landing.removeClass('hidden');
+            requestAnimationFrame(function () {
+                // Start transition after the element is displayed.
+                $landing.removeClass('hidden');
+            });
             $content.addClass('static');
             $scrollDown.removeClass('scroll-hidden');
             $slogan.addClass('hidden');
@@ -111,19 +114,28 @@ $(document).ready(function () {
             const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
             $landing.css({
                 "transform": "scale(" + landingScale + ")",
-                "transform-origin": zoomCenter.left + "px " + (zoomCenter.top) + "px"
+                "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
             });
             const bannerScale = Math.max(1, (contentScale - yPosition * 0.001));
             $bannerImg.css({
-                "transform": "scale(" + bannerScale + ")"
+                "transform": "scale(" + bannerScale + ")",
             });
 
         } else {
+            if (yPosition <= maxYPos + $landingAnchor.height()) {
+                $content.addClass('static');
+            } else {
+                $content.removeClass('static');
+            }
             // Not visible.
             $landing.addClass('hidden');
-            $content.removeClass('static');
             $scrollDown.addClass('scroll-hidden');
             $slogan.removeClass('hidden');
+            const url = window.location.href;
+            if (url.endsWith("#landing_space2")) {
+                // Remove in-page links so we can jump back to where we left off when navigating back.
+                window.history.replaceState(null, "", url.substr(0, url.length - 15));
+            }
         }
 
         updateNavColor($navAnchor, $navbar, yPosition);
@@ -131,22 +143,15 @@ $(document).ready(function () {
 
     let $window = $(window);
 
-    let lastScrollTop = $window.scrollTop();
-
-    function scrollTrigger() {
-        const scrollTop = $window.scrollTop();
-        // if (lastScrollTop !== scrollTop) {
-        //     lastScrollTop = scrollTop;
-        toggleLandingAndNavbar();
-        // }
-        window.requestAnimationFrame(scrollTrigger);
-    }
-
-    // scrollTrigger();
     $window.scroll(toggleLandingAndNavbar);
-
     $window.resize(handleResize);
+
+    $landingImg.on("load", handleResize);
     handleResize();
+
+    // $scrollDown.click(function () {
+    //     $(document).scrollTop("#landing_space2");
+    // })
 
     // const $landingImg = $("#landing img");
     // $.get($landingImg.attr("src"), function (data) {

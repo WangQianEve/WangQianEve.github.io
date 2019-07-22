@@ -3,10 +3,11 @@
 @import "variables";
 
 $scroll_dist: 40vw;
+$scroll_anchor_height: 100px;
 
 .content {
   position: absolute;
-  margin-top: $scroll_dist;
+  margin-top: calc(#{$scroll_dist} + #{$scroll_anchor_height});
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +42,7 @@ $scroll_dist: 40vw;
 
 #filter {
   transition: opacity .3s;
-  margin: 100px 10vw 0px;
+  margin: 100px 10vw 0;
 
   .btn {
     cursor: pointer;
@@ -150,7 +151,7 @@ $scroll_dist: 40vw;
     img {
       width: 100%;
       object-fit: cover;
-      object-position: 0 0;
+      //object-position: 0 0;
       outline: 2px solid #fff;
     }
 
@@ -168,7 +169,7 @@ $scroll_dist: 40vw;
 }
 
 #landing_anchor {
-  height: 50px;
+  height: $scroll_anchor_height;
 }
 
 #landing_space2 {
