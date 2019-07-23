@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Qian Wang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <link href="css/project.css" rel="stylesheet" type="text/css">
+    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/navbar.js" type="text/javascript"></script>
+    <script src="js/project.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="images/Q.png"/>
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
+    <div id="inpageNav" class="roundedNav">
+        <div id='highlighter' class="roundedNav"></div>
+        <a href="#sec-summary">
+            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center"></div>
+            <div class="nav-section">Summary</div>
+        </a>
+        <a href="#sec-research">
+            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
+            <div class="nav-section">Research</div>
+        </a>
+        <a href="#sec-ideate">
+            <div class="icon" style="-webkit-mask: url(images/nav/ideate.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Ideate</div>
+        </a>
+        <a href="#sec-design">
+            <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Design</div>
+        </a>
+        <a href="#sec-test">
+            <div class="icon" style="-webkit-mask: url(images/nav/testing.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Test</div>
+        </a>
+        <a href="#sec-next">
+            <div class="icon" style="-webkit-mask: url(images/nav/next.svg) no-repeat center"></div>
+            <div class="nav-section">Next Steps</div>
+        </a>
+    </div>
+    <div class="navList dark">
+        <a class="pg-btn active" href="index.html#landing_space2">Design</a>
+        <a class='pg-btn' href="code.html">Code</a>
+        <a class='pg-btn' href="about.html">About</a>
+        <a class='pg-btn' href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
+    </div>
+</div>
+<div class="banner">
+    <img src="images/alexa/alexa-banner.png" alt=""/>
+</div>
+<div class="container flex-v">
+    <div id="nav_anchor"></div>
+    <div class="section intro">
+        <div class="intro-card card">
+            <div class="card-title"> <span class="highlight">2nd Place</span>&nbsp;in Alexa Day Competition</div>
+            <div class="details">
+                <div class="item">Time</div>
+                <div class="content">Feb. 2019 - Apr. 2019 (2 months)</div>
+            </div>
+            <div class="details">
+                <div class="item">Team</div>
+                <div class="content">Melissa Shi / Ally Liu / Qian Wang / Paopao Ge / Sijia Li / Menghan Zhang / Mengqing Jiang / Wei Wang</div>
+            </div>
+            <div class="details">
+                <div class="item">My Role</div>
+                <div class="content">UX Lead / Researcher</div>
+            </div>
+            <div class="details">
+                <div class="item">Tools</div>
+                <div class="content">Tortu / Lucid Chart / Figma / iMovie / Alexa Dev Tools</div>
+            </div>
+        </div>
+    </div>
+    <div id="sec-summary" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">00</div>
+        <div class="section-name">Summary</div>
+    </div>
+    <div class="section">
+        <div class="summary section-item flex-h">
+            <div class="tag narrow">Problem</div>
+            <div>
+                <div class="title highlight">How might we help the visually impaired apply makeup more easily and independently?</div>
+                <div>Currently, there are 285 million people in the world who are visually impaired, with two-thirds of whom are female. However, it’s not easy for them to apply makeup on their own. In the current makeup industry, the visually impaired are often ignored and being under-served. However, we believe, “Everyone has the right to wear makeup, be confident and beautiful.”</div>
+            </div>
+        </div>
+        <div class="summary section-item flex-h">
+            <div class="tag narrow">Solution</div>
+            <div>
+                <div class="title highlight">An Alexa Skill that provides guidance applying makeup and checks the makeup.</div>
+                <div>With the help of 4 girls who have different kinds of visual impairment, we learned that the most challenging step of all is to check if things are well done. So we designed a voice user interface (VUI) as an Alexa Skill focusing on checking makeup and providing guidance and tips.</div>
+            </div>
+        </div>
+    </div>
+    <div class="section color-bg sec card">
+        <div class="section-item">
+            <div class="tag highlight">How does it work?</div>
+        </div>
+        <div class="section-item flex-h">
+            <div class="flex-v v-center">
+                <div class="title">Check if the makeup is done well through computer vision.</div>
+                <div>Users can ask Beauty+ to check their current makeup at any time. Beauty+ will take a picture and use <span class="highlight sec">computer vision</span> technologies to check if the product is <span class="highlight sec">blended well</span> or if there is any <span class="highlight sec">unexpected color</span> (e.g., not fully covered acne, mascara stains, eyebrow mistakes). </div>
+            </div>
+            <div class="images right">
+<!--                <img src="images/alexa/feature1.png"/>-->
+                <video class="slide active" autoplay="" loop="" muted="">
+                    <source src="videos/alexa/Alexa%20Demo1.webm" type="video/webm">
+                </video>
+            </div>
+        </div>
+        <div class="section-item flex-h">
+            <div class="images left">
+<!--                <img src="images/alexa/feature2.png"/>-->
+                <video class="slide active" autoplay="" loop="" muted="">
+                    <source src="videos/alexa/Alexa%20Demo2.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="flex-v v-center">
+                <div class="title">Tailored guidance and tips</div>
+                <div>Beauty+ can guide users step by step, and provide tailored tips when needed. We gathered <span class="highlight sec">121 tips</span>, and many of them are especially designed for people with no or limited vision.</div>
+            </div>
+        </div>
+    </div>
+    <div class="block color-bg trd overflow">
+        <div class="section">
+            <div class="tag highlight">Market Value</div>
+            <div class="paragraph">Users can ask Beauty+ to check their current makeup at anytime. Beauty+ will take a picture and use computer vision technology to check if the product is blended well or if there is any unexpected color (not fully covered acne, mascara stains, eyebrow mistakes etc.). </div>
+            <div class="section-item flex-h">
+                <div class="flex-v center">
+                    <div class="large">48.3 B</div>
+                    <div>Market Value</div>
+                </div>
+                <div class="flex-v center">
+                    <div class="large">5.5%</div>
+                    <div>Yearly Growth</div>
+                </div>
+                <div class="flex-v center">
+                    <div class="large">85%</div>
+                    <div>Women wear Makeup</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section color-bg color-summary card summary-card">
+        <div class="large-title first">DESIGN</div>
+        <div class="large-title">PROCESS</div>
+        <div class="flex-h summary-container">
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-research"><b>Research</b></a></div>
+                    <div><a href="#competitor">Competitor Analysis</a></div>
+                    <div><a href="#role-play">12 Role-Plays</a></div>
+                    <div><a href="#contextual">4 Contextual Interviews</a></div>
+                </div>
+            </div>
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/ideate.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-ideate"><b>Ideate</b></a></div>
+                    <div><a href="#personas">Personas</a></div>
+                    <div><a  href="#walk-the-wall">Walking the wall</a></div>
+                </div>
+            </div>
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-design"><b>Design</b></a></div>
+                    <div><a href="#technical">Technical Experiments</a></div>
+                    <div><a href="#more-research">More researches</a></div>
+                    <div><a  href="#dialogue-flow">Dialogue Flow</a></div>
+                </div>
+            </div>
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/testing.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-test"><b>Testing</b></a></div>
+                    <div><a href="#wizard-of-oz">Wizard of Oz</a></div>
+                    <div><a href="#prototyping">Technical Prototyping</a></div>
+                </div></div>
+            </div>
+    </div>
+<!--Research-->
+    <div id="sec-research" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">01</div>
+        <div class="section-name">Research</div>
+    </div>
+    <div class="section">
+        <div id="competitor" class="section-item flex-h">
+            <div>
+                <div class="tag highlight">Competitor Analysis</div>
+                <div class="title">The makeup industry has been ignoring people with visual impairments.</div>
+                <p>We researched <span class="highlight sec">current technologies</span> in the makeup industry but sadly didn’t find any that are designed for people with visual impairments. In fact, none of the products we found support accessible features as simple as auditory feedback. We listed their main features to benchmark our future design.</p>
+                <p>Since video blog is a mainstream way to learn about makeup, we also researched <span class="highlight sec">makeup videos on Youtube</span>. We found many makeup tutorials made by blind people, but <span class="highlight sec">didn’t see any intended to teach blind people</span>.</p>
+            </div>
+            <div class="images right">
+                <img src="images/alexa/competitor.png"/>
+                <div class="caption">existing competitors</div>
+            </div>
+        </div>
+        <div id="role-play" class="section-item flex-v">
+            <div class="flex-h">
+                <div class="images left">
+                    <video autoplay loop>
+                        <source src="videos/alexa/mockup.webm" type="video/webm"> Your browser does not support HTML 5 video tag.
+                    </video>
+                </div>
+                <div>
+                    <div class="tag highlight">Role-Play</div>
+                    <div class="title">We tried putting on makeup without vision to better empathize with users.</div>
+                    <p>To better <span class="highlight sec">empathize</span> with people with visual impairments and <span class="highlight sec">prepare for future user interviews</span>, we did role-play makeups, which means we put on makeup with eyes closed. Each of us did two role-plays, one by ourselves, one following a youtube tutorial.</p>
+                </div>
+            </div>
+            <img class="insights" src="images/alexa/insights-roleplay.png"/>
+        </div>
+        <div id="contextual" class="section-item flex-v">
+            <div class="narrow-text">
+                <div class="tag highlight">Contextual Interviews</div>
+                <div class="title">We interviewed target users to validate assumptions and reveal more user needs.</div>
+                <p>We interviewed <span class="highlight sec">three individuals with different types of visual impairments</span> (including blindness), and observed them doing their daily makeup routine or follow a tutorial if they don’t usually use makeup.</p>
+            </div>
+            <img class="insights" src="images/alexa/insights-interview.png"/>
+        </div>
+    </div>
+
+    <div class="block color-bg trd padding">
+        <div id="sec-ideate" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">02</div>
+            <div class="section-name">Ideate</div>
+        </div>
+        <div class="section">
+            <div id="personas" class="section-item ">
+                <div class="tag highlight">Personas</div>
+                <p>We summarized two primary personas. One is an experienced makeup user who needs help mainly for the final check; the other is a novice user who needs more guidance and tips.</p>
+                <div class="flex-h">
+                    <div class="images left even">
+                        <img src="images/alexa/persona1.png"/>
+                    </div>
+                    <div  class="images right even">
+                        <img  src="images/alexa/persona2.png"/>
+                    </div>
+                </div>
+            </div>
+            <div id="walk-the-wall" class="section-item">
+                <div class="tag highlight">Walking the wall & Ideate</div>
+                <p>For ideation, we used “walking the wall” method. Design ideas were then plotted on a cost/value matrix. </p>
+                <div class="images full">
+                    <img src="images/alexa/ideation.png"/>
+                </div>
+                <p>In the end, we picked two features as the core features, along with five other features to include in our final design.</p>
+                <div class="images full">
+                    <img src="images/alexa/features.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sec-design" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">03</div>
+        <div class="section-name">Design</div>
+    </div>
+    <div class="section">
+        <div id="technical" class="section-item flex-h">
+            <div>
+                <div class="tag highlight">Technical Experiments</div>
+                <div class="title">Facing this unfamiliar platform, we prepared ourselves by building a simple app on it.</div>
+                <p>With no experience designing an Alexa Skill, how can we quickly learn about the capabilities and limitations of this platform? I first looked into design guidelines and development documentations, and then designed and built a simple Alexa Skill. This hands-on experience helped me get to know the <span class="highlight sec">framework, useful resources, and best practices</span> to design for it. I was also able to experiment the <span class="highlight sec">boundaries of its capabilities.</span></p>
+            </div>
+            <div class="images right">
+                <img src="images/alexa/technical.png"/>
+            </div>
+        </div>
+        <div id="more-research" class="section-item flex-h">
+            <div>
+                <div class="tag highlight">Background Research</div>
+                <div class="title">We did more research to build a set of tips tailored to the target users.</div>
+                <p>We looked through <span class="highlight sec">more than 100 makeup videos and articles</span> and compiled a list of proper tips. We organized them into four categories: <span class="highlight sec">“For first-time users,” “How to apply,” “How to fix,”</span> and <span class="highlight sec">“How to self-check.”</span></p>
+            </div>
+            <div class="images right">
+                <img src="images/alexa/moreresearch.png"/>
+            </div>
+        </div>
+        <div id="dialogue-flow" class="section-item">
+            <div class="tag highlight">Dialogue Flow</div>
+            <div class="title">Finally, we designed the conversation flow and wrote scripts together.</div>
+            <p>For prototyping the conversational UI, we started with a whiteboard, markers, and post-its, and then digitized them as a flow of intents with <span class="highlight sec">Tortu and Lucid Chart</span>. We broke down the flow into several parts and designed anchors to link them. After finalizing the flow, we wrote example utterances with slots for each intent.</p>
+            <div class="images full">
+                <img src="images/alexa/dialogueflow.png"/>
+                <div class="caption">Dialog flow broken down into several parts</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block color-bg trd padding">
+        <div id="sec-test" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">04</div>
+            <div class="section-name">Test & Iterate</div>
+        </div>
+        <div class="section">
+            <div id="wizard-of-oz" class="section-item">
+                <div class="tag highlight">Wizard of Oz</div>
+                <div class="title">DON’T OVERKILL in responses.</div>
+                <p>We want to be polite, we want to be helpful, and we want to <span class="highlight sec">guarantee discoverability of key features</span>. However, these are not reasons for having overly verbose responses. Through “Wizard of Oz” testing, we made our responses more concise, and the dialogue flows simpler. Below are <span class="highlight sec">tips we learned:</span></p>
+                <ul>
+                    <li>VUI shouldn’t offer more than two options at a time.</li>
+                    <li>Customize response based on user needs.</li>
+                    <li>Pause as progressive disclosure.</li>
+                    <li>Reply “Let me know ...” rather than “Do you want ...?” to simplify the flow.</li>
+                    <li>Don’t ask, just do. </li>
+                </ul>
+                <p class="highlight sec">See below for examples:</p>
+                <div class="slides images full flex-v run">
+                    <img class="slide active" src="images/alexa/example1.png">
+                    <img class="slide" src="images/alexa/example2.png">
+                    <div class="demo">
+                        <div class="active" onclick="currentDiv(this,0)">
+                            <img src="images/alexa/example1.png">
+                        </div>
+                        <div onclick="currentDiv(this,1)" class="">
+                            <img src="images/alexa/example2.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="prototyping" class="section-item">
+                <div class="tag highlight">Technical Prototyping</div>
+                <div class="title">Prototyping reveals more unexpected detail limitations.</div>
+                <p>Building in Alexa and hearing the responses reveals more detailed problems due to the platform and technology. </p>
+                <ul>
+                    <li>Skill name cannot contain “Echo” (our original name is “Echo Beauty”).</li>
+                    <li>Alexa’s tone is limited, with only two punctuations (“,” and “.”) supported. So question marks, dashes, and apostrophes needed to be replaced while remaining similar tones.</li>
+                </ul>
+                <p class="highlight sec">See below for technical details:</p>
+                <div class="slides images full flex-v run">
+                    <img class="slide active" src="images/alexa/technical1.png">
+                    <img class="slide" src="images/alexa/technical2.png">
+                    <img class="slide" src="images/alexa/technical3.png">
+                    <img class="slide" src="images/alexa/technical4.png">
+                    <img class="slide" src="images/alexa/technical5.png">
+                    <div class="demo">
+                        <div class="active" onclick="currentDiv(this,0)">
+                            <img src="images/alexa/technical1.png">
+                        </div>
+                        <div onclick="currentDiv(this,1)" class="">
+                            <img src="images/alexa/technical2.png">
+                        </div>
+                        <div onclick="currentDiv(this,2)" class="">
+                            <img src="images/alexa/technical3.png">
+                        </div>
+                        <div onclick="currentDiv(this,3)" class="">
+                            <img src="images/alexa/technical4.png">
+                        </div>
+                        <div onclick="currentDiv(this,4)" class="">
+                            <img src="images/alexa/technical5.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sec-next" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">05</div>
+        <div class="section-name">Next Steps</div>
+    </div>
+    <div class="section">
+        <div class="section-item">
+            <p style="color:#444">As a first step towards accessible makeup for the visually impaired, our solution is still far from perfect. Future steps for this project can be:</p>
+            <ul>
+                <li><span class="highlight sec">Test with more users</span> who have visual impairments to refine current design and scripts.</li>
+                <li><span class="highlight sec">Design a personality</span> for the skill to make it more adorable and memorable.</li>
+                <li>Identify and design for higher-level user needs, e.g. <span class="highlight sec">emotional needs.</span></li>
+                <li>Explore potential ways to incorporate or tackle more <span class="highlight sec">high-value-high-cost features</span>.</li>
+                <li>Expand our target user group and design for <span class="highlight sec">the general crowd.</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="to-other-projects flex-h">
+        <a href="brandeis.html">← Previous: Brandeis</a>
+        <a href="liquidnet.html">Next: Trading Alert Design →</a>
+    </div>
+
+    <div class="footer">Website designed and developed by @ Qian Wang 2019</div>
+</body>
+</html>

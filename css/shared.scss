@@ -247,6 +247,11 @@ body {
     background: linear-gradient(#FD6161, #FF956C);
   }
 }
+
+.highlight-content {
+  background-color: $link-bg-color;
+}
+
 .highlight {
   color: $primary-color !important;
   &.sec {

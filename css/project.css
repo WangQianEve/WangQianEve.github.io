@@ -207,7 +207,7 @@ body {
   opacity: 1;
 }
 .section .slides.video16-9 video {
-  height: 16.5vw;
+  height: 12vw;
 }
 .section .images {
   flex-shrink: 0;

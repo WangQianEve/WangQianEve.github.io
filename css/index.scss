@@ -78,10 +78,11 @@ $scroll_anchor_height: 100px;
 
   .filterDiv {
     width: 38%;
+    max-width: 500px;
     display: none; /* Hidden by default */
     opacity: 0;
-    padding: 3vw 2vw;
-    margin: 5vw 4vw;
+    padding: 30px 25px;
+    margin: 30px 25px;
     transition: box-shadow .3s, opacity .3s;
     text-decoration: none;
     color: gray;

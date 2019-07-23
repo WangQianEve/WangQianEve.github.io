@@ -14,7 +14,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Prompt", "Helvetica", "Arial", sans-serif;
   font-weight: 200;
   color: #666;
   font-size: 16px;
@@ -44,7 +44,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  transition: background-color .3s, box-shadow .3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
   font-weight: 400;
   display: flex;
   z-index: 100;
@@ -82,7 +82,7 @@ body {
   margin-left: 45px;
   align-items: center;
   font-size: 12px;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 .navbar #inpageNav #highlighter {
   width: 140px;
@@ -242,6 +242,10 @@ body {
   background: linear-gradient(#FD6161, #FF956C);
 }
 
+.highlight-content {
+  background-color: #E0EBFF;
+}
+
 .highlight {
   color: #FD6161 !important;
 }
@@ -315,11 +319,11 @@ body {
   margin-top: -200px;
   font-size: 44px;
   color: white;
-  transition: opacity .3s;
-  transition-delay: .3s;
+  transition: opacity 0.3s;
+  transition-delay: 0.3s;
 }
 .banner .slogan.hidden {
-  transition-delay: .0s;
+  transition-delay: 0s;
 }
 
 .btn {
@@ -330,7 +334,7 @@ body {
 }
 
 #filter {
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   margin: 100px 10vw 0;
 }
 #filter .btn {
@@ -356,7 +360,7 @@ body {
 }
 
 .container {
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -364,12 +368,13 @@ body {
 }
 .container .filterDiv {
   width: 38%;
+  max-width: 500px;
   display: none;
   /* Hidden by default */
   opacity: 0;
-  padding: 3vw 2vw;
-  margin: 5vw 4vw;
-  transition: box-shadow .3s, opacity .3s;
+  padding: 30px 25px;
+  margin: 30px 25px;
+  transition: box-shadow 0.3s, opacity 0.3s;
   text-decoration: none;
   color: gray;
 }
@@ -475,7 +480,7 @@ body {
 }
 
 .scroll_down::before {
-  content: '╲╱';
+  content: "╲╱";
   color: #444;
   position: fixed;
   opacity: 1;

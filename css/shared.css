@@ -241,6 +241,10 @@ body {
   background: linear-gradient(#FD6161, #FF956C);
 }
 
+.highlight-content {
+  background-color: #E0EBFF;
+}
+
 .highlight {
   color: #FD6161 !important;
 }
