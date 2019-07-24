@@ -20,10 +20,17 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.container a {
+  color: #789CFB;
+  border-bottom: 1.5px solid #789CFB;
+  height: 2em;
+  text-decoration: none;
+}
 
 .intro-card {
   align-self: flex-start;
-  width: 600px;
+  width: 800px;
+  max-width: 100%;
   margin-left: -50px;
   position: relative;
   background-color: white;
@@ -100,6 +107,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-style: normal;
+  border: none;
 }
 .section.summary-card .items > div {
   padding: 6px 0;
@@ -131,6 +139,22 @@ body {
 }
 .section.summary-card .summary-container > div {
   width: 30%;
+}
+.section.summary-card .contrib-title {
+  margin-top: 2vw;
+  width: 100%;
+}
+.section.summary-card .contrib-title .line {
+  border-bottom: white 1px solid;
+  height: 9px;
+  flex-grow: 1;
+}
+.section.summary-card .contrib-title b {
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+.section.summary-card p {
+  line-height: 1.8em;
 }
 .section .summary .title {
   padding-top: 0;
@@ -291,6 +315,7 @@ body {
   box-shadow: 2px 2px 10px #00000011;
   text-decoration: none;
   font-style: normal;
+  border: none;
 }
 .section .btn.light {
   background-color: white;
@@ -327,11 +352,6 @@ img {
 }
 .background.right {
   align-self: flex-end;
-}
-
-a {
-  color: #789CFB;
-  font-style: italic;
 }
 
 .to-other-projects {

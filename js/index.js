@@ -15,7 +15,6 @@ function filterSelection(c) {
         if (x[i].className.split(' ').indexOf(c) > -1) {
             addClass(x[i], "show");
             setTimeout(function (param1) {
-                console.log('hey', param1);
                 addClass(param1, "visible");
             }, 200, x[i]);
         }
@@ -59,6 +58,7 @@ function createFilter() {
 }
 
 $highlighterShow = false;
+first_time_scroll = true;
 
 $(document).ready(function () {
     filterSelection("featured");
@@ -89,6 +89,7 @@ $(document).ready(function () {
     let $landingImg = $("#landing img");
     let topOffset = 0;
 
+
     function handleResize() {
         topOffset = Math.min(0, ($window.height() - $landingImg.height()) / 2);
         $landingImg.css("margin-top", topOffset);
@@ -101,31 +102,35 @@ $(document).ready(function () {
         const zoomCenter = $zoomAnchor.offset();
 
         if (yPosition <= maxYPos) {
-            // Visible.
-            $landing.css("display", "");
-            requestAnimationFrame(function () {
-                // Start transition after the element is displayed.
-                $landing.removeClass('hidden');
-            });
-            $content.addClass('static');
-            $scrollDown.removeClass('scroll-hidden');
-            $slogan.addClass('hidden');
+            if (first_time_scroll) {
+                // Visible.
+                $landing.css("display", "");
+                requestAnimationFrame(function () {
+                    // Start transition after the element is displayed.
+                    $landing.removeClass('hidden');
+                });
+                $content.addClass('static');
+                $scrollDown.removeClass('scroll-hidden');
+                $slogan.addClass('hidden');
 
-            const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
-            $landing.css({
-                "transform": "scale(" + landingScale + ")",
-                "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
-            });
-            const bannerScale = Math.max(1, (contentScale - yPosition * 0.001));
-            $bannerImg.css({
-                "transform": "scale(" + bannerScale + ")",
-            });
-
+                const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
+                $landing.css({
+                    "transform": "scale(" + landingScale + ")",
+                    "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
+                });
+                const bannerScale = Math.max(1, (contentScale - yPosition * 0.001));
+                $bannerImg.css({
+                    "transform": "scale(" + bannerScale + ")",
+                });
+            }
         } else {
             if (yPosition <= maxYPos + $landingAnchor.height()) {
                 $content.addClass('static');
             } else {
                 $content.removeClass('static');
+            }
+            if (first_time_scroll) {
+                first_time_scroll = false;
             }
             // Not visible.
             $landing.addClass('hidden');
@@ -148,17 +153,4 @@ $(document).ready(function () {
 
     $landingImg.on("load", handleResize);
     handleResize();
-
-    // $scrollDown.click(function () {
-    //     $(document).scrollTop("#landing_space2");
-    // })
-
-    // const $landingImg = $("#landing img");
-    // $.get($landingImg.attr("src"), function (data) {
-    //     // console.log($(data).find("svg"));
-    //     let $svgElem = $(data).find("svg");
-    //     $svgElem.removeAttr("width").removeAttr("height");
-    //     $landingImg.replaceWith($svgElem);
-    //     handleResize();
-    // });
 });

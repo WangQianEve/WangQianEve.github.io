@@ -11,7 +11,7 @@ $scroll_anchor_height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 100%;
   &.static {
     position: fixed;
     margin-top: 0;
@@ -75,7 +75,7 @@ $scroll_anchor_height: 100px;
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px 5vw;
-
+  width: 90vw;
   .filterDiv {
     width: 38%;
     max-width: 500px;
@@ -174,9 +174,8 @@ $scroll_anchor_height: 100px;
 }
 
 #landing_space2 {
-  height: 2000px;
+  height:calc(100vh + 50px);
   width: 100%;
-  //border: solid red 1px;
 }
 
 #zoom_anchor {

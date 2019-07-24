@@ -307,6 +307,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .content.static {
   position: fixed;
@@ -365,6 +366,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px 5vw;
+  width: 90vw;
 }
 .container .filterDiv {
   width: 38%;
@@ -450,7 +452,7 @@ body {
 }
 
 #landing_space2 {
-  height: 2000px;
+  height: calc(100vh + 50px);
   width: 100%;
 }
 
