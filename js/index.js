@@ -57,10 +57,16 @@ function createFilter() {
     }
 }
 
+function showAllCodeWork() {
+    $('.code.noshow').removeClass('noshow');
+    $('.code-more').addClass('noshow');
+}
+
 $highlighterShow = false;
 first_time_scroll = true;
 
 $(document).ready(function () {
+    $(this).scrollTop(0);
     filterSelection("featured");
     createFilter();
     // landing page
@@ -78,9 +84,7 @@ $(document).ready(function () {
     const $slogan = $(".slogan");
 
     $landing.on("transitionend", function () {
-        if (window.pageYOffset >= $landingAnchor.offset().top) {
-            $landing.css("display", "none");
-        }
+        $landing.css("display", "none");
     });
 
     const bezierFn = cubicBezierGenerator(.44, .01, .82, .47);
@@ -124,11 +128,7 @@ $(document).ready(function () {
                 });
             }
         } else {
-            if (yPosition > $landingAnchor.offset()) {
-                $content.removeClass('static');
-            } else {
-                $content.addClass('static');
-            }
+            $content.removeClass('static');
             if (first_time_scroll) {
                 first_time_scroll = false;
                 window.scrollTo(0, 0);
@@ -151,7 +151,7 @@ $(document).ready(function () {
 
     $window.scroll(toggleLandingAndNavbar);
     $window.resize(handleResize);
-
-    $landingImg.on("load", handleResize);
-    handleResize();
+    // $landingImg.on("load", handleResize);
+    // handleResize();
+    // toggleLandingAndNavbar();
 });

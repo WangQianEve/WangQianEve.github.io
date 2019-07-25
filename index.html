@@ -17,37 +17,37 @@
         <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
         <div></div>
         <div class="navList dark">
-            <a class="pg-btn active" href="index.html#landing_space2" >Design</a>
-            <a class='pg-btn' href="code.html">Code</a>
+            <a class="pg-btn active" href="index.html">Work</a>
             <a class='pg-btn' href="about.html">About</a>
             <a class='pg-btn' href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
         </div>
     </div>
-    <div id="landing_space1"></div>
     <div id="landing_anchor"></div>
     <div id="landing_space2"></div>
     <div id="content" class="content static">
         <div class="banner">
             <div id="nav_anchor"></div>
-            <img src="images/homepage-banner.svg" alt="">
-            <div class="slogan hidden">Design to solve problems<br>Design to bring joy and care</div>
+<!--            <div class="slogan hidden">Design to solve problems<br>Design to bring joy and care</div>-->
         </div>
-        <div id="filter">
-            <button class="btn active" onclick="filterSelection('featured')"> Featured (6)</button>
-            <button class="btn" onclick="filterSelection('filterDiv')"> All (10)</button>
-            <button class="btn" onclick="filterSelection('vui')"> VUI (2)</button>
-            <button class="btn" onclick="filterSelection('ai')"> AI (6)</button>
-            <button class="btn" onclick="filterSelection('game')"> Game Design (3)</button>
-            <button class="btn" onclick="filterSelection('research')"> Research (4)</button>
+        <div class="section-title">
+            <div class="title">Design</div>
+            <div id="filter">
+                <button class="btn active" onclick="filterSelection('featured')"> Featured (4)</button>
+                <button class="btn" onclick="filterSelection('filterDiv')"> All (10)</button>
+                <button class="btn" onclick="filterSelection('vui')"> VUI (2)</button>
+                <button class="btn" onclick="filterSelection('ai')"> AI (6)</button>
+                <button class="btn" onclick="filterSelection('game')"> Game Design (3)</button>
+                <button class="btn" onclick="filterSelection('research')"> Research (4)</button>
+            </div>
         </div>
         <div class="container">
             <a href="liquidnet.html" class="filterDiv featured ui research ai">
                 <img src="images/capstone.png" alt=""/>
                 <div class="title">
-                    <div class="t1">Design for Smart Trading Alerts</div>
+                    <div class="t1">Liquidnet</div>
                     <div class="btn">AI</div>
                 </div>
-                <div class="description">An alert system that increases user engagement and drives personalization.</div>
+                <div class="description">A smart alert system redesign that increases user engagement and drives personalization.</div>
             </a>
             <a href="brandeis.html" class="filterDiv featured ui">
                 <img src="images/brandeis.png" alt=""/>
@@ -78,7 +78,7 @@
                 <div class="description">Adapting Venmo interface with AI technology</div>
             </a>
             <!--href="iml-quiz.html" -->
-            <a class="filterDiv featured ai ui game">
+            <a class="filterDiv ai ui game">
                 <img src="images/aimage%20quiz.png" alt=""/>
                 <div class="coming-soon-label">Coming Soon</div>
                 <div class="title">
@@ -90,7 +90,7 @@
                 <div class="description">A quiz game that generate labeled data for an interpretable machine learning project.</div>
             </a>
             <!--href="lane.html" -->
-            <a class="filterDiv featured ui">
+            <a class="filterDiv ui">
                 <img src="images/lane.png" alt=""/>
                 <div class="coming-soon-label">Coming Soon</div>
                 <div class="title">
@@ -145,12 +145,139 @@
             </a>
             <!--href="dlog.html" -->
         </div>
-        <a class="section center btt" href="#landing_space2">
-            <img src="images/arrow.svg"/>
-            <div>Back To Top</div>
-        </a>
-        <div class="footer">Website designed and developed by @ Qian Wang 2019</div>
+        <div class="bg-dark">
+            <div class="section-title">
+                <div class="title">Development</div>
+            </div>
+            <div class="container code">
+                <div class="section-item flex-h code">
+                    <div class="code-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/forceboard.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="flex-v">
+                        <div class="code-title">Forceboard: Pressure-based text entry</div>
+                        <i class="collaboration"><b>Advisors</b>: Prof. Yuanchun Shi, Prof. Chun Yu <b>Collaborator</b>: Mingyuan Zhong, Xuhai Xu</i>
+                        <div>ForceTouch describes the idea of leveraging pressure to type. Users apply pressure on the interface to position a sliding cursor over the desired letter and confirm the selection with a quick release.</div>
+                        <div class="flex-h code-actions">
+                            <div class="btn">Google Glass Dev</div>
+                            <a class="right" target="_blank" href="https://dl.acm.org/citation.cfm?id=3174102">SIGCHI 2018 Paper</a>
+                            <a target="_blank" href="https://github.com/WangQianEve/ForceBoard">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-item flex-h code">
+                    <div class="code-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/SpeechExplosion.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="flex-v">
+                        <div class="code-title">Speech Explosion: A voice-interactive wall installation with infrared sensors.</div>
+                        <i class="collaboration"><b>Collaborator</b>: Ran Shu, Hanzheng Wang</i>
+                        <p>Speech Explosion is part of an exhibition at an AI company showing the evolution of human intelligence. It's composed of a projection of the web-page, a voice recognition engine, and an infrared sensor to activate the engine only when people are around. I joined the project to improve the user experience and implement it.</p>
+                        <div class="flex-h code-actions">
+                            <div class="btn">Web</div>
+                            <div class="btn">Arduino</div>
+                            <a class="right" target="_blank" href="https://github.com/WangQianEve/SpeechExplosion">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-item flex-h code">
+                    <div class="code-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/Labeling.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="flex-v">
+                        <div class="code-title">Pointcloud Labeling Technique</div>
+                        <i class="collaboration"><b>Collaborator</b>: Jun Peng, Tiancheng Lou, Wenchao Zheng, Bocong Liu, Ruidong Tang</i>
+                        <div>A machine learning-empowered interaction method that helps people rapidly labeling pointcloud data for autonomous driving technology.</div>
+                        <div class="flex-h code-actions">
+                            <div class="btn">Qt</div>
+                            <div class="btn">OpenGL</div>
+                            <a class="right">Patent No. CN201810075279.8</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-item flex-h code noshow">
+                    <div class="code-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/KSI.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="flex-v">
+                        <div class="code-title">Index Sense: Use the keyboard surface as a touchpad. </div>
+                        <i class="collaboration"><b>Advisor</b>: Prof. Anind Dey <b>Collaborator</b>: Julian Ramos</i>
+                        <div>We explored a new space for interaction on laptops -- keyboard surface. We used computer vision technology to detect the 3D position of the finger tip, thus supporting using the keyboard surface as a track pad. Fitts law experiments shows the speed of our design is much faster than track pad, almost as fast as the mouse.</div>
+                        <div class="flex-h code-actions">
+                            <div class="btn">Computer Vision</div>
+                            <a class="right" target="_blank" href="videos/code/ksi_paper.pdf">Paper</a>
+                            <a target="_blank" href="https://github.com/WangQianEve/KSI">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-item flex-h code noshow">
+                    <div class="code-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/Jitters.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="flex-v">
+                        <div class="code-title">Detect jitters in mobile phone transition animations and model users' perception of it.</div>
+                        <i class="collaboration"><b>Advisors</b>: Prof. Yuanchun Shi, Prof. Chun Yu <b>Collaborator</b>: Mingyuan Zhong<b> Sponsor</b>: Huawei</i>
+                        <div>To guarantee a smoother mobile user experience, we built an animation evaluation system. It uses computer vision technology to detect jitters and uses machine learning technology to predict users' perception of the jitters, thus deciding how to improve the user experience. The machine learning model is built based on data from an online user study of more than 2000 people. </div>
+                        <div class="flex-h code-actions">
+                            <div class="btn">Computer Vision</div>
+                            <div class="btn">Machine Learning</div>
+                            <div class="btn">Android</div>
+                            <a target="_blank" href="doc/qian's%20thesis.pdf" class="right">Paper (Chinese)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-item flex-h code noshow">
+                    <div class="code-image">
+                        <img src="images/code/gesture-controlled-animation.webp">
+                    </div>
+                    <div class="flex-v">
+                        <div class="code-title">Hand gesture-controlled animation generating tool</div>
+                        <i class="collaboration"><b>Advisors</b>: Prof. Yuanchun Shi, Prof. Chun Yu <b>Collaborator</b>: Yudong Chen, Guangbin Chen</i>
+                        <div>We build an animation generation tool to experiments how well can we use our hands to control the movement of the avatar. The system is built on Unity using Leap Motion as the gesture recognition component. The result shows that at least direct manipulation is not accurate enough and is too tiring.</div>
+                        <div class="flex-h code-actions">
+                            <div class="btn">Unity</div>
+                            <div class="btn">Leap Motion</div>
+                            <a target="_blank" href="videos/code/gca_demo.mp4" class="right">Demo Video</a>
+                            <a target="_blank" href="doc/gca_report.pdf" class="">Documentation (Chinese)</a>
+                            <a target="_blank" href="https://github.com/WangQianEve/GestureControlledAnimation" class="">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-item flex-h code noshow">
+                    <div class="code-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/Gooseberry.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="flex-v">
+                        <div class="code-title">Gooseberry: group meeting scheduling tool</div>
+                        <i class="collaboration"><b>Advisors</b>: Jie Tang <b>Collaborator</b>: Xinran Wang</i>
+                        <div>The core idea is to show the overlap of people's available time through color. Users can add their schedule through drag and drop and can link it with their calendar. Yes, it sounds/looks a lot like when2meet.com, which I like a lot. However, back in 2017 when I did this project, I haven't heard/seen anything similar.</div>
+                        <div class="flex-h code-actions">
+                            <div class="btn">Web Frontend + Backend</div>
+                            <div class="btn">OAuth + Mysql</div>
+                            <a target="_blank" href="https://github.com/WangQianEve/Gooseberry" class="right">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="code-more" onclick="showAllCodeWork()">View More</a>
+            <div class="footer">Website designed and developed by @ Qian Wang 2019</div>
+        </div>
     </div>
+    <a class="up-btn" href="#content">
+        <img src="images/up-arrow.svg"/>
+    </a>
     <div id="zoom_anchor"></div>
     <div id="landing">
         <div class="bg">
