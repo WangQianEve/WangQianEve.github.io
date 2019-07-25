@@ -3,7 +3,6 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -303,7 +302,6 @@ body {
 
 .content {
   position: absolute;
-  margin-top: calc(40vw + 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -314,6 +312,9 @@ body {
   margin-top: 0;
 }
 
+.banner {
+  height: fit-content;
+}
 .banner .slogan {
   position: absolute;
   padding-left: 5vw;
@@ -443,16 +444,18 @@ body {
 }
 
 #landing_space1 {
-  height: 40vw;
+  height: 0px;
   width: 100%;
 }
 
 #landing_anchor {
+  position: absolute;
+  top: 40vw;
   height: 100px;
 }
 
 #landing_space2 {
-  height: calc(100vh + 50px);
+  height: calc(40vw + 50px + 100vh);
   width: 100%;
 }
 

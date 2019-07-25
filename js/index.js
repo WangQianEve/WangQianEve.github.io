@@ -69,7 +69,7 @@ $(document).ready(function () {
     const $content = $(".content");
     const $zoomAnchor = $("#zoom_anchor");
 
-    const contentScale = 1.5;
+    const contentScale = .5;
     //nav bar
     const $navbar = $(".navbar");
     const $navAnchor = $("#nav_anchor");
@@ -118,19 +118,20 @@ $(document).ready(function () {
                     "transform": "scale(" + landingScale + ")",
                     "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
                 });
-                const bannerScale = Math.max(1, (contentScale - yPosition * 0.001));
+                const bannerScale = 1 + contentScale * (1 - yPosition / maxYPos);
                 $bannerImg.css({
                     "transform": "scale(" + bannerScale + ")",
                 });
             }
         } else {
-            if (yPosition <= maxYPos + $landingAnchor.height()) {
-                $content.addClass('static');
-            } else {
+            if (yPosition > $landingAnchor.offset()) {
                 $content.removeClass('static');
+            } else {
+                $content.addClass('static');
             }
             if (first_time_scroll) {
                 first_time_scroll = false;
+                window.scrollTo(0, 0);
             }
             // Not visible.
             $landing.addClass('hidden');
