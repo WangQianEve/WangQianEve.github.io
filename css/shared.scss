@@ -12,6 +12,11 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+
+* {
+  transition: opacity .3s;
+}
+
 body {
   margin: 0;
   font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;

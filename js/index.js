@@ -62,6 +62,22 @@ function showAllCodeWork() {
     $('.code-more').addClass('noshow');
 }
 
+function turnOnDesign() {
+    $('#filter').removeClass('noshow');
+    $('.container.design').removeClass('noshow');
+    $('.container.code').addClass('noshow');
+    $('.title.design').addClass('active');
+    $('.title.code').removeClass('active');
+}
+
+function turnOnCode() {
+    $('#filter').addClass('noshow');
+    $('.container.design').addClass('noshow');
+    $('.container.code').removeClass('noshow');
+    $('.title.design').removeClass('active');
+    $('.title.code').addClass('active');
+}
+
 $highlighterShow = false;
 first_time_scroll = true;
 
@@ -151,7 +167,6 @@ $(document).ready(function () {
 
     $window.scroll(toggleLandingAndNavbar);
     $window.resize(handleResize);
-    // $landingImg.on("load", handleResize);
-    // handleResize();
-    // toggleLandingAndNavbar();
+
+    turnOnDesign();
 });

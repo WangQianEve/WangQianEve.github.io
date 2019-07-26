@@ -11,6 +11,10 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  transition: opacity 0.3s;
+}
+
 body {
   margin: 0;
   font-family: "Prompt", "Helvetica", "Arial", sans-serif;
@@ -338,25 +342,38 @@ body {
 }
 
 .section-title {
-  margin: 80px 10vw 40px;
+  margin: 80px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #444;
 }
-.section-title .title {
+.section-title .switch {
   width: fit-content;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 2em;
-  margin-bottom: 50px;
   text-transform: uppercase;
 }
-
-#filter {
+.section-title .switch .title {
+  cursor: pointer;
+  margin: 20px;
+  opacity: 0.2;
+}
+.section-title .switch .title.active {
+  opacity: 1;
+}
+.section-title .switch .v-line {
+  width: 1px;
+  border: 1px solid black;
+  height: 20px;
+  align-self: center;
+}
+.section-title #filter {
+  margin: 40px 0;
   transition: opacity 0.3s;
 }
-#filter .btn {
+.section-title #filter .btn {
   cursor: pointer;
   font-family: "Prompt", "Helvetica", "Arial", sans-serif;
   font-weight: 200;
@@ -365,10 +382,10 @@ body {
   margin: 0 4px;
   height: auto;
 }
-#filter .btn:hover {
+.section-title #filter .btn:hover {
   background-color: #ffeeee;
 }
-#filter .active {
+.section-title #filter .active {
   background-color: #FD6161;
   color: white;
   pointer-events: none;
@@ -378,13 +395,12 @@ body {
   opacity: 0;
 }
 
-.code.noshow {
+.noshow {
   display: none !important;
 }
 
 .container {
   margin: 0 10vw;
-  transition: opacity 0.3s;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
