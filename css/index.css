@@ -406,13 +406,13 @@ body {
   justify-content: space-around;
 }
 .container .filterDiv {
-  width: 38%;
-  max-width: 500px;
+  width: 45%;
+  max-width: 600px;
   display: none;
   /* Hidden by default */
   opacity: 0;
-  padding: 30px 25px;
-  margin: 30px 25px;
+  padding: 40px 30px;
+  margin: 20px 20px;
   transition: box-shadow 0.3s, opacity 0.3s;
   text-decoration: none;
   color: gray;
@@ -428,6 +428,9 @@ body {
   flex-direction: row;
   margin: 15px 0;
 }
+.container .filterDiv .title .t1 {
+  color: #444;
+}
 .container .filterDiv .description {
   font-size: 16px;
 }
@@ -440,7 +443,7 @@ body {
 
 .t1 {
   flex-grow: 1;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
 }
 
