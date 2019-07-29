@@ -129,7 +129,6 @@ body {
     }
   }
   .navList {
-    font-size: 18px;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
@@ -275,8 +274,8 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1300px;
-  width: 76vw;
-  padding: 20px 90px;
+  width: 85vw;
+  padding: 20px 60px;
   line-height: 2rem;
   &.center {
     align-items: center;
@@ -287,8 +286,8 @@ body {
 }
 
 .section-item {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
 }
 
 .large-icon {

@@ -26,7 +26,7 @@ function updateNav($sections, $links, $highlighter) {
     for (let i = $sections.length - 1; i >= 0; i -= 1) {
         let $section = $sections.eq(i);
         if (yPosition >= $section.offset().top) {
-            $highlighter.css({'left': i * 45 + 150});
+            $highlighter.css({'left': i * 45 + 210});
             return $links
                 .removeClass('active')
                 .filter(`[href="#${$section.attr('id')}"]`)

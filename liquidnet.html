@@ -86,15 +86,15 @@
         <div class="section-index">00</div>
         <div class="section-name">Summary</div>
     </div>
-    <div class="section">
-        <div class="summary section-item flex-h">
+    <div class="section section-item">
+        <div class="summary flex-h">
             <div class="tag narrow">Problem Framing</div>
             <div>
                 <div class="title highlight">Re-design Liquidnet’s alert system to encourage users to fully utilize the advanced features.</div>
                 <div>This project is sponsored by Liquidnet, a company that provides cutting-edge financial technology to <span class="highlight-content"> institutional traders and asset managers</span>. The challenge is that users often only use Liquidnet’s basic trading features, and even minimize the interface most of the time. This way, the advanced technologies that can identify new trading opportunities are not fully utilized, thus causing fewer trades than expected within Liquidnet’s network.</div>
             </div>
         </div>
-        <div class="summary section-item flex-h">
+        <div class="summary space-above flex-h">
             <div class="tag narrow">Solution</div>
             <div>
                 <div class="title highlight">A comprehensive set of alert design guidelines and proof-of-concept prototypes that increases engagement and supports individualization.</div>
@@ -114,18 +114,18 @@
     </div>
     <div class="block color-bg sec overflow-bottom">
         <div id="solution" class="section">
-            <div class="section-item">
+            <div class="space-above">
                 <div class="tag highlight">Main prototypes</div>
             </div>
             <div class="section-item">
                 <div class="title">Use colors to manage different levels of attention and indicate alert types.</div>
                 <div>We tested the effects of different combinations of <span class="highlight-content">color, animation, and sound</span> at a simulated trading desk. We discovered that salient colors work best because of the higher contrast. So in our prototype, we designed 3 levels of urgency with different areas of color. We also used different colors to represent different types of alerts.</div>
                 <div class="flex-h around space-above">
-                    <div class="images">
+                    <div class="images left">
                         <img src="images/Capstone/color-original.png"/>
                         <div class="caption">Liquidnet's original alert stream</div>
                     </div>
-                    <div class="images">
+                    <div class="images right">
                         <img src="images/Capstone/color-ours.png"/>
                         <div class="caption">Redesign - 3 levels of urgency</div>
                     </div>
@@ -273,7 +273,7 @@
             <div class="flex-h space-below">
                 <div>
                     <div class="title">A domain full of risk, pressure, and jargon.</div>
-                    <p><span class="highlight-content">To quickly get on board with this unfamiliar domain, we utilized a wide range of resources</span>, including friends with relevant background, online videos introducing trading knowledge (Youtube, Investopedia, etc.), movies and documentaries about traders, even games simulating the trading experience. We absorbed a lot of basic knowledge and jargon, which allowed us to study professional materials provided by our client afterwards.</p>
+                    <p><span class="highlight-content">To quickly get on board with this unfamiliar domain, we utilized a wide range of resources</span>, including friends with relevant background, online videos introducing trading knowledge (Youtube, Investopedia, etc.), movies and documentaries about traders, even games simulating the trading experience. We quickly learned lots of jargon, which helped us to communicate with our interviewees later.</p>
                 </div>
                 <div class="images narrow right flex-v">
                     <img src="images/Capstone/userresearch1.png"/>
@@ -287,13 +287,13 @@
                 </div>
                 <div>
                     <div class="title">Predominantly outdated design styles and data-heavy interfaces.</div>
-                    <p>To learn about domain-specific design paradigms, we researched on existing products, and realized that in general, the design styles are outdated and data-heavy. <span class="highlight-content">This is also why we later specifically test the acceptability of of different styles</span>. Though the main-stream is still dark mode, there's also quite a few light mode. </p>
+                    <p>To learn about domain-specific design paradigms, we researched on existing products, and realized that in general, the design styles are outdated and data-heavy. <span class="highlight-content">This is also why we later specifically test the acceptability of of different design styles</span>.</p>
                 </div>
             </div>
             <div class="flex-h">
                 <div>
                     <div class="title">"Feature creep" is becoming a challenge for Liquidnet.</div>
-                    <p><span class="highlight-content"></span>After the client walked us through the current product, we built a <span class="highlight-content">product model</span> to represent our understanding, and conducted <span class="highlight-content">heuristic evaluations</span> on both the current and the next version of Liquidnet. We realize that Liquidnet has been incorporating lots of analytics technologies into the system, but the current design couldn't serve these components well. And while Liquidnet is growing, all kinds of technologies and features starts to make the product complex and hard to use, which is also validated in our later interviews.</p>
+                    <p><span class="highlight-content"></span>After studying the current product, we built a <span class="highlight-content">product model</span>, and conducted <span class="highlight-content">heuristic evaluations</span> on Liquidnet. We realized that Liquidnet has been incorporating lots of advanced analytics technologies into the system, but the product is still designed for matching. As a result, customers find Liquidnet more and more complex and hard to use.</p>
                 </div>
                 <div class="images narrow right flex-v">
                     <img src="images/Capstone/product-model.png"/>
@@ -306,7 +306,7 @@
             <div class="flex-h space-below">
                 <div>
                     <div class="title">With no direct access to our target users, we interviewed 22 stakeholders and proxy users.</div>
-                    <p>Because we have no access to target users, we instead interviewed different stakeholders and proxy users from the client-side and our own network. A <span class="highlight-content">technique</span> we used with extremely busy interviewees is to bring pre-made artifacts like customer journey maps for interviewees to correct. This way we can make the most of our limited time.</p>
+                    <p>Having no access to target users, we instead interviewed stakeholders and proxy users. A <span class="highlight-content">technique</span> we used with extremely busy interviewees is to bring pre-made artifacts like customer journey maps for them to correct.</p>
                 </div>
                 <div class="images right flex-v">
                     <img src="images/Capstone/interview1.png"/>
@@ -390,25 +390,25 @@
                     <p>We observed the trading desk in our client’s company during the market opening, mid-day, and market closing time. While observing, we used the <span class="highlight-content">AEIOU</span>  framework to focus around activities (A), events (E), interactions (I), objects (O), and users (U). We discovered several pain points that was not revealed in our interviews. One trader even directly tell us "If you can make building report easier, I'll be VERY happy." Although some pain points seems not directly related to alert (like report building, more efficiently search and navigation), but we see them as great opportunities.</p>
                 </div>
             </div>
-            <div class="insight-title">Key Insights from Shadowing</div>
-            <div class="insight-cards">
-                <div>
-                    <p class="insight-sum">Market closing is the most stressful time</p>
-                    <p>Among these 3 periods, closing time is the busiest and most stressful, during which traders collaborate more.</p>
-                </div>
-                <div>
-                    <p class="insight-sum">Different preferences for sounds</p>
-                    <p>Not all traders use sounds, and each has different preferences for sounds.</p>
-                </div>
-                <div>
-                    <p class="insight-sum">Report building is repetitive work</p>
-                    <p>Traders communicate with portfolio managers and clients using reports, which requires considerable manual work.</p>
-                </div>
-                <div>
-                    <p class="insight-sum">Scroll-and-click can be cumbersome</p>
-                    <p>Sometimes, when navigating through lots of information, scrolling can be too slow, and even cumbersome.</p>
-                </div>
-            </div>
+<!--            <div class="insight-title">Key Insights from Shadowing</div>-->
+<!--            <div class="insight-cards">-->
+<!--                <div>-->
+<!--                    <p class="insight-sum">Market closing is the most stressful time</p>-->
+<!--                    <p>Among these 3 periods, closing time is the busiest and most stressful, during which traders collaborate more.</p>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <p class="insight-sum">Different preferences for sounds</p>-->
+<!--                    <p>Not all traders use sounds, and each has different preferences for sounds.</p>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <p class="insight-sum">Report building is repetitive work</p>-->
+<!--                    <p>Traders communicate with portfolio managers and clients using reports, which requires considerable manual work.</p>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <p class="insight-sum">Scroll-and-click can be cumbersome</p>-->
+<!--                    <p>Sometimes, when navigating through lots of information, scrolling can be too slow, and even cumbersome.</p>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
     <!--design research-->
@@ -467,7 +467,7 @@
                 </div>
                 <div>
                     <div class="tag highlight">Experience Prototyping / Research Through Design</div>
-                    <div class="title">Sitting at a simulated trading desk with traders and critique on prototypes in our only chance with target users.</div>
+                    <div class="title">User testing at a simulated trading desk with traders in our only chance with target users.</div>
                     <p>We only had one chance to talk with our target users in person, and we decided to use the <span class="highlight-content">“research through design”</span> approach rather than exploratory research, so that we can gain a more precise understanding of their needs and preferences. We learned a lot expected/unexpected things, like "Animation isn't as effective as we thought in terms of grabbing attention", etc.</p>
                 </div>
             </div>
@@ -479,10 +479,10 @@
                 </div>
                 <div class="slides video16-9 images right flex-v">
                     <video class='slide active' autoplay loop muted>
-                        <source src="videos/Capstone/prototype1.webm" type="video/webm">
+                        <source src="videos/Capstone/prototype2.webm" type="video/webm">
                     </video>
                     <video class='slide' autoplay loop muted>
-                        <source src="videos/Capstone/prototype2.webm" type="video/webm">
+                        <source src="videos/Capstone/prototype1.webm" type="video/webm">
                     </video>
                     <img class='slide' src="images/Capstone/prototype3.png"/>
                     <video class='slide' autoplay loop muted>
@@ -496,10 +496,10 @@
                     </video>
                     <div class="demo">
                         <div class="active" onclick="currentDiv(this,0)">
-                            <img src="images/Capstone/prototype1.png"/>
+                            <img src="images/Capstone/prototype2.png"/>
                         </div>
                         <div onclick="currentDiv(this,1)">
-                            <img src="images/Capstone/prototype2.png"/>
+                            <img src="images/Capstone/prototype1.png"/>
                         </div>
                         <div onclick="currentDiv(this,2)">
                             <img src="images/Capstone/prototype3-t.png"/>
@@ -521,7 +521,7 @@
             <div class="tag highlight">Feedback Grid</div>
             <div class="flex-h space-below">
                 <div>
-                    <div class="title">We synthesized our notes and generated design guidelines tailored for a trading alert system.</div>
+                    <div class="title">We generated design guidelines tailored for a trading alert system after synthesizing.</div>
                     <p>For synthesizing, we used the feedback grid method and modified the 4th quadrant to better fit our research. Our feedback grid has four quadrants: <span class="highlight-content">“what worked”</span>, <span class="highlight-content">“what should be changed”</span>, <span class="highlight-content">“new ideas”</span>, and <span class="highlight-content">“general behaviors”</span>. This helped us quickly generate design guidelines from each quadrant. For instance, from quadrant 1 and 2, we concluded DOs and DON’Ts, from quadrant 3, we extracted design limits and preferences.</p>
                 </div>
                 <div class="images right flex-v">

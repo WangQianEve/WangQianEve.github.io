@@ -159,7 +159,6 @@ $(document).ready(function () {
                 window.history.replaceState(null, "", url.substr(0, url.length - 15));
             }
         }
-
         updateNavColor($navAnchor, $navbar, yPosition);
     }
 

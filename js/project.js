@@ -55,5 +55,5 @@ function changeSlide(elem, n) {
 
 $(document).ready(function() {
     initCarousels();
-    setInterval(carousel, 3000);
+    // setInterval(carousel, 3000);
 });
