@@ -83,7 +83,7 @@ first_time_scroll = true;
 
 $(document).ready(function () {
     $(this).scrollTop(0);
-    filterSelection("featured");
+    filterSelection("filterDiv");
     createFilter();
     // landing page
     const $landingAnchor = $("#landing_anchor");
