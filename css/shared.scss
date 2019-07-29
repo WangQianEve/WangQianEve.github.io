@@ -45,7 +45,8 @@ body {
 
 .navbar {
   .logo {
-    padding-top: 15px;
+    height: 20px;
+    margin-top: 15px;
   }
   a {
     text-decoration: none;
@@ -61,7 +62,7 @@ body {
   display: flex;
   z-index: 100;
   &.active {
-    background-color: #ffffffee;
+    background-color: #ffffff;
     box-shadow: 0px 0px 5px #00000022;
     .pg-btn {
       color: grey;
@@ -128,6 +129,7 @@ body {
     }
   }
   .navList {
+    font-size: 18px;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
