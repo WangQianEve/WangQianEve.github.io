@@ -54,6 +54,7 @@ body {
 .navbar .logo {
   height: 20px;
   margin-top: 15px;
+  flex-shrink: 0;
 }
 .navbar a {
   text-decoration: none;
@@ -266,7 +267,7 @@ body {
   max-width: 1300px;
   width: 85vw;
   padding: 20px 60px;
-  line-height: 2rem;
+  line-height: 2em;
 }
 .section.center {
   align-items: center;
@@ -302,6 +303,59 @@ body {
   text-align: center;
   font-size: 50px;
   margin-top: 40vh;
+}
+
+.tablet-mobile {
+  display: none;
+}
+
+.desktop {
+  display: flex;
+}
+
+.even > div, .even img {
+  flex-shrink: 1;
+}
+
+@media (max-width: 1023px) {
+  #inpageNav {
+    display: none !important;
+  }
+
+  .section {
+    width: 100%;
+  }
+  .section .tag {
+    font-size: 12px;
+  }
+  .section .summary .title {
+    font-size: 16px;
+  }
+  .section .title {
+    font-size: 18px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .tablet-mobile-v {
+    flex-direction: column !important;
+  }
+
+  .tablet-mobile {
+    display: flex;
+  }
+
+  .images.tablet-mobile-full {
+    width: 90%;
+    margin: 0 !important;
+    align-self: center;
+  }
+
+  .desktop {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=shared.css.map */

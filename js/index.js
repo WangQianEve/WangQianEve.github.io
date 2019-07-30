@@ -82,6 +82,7 @@ $highlighterShow = false;
 first_time_scroll = true;
 
 $(document).ready(function () {
+    document.querySelector('.banner-video').playbackRate = .5;
     $(this).scrollTop(0);
     filterSelection("filterDiv");
     createFilter();
@@ -103,7 +104,7 @@ $(document).ready(function () {
         $landing.css("display", "none");
     });
 
-    const bezierFn = cubicBezierGenerator(.44, .01, .82, .47);
+    const bezierFn = cubicBezierGenerator(.5, .0, .5, 1);
     const finalScale = 20;
 
     let $landingImg = $("#landing img");

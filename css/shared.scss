@@ -47,6 +47,7 @@ body {
   .logo {
     height: 20px;
     margin-top: 15px;
+    flex-shrink: 0;
   }
   a {
     text-decoration: none;
@@ -276,7 +277,7 @@ body {
   max-width: 1300px;
   width: 85vw;
   padding: 20px 60px;
-  line-height: 2rem;
+  line-height: 2em;
   &.center {
     align-items: center;
   }
@@ -310,4 +311,53 @@ body {
   text-align: center;
   font-size: 50px;
   margin-top: 40vh;
+}
+
+.tablet-mobile {
+  display: none;
+}
+
+.desktop {
+  display: flex;
+}
+
+.even {
+  > div,img {
+    flex-shrink: 1;
+  }
+}
+
+@media (max-width: 1023px) {
+  #inpageNav {
+    display: none !important;
+  }
+  .section {
+    width: 100%;
+    .tag {
+      font-size: 12px;
+    }
+    .summary .title {
+      font-size: 16px;
+    }
+    .title {
+      font-size: 18px;
+    }
+  }
+  body {
+    font-size: 14px;
+  }
+  .tablet-mobile-v {
+    flex-direction: column !important;
+  }
+  .tablet-mobile {
+    display: flex;
+  }
+  .images.tablet-mobile-full {
+    width: 90%;
+    margin: 0 !important;
+    align-self: center;
+  }
+  .desktop {
+    display: none;
+  }
 }

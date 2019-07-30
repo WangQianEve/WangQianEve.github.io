@@ -242,7 +242,6 @@ body {
 }
 .section .images.demo {
   width: fit-content;
-  height: 70vh;
   margin-bottom: 40px;
 }
 .section .images.demo video {
@@ -305,9 +304,10 @@ body {
   width: 25%;
 }
 .section .btn {
+  height: 2.5em;
   margin: 0 10px;
   line-height: 2.5em;
-  padding: 0 1.5em;
+  padding: 0 1.5em 0.5em;
   border-radius: 30px;
   background-color: #789CFB;
   color: white;
