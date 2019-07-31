@@ -58,7 +58,7 @@ body {
   align-self: flex-start;
   display: flex;
   padding: 30px 0;
-  width: 50%;
+  width: 100%;
 }
 .section-title .section-line {
   width: 10%;
@@ -137,9 +137,6 @@ body {
   background-color: white;
   flex-grow: 0;
 }
-.section.summary-card .summary-container > div {
-  width: 30%;
-}
 .section.summary-card .contrib-title {
   margin-top: 2vw;
   width: 100%;
@@ -172,7 +169,8 @@ body {
   color: white;
 }
 .section .insight-cards div {
-  width: 400px;
+  width: 45%;
+  max-width: 400px;
   background-color: #789CFB;
   padding: 10px 10px;
   margin: 15px;
@@ -229,9 +227,6 @@ body {
 }
 .section .slides .demo div.active {
   opacity: 1;
-}
-.section .slides.video16-9 video {
-  height: 21vw;
 }
 .section .images {
   flex-shrink: 0;
@@ -414,6 +409,45 @@ img {
 .label {
   text-transform: uppercase;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 50vw;
+  }
+
+  .intro-card {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .section.intro {
+    margin-top: 0;
+  }
+  .section.intro .intro-card {
+    box-shadow: none;
+    padding: 0;
+  }
+  .section.intro .intro-card .details {
+    font-size: 12px;
+  }
+  .section .insight-cards > div {
+    width: 100%;
+  }
+  .section .tag.narrow {
+    width: 100%;
+  }
+
+  .section-title .section-name {
+    font-size: 20px;
+  }
+  .section-title .section-index {
+    font-size: 30px;
+  }
+
+  .to-other-projects {
+    padding: 20px;
+  }
 }
 
 /*# sourceMappingURL=project.css.map */

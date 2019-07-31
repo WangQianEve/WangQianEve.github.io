@@ -98,4 +98,32 @@
   display: inline;
 }
 
+@media (max-width: 1023px) {
+  .about-card {
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+  }
+  .about-card .about-items {
+    margin-left: 50px;
+    margin-bottom: 30px;
+    align-self: center;
+  }
+  .about-card > a {
+    width: 250px;
+  }
+
+  .evenly > div {
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  .about-card {
+    flex-direction: column;
+  }
+  .about-card .about-items {
+    margin: 0 0 50px;
+  }
+}
+
 /*# sourceMappingURL=about.css.map */

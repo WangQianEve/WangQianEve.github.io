@@ -57,7 +57,7 @@ body {
   align-self: flex-start;
   display: flex;
   padding: 30px 0;
-  width: 50%;
+  width: 100%;
   .section-line {
     width: 10%;
     border-bottom: 2px solid black;
@@ -135,9 +135,6 @@ body {
         background-color: white;
         flex-grow: 0;
       }
-      > div {
-        width: 30%;
-      }
     }
     .contrib-title {
       margin-top: 2vw;
@@ -171,7 +168,8 @@ body {
     justify-content: center;
     color: white;
     div {
-      width: 400px;
+      width: 45%;
+      max-width: 400px;
       background-color: $secondary-color;
       padding: 10px 10px;
       margin: 15px;
@@ -231,9 +229,6 @@ body {
           opacity: 1;
         }
       }
-    }
-    &.video16-9 video{
-      height: 21vw;
     }
   }
   .images {
@@ -419,4 +414,45 @@ img {
 .label {
   text-transform: uppercase;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 50vw;
+  }
+  .intro-card {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    &.intro {
+      margin-top: 0;
+      .intro-card {
+        box-shadow: none;
+        padding: 0;
+        .details {
+          font-size: 12px;
+        }
+      }
+    }
+    .insight-cards > div {
+      width: 100%;
+    }
+    .tag.narrow {
+      width: 100%;
+    }
+  }
+  .section-title {
+    .section-name {
+      font-size: 20px;
+    }
+    .section-index {
+      font-size: 30px;
+    }
+  }
+  .to-other-projects {
+    padding: 20px;
+  }
 }

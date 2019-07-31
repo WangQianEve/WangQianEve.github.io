@@ -84,7 +84,7 @@ first_time_scroll = true;
 $(document).ready(function () {
     document.querySelector('.banner-video').playbackRate = .5;
     $(this).scrollTop(0);
-    filterSelection("filterDiv");
+    filterSelection("featured");
     createFilter();
     // landing page
     const $landingAnchor = $("#landing_anchor");
@@ -109,9 +109,14 @@ $(document).ready(function () {
 
     let $landingImg = $("#landing img");
     let topOffset = 0;
-
+    let zoomCenter = $zoomAnchor.offset();
+    const maxYPos = $landingAnchor.offset().top;
+    const maxYPos2 = maxYPos + $landingAnchor.height();
+    let window_width = $(window).width();
 
     function handleResize() {
+        window_width = $(window).width();
+        zoomCenter = $zoomAnchor.offset();
         topOffset = Math.min(0, ($window.height() - $landingImg.height()) / 2);
         $landingImg.css("margin-top", topOffset);
         toggleLandingAndNavbar();
@@ -119,45 +124,41 @@ $(document).ready(function () {
 
     function toggleLandingAndNavbar() {
         const yPosition = window.pageYOffset;
-        const maxYPos = $landingAnchor.offset().top;
-        const zoomCenter = $zoomAnchor.offset();
+        if (window_width >= 768) {
+            if (yPosition <= maxYPos) {
+                if (first_time_scroll) {
+                    // Visible.
+                    $landing.css("display", "");
+                    requestAnimationFrame(function () {
+                        // Start transition after the element is displayed.
+                        $landing.removeClass('hidden');
+                    });
+                    $content.addClass('static');
+                    $scrollDown.removeClass('scroll-hidden');
+                    $slogan.addClass('hidden');
 
-        if (yPosition <= maxYPos) {
-            if (first_time_scroll) {
-                // Visible.
-                $landing.css("display", "");
-                requestAnimationFrame(function () {
-                    // Start transition after the element is displayed.
-                    $landing.removeClass('hidden');
-                });
-                $content.addClass('static');
-                $scrollDown.removeClass('scroll-hidden');
-                $slogan.addClass('hidden');
-
-                const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
-                $landing.css({
-                    "transform": "scale(" + landingScale + ")",
-                    "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
-                });
-                const bannerScale = 1 + contentScale * (1 - yPosition / maxYPos);
-                $bannerImg.css({
-                    "transform": "scale(" + bannerScale + ")",
-                });
-            }
-        } else {
-            $content.removeClass('static');
-            if (first_time_scroll) {
-                first_time_scroll = false;
-                window.scrollTo(0, 0);
-            }
-            // Not visible.
-            $landing.addClass('hidden');
-            $scrollDown.addClass('scroll-hidden');
-            $slogan.removeClass('hidden');
-            const url = window.location.href;
-            if (url.endsWith("#landing_space2")) {
-                // Remove in-page links so we can jump back to where we left off when navigating back.
-                window.history.replaceState(null, "", url.substr(0, url.length - 15));
+                    const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
+                    $landing.css({
+                        "transform": "scale(" + landingScale + ")",
+                        "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
+                    });
+                    const bannerScale = 1 + contentScale * (1 - yPosition / maxYPos);
+                    $bannerImg.css({
+                        "transform": "scale(" + bannerScale + ")",
+                    });
+                }
+            } else {
+                if (yPosition >= maxYPos2) {
+                    $content.removeClass('static');
+                    if (first_time_scroll) {
+                        first_time_scroll = false;
+                        window.scrollTo(0, 0);
+                    }
+                }
+                // Not visible.
+                $landing.addClass('hidden');
+                $scrollDown.addClass('scroll-hidden');
+                $slogan.removeClass('hidden');
             }
         }
         updateNavColor($navAnchor, $navbar, yPosition);

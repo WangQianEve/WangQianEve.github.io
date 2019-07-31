@@ -48,6 +48,7 @@ body {
     height: 20px;
     margin-top: 15px;
     flex-shrink: 0;
+    object-fit: contain;
   }
   a {
     text-decoration: none;
@@ -195,9 +196,6 @@ body {
     justify-content: center;
   }
 }
-.no-wrap {
-  white-space: nowrap;
-}
 .flex-h {
   display: flex !important;
   flex-direction: row !important;
@@ -216,6 +214,9 @@ body {
       padding: 10px;
       flex-shrink: 1;
     }
+  }
+  &.wrap {
+    flex-wrap: wrap;
   }
 }
 .card {
@@ -287,8 +288,8 @@ body {
 }
 
 .section-item {
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
 }
 
 .large-icon {
@@ -319,6 +320,10 @@ body {
 
 .desktop {
   display: flex;
+}
+
+.mobile {
+  display: none;
 }
 
 .even {
@@ -353,11 +358,50 @@ body {
     display: flex;
   }
   .images.tablet-mobile-full {
-    width: 90%;
+    width: 80%;
     margin: 0 !important;
     align-self: center;
   }
   .desktop {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0 20px;
+    .logo {
+      height: 15px;
+    }
+  }
+  .mobile-v {
+    flex-direction: column !important;
+  }
+  .images.mobile-full {
+    width: 80%;
+    margin: 0 !important;
+    align-self: center;
+  }
+  .not-mobile {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .section {
+    padding: 30px;
+  }
+  .slideshow-sec {
+    padding: 0;
+  }
+  .section .images.demo {
+    margin-bottom: 0;
+  }
+  .footer {
+    font-size: 10px;
+    height: 35px !important;
+  }
+  .static {
+    position: static !important;
   }
 }
