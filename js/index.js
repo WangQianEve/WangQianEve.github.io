@@ -6,55 +6,45 @@ function updateNavColor($anchor, $navbar, yPosition) {
     }
 }
 
-function filterSelection(c) {
-    let x, i;
-    x = document.getElementsByClassName("filterDiv");
-    for (i = 0; i < x.length; i++) {
-        removeClass(x[i], "show");
-        removeClass(x[i], "visible");
-        if (x[i].className.split(' ').indexOf(c) > -1) {
-            addClass(x[i], "show");
-            setTimeout(function (param1) {
-                addClass(param1, "visible");
-            }, 200, x[i]);
-        }
-    }
-}
+function filterSelection(klass) {
+    let $projects = $(".filterDiv");
+    let $shownProject = $projects.filter(".show").eq(0);
 
-function addClass(element, name) {
-    let i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) === -1) {
-            element.className += " " + arr2[i];
-        }
-    }
-}
+    let displayFiltered = function () {
+        $projects.removeClass("show");
+        requestAnimationFrame(function () {
+            $projects.filter("." + klass).addClass("show");
+            if ($shownProject.length > 0) {
+                $shownProject.unbind("transitionend");
+            }
+            requestAnimationFrame(function () {
+                // if not called inside here, previously hidden elements
+                // would just appear without transform
+                $projects.addClass("visible");
+            });
+        });
+    };
 
-// Hide elements that are not selected
-function removeClass(element, name) {
-    let i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
+    if ($shownProject.length > 0) {
+        $shownProject.on("transitionend", displayFiltered);
+        $projects.removeClass("visible");
+    } else {
+        $projects.removeClass("visible");
+        displayFiltered();
     }
-    element.className = arr1.join(" ");
 }
 
 function createFilter() {
-    let btnContainer = document.getElementById("filter");
-    let btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-            let current = btnContainer.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-    }
+    let $btnContainer = $("#filter");
+    let $btns = $btnContainer.find(".btn");
+    $btns.each(function (index) {
+        let $this = $(this);
+        $this.click(function () {
+            let $current = $btnContainer.find(".active");
+            $current.removeClass("active");
+            $this.addClass("active");
+        })
+    });
 }
 
 function showAllCodeWork() {
@@ -82,7 +72,7 @@ $highlighterShow = false;
 first_time_scroll = true;
 
 $(document).ready(function () {
-    document.querySelector('.banner-video').playbackRate = .5;
+    document.querySelector('.banner-video').playbackRate = 1;
     $(this).scrollTop(0);
     filterSelection("featured");
     createFilter();

@@ -137,7 +137,7 @@ $scroll_anchor_height: 100px;
     color: gray;
 
     &:hover {
-      box-shadow: 0px 2px 10px #00000011;
+      box-shadow: 0 2px 10px #00000011;
     }
 
     img {
@@ -246,16 +246,21 @@ $scroll_anchor_height: 100px;
   top: 0;
 }
 
-.coming-soon-label {
+.coming-soon-container {
   position: absolute;
   margin-top: -50px;
+  left: 0;
+  right: 0;
+}
+
+.coming-soon-container .coming-soon-label {
   padding: 5px 10px;
   background-color: #ffffffdd;
   color: #666;
   font-size: 14px;
   border-radius: 30px;
   width: fit-content;
-  margin-left: 10vw;
+  margin: 0 auto;
 }
 
 .up-btn {
@@ -274,6 +279,7 @@ $scroll_anchor_height: 100px;
 }
 
 .scroll_down::before {
+  margin-left: -1em;
   opacity: 0;
   content: '╲╱';
   position: fixed;
@@ -317,6 +323,7 @@ $scroll_anchor_height: 100px;
     font-weight: 300;
     height: 2em;
     margin: 0 20px;
+    line-height: 2.4em;  // put underline closer to text
   }
 
   .right {
@@ -433,7 +440,7 @@ $scroll_anchor_height: 100px;
     }
     .filterDiv {
       &:hover {
-        box-shadow: 0px 2px 10px #00000000;
+        box-shadow: 0 2px 10px #00000000;
       }
       width: 100%;
       margin: 40px 0;
