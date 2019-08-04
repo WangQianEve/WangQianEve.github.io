@@ -246,21 +246,24 @@ $scroll_anchor_height: 100px;
   top: 0;
 }
 
-.coming-soon-container {
-  position: absolute;
-  margin-top: -50px;
-  left: 0;
-  right: 0;
-}
+.project-image-container {
+  position: relative;
 
-.coming-soon-container .coming-soon-label {
-  padding: 5px 10px;
-  background-color: #ffffffdd;
-  color: #666;
-  font-size: 14px;
-  border-radius: 30px;
-  width: fit-content;
-  margin: 0 auto;
+  .coming-soon-container {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+
+    .coming-soon-label {
+      padding: 5px 10px;
+      background-color: #ffffffdd;
+      color: #666;
+      font-size: 14px;
+      border-radius: 30px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
 }
 
 .up-btn {
