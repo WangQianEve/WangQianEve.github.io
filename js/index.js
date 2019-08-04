@@ -58,6 +58,7 @@ function turnOnDesign() {
     $('.container.code').addClass('noshow');
     $('.title.design').addClass('active');
     $('.title.code').removeClass('active');
+    window.history.replaceState(null, null, ' ');
 }
 
 function turnOnCode() {
@@ -66,6 +67,7 @@ function turnOnCode() {
     $('.container.code').removeClass('noshow');
     $('.title.design').removeClass('active');
     $('.title.code').addClass('active');
+    window.location.hash = "#code";
 }
 
 $(document).ready(function () {
@@ -73,6 +75,7 @@ $(document).ready(function () {
     $(this).scrollTop(0);
     filterSelection("featured");
     createFilter();
+
     // landing page
     const $landingAnchor = $("#landing_anchor");
     const $landing = $("#landing");
@@ -94,15 +97,16 @@ $(document).ready(function () {
     const bezierFn = cubicBezierGenerator(.5, .0, .5, 1);
     const finalScale = 20;
 
+    let $window = $(window);
     let $landingImg = $("#landing img");
     let topOffset = 0;
     let zoomCenter = $zoomAnchor.offset();
     const maxYPos = $landingAnchor.offset().top;
     const maxYPos2 = maxYPos + $landingAnchor.height();
-    let window_width = $(window).width();
+    let window_width = $window.width();
 
     function handleResize() {
-        window_width = $(window).width();
+        window_width = $window.width();
         zoomCenter = $zoomAnchor.offset();
         topOffset = Math.min(0, ($window.height() - $landingImg.height()) / 2);
         $landingImg.css("margin-top", topOffset);
@@ -153,10 +157,12 @@ $(document).ready(function () {
         updateNavColor($navAnchor, $navbar, yPosition);
     }
 
-    let $window = $(window);
-
     $window.scroll(toggleLandingAndNavbar);
     $window.resize(handleResize);
 
-    turnOnDesign();
+    if (window.location.hash === "#code") {
+        turnOnCode();
+    } else {
+        turnOnDesign();
+    }
 });
