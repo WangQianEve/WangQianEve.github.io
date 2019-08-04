@@ -500,6 +500,9 @@ body {
 }
 
 #filter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin: 40px 0;
   transition: opacity 0.3s;
 }
