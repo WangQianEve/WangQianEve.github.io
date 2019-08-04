@@ -68,9 +68,6 @@ function turnOnCode() {
     $('.title.code').addClass('active');
 }
 
-$highlighterShow = false;
-first_time_scroll = true;
-
 $(document).ready(function () {
     document.querySelector('.banner-video').playbackRate = 1;
     $(this).scrollTop(0);
@@ -112,11 +109,13 @@ $(document).ready(function () {
         toggleLandingAndNavbar();
     }
 
+    let firstTimeScroll = true;
+
     function toggleLandingAndNavbar() {
         const yPosition = window.pageYOffset;
         if (window_width >= 768) {
             if (yPosition <= maxYPos) {
-                if (first_time_scroll) {
+                if (firstTimeScroll) {
                     // Visible.
                     $landing.css("display", "");
                     requestAnimationFrame(function () {
@@ -140,8 +139,8 @@ $(document).ready(function () {
             } else {
                 if (yPosition >= maxYPos2) {
                     $content.removeClass('static');
-                    if (first_time_scroll) {
-                        first_time_scroll = false;
+                    if (firstTimeScroll) {
+                        firstTimeScroll = false;
                         window.scrollTo(0, 0);
                     }
                 }

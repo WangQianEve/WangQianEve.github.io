@@ -464,4 +464,19 @@ $scroll_anchor_height: 100px;
       }
     }
   }
+
+  .up-btn {
+    width: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: .2;
+    transition: opacity .3s;
+    &:hover {
+      opacity: 1;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }

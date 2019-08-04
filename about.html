@@ -84,5 +84,22 @@
     </div>
 </div>
 <div class="footer">Website designed and developed by @ Qian Wang 2019</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        let $navbar = $(".navbar");
+        let $anchor = $(".about-card");
+
+        function updateNavColor() {
+            const yPosition = window.pageYOffset;
+            if (yPosition + $navbar.height() >= $anchor.offset().top) {
+                $navbar.addClass('active');
+            } else {
+                $navbar.removeClass('active');
+            }
+        }
+
+        $(window).scroll(updateNavColor);
+    });
+</script>
 </body>
 </html>
