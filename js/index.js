@@ -6,32 +6,39 @@ function updateNavColor($anchor, $navbar, yPosition) {
     }
 }
 
-function filterSelection(klass) {
-    let $projects = $(".filterDiv");
-    let $shownProject = $projects.filter(".show").eq(0);
-
-    let displayFiltered = function () {
-        $projects.removeClass("show");
+function fadeChange($from, $to, enabled = true) {
+    let display = function () {
+        $from.removeClass("show");
+        $to.removeClass("show");
         requestAnimationFrame(function () {
-            $projects.filter("." + klass).addClass("show");
-            if ($shownProject.length > 0) {
-                $shownProject.unbind("transitionend");
+            $to.addClass("show");
+            if ($from.length > 0) {
+                $from.unbind("transitionend");
             }
             requestAnimationFrame(function () {
                 // if not called inside here, previously hidden elements
                 // would just appear without transform
-                $projects.addClass("visible");
+                $to.addClass("visible");
             });
         });
     };
 
-    if ($shownProject.length > 0) {
-        $shownProject.on("transitionend", displayFiltered);
-        $projects.removeClass("visible");
+    if (enabled) {
+        let $fromVisible = $from.filter(".visible");
+        if ($fromVisible.length > 0) $fromVisible.eq(0).on("transitionend", display);
+        $from.removeClass("visible");
+        $to.removeClass("visible");
+        if ($fromVisible.length === 0) display();
     } else {
-        $projects.removeClass("visible");
-        displayFiltered();
+        $from.removeClass("show").removeClass("visible");
+        $to.addClass("visible").addClass("show");
     }
+}
+
+function filterSelection(klass) {
+    let $projects = $(".filterDiv");
+    let $shownProjects = $projects.filter(".show");
+    fadeChange($shownProjects, $projects.filter("." + klass));
 }
 
 function createFilter() {
@@ -47,32 +54,26 @@ function createFilter() {
     });
 }
 
-function showAllCodeWork() {
-    $('.code.noshow').removeClass('noshow');
-    $('.code-more').addClass('noshow');
-}
-
-function turnOnDesign() {
-    $('#filter').removeClass('noshow');
-    $('.container.design').removeClass('noshow');
-    $('.container.code').addClass('noshow');
+function turnOnDesign(initial = false) {
     $('.title.design').addClass('active');
     $('.title.code').removeClass('active');
-    window.history.replaceState(null, null, ' ');
+    const $design = $("#filter, .container.design");
+    const $code = $(".container.code");
+    fadeChange($code, $design, !initial);
+    if (!initial) window.location.hash = "#design";
 }
 
-function turnOnCode() {
-    $('#filter').addClass('noshow');
-    $('.container.design').addClass('noshow');
-    $('.container.code').removeClass('noshow');
+function turnOnCode(initial = false) {
     $('.title.design').removeClass('active');
     $('.title.code').addClass('active');
-    window.location.hash = "#code";
+    const $design = $("#filter, .container.design");
+    const $code = $(".container.code");
+    fadeChange($design, $code, !initial);
+    if (!initial) window.location.hash = "#code";
 }
 
 $(document).ready(function () {
     document.querySelector('.banner-video').playbackRate = 1;
-    $(this).scrollTop(0);
     filterSelection("featured");
     createFilter();
 
@@ -103,48 +104,61 @@ $(document).ready(function () {
     let zoomCenter = $zoomAnchor.offset();
     const maxYPos = $landingAnchor.offset().top;
     const maxYPos2 = maxYPos + $landingAnchor.height();
-    let window_width = $window.width();
+    let windowWidth = $window.width();
 
     function handleResize() {
-        window_width = $window.width();
+        windowWidth = $window.width();
         zoomCenter = $zoomAnchor.offset();
         topOffset = Math.min(0, ($window.height() - $landingImg.height()) / 2);
         $landingImg.css("margin-top", topOffset);
         toggleLandingAndNavbar();
     }
 
-    let firstTimeScroll = true;
+    let firstTimeScroll = window.location.hash === "";
+    $window.on('beforeunload', function () {
+        // If during landing page animation, scroll to top when reloading so we don't confuse
+        // the user.
+        // Scroll to top before refreshing to make sure we start at the top after refresh.
+        $window.unbind("scroll");
+        if (firstTimeScroll) $window.scrollTop(0);
+    });
+    if (!firstTimeScroll) {
+        $content.removeClass('static');
+        $landing.addClass('hidden');
+        $scrollDown.addClass('scroll-hidden');
+        $slogan.removeClass('hidden');
+    }
 
     function toggleLandingAndNavbar() {
         const yPosition = window.pageYOffset;
-        if (window_width >= 768) {
+        if (windowWidth >= 768 && firstTimeScroll) {
             if (yPosition <= maxYPos) {
-                if (firstTimeScroll) {
-                    // Visible.
-                    $landing.css("display", "");
-                    requestAnimationFrame(function () {
-                        // Start transition after the element is displayed.
-                        $landing.removeClass('hidden');
-                    });
-                    $content.addClass('static');
-                    $scrollDown.removeClass('scroll-hidden');
-                    $slogan.addClass('hidden');
+                // Visible.
+                $landing.css("display", "");
+                requestAnimationFrame(function () {
+                    // Start transition after the element is displayed.
+                    $landing.removeClass('hidden');
+                });
+                $content.addClass('static');
+                $scrollDown.removeClass('scroll-hidden');
+                $slogan.addClass('hidden');
 
-                    const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
-                    $landing.css({
-                        "transform": "scale(" + landingScale + ")",
-                        "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
-                    });
-                    const bannerScale = 1 + contentScale * (1 - yPosition / maxYPos);
-                    $bannerImg.css({
-                        "transform": "scale(" + bannerScale + ")",
-                    });
-                }
+                const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
+                $landing.css({
+                    "transform": "scale(" + landingScale + ")",
+                    "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
+                });
+                const bannerScale = 1 + contentScale * (1 - yPosition / maxYPos);
+                $bannerImg.css({
+                    "transform": "scale(" + bannerScale + ")",
+                });
             } else {
                 if (yPosition >= maxYPos2) {
                     $content.removeClass('static');
                     if (firstTimeScroll) {
                         firstTimeScroll = false;
+                        if (window.location.hash === "")
+                            window.location.hash = "#design";
                         window.scrollTo(0, 0);
                     }
                 }
@@ -161,8 +175,10 @@ $(document).ready(function () {
     $window.resize(handleResize);
 
     if (window.location.hash === "#code") {
-        turnOnCode();
+        turnOnCode(true);
     } else {
-        turnOnDesign();
+        turnOnDesign(true);
     }
+
+    handleResize();
 });
