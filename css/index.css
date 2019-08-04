@@ -368,6 +368,7 @@ body {
   }
   .navbar .logo {
     height: 15px;
+    margin-top: 18px;
   }
 
   .mobile-v {
@@ -497,11 +498,12 @@ body {
   height: 20px;
   align-self: center;
 }
-.section-title #filter {
+
+#filter {
   margin: 40px 0;
   transition: opacity 0.3s;
 }
-.section-title #filter .btn {
+#filter .btn {
   cursor: pointer;
   font-family: "Prompt", "Helvetica", "Arial", sans-serif;
   font-weight: 200;
@@ -509,14 +511,15 @@ body {
   font-size: 14px;
   margin: 0 4px;
   height: auto;
+  transition: background-color 0.3s;
 }
-.section-title #filter .btn:hover {
-  background-color: #ffeeee;
-}
-.section-title #filter .active {
+#filter .btn.active {
   background-color: #FD6161;
   color: white;
   pointer-events: none;
+}
+#filter .btn:not(.active):hover {
+  background-color: #ffeeee;
 }
 
 .hidden {
@@ -529,9 +532,10 @@ body {
 
 .container {
   margin: 0 10vw;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-around;
+  opacity: 0;
 }
 .container .filterDiv {
   width: 45%;
@@ -546,7 +550,13 @@ body {
   color: gray;
 }
 .container .filterDiv:hover {
-  box-shadow: 0px 2px 10px #00000011;
+  box-shadow: 0 2px 10px #00000011;
+}
+.container .filterDiv.show {
+  display: block;
+}
+.container .filterDiv.visible {
+  opacity: 1;
 }
 .container .filterDiv img {
   width: 100%;
@@ -562,10 +572,10 @@ body {
 .container .filterDiv .description {
   font-size: 16px;
 }
-.container .show {
-  display: block;
+.container.show {
+  display: flex;
 }
-.container .visible {
+.container.visible {
   opacity: 1;
 }
 
@@ -647,16 +657,22 @@ body {
   top: 0;
 }
 
-.coming-soon-label {
+.project-image-container {
+  position: relative;
+}
+.project-image-container .coming-soon-container {
   position: absolute;
-  margin-top: -50px;
+  width: 100%;
+  bottom: 20px;
+}
+.project-image-container .coming-soon-container .coming-soon-label {
   padding: 5px 10px;
   background-color: #ffffffdd;
   color: #666;
   font-size: 14px;
   border-radius: 30px;
   width: fit-content;
-  margin-left: 10vw;
+  margin: 0 auto;
 }
 
 .up-btn {
@@ -675,6 +691,7 @@ body {
 }
 
 .scroll_down::before {
+  margin-left: -1em;
   opacity: 0;
   content: "╲╱";
   position: fixed;
@@ -716,6 +733,7 @@ body {
   font-weight: 300;
   height: 2em;
   margin: 0 20px;
+  line-height: 2.4em;
 }
 .code-actions .right {
   margin-left: auto;
@@ -831,7 +849,7 @@ body {
     padding: 0;
   }
   .container .filterDiv:hover {
-    box-shadow: 0px 2px 10px #00000000;
+    box-shadow: 0 2px 10px #00000000;
   }
 
   .flex-h.code {
@@ -850,6 +868,21 @@ body {
   .flex-h.code .code-actions > a {
     margin-left: 5px;
     margin-bottom: 5px;
+  }
+
+  .up-btn {
+    width: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.2;
+    transition: opacity 0.3s;
+  }
+  .up-btn:hover {
+    opacity: 1;
+  }
+  .up-btn img {
+    width: 100%;
   }
 }
 
