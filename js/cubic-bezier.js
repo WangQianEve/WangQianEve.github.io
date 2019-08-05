@@ -13,9 +13,10 @@ function solveQuadraticEquation(a, b, c) {
     if (discriminant < 0) {
         return [];
     } else {
+        const sqrtD = Math.sqrt(discriminant);
         return [
-            (-b + Math.sqrt(discriminant)) / (2 * a),
-            (-b - Math.sqrt(discriminant)) / (2 * a)
+            (-b + sqrtD) / (2 * a),
+            (-b - sqrtD) / (2 * a)
         ];
     }
 }
@@ -30,34 +31,34 @@ function solveCubicEquation(a, b, c, d) {
 
     const p = (3 * c - b * b) / 3;
     const q = (2 * b * b * b - 9 * b * c + 27 * d) / 27;
+    const C = -b / 3;
 
     if (p === 0) {
-        return [Math.pow(-q, 1 / 3)];
+        return [Math.pow(-q, 1 / 3) + C];
     } else if (q === 0) {
-        return [Math.sqrt(-p), -Math.sqrt(-p)];
+        const sqrtP = Math.sqrt(-p);
+        return [C, sqrtP + C, -sqrtP + C];
     } else {
-        const discriminant = Math.pow(q / 2, 2) + Math.pow(p / 3, 3);
+        const q2 = q / 2, p3 = p / 3;
+        const discriminant = q2 * q2 + p3 * p3 * p3;
         if (discriminant === 0) {
-            return [Math.pow(q / 2, 1 / 3) - b / 3];
+            return [Math.pow(q2, 1 / 3) + C];
         } else if (discriminant > 0) {
-            return [Math.pow(-(q / 2) + Math.sqrt(discriminant), 1 / 3) - Math.pow((q / 2) + Math.sqrt(discriminant), 1 / 3) - b / 3];
+            const sqrtD = Math.sqrt(discriminant);
+            return [Math.pow(-q2 + sqrtD, 1 / 3) - Math.pow(q2 + sqrtD, 1 / 3) + C];
         } else {
-            const r = Math.sqrt(Math.pow(-(p / 3), 3));
-            const phi = Math.acos(-(q / (2 * Math.sqrt(Math.pow(-(p / 3), 3)))));
+            const r = Math.pow(-p3, 1.5);
+            const phi = Math.acos(-q2 / r);
             const s = 2 * Math.pow(r, 1 / 3);
             return [
-                s * Math.cos(phi / 3) - b / 3,
-                s * Math.cos((phi + 2 * Math.PI) / 3) - b / 3,
-                s * Math.cos((phi + 4 * Math.PI) / 3) - b / 3
+                s * Math.cos(phi / 3) + C,
+                s * Math.cos((phi + 2 * Math.PI) / 3) + C,
+                s * Math.cos((phi + 4 * Math.PI) / 3) + C
             ];
 
         }
 
     }
-}
-
-function roundToDecimal(num, dec) {
-    return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
 }
 
 function solveCubicBezier(p0, p1, p2, p3, x) {
@@ -71,17 +72,10 @@ function solveCubicBezier(p0, p1, p2, p3, x) {
     const c = 3 * p1 - 3 * p0;
     const d = p0;
 
-    const roots = solveCubicEquation(
-        p3 - 3 * p2 + 3 * p1 - p0,
-        3 * p2 - 6 * p1 + 3 * p0,
-        3 * p1 - 3 * p0,
-        p0
-    );
+    const roots = solveCubicEquation(a, b, c, d);
 
     const result = [];
-    let root;
-    for (let i = 0; i < roots.length; i++) {
-        root = roundToDecimal(roots[i], 15);
+    for (let root of roots) {
         if (root >= 0 && root <= 1) result.push(root);
     }
 
@@ -107,10 +101,10 @@ function cubicBezierInterceptor(p0, p1, p2, p3) {
         const tSquare = t * t;
         const tCubic = tSquare * t;
 
-        const x = ax * tCubic + bx * tSquare + cx * t + p0[0];
+        // const x = ax * tCubic + bx * tSquare + cx * t + p0[0];
         const y = ay * tCubic + by * tSquare + cy * t + p0[1];
 
-        return [x, y];
+        return y;
     }
 }
 
@@ -122,12 +116,7 @@ function cubicBezierGenerator(p1x, p1y, p2x, p2y) {
     const cubicBezier = simplifiedCubicBezier(p1x, p1y, p2x, p2y);
     return function (t) {
         let results = solveCubicBezier(0, p1x, p2x, 1, t);
-        for (let i = 0; i < results.length; i++) {
-            let temp = results[i];
-            if (temp >= 0 && temp <= 1) {
-                return cubicBezier(temp)[1];
-            }
-        }
+        if (results.length > 0) return cubicBezier(results[0]);
         return 0;
     };
 }

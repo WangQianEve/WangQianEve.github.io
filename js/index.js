@@ -9,9 +9,8 @@ function updateNavColor($anchor, $navbar, yPosition) {
 function fadeChange($from, $to, enabled = true) {
     let display = function () {
         $from.removeClass("show");
-        $to.removeClass("show");
+        $to.addClass("show");
         requestAnimationFrame(function () {
-            $to.addClass("show");
             if ($from.length > 0) {
                 $from.unbind("transitionend");
             }
@@ -91,15 +90,12 @@ $(document).ready(function () {
     const $scrollDown = $(".scroll_down");
     const $slogan = $(".slogan");
 
-    $landing.on("transitionend", function () {
-        $landing.css("display", "none");
-    });
-
-    const bezierFn = cubicBezierGenerator(.5, .0, .5, 1);
+    const bezierFn = cubicBezierGenerator(.5, .0, 1, .5);
     const finalScale = 20;
 
     let $window = $(window);
     let $landingImg = $("#landing img");
+    let imgAspectRatio;
     let topOffset = 0;
     let zoomCenter = $zoomAnchor.offset();
     const maxYPos = $landingAnchor.offset().top;
@@ -107,9 +103,15 @@ $(document).ready(function () {
     let windowWidth = $window.width();
 
     function handleResize() {
+        imgAspectRatio = $landingImg[0].naturalHeight / $landingImg[0].naturalWidth;
         windowWidth = $window.width();
         zoomCenter = $zoomAnchor.offset();
-        topOffset = Math.min(0, ($window.height() - $landingImg.height()) / 2);
+        const imageHeight = $landingImg.width() * imgAspectRatio;
+        topOffset = Math.min(0, ($window.height() - imageHeight) / 2);
+        // console.log(imageHeight, topOffset, zoomCenter);
+        // alert([$landingImg.height(), $landingImg.width() * imgAspectRatio, topOffset].join(" "));
+        // alert([topOffset, zoomCenter.left, zoomCenter.top, $window.width(), $window.height(), $landingImg.height()].join(" "));
+        // alert([$landingImg.height(), imgAspectRatio].join(" "));
         $landingImg.css("margin-top", topOffset);
         toggleLandingAndNavbar();
     }
@@ -124,10 +126,16 @@ $(document).ready(function () {
     });
     if (!firstTimeScroll) {
         $content.removeClass('static');
+        $landing.css("display", "none");
         $landing.addClass('hidden');
         $scrollDown.addClass('scroll-hidden');
         $slogan.removeClass('hidden');
     }
+
+    $landing.on("transitionend", function () {
+        if (window.pageYOffset > maxYPos)
+            $landing.css("display", "none");
+    });
 
     function toggleLandingAndNavbar() {
         const yPosition = window.pageYOffset;
@@ -143,12 +151,13 @@ $(document).ready(function () {
                 $scrollDown.removeClass('scroll-hidden');
                 $slogan.addClass('hidden');
 
-                const landingScale = 1 + (finalScale - 1) * bezierFn(yPosition / maxYPos);
+                const progress = yPosition / maxYPos;
+                const landingScale = 1 + (finalScale - 1) * bezierFn(progress);
                 $landing.css({
                     "transform": "scale(" + landingScale + ")",
-                    "transform-origin": zoomCenter.left + "px " + zoomCenter.top + "px",
+                    "transform-origin": zoomCenter.left + "px " + (zoomCenter.top + topOffset) + "px",
                 });
-                const bannerScale = 1 + contentScale * (1 - yPosition / maxYPos);
+                const bannerScale = 1 + contentScale * (1 - progress);
                 $bannerImg.css({
                     "transform": "scale(" + bannerScale + ")",
                 });
@@ -180,5 +189,6 @@ $(document).ready(function () {
         turnOnDesign(true);
     }
 
+    $landingImg.on("load", handleResize);
     handleResize();
 });
