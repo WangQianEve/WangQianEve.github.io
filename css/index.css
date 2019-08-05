@@ -653,8 +653,8 @@ body {
 }
 
 #zoom_anchor {
-  margin-left: 53vw;
-  margin-top: 24vw;
+  margin-left: 52.7vw;
+  margin-top: 23vw;
   position: absolute;
   left: 0;
   top: 0;
@@ -675,6 +675,7 @@ body {
   font-size: 14px;
   border-radius: 30px;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto;
 }
 
