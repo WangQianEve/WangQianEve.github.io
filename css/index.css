@@ -479,6 +479,7 @@ body {
 }
 .section-title .switch {
   width: fit-content;
+  width: -moz-fit-content;
   font-size: 24px;
   font-weight: 400;
   line-height: 2em;

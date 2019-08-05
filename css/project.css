@@ -237,6 +237,7 @@ body {
 }
 .section .images.demo {
   width: fit-content;
+  width: -moz-fit-content;
   margin-bottom: 40px;
 }
 .section .images.demo video {
@@ -307,6 +308,7 @@ body {
   background-color: #789CFB;
   color: white;
   width: fit-content;
+  width: -moz-fit-content;
   align-self: flex-end;
   font-weight: 300;
   box-shadow: 2px 2px 10px #00000011;
@@ -361,17 +363,17 @@ body {
   text-decoration: none;
 }
 
-.slideshow-button {
+.container .slideshow-button {
   cursor: pointer;
   width: 20px;
   max-width: 4vw;
   position: absolute;
   top: 50%;
 }
-.slideshow-button.left {
+.container .slideshow-button.left {
   left: 0;
 }
-.slideshow-button.right {
+.container .slideshow-button.right {
   right: 0;
 }
 

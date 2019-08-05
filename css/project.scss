@@ -239,6 +239,7 @@ body {
     align-items: center;
     &.demo {
       width: fit-content;
+      width: -moz-fit-content;
       margin-bottom: 40px;
       video {
         max-width: 100%;
@@ -312,6 +313,7 @@ body {
     background-color: $secondary-color;
     color: white;
     width: fit-content;
+    width: -moz-fit-content;
     align-self: flex-end;
     font-weight: 300;
     box-shadow: 2px 2px 10px #00000011;
@@ -369,7 +371,7 @@ body {
   font-weight: 400;
 }
 
-.slideshow-button {
+.container .slideshow-button {
   cursor: pointer;
   width: 20px;
   max-width: 4vw;

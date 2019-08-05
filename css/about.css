@@ -87,6 +87,7 @@
 .qian .chi-an {
   background-color: #000000aa;
   width: fit-content;
+  width: -moz-fit-content;
   padding: 3px 10px;
   border-radius: 20px;
   color: white;

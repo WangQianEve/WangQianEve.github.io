@@ -133,7 +133,7 @@ $(document).ready(function () {
     }
 
     $landing.on("transitionend", function () {
-        if (window.pageYOffset > maxYPos)
+        if (!firstTimeScroll || window.pageYOffset > maxYPos)
             $landing.css("display", "none");
     });
 
