@@ -279,10 +279,12 @@ body {
 .section-item {
   padding-top: 6vw;
   padding-bottom: 6vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .large-icon {
-  width: 40%;
+  width: 40% !important;
   margin: 30px 0;
 }
 
@@ -314,7 +316,7 @@ body {
 }
 
 .mobile {
-  display: none;
+  display: none !important;
 }
 
 .even > div, .even img {
@@ -374,18 +376,18 @@ body {
     flex-direction: column !important;
   }
 
-  .images.mobile-full {
-    width: 80%;
+  .mobile-full {
+    width: 80% !important;
     margin: 0 !important;
     align-self: center;
   }
 
   .not-mobile {
-    display: none;
+    display: none !important;
   }
 
   .mobile {
-    display: block;
+    display: block !important;
   }
 
   .section {
