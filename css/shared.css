@@ -1,7 +1,24 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -11,7 +28,7 @@ html {
 }
 
 * {
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 
 body {
@@ -46,7 +63,6 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  transition: background-color 0.3s, box-shadow 0.3s;
   font-weight: 400;
   display: flex;
   z-index: 100;
@@ -68,9 +84,6 @@ body {
 .navbar.active .pg-btn {
   color: grey;
 }
-.navbar.active #inpageNav {
-  opacity: 1;
-}
 .navbar .roundedNav {
   height: 25px;
   border-radius: 30px;
@@ -87,7 +100,6 @@ body {
   margin-left: 45px;
   align-items: center;
   font-size: 12px;
-  transition: opacity 0.3s;
 }
 .navbar #inpageNav #highlighter {
   width: 140px;
@@ -124,6 +136,9 @@ body {
 .navbar #inpageNav a.active .nav-section {
   display: inline;
 }
+.navbar #inpageNav.visible {
+  opacity: 1;
+}
 .navbar .navList {
   display: flex;
   flex-grow: 1;
@@ -137,7 +152,6 @@ body {
   opacity: 0.5;
   align-self: center;
   padding: 0 10px;
-  transition: opacity 0.3s, color 0.3s;
 }
 .navbar .navList a:hover {
   opacity: 1;
@@ -277,8 +291,8 @@ body {
 }
 
 .section-item {
-  padding-top: 6vw;
-  padding-bottom: 6vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
   display: flex;
   flex-direction: column;
 }

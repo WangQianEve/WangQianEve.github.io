@@ -5,3 +5,12 @@ $link-bg-color: #E0EBFF;
 $light-bg-color: #F0F4FB;
 $text: #666;
 $brandeis-color: #1A73E8;
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes bounce {
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

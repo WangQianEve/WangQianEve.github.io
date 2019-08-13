@@ -53,7 +53,16 @@ function changeSlide(elem, n) {
     slideshow(elem, target_index);
 }
 
+function collapsible(elem) {
+    let section = $(elem).parents('.collapsible');
+    if (section.hasClass('expand')) {
+        section.removeClass('expand').addClass('folded');
+    } else {
+        section.removeClass('folded').addClass('expand');
+    }
+}
+
 $(document).ready(function() {
     initCarousels();
-    // setInterval(carousel, 3000);
+    setInterval(carousel, 6000);
 });
