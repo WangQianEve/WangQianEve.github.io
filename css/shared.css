@@ -263,6 +263,9 @@ body {
 .highlight-content {
   background-color: #E0EBFF;
 }
+.highlight-content.with-bg {
+  background-color: #D8E6FF;
+}
 
 .highlight {
   color: #FD6161 !important;

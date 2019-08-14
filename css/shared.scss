@@ -253,6 +253,11 @@ body {
 
 .highlight-content {
   background-color: $link-bg-color;
+  &.with-bg {
+    background-color: $link-bg-color2;
+    //font-weight: 300;
+    //color: #222;
+  }
 }
 
 .highlight {
