@@ -18,7 +18,7 @@
 <div class="navbar">
     <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
     <div class="navList dark">
-        <a href="index.html" class="pg-btn active">Work</a>
+        <a href="index.html#design" class="pg-btn active">Work</a>
         <a class='pg-btn' href="about.html">About</a>
         <a class='pg-btn' href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
     </div>
@@ -31,200 +31,376 @@
     <div class="section intro">
         <div class="intro-card card">
             <div class="details">
+                <div class="item">Sponsor</div>
+                <div class="content">DARPA / BBN / Google (potential)</div>
+            </div>
+            <div class="details">
+                <div class="item">Advisor</div>
+                <div class="content">Jason Hong (CHIMPS Lab)</div>
+            </div>
+            <div class="details">
                 <div class="item">Time</div>
                 <div class="content">Feb. 2019 - Jul. 2019 (5 months)</div>
+            </div>
+            <div class="details">
+                <div class="item">Tools</div>
+                <div class="content">Figma / InVision</div>
             </div>
             <div class="details">
                 <div class="item">Team</div>
                 <div class="content">Ally Liu / Qian Wang / Rudy Iyer / Won-Woo Chung</div>
             </div>
             <div class="details">
-                <div class="item">My Role</div>
-                <div class="content">UX Designer</div>
+                <div class="item">Role</div>
+                <div class="content">UX Designer, User Researcher</div>
             </div>
             <div class="details">
-                <div class="item">Advisor</div>
-                <div class="content">Jason Hong</div>
-            </div>
-            <div class="details">
-                <div class="item">Sponsor</div>
-                <div class="content">DARPA / BBN / Google (potential)</div>
+                <div class="item">Contribution</div>
+                <div class="content">Designed the information hierarchy, part of the interfaces, and the interactions.<br/>Determined the control logic together with the developer.<br>Conducted multiple rounds of user testing to refine the design. </div>
             </div>
         </div>
     </div>
     <!--summary-->
+    <div id="sec-summary" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">00</div>
+        <div class="section-name">Summary</div>
+    </div>
     <div class="section section-item">
         <div class="summary flex-h mobile-v">
             <div class="tag narrow">Problem</div>
             <div>
-                <div class="title highlight brandeis-color">How might we help users protect their mobile privacy easily in various contexts and satisfy both individual and organizational needs?</div>
+                <div class="title brandeis-color">How might we help people protect their mobile privacy easily in both personal and organizational settings?</div>
                 <div>Current mobile systems let users control each app’s access to sensors/data at a certain level. However, this is not enough. Based on our research, many applications request more data than they need, or even leak user data to other companies. This can jeopardize the user’s properties, or even put lives under threat for those working in particular fields (e.g., military).</div>
             </div>
         </div>
         <div class="summary space-above flex-h mobile-v">
             <div class="tag narrow">Solution</div>
             <div>
-                <div class="title highlight brandeis-color">A privacy-enhanced Android system that helps you control and understand your privacy settings.</div>
+                <div class="title brandeis-color">A privacy-enhanced Android system that helps you control and understand your privacy settings.</div>
+                <div>We designed 5 different touchpoints to configure privacy settings. Privacy manager is the most important one, it is a centralized configuration app. The 5 touchpoints together manages 4 layers of settings.</div>
+                <div class="flex-h even">
+                    <div>
+                        <img src="images/brandeis/touchpoints.png" style="max-width: 300px">
+                    </div>
+                    <div>
+                        <img src="images/brandeis/levels.png" style="max-width: 300px">
+                    </div>
+                </div>
+                <div>See details below.</div>
             </div>
         </div>
     </div>
 
-    <div class="block color-bg sec">
-        <div class="section">
-            <div class="highlight label space-above">How Does It Work?</div>
-            <div class="section-item flex-h mobile-v">
-                <div class="flex-v v-center">
-                    <div class="label">Touch Point 1 - Privacy Manager </div>
-                    <p>Privacy Manager is where users can manage their privacy settings. </p>
-                    <div class="title highlight brandeis-color">Homepage</div>
-                    <p>From the homepage, users can access their global settings, app settings, and privacy profiles. Besides that, there’s a privacy overview section that provides a brief view of how users’ data is currently being accessed.</p>
-                    <p><b>Recommended Setting</b><br>The system also generates recommended settings so that users can improve their privacy settings easily.</p>
-                </div>
-                <div class="images right demo demo-mobile mobile-full">
-                    <video autoplay="" loop="" muted="">
-                        <source src="videos/brandeis/Bradeis-Homepage.webm" type="video/webm">
-                    </video>
-                </div>
+    <div id="solution" class="section color-bg sec card space-above collapsible expand">
+        <div class="space-above small flex-h">
+            <div class="tag highlight">Touch Point 1 - Privacy Manager</div>
+            <div class="toggle" onclick="collapsible(this)"></div>
+        </div>
+        <p>Privacy Manager is where users can manage their privacy settings. </p>
+        <div class="section-item flex-h around mobile-v">
+            <div class="images demo demo-mobile demo-left mobile-full">
+                <video autoplay="" loop="" muted="">
+                    <source src="videos/brandeis/Brandeis-Homepage.webm" type="video/webm">
+                    <source src="videos/brandeis/Brandeis-Homepage.mp4" type="video/mp4">
+                </video>
             </div>
-            <div class="section-item flex-h mobile-v">
-                <div class="flex-v v-center">
-                    <div class="title highlight brandeis-color">Global Setting</div>
-                    <p><b>“What-Why-Where” setting</b><br>Our privacy-enhanced Android system requires app developers to specify the purpose of every data request, and can trace back which specific libraries used the data. So we used a “what-why-where” information hierarchy: <span class="highlight brandeis-color">“what data is being requested,” “why it’s requested,”</span> and <span class="highlight brandeis-color">“where is the data used.”</span> They are shown in a progressive disclosure fashion in both global settings and app settings.</p>
-                </div>
-                <div class="images right demo demo-mobile mobile-full">
-                    <video class="slide active" autoplay="" loop="" muted="">
-                        <source src="videos/brandeis/Brandeis-GlobalSetting.webm" type="video/webm">
-                    </video>
-                </div>
+            <div class="flex-v v-center text-too-long">
+                <div class="title brandeis-color">Homepage</div>
+                <p>From the homepage, users can access global settings, app settings, and privacy modes. Besides that, there’s a privacy overview section showing how users’ data is currently being accessed. There's also a <span class="highlight-content">recommended setting</span> section to help users quickly configure their settings.</p>
             </div>
-                <div class="section-item flex-h mobile-v">
-                    <div class="flex-v v-center">
-                        <div class="title highlight brandeis-color">Privacy Mode</div>
-                        <p><span class="highlight brandeis-color">Organizations</span> sometimes need to prevent data leaks from its employees or visitors. For instance, DARPA’s employees sometimes need to hide their location from all apps when they are out on a mission. So we designed the privacy mode, which contains <span class="highlight brandeis-color">a set of permission rules that users cannot change</span>.</p>
-                    </div>
-                    <div class="images right demo demo-mobile mobile-full">
-                        <video class="slide active" autoplay="" loop="" muted="">
-                            <source src="videos/brandeis/Brandeis-Privacy%20Mode.webm" type="video/webm">
-                        </video>
-                    </div>
-                </div>
-            <div class="section-item flex-h mobile-v">
-                <div class="flex-v v-center">
-                    <div class="label">Touch Point 2 - Quick Setting</div>
-                    <div class="title highlight brandeis-color">Quick Setting</div>
-                    <p>PE-Android supports more privacy-related options in the quick setting view. This can help those who are in a sensitive situation and want to temporarily block specific types of data access.</p>
-                    <p>In the example on the right, certain permissions are disabled by the current privacy mode.</p>
-                </div>
-                <div class="images right demo demo-mobile mobile-full">
-                    <video class="slide active" autoplay="" loop="" muted="">
-                        <source src="videos/brandeis/Brandeis-QuickSetting.webm" type="video/webm">
-                    </video>
-                </div>
+        </div>
+        <div class="section-item flex-h around mobile-v">
+            <div class="images demo demo-mobile demo-left mobile-full">
+                <video autoplay="" loop="" muted="">
+                    <source src="videos/brandeis/Brandeis-GlobalSetting.mp4" type="video/webm">
+                </video>
             </div>
-            <div class="section-item flex-h mobile-v">
-                <div class="flex-v v-center">
-                    <div class="label">Touch Point 3 - App Installation</div>
-                    <div class="title highlight brandeis-color">App Settings</div>
-                    <p>Right after users installed an app, the App Settings page will be prompted. By default, all permissions are set based on your <span class="highlight brandeis-color">usual settings</span>. If no previous settings were found, they're set based on <span class="highlight brandeis-color">settings of the majority of PE-Android users</span>.</p>
-                    <p>Uncommon permission requirements are put upfront to attract users' attention.</p>
-                    <p>In the example on the right, certain permissions cannot be granted because they're disabled by the current privacy mode.</p>
-                </div>
-                <div class="images right demo demo-mobile mobile-full">
-                    <video class="slide active" autoplay="" loop="" muted="">
-                        <source src="videos/brandeis/Brandeis-Install.webm" type="video/webm">
-                    </video>
-                </div>
+            <div class="flex-v v-center text-too-long">
+                <div class="title brandeis-color">Global Setting</div>
+                <div style="color: #000; font-weight: 300">“What-Why-Where” Setting</div>
+                <div>Users can manage access globally in 3 levels: “what data is being requested,” “why it’s requested,” and “where is the data used.” This order is determined through a user research method called "card sorting". The settings are presented in a <span class="highlight-content">progressive disclosure fashion</span>.</div>
             </div>
-            <div class="section-item flex-h mobile-v">
-                <div class="flex-v v-center">
-                    <div class="label">Touch Point 4 - App Running </div>
-                    <div class="title highlight brandeis-color">Run-time Message</div>
-                    <p>While users are using an app, a pop-up will appear if the requested permission is set to “Ask”. Users can view the detailed explanation of why the app needs the data by clicking “Show More”. Checking “Never Ask Again” will correspondingly change the App privacy setting.</p>
-                </div>
-                <div class="images right demo demo-mobile mobile-full">
-                    <video class="slide active" autoplay="" loop="" muted="">
-                        <source src="videos/brandeis/Brandeis-Runtime.webm" type="video/webm">
-                    </video>
-                </div>
+        </div>
+        <div class="section-item flex-h around mobile-v">
+            <div class="images demo demo-mobile demo-left mobile-full">
+                <video autoplay="" loop="" muted="">
+                    <source src="videos/brandeis/Brandeis-Privacy%20Mode.mp4" type="video/webm">
+                </video>
             </div>
-            <div class="section-item flex-h mobile-v">
-                <div class="flex-v v-center">
-                    <div class="label">Touch Point 5 - Need Exception</div>
-                    <div class="title highlight brandeis-color">Notification Center</div>
-                    <p>Sometimes, users need a temporary exception to the privacy setting to use certain functionality. They can view the most recently blocked request in the notification center, then choose to allow just once or open the privacy manager to change the setting.</p>
-                </div>
-                <div class="images right demo demo-mobile mobile-full">
-                    <video class="slide active" autoplay="" loop="" muted="">
-                        <source src="videos/brandeis/Brandeis-Notification.webm" type="video/webm">
-                    </video>
-                </div>
+            <div class="flex-v v-center text-too-long">
+                <div class="title brandeis-color">Privacy Mode</div>
+                <div style="color: #000; font-weight: 300">Organizational Need</div>
+                <p>Organizations often need to prevent data leaks from its employees or visitors. For instance, DARPA’s military people may need to hide their location from all apps when they are out on a mission. The privacy mode allows users to apply different set of permissions in different contexts.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section color-bg sec card space-above collapsible expand">
+        <div class="space-above small flex-h">
+            <div class="tag highlight">Touch Point 2 - Quick Setting</div>
+            <div class="toggle" onclick="collapsible(this)"></div>
+        </div>
+        <div class="section-item flex-h around mobile-v">
+            <div class="images demo-left demo demo-mobile mobile-full">
+                <video class="slide active" autoplay="" loop="" muted="">
+                    <source src="videos/brandeis/Brandeis-QuickSetting.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="flex-v v-center text-too-long">
+                <div class="title brandeis-color">Quick Setting</div>
+                <p>PE-Android supports more privacy-related options in the quick setting view. This can help those who are in a sensitive situation and want to temporarily block specific types of data access.</p>
+                <p>In the example on the right, certain permissions are disabled by the current privacy mode.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section color-bg sec card space-above collapsible expand">
+        <div class="space-above small flex-h">
+            <div class="tag highlight">Touch Point 3 - App Installation</div>
+            <div class="toggle" onclick="collapsible(this)"></div>
+        </div>
+        <div class="section-item flex-h around mobile-v">
+            <div class="images demo-left demo demo-mobile mobile-full">
+                <video class="slide active" autoplay="" loop="" muted="">
+                    <source src="videos/brandeis/Brandeis-Install.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="flex-v v-center text-too-long">
+                <div class="title brandeis-color">App Settings</div>
+                <p>Right after users installed an app, the App Settings page will be prompted. By default, all permissions are set based on your <span class="highlight brandeis-color">usual settings</span>. If no previous settings were found, they're set based on <span class="highlight brandeis-color">settings of the majority of PE-Android users</span>.</p>
+                <p>Uncommon permission requirements are put upfront to attract users' attention.</p>
+                <p>In the example on the right, certain permissions cannot be granted because they're disabled by the current privacy mode.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section color-bg sec card space-above collapsible expand">
+        <div class="space-above small flex-h">
+            <div class="tag highlight">Touch Point 4 - App Running</div>
+            <div class="toggle" onclick="collapsible(this)"></div>
+        </div>
+        <div class="section-item flex-h around mobile-v">
+            <div class="images demo-left demo demo-mobile mobile-full">
+                <video class="slide active" autoplay="" loop="" muted="">
+                    <source src="videos/brandeis/Brandeis-Runtime.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="flex-v v-center text-too-long">
+                <div class="title brandeis-color">Run-time Message</div>
+                <p>While users are using an app, a pop-up will appear if the requested permission is set to “Ask”. Users can view the detailed explanation of why the app needs the data by clicking “Show More”. Checking “Never Ask Again” will correspondingly change the App privacy setting.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section color-bg sec card space-above collapsible expand">
+        <div class="space-above small flex-h">
+            <div class="tag highlight">Touch Point 5 - Notification Center</div>
+            <div class="toggle" onclick="collapsible(this)"></div>
+        </div>
+        <div class="section-item flex-h around mobile-v">
+            <div class="images demo-left demo demo-mobile mobile-full">
+                <video class="slide active" autoplay="" loop="" muted="">
+                    <source src="videos/brandeis/Brandeis-Notification.webm" type="video/webm">
+                    <source src="videos/brandeis/Brandeis-Notification.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="flex-v v-center text-too-long">
+                <div class="title brandeis-color">Notification Center</div>
+                <p>Sometimes, users need a temporary exception to the privacy setting to use certain functionality. They can view the most recently blocked request in the notification center, then choose to allow just once or open the privacy manager to change the setting.</p>
             </div>
         </div>
     </div>
 
     <!--challenges-->
-    <div class="section section-item">
-        <div class="space-below highlight label">Main Challenges</div>
-        <div class="flex-h even mobile-v">
-            <div class="flex-v center">
-                <img class="large-icon" src="images/brandeis/challenge1.svg" style="margin-top: 0">
-                <b class="b2 highlight brandeis-color">Complicated System</b>
-                <div class="b3">Multiple touchpoints complicated the system. We need to stand in users’ shoes to simplify the logic and use design to express it clearly. Our final solution is:
-                    <br/>
-                    1. Privacy mode has the highest control, quick settings come next, then global settings and app settings.
-                    <br/>
-                    2. Between global settings and app settings, the most recent change is effective.</div>
-            </div>
-            <div class="flex-v center">
-                <img class="large-icon" src="images/brandeis/challenge2.svg">
-                <b class="b2 highlight brandeis-color">Various User Types</b>
-                <div class="b3">As a mobile OS, we have various target user types. Some of them want more fine-grained control, while others may not even want to configure anything. In the end, we used progressive disclosure to serve various types of users.</div>
-            </div>
-            <div class="flex-v center">
-                <img class="large-icon" src="images/brandeis/challenge3.svg">
-                <b class="b2 highlight brandeis-color">Apply Existing Design Style</b>
-                <div class="b3">Our work is based on the Android system. Considering both user habit and development constraints, we need to follow a design style similar to that used in Android. However, existing styles are not always suitable for our features. When and how to innovate while staying close to the design style is a challenge.</div>
+    <div class="block color-bg trd overflow">
+        <div class="section">
+            <div class="tag highlight">Validation</div>
+            <div class="paragraph">We did thorough iterations through out the 5 months to make sure this complex system is easy to use and understand. We have at least 5, at most 15 iterations for each design decision we made. Following a double diamond practice, we often generate multiple designs, and then narrow down through user testing. On average, we conducted at least 3 user testings per week. This give us confidence to have a conversation with Google for future cooperation.</div>
+            <div class="section-item flex-h mobile-v">
+                <div class="flex-v center">
+                    <div class="large">5-15</div>
+                    <div>Iterations per design decision</div>
+                </div>
+                <div class="flex-v center">
+                    <div class="large">3+</div>
+                    <div>User testing per week</div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!--methods-->
-    <div class="section section-item">
-        <div class="space-below highlight label">Research Methods</div>
-        <div class="flex-h even mobile-v">
-            <div class="flex-v center">
-                <img class="" src="images/brandeis/card-sorting.png" style="margin-bottom: 30px">
-                <b class="b2 highlight brandeis-color">Card Sorting</b>
-                <div class="b3">We used card sorting to figure out the right information hierarchy. The result is our “what-why-where” structure.</div>
+    <!--Design Process-->
+    <div class="section color-bg color-summary card summary-card">
+        <div class="large-title first">DESIGN</div>
+        <div class="large-title">PROCESS</div>
+        <div class="flex-h summary-container mobile-v even">
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-user-research"><b>Research</b></a></div>
+                    <div><a href="#card-sorting">Card Sorting</a></div>
+                    <div><a  href="#heuristic">HEURISTIC EVALUATION</a></div>
+                </div>
             </div>
-            <div class="flex-v center">
-                <img class="" src="images/brandeis/a:b.png" style="margin: 30px 0">
-                <b class="b2 highlight brandeis-color">A/B Testing</b>
-                <div class="b3">With a complicated system and various user types, we often come up with multiple potential designs. A/B testing helped us identify the strengths and weaknesses of each, and inspired new ideas.</div>
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-design"><b>Design</b></a></div>
+                    <div><a href="#parallel">Parallel Design</a></div>
+                    <div><a href="#fidelity">Low/Mid/High Fidelity</a></div>
+                </div>
             </div>
-            <div class="flex-v center">
-                <img class="" src="images/brandeis/cognitive-walkthrough.png" style="margin: 30px 0">
-                <b class="b2 highlight brandeis-color">Cognitive Walkthrough</b>
-                <div class="b3">The more complex the system is, the more user testing and walkthrough it needs. We’ve been continuously doing cognitive walkthroughs with users from different backgrounds during this project span to avoid missing edge cases.</div>
+            <div class="flex-h">
+                <div class="icon" style="-webkit-mask: url(images/nav/testing.svg) no-repeat center"></div>
+                <div class="items">
+                    <div><a href="#sec-user-research"><b>Iterate</b></a></div>
+                    <div><a href="#a/b">A/B TESTING</a></div>
+                    <div><a href="#think-aloud">Think Alouds</a></div>
+                    <div><a href="#dev-wt">Developer WALKTHROUGH</a></div>
+                    <div><a href="#design-wt">Designer WALKTHROUGH</a></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="section section-item">
-        <div class="space-below highlight label">Reflection</div>
-        <div class="title">What did I learn?</div>
-        <ul>
-            <li>The key to designing a complex system is to <span class="highlight brandeis-color"> simplify it through understanding the data and logic</span>. We spent weeks discussing the control logic, conducting user research to understand users’ mental models before settling down on a design.</li>
-            <li><span class="highlight brandeis-color">Applying a design style like Material Design is not only about imitation; it’s also about innovation.</span> During prototyping, we often need to refer to the Material Design website and examples in the latest Android system to seek inspiration, while also reading through the Android developer documentation to figure out feasibility. It is a challenge to create a design based on an existing style while still fitting into the concept.</li>
-        </ul>
-        <div class="title">How can this project proceed?</div>
-        <p>This project is still ongoing, we are in the process of talking to more sponsors and partners. In the future, we hope to keep refining the product until it can satisfy more users and more institutional needs. One direction I’m particularly interested in is to provide smarter recommendations for privacy settings so that users don’t have to dive into details of the underlying system.</p>
-        <p>I hope one day, everyone can protect and manage their privacy easily and wisely.</p>
+    <!--research-->
+    <div id="sec-user-research" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">01</div>
+        <div class="section-name">Research Methods</div>
+    </div>
+    <div class="section">
+        <p>Since the project already started when I joined. We mainly focused on evaluative research, rather than generative research.</p>
+        <div class="section-item">
+            <div class="tag highlight">Card Sorting</div>
+            <div class="flex-h mobile-v">
+                <div>
+                    <div class="title">Decide the information hierarchy: "what-why-where"</div>
+                    <p>We used card sorting to figure out the right information hierarchy. We printed out permission cards with "what data this is for", "why it was requested", and "who'll be using it" on each one. Then we asked users to organize them. The result shows <span class="highlight-content">80%</span> of users sorted them in a “what-why-where” sequence.</p>
+                </div>
+                <div class="images right flex-v mobile-full">
+                    <img src="images/brandeis/card-sorting.png"/>
+                    <div class="caption">card sorting</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-item">
+            <div class="tag highlight">A/B Testing + Think-Alouds</div>
+            <div class="flex-h mobile-v">
+                <div>
+                    <div class="title">Keep refining the design until it's easy to use for different people.</div>
+                    <p>Designing for such a complicated system and various user types means testing again and again. The most often used method is the simplest A/B testing combined with think-alouds. For each design decision, we usually develop multiple designs to test. Asking users to perform a task and thinking aloud helped us better understand the mindset of users, thus informed us how to proceed.</p>
+                </div>
+                <div class="images right flex-v mobile-full">
+                    <img src="images/brandeis/a:b.png"/>
+                    <div class="caption">an example of parallel designs</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-item">
+            <div class="tag highlight">Dev Check / Developer Walkthrough</div>
+            <div class="flex-h mobile-v">
+                <div>
+                    <div class="title">Apply a data-driven design method, and use dev resources to guarantee feasibility.</div>
+                    <p>We figured out exactly what and how much data will be shown on each page. This way, we can make sure the design is still easy to use for any possible scenarios. This also made us to apply a progressive disclosure fashion for the global settings. We also walked through the design with developers to make sure all our designs are feasible under the current Android framework.</p>
+                </div>
+                <div class="images right flex-v mobile-full">
+                    <img src="images/brandeis/dev.png"/>
+                    <div class="caption">Android's developer documentation about permissions</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-item">
+            <div class="tag highlight">Designer Walkthrough / Heuristic Evaluation</div>
+            <div class="flex-h mobile-v">
+                <div>
+                    <div class="title">Check design consistency, the style against Material Design, and edge cases.</div>
+                    <p>Besides user testing, we also conduct designer walkthrough once in a while to make sure our design system is consistent everywhere. Designing for Android also requires our design to align with Material Design.</p>
+                </div>
+                <div class="images right flex-v mobile-full">
+                    <img src="images/brandeis/cognitive-walkthrough.png"/>
+                    <div class="caption">designer walkthrough</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="to-other-projects flex-h">
-        <a href="liquidnet.html">← Liquidnet</a>
-        <a href="beauty_plus.html">Beauty + →</a>
+    <!--Design-->
+    <div class="block color-bg trd">
+        <div id="sec-design" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">02</div>
+            <div class="section-name">Design</div>
+        </div>
+        Work In Progress
+<!--        <div class="section">-->
+<!--            <div class="section-item">-->
+<!--                <div class="tag highlight"></div>-->
+<!--                <div class="flex-h mobile-v even">-->
+<!--                    <div class="images flex-v mobile-full">-->
+<!--                        <img src="images/brandeis/o-global.png"/>-->
+<!--                        <div class="caption">Global Setting</div>-->
+<!--                    </div>-->
+<!--                    <div class="images flex-v mobile-full">-->
+<!--                        <img src="images/brandeis/o-install.png"/>-->
+<!--                        <div class="caption">Install UI</div>-->
+<!--                    </div>-->
+<!--                    <div class="images flex-v mobile-full">-->
+<!--                        <img src="images/brandeis/o-runtime.png"/>-->
+<!--                        <div class="caption">Runtime Popup</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+
+    <!--Reflection-->
+    <div id="sec-reflection" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">03</div>
+        <div class="section-name">Reflection</div>
+    </div>
+<!--    <div class="section">-->
+<!--        <div class="tag highlight">Main Challenges</div>-->
+<!--        <div class="flex-h even mobile-v">-->
+<!--            <div class="flex-v center">-->
+<!--                <img class="large-icon" src="images/brandeis/challenge1.svg">-->
+<!--                <div class="b2 brandeis-color">Complicated System</div>-->
+<!--                <div class="b3">Multiple touchpoints complicated the system. We need to stand in users’ shoes to simplify the logic and use design to express it clearly. Our final solution is:-->
+<!--                    <br/>-->
+<!--                    1. Privacy mode has the highest control, quick settings come next, then global settings and app settings.-->
+<!--                    <br/>-->
+<!--                    2. Between global settings and app settings, the most recent change is effective.</div>-->
+<!--            </div>-->
+<!--            <div class="flex-v center">-->
+<!--                <img class="large-icon" src="images/brandeis/challenge2.svg">-->
+<!--                <div class="b2 brandeis-color">Various User Types</div>-->
+<!--                <div class="b3">As a mobile OS, we have various target user types. Some of them want more fine-grained control, while others may not even want to configure anything. In the end, we used progressive disclosure to serve various types of users.</div>-->
+<!--            </div>-->
+<!--            <div class="flex-v center">-->
+<!--                <img class="large-icon" src="images/brandeis/challenge3.svg">-->
+<!--                <div class="b2 brandeis-color">Apply Existing Design Style</div>-->
+<!--                <div class="b3">Our work is based on the Android system. Considering both user habit and development constraints, we need to follow a design style similar to that used in Android. However, existing styles are not always suitable for our features. When and how to innovate while staying close to the design style is a challenge.</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="section">
+        <div class="reflection">
+            <div class="title correct">Things we did correctly 😉</div>
+            <ul>
+                <li>The key to designing a complex system is to <span class="highlight-content"> simplify it through understanding the data and logic</span>. We spent weeks discussing the control logic, conducting user research to understand users’ mental models before settling down on a design.</li>
+                <li>We had a good balance between <span class="highlight-content">following a design guideline (Material Design)</span> and <span class="highlight-content">innovating based on the need.</span></li>
+            </ul>
+        </div>
+        <div class="reflection">
+            <div class="title wrong">Things we can improve 🤔</div>
+            <ul>
+                <li>We couldn't test the privacy profile with <span class="highlight-content">organizational users</span> due to lack of access. If possible, I hope to do more testing with them.</li>
+                <li>If given more time, I hope to further explore how we can <span class="highlight-content">recommend configurations</span>, thus making it even easier to maintain a good setting.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section to-other-projects flex-h">
+        <a class="btn" href="liquidnet.html">← Liquidnet</a>
+        <a class="btn" href="beauty_plus.html">Beauty + →</a>
     </div>
 
     <div class="footer">Website designed and developed by @ Qian Wang 2019</div>

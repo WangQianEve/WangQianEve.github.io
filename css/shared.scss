@@ -59,16 +59,9 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  font-weight: 400;
+  font-weight: 300;
   display: flex;
   z-index: 100;
-  &.active {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 5px #00000022;
-    .pg-btn {
-      color: grey;
-    }
-  }
   .roundedNav {
     height: 25px;
     border-radius: 30px;
@@ -128,16 +121,23 @@ body {
       opacity: 1;
     }
   }
+  &.active {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px #00000022;
+    .navList .pg-btn {
+      color: #444;
+    }
+  }
   .navList {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
     &.dark {
-      a {
+      .pg-btn {
         color: #444;
       }
     }
-    a {
+    .pg-btn {
       color: white;
       opacity: 0.5;
       align-self: center;
@@ -145,14 +145,9 @@ body {
       &:hover {
         opacity: 1;
       }
-    }
-    a.active {
-      opacity: 1;
-    }
-  }
-  .dark {
-    a {
-      color: grey;
+      &.active {
+        opacity: 1;
+      }
     }
   }
 }
@@ -171,7 +166,6 @@ body {
   color: white;
   text-align: center;
   padding-top: 10px;
-  margin-top: 100px;
   width: 100%;
 }
 
@@ -241,6 +235,10 @@ body {
     margin: -200px 0;
     padding: 300px 0;
     z-index: 0;
+    &.no-process {
+      margin-bottom: 0;
+      padding-bottom: 50px;
+    }
   }
   &.overflow-bottom {
     margin-bottom: -200px;
@@ -263,9 +261,6 @@ body {
     font-weight: 300;
     //border-bottom: 10px solid $secondary-color;
     color: $secondary-color !important;
-  }
-  &.brandeis-color {
-    color: #1A73E8 !important;
   }
 }
 
@@ -300,6 +295,7 @@ body {
 }
 .b2 {
   font-size: 16px;
+  font-weight: 300;
 }
 .b3 {
   font-size: 14px;
