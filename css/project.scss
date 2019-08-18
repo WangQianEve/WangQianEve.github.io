@@ -6,22 +6,53 @@ body {
   width: 100%;
   align-items: stretch;
 }
+
+.parallax {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .banner {
-  position: fixed;
-  height: 56vw;
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  top: 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  height: 100vh;
+  img {
+    position: absolute;
+  }
+  .banner-text {
+    opacity: 0;
+    left: 10vw;
+    top: 20vw;
+    width: 40%;
+    position: absolute;
+    animation: .6s .3s fadeInUp forwards;
+  }
 }
 .container {
-  width: 100%;
+  //display: block;
   position: relative;
-  z-index: 0;
-  margin-top: calc(56vw + 200px);
   background-color: white;
+  z-index: 1;
+  //
+  width: 100%;
+  //position: relative;
+  //z-index: 0;
+  //margin-top: calc(56vw + 200px);
+  margin-top: calc(200px);
+  //background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   a {
     color: $link-color;
-    border-bottom: 1.5px solid $link-color;
+    border-bottom: 1px dashed $link-color;
     height: 2em;
     text-decoration: none;
   }
@@ -35,11 +66,6 @@ body {
   background-color: white;
   padding: 20px 50px;
   color: #404040;
-  .card-title {
-    font-size: 18px;
-    font-weight: 300;
-    display: flex;
-  }
   .details {
     font-size: 14px;
     display: flex;
@@ -68,6 +94,7 @@ body {
   .section-index {
     font-size: 40px;
     font-family: "Playfair Display", "Georgia", serif;
+    font-weight: 700;
     padding: 0 10px;
     position: relative;
     top: -14px;
@@ -76,6 +103,7 @@ body {
   .section-name {
     font-size: 30px;
     font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     color: black;
     text-transform: uppercase;
   }
@@ -175,7 +203,7 @@ img {
   }
   .summary {
     .title{
-      padding-top: 0;
+      font-size: 24px;
     }
     img {
       margin: 10px 0;
@@ -353,11 +381,15 @@ img {
       margin: 50px 0;
     }
   }
+  .divider {
+    height: 2px;
+    border-bottom: 1px #aaa dashed;
+  }
   .title {
-    font-size: 20px;
-    font-weight: 300;
+    font-family: $font-titles;
+    font-size: 22px;
+    font-weight: 400;
     padding: 10px 0;
-    color: #000;
     .bolded {
       font-weight: 500;
     }
@@ -366,25 +398,41 @@ img {
     align-self: flex-end;
   }
   &.collapsible {
-    .toggle {
+    .toggle-wrapper {
       cursor: pointer;
-      margin-left: auto;
-      font-size: 12px;
+    }
+    .toggle {
+      color: #999;
+      margin-left: 20px;
+      font-size: 14px;
+      background-image: linear-gradient(#999, #999);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      &:hover {
+        background-size: 100% 2px;
+      }
     }
     &.expand {
+      .to-fold {
+        display: initial;
+      }
+      .to-unfold {
+        display: none;
+      }
       .section-item {
         display: initial;
       }
-      .toggle::before {
-        content: '╱╲';
-      }
     }
     &.folded {
+      .to-fold {
+        display: none;
+      }
+      .to-unfold {
+        display: initial;
+      }
       .section-item {
         display: none !important;
-      }
-      .toggle::before {
-        content: '╲╱';
       }
     }
   }

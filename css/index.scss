@@ -121,7 +121,7 @@ $scroll_anchor_height: 100px;
   align-items: center;
   .slogan {
     position: absolute;
-    margin-top: calc(35vw - 260px);
+    margin-top: calc(30vw - 260px);
     width: 80%;
     color: white;
     &.hidden {
@@ -130,9 +130,8 @@ $scroll_anchor_height: 100px;
       }
     }
     #slogan-header {
-      font-family: "Arial", sans-serif;
       transition-delay: .3s;
-      font-size: 30px;
+      font-size: 34px;
       font-weight: 200;
     }
     #slogan-content {

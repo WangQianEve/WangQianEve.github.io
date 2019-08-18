@@ -7,6 +7,16 @@
     opacity: 1;
   }
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes bounce {
   50% {
     transform: translateY(-20%);
@@ -34,9 +44,9 @@ html {
 
 body {
   margin: 0;
-  font-family: "Prompt", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-weight: 200;
-  color: #666;
+  color: #444;
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -59,6 +69,7 @@ body {
 }
 
 .navbar {
+  font-family: "Prompt", sans-serif;
   height: 50px;
   padding: 0 50px;
   position: fixed;
@@ -278,6 +289,9 @@ body {
 .highlight {
   color: #FD6161 !important;
 }
+.highlight.liquidnet {
+  color: #222 !important;
+}
 .highlight.sec {
   font-weight: 300;
   color: #789CFB !important;
@@ -455,6 +469,16 @@ video {
     opacity: 1;
   }
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes bounce {
   50% {
     transform: translateY(-20%);
@@ -580,7 +604,7 @@ html {
 }
 .banner .slogan {
   position: absolute;
-  margin-top: calc(35vw - 260px);
+  margin-top: calc(30vw - 260px);
   width: 80%;
   color: white;
 }
@@ -588,9 +612,8 @@ html {
   opacity: 0;
 }
 .banner .slogan #slogan-header {
-  font-family: "Arial", sans-serif;
   transition-delay: 0.3s;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 200;
 }
 .banner .slogan #slogan-content {

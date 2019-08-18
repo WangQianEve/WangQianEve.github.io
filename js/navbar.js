@@ -38,6 +38,16 @@ function updateNav($sections, $links, $highlighter, $inpageNav) {
     $links.removeClass('active');
 }
 
+function highlight(hls) {
+    const yPosition = window.pageYOffset;
+    for (let i = 0; i < hls.length; i++) {
+        var positionFromTop = hls.eq(i).offset().top;
+        if (positionFromTop < yPosition + window.innerHeight - 200) {
+            hls.eq(i).css('background-size', '100%');
+        }
+    }
+}
+
 $highlighterShow = false;
 
 $(document).ready(function () {
@@ -47,6 +57,12 @@ $(document).ready(function () {
     const $highlighter = $('#highlighter');
     const $navbar = $('.navbar');
     const $navAnchor = $('#nav_anchor');
+    const hls = $('.highlight-content');
+    $('.parallax').scroll(function () {
+        updateNav($sections, $links, $highlighter, $inpageNav);
+        updateNavColor($navAnchor, $navbar);
+        highlight(hls);
+    });
     $(window).scroll(function () {
         updateNav($sections, $links, $highlighter, $inpageNav);
         updateNavColor($navAnchor, $navbar);

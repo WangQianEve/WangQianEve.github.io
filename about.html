@@ -112,18 +112,17 @@
     }
     $(window).scroll(scrollHandler);
 
-
   });
   function highlightDesign(reverse) {
     if (reverse) {
-      $('#designer-content').css("opacity", ".4")
+      $('#designer-content').css({"opacity": ".5"})
     } else {
-      $('#designer-content').css("opacity", "1")
+      $('#designer-content').css({"opacity": "1"})
     }
   }
   function highlightEngineer(reverse) {
     if (reverse) {
-      $('#engineer-content').css("opacity", ".4")
+      $('#engineer-content').css("opacity", ".5")
     } else {
       $('#engineer-content').css("opacity", "1")
     }

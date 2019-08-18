@@ -19,10 +19,9 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;
-  //font-family: 'Crimson Text', 'Helvetica', 'Arial', serif;
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
   font-weight: 200;
-  color: $text;
+  color: #444;
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -45,6 +44,7 @@ body {
 }
 
 .navbar {
+  font-family: 'Prompt', sans-serif;
   .logo {
     height: 20px;
     margin-top: 15px;
@@ -260,16 +260,18 @@ body {
 }
 
 .highlight-content {
-  background-color: $link-bg-color;
-  &.with-bg {
-    background-color: $link-bg-color2;
-    //font-weight: 300;
-    //color: #222;
-  }
+  background-image: linear-gradient($link-bg-color, $link-bg-color);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition: .8s;
 }
 
 .highlight {
   color: $primary-color !important;
+  &.liquidnet {
+    color: #222 !important;
+  }
   &.sec {
     font-weight: 300;
     //border-bottom: 10px solid $secondary-color;
