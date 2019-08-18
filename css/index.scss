@@ -92,16 +92,13 @@ $scroll_anchor_height: 100px;
   margin-top: 15vw;
 }
 .up-btn {
-  width: 50px;
+  width: 40px;
   position: fixed;
   bottom: 50px;
   right: 50px;
   opacity: .2;
   &:hover {
     opacity: 1;
-  }
-  img {
-    width: 100%;
   }
 }
 
@@ -120,32 +117,34 @@ $scroll_anchor_height: 100px;
 .banner {
   display: flex;
   flex-direction: column;
+  height: 35vw;
+  align-items: center;
   .slogan {
     position: absolute;
     margin-top: calc(35vw - 260px);
-    margin-left: 100px;
-    font-size: 30px;
-    font-weight: 300;
     width: 80%;
     color: white;
-    transition-delay: .3s;
     &.hidden {
-      opacity: 0;
+      p {
+        opacity: 0;
+      }
     }
-    .small {
+    #slogan-header {
+      font-family: "Arial", sans-serif;
+      transition-delay: .3s;
+      font-size: 30px;
+      font-weight: 200;
+    }
+    #slogan-content {
       line-height: 2em;
       font-size: 18px;
       color: #ffffff99;
+      transition-delay: .5s;
     }
     .hl {
       color: #ffffff;
-      font-weight: 400;
+      font-weight: 200;
     }
-  }
-  height: 35vw;
-  .video-wrapper {
-    width: 100%;
-    height: 100%;
   }
   .banner-video {
     width: 100%;
@@ -154,7 +153,7 @@ $scroll_anchor_height: 100px;
   }
 }
 .section-title {
-  margin: 80px 0 0;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +182,7 @@ $scroll_anchor_height: 100px;
   }
 }
 .container {
-  margin: 0 10vw;
+  margin: 0 10vw 50px;
   display: none;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -195,15 +194,14 @@ $scroll_anchor_height: 100px;
     opacity: 1;
   }
   .filterDiv {
-    width: 45%;
+    width: 40%;
     max-width: 600px;
     display: none; /* Hidden by default */
     opacity: 0;
-    padding: 40px 30px;
-    margin: 20px 20px;
+    //padding: 40px 30px;
+    margin: 50px 50px;
     text-decoration: none;
     color: gray;
-
     .project-image {
       &:hover {
         //box-shadow: 0 2px 10px #00000011;
@@ -224,10 +222,6 @@ $scroll_anchor_height: 100px;
 
     &.visible {
       opacity: 1;
-    }
-
-    img {
-      width: 100%;
     }
 
     .project-image-container {
@@ -255,19 +249,20 @@ $scroll_anchor_height: 100px;
       display: flex;
       flex-direction: row;
       margin: 10px 0;
+      font-size: 14px;
       .tag {
         border: none;
         color: #999;
         padding: 0 15px;
-        font-size: 14px;
         font-weight: 300;
       }
     }
+
     .project-title {
       color: #444;
       //flex-grow: 1;
       font-size: 20px;
-      font-weight: 400;
+      font-weight: 300;
       padding-top: 20px;
     }
     .description {

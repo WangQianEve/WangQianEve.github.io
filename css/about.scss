@@ -8,15 +8,17 @@
 .about-card {
   display: flex;
   flex-direction: column;
-  margin-right: 100px;
+  margin-left: 80px;
   > img {
     width: 200px;
     align-self: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   a {
+    line-height: 2em;
+    font-size: 14px;
     border: none;
-    margin: 5px 0;
+    margin: 3px 0;
     cursor: pointer;
     color: #888;
     font-style: normal;
@@ -24,10 +26,10 @@
 }
 
 .about-page-title {
-  font-size: 36px;
+  margin-top: 3em;
+  font-size: 30px;
   line-height: 2em;
   color: #444;
-  font-weight: 300;
 }
 
 
@@ -47,12 +49,8 @@
 }
 
 .evenly {
-  justify-content: space-between;
   > div {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
 }
 
@@ -62,42 +60,71 @@
 }
 
 .about-story {
+  flex-direction: column;
   padding: 20px;
   display: flex;
   align-items: center;
   img {
     object-fit: cover;
     width: 100%;
+    margin-bottom: 20px;
   }
+}
+@keyframes backgroundSlideIn {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+.about-highlight {
+  background-image: linear-gradient($link-bg-color, $link-bg-color);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  cursor: pointer;
+  transition: .8s;
+}
+#designer {
+  animation: .5s .3s backgroundSlideIn forwards;
+  &:hover {
+    #designer-content {
+      color: #000;
+    }
+  }
+}
+#engineer {
+  animation: .5s .6s backgroundSlideIn forwards;
 }
 
 .about-content {
   a {
+    color: #222;
     text-decoration: none;
-    border-bottom: 1.5px solid $link-color;
+    border-bottom: 1px dashed $link-color;
     height: 2em;
-    color: $text;
   }
-  .about-highlight {
-    //color: $primary-color;
-    background-color: $link-bg-color;
+  p {
+    color: #222;
+    opacity: .3;
   }
 }
 .qian {
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 1.5px solid $link-color;
+  border-bottom: 1px solid $link-color;
   height: 2em;
   .chi-an {
+    line-height: 2em;
+    font-size: 16px;
     background-color: #000000aa;
-    width: fit-content;
-    width: -moz-fit-content;
     padding: 3px 10px;
     border-radius: 20px;
     color: white;
     position: absolute;
     margin-top: -32px;
-    margin-left: -40px;
+    margin-left: -60px;
     display: none;
   }
   &:hover {
@@ -106,6 +133,7 @@
     }
   }
 }
+
 @media (max-width: 1023px) {
   .about-card {
     flex-direction: row;

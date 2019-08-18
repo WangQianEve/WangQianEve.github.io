@@ -164,7 +164,7 @@ body {
 
 .footer {
   height: 50px;
-  background-color: #444;
+  background-color: #222;
   color: white;
   text-align: center;
   padding-top: 10px;
@@ -226,6 +226,10 @@ body {
   position: relative;
   z-index: 1;
   background-color: white;
+  &.dark {
+    background-color: #222;
+    color: white;
+  }
   &.card {
     z-index: 2;
   }

@@ -22,26 +22,28 @@
 .about-card {
   display: flex;
   flex-direction: column;
-  margin-right: 100px;
+  margin-left: 80px;
 }
 .about-card > img {
   width: 200px;
   align-self: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .about-card a {
+  line-height: 2em;
+  font-size: 14px;
   border: none;
-  margin: 5px 0;
+  margin: 3px 0;
   cursor: pointer;
   color: #888;
   font-style: normal;
 }
 
 .about-page-title {
-  font-size: 36px;
+  margin-top: 3em;
+  font-size: 30px;
   line-height: 2em;
   color: #444;
-  font-weight: 300;
 }
 
 .about-section-title {
@@ -59,14 +61,8 @@
   margin-top: 3.5px;
 }
 
-.evenly {
-  justify-content: space-between;
-}
 .evenly > div {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 
 .about-title {
@@ -75,6 +71,7 @@
 }
 
 .about-story {
+  flex-direction: column;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -82,34 +79,64 @@
 .about-story img {
   object-fit: cover;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+@keyframes backgroundSlideIn {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+.about-highlight {
+  background-image: linear-gradient(#E0EBFF, #E0EBFF);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+#designer {
+  animation: 0.5s 0.3s backgroundSlideIn forwards;
+}
+#designer:hover #designer-content {
+  color: #000;
+}
+
+#engineer {
+  animation: 0.5s 0.6s backgroundSlideIn forwards;
 }
 
 .about-content a {
+  color: #222;
   text-decoration: none;
-  border-bottom: 1.5px solid #789CFB;
+  border-bottom: 1px dashed #789CFB;
   height: 2em;
-  color: #666;
 }
-.about-content .about-highlight {
-  background-color: #E0EBFF;
+.about-content p {
+  color: #222;
+  opacity: 0.3;
 }
 
 .qian {
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 1.5px solid #789CFB;
+  border-bottom: 1px solid #789CFB;
   height: 2em;
 }
 .qian .chi-an {
+  line-height: 2em;
+  font-size: 16px;
   background-color: #000000aa;
-  width: fit-content;
-  width: -moz-fit-content;
   padding: 3px 10px;
   border-radius: 20px;
   color: white;
   position: absolute;
   margin-top: -32px;
-  margin-left: -40px;
+  margin-left: -60px;
   display: none;
 }
 .qian:hover .chi-an {
