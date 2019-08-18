@@ -22,26 +22,37 @@
         <a href="#sec-summary">
             <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center"></div>
             <div class="nav-section">Summary</div>
+            <span class="tooltip">Summary</span>
         </a>
         <a href="#sec-research">
             <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
             <div class="nav-section">Research</div>
+            <span class="tooltip">Research</span>
         </a>
         <a href="#sec-ideate">
             <div class="icon" style="-webkit-mask: url(images/nav/ideate.svg) no-repeat center; mask-size: contain"></div>
             <div class="nav-section">Ideate</div>
+            <span class="tooltip">Ideate</span>
         </a>
         <a href="#sec-design">
             <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; mask-size: contain"></div>
             <div class="nav-section">Design</div>
+            <span class="tooltip">Design</span>
         </a>
         <a href="#sec-test">
             <div class="icon" style="-webkit-mask: url(images/nav/testing.svg) no-repeat center; mask-size: contain"></div>
-            <div class="nav-section">Test</div>
+            <div class="nav-section">Iterate</div>
+            <span class="tooltip">Iterate</span>
+        </a>
+        <a href="#sec-final">
+            <div class="icon" style="-webkit-mask: url(images/nav/final.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Final</div>
+            <span class="tooltip">Final</span>
         </a>
         <a href="#sec-next">
             <div class="icon" style="-webkit-mask: url(images/nav/next.svg) no-repeat center"></div>
             <div class="nav-section">Next Steps</div>
+            <span class="tooltip">Next Steps</span>
         </a>
     </div>
     <div class="navList dark">
@@ -63,16 +74,20 @@
                 <div class="content">Feb. 2019 - Apr. 2019 (2 months)</div>
             </div>
             <div class="details">
+                <div class="item">Tools</div>
+                <div class="content">Tortu / Lucid Chart / Figma / iMovie / Alexa Dev Tools</div>
+            </div>
+            <div class="details">
                 <div class="item">Team</div>
                 <div class="content">Melissa Shi / Ally Liu / Qian Wang / Paopao Ge / Sijia Li / Menghan Zhang / Mengqing Jiang / Wei Wang</div>
             </div>
             <div class="details">
-                <div class="item">My Role</div>
+                <div class="item">Role</div>
                 <div class="content">UX Lead / Researcher</div>
             </div>
             <div class="details">
-                <div class="item">Tools</div>
-                <div class="content">Tortu / Lucid Chart / Figma / iMovie / Alexa Dev Tools</div>
+                <div class="item">Contribution</div>
+                <div class="content">Lead the design of the conversation flow.<br/>Handover and communicate the design to the development team and help them form the technical solution.</br>Followed the research lead and was part of most of the contextual interviews.</div>
             </div>
         </div>
     </div>
@@ -97,35 +112,53 @@
             </div>
         </div>
     </div>
-    <div class="section color-bg sec card">
-        <div class="space-above">
-            <div class="tag highlight">How does it work?</div>
+    <div id="solution" class="section color-bg sec card">
+        <div class="space-above small">
+            <div class="tag highlight">Key Features</div>
         </div>
         <div class="section-item flex-h mobile-v">
+            <div class="demo alexa-demo demo-left" style="max-width: 400px;">
+                <video autoplay="" loop="" muted="">
+                    <source src="videos/alexa/Alexa-Demo1.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="flex-v v-center">
-                <div class="title">Check if the makeup is done well through computer vision.</div>
+                <div class="title">1 / Check if the makeup is done well through computer vision.</div>
                 <div>Users can ask Beauty+ to check their current makeup at any time. Beauty+ will take a picture and use <span class="highlight-content">computer vision</span> technologies to check if the product is <span class="highlight-content">blended well</span> or if there is any <span class="highlight-content">unexpected color</span> (e.g., not fully covered acne, mascara stains, eyebrow mistakes). </div>
             </div>
-            <div class="images right mobile-full">
-                <video class="slide active" autoplay="" loop="" muted="">
-                    <source src="videos/alexa/Alexa%20Demo1.webm" type="video/webm">
-                </video>
-            </div>
         </div>
         <div class="section-item flex-h mobile-v">
-            <div class="images left not-mobile">
-                <video class="slide active" autoplay="" loop="" muted="">
-                    <source src="videos/alexa/Alexa%20Demo2.webm" type="video/webm">
+            <div class="demo alexa-demo demo-left" style="max-width: 400px;">
+                <video autoplay="" loop="" muted="">
+                    <source src="videos/alexa/Alexa-Demo2.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="flex-v v-center">
-                <div class="title">Tailored guidance and tips</div>
+                <div class="title">2 / Tailored guidance and tips</div>
                 <div>Beauty+ can guide users step by step, and provide tailored tips when needed. We gathered <span class="highlight-content">121 tips</span>, and many of them are especially designed for people with no or limited vision.</div>
             </div>
-            <div class="images left mobile mobile-full">
-                <video class="slide active" autoplay="" loop="" muted="">
-                    <source src="videos/alexa/Alexa%20Demo2.webm" type="video/webm">
-                </video>
+        </div>
+    </div>
+    <div class="section color-bg sec card space-above">
+        <div class="tag highlight space-above small">Other Features</div>
+        <div class="section-item center">
+            <img src="images/alexa/features-highlight.png" style="max-width: 950px">
+        </div>
+    </div>
+<!--    <div class="section color-bg sec card space-above">-->
+<!--        <div class="tag highlight">Dialog Flow</div>-->
+<!--        <div class="section-item center">-->
+<!--            <img src="images/alexa/dialogue-flow-new.png">-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="section color-bg sec card space-above">
+        <div class="tag highlight space-above small">Concept Video & Prototype Demo</div>
+        <div class="space-above space-below flex-h even">
+            <div>
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/329157553" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+            <div>
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/354428041" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
             </div>
         </div>
     </div>
@@ -135,21 +168,24 @@
             <div class="paragraph">There are 285 million visually impaired people around the world, and this is a unexplored market. What's more, although designed for the visually impaired, the guidance/tips feature of Beauty Plus actually can serves anyone who want to improve their makeup skills. This enabled Beauty Plus to enter the larger market (the makeup industry has a 48.3-billion-dollar market value, and it's robustly growing at a speed of 5.5% per year).</div>
             <div class="section-item flex-h mobile-v">
                 <div class="flex-v center">
+                    <img src="images/alexa/icon-cosmetic.svg" style="max-width: 80px">
                     <div class="large">48.3 B</div>
-                    <div>Market Value</div>
+                    <div>Cosmetic Market Value</div>
                 </div>
                 <div class="flex-v center">
+                    <img src="images/alexa/icon-growth.svg" style="max-width: 80px">
                     <div class="large">5.5%</div>
                     <div>Yearly Growth</div>
                 </div>
                 <div class="flex-v center">
+                    <img src="images/alexa/icon-makeup.svg" style="max-width: 80px">
                     <div class="large">85%</div>
                     <div>Women wear Makeup</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section color-bg color-summary card summary-card">
+    <div class="color-bg color-summary card summary-card">
         <div class="large-title first">DESIGN</div>
         <div class="large-title">PROCESS</div>
         <div class="flex-h summary-container mobile-v even">
@@ -158,8 +194,9 @@
                 <div class="items">
                     <div><a href="#sec-research"><b>Research</b></a></div>
                     <div><a href="#competitor">Competitor Analysis</a></div>
-                    <div><a href="#role-play">12 Role-Plays</a></div>
-                    <div><a href="#contextual">4 Contextual Interviews</a></div>
+                    <div><a href="#role-play">Role-Plays</a></div>
+                    <div><a href="#contextual">Contextual Interviews</a></div>
+                    <div><a href="#more-research">More researches</a></div>
                 </div>
             </div>
             <div class="flex-h">
@@ -175,20 +212,20 @@
                 <div class="items">
                     <div><a href="#sec-design"><b>Design</b></a></div>
                     <div><a href="#technical">Technical Experiments</a></div>
-                    <div><a href="#more-research">More researches</a></div>
+                    <div><a href="#whiteboarding">Whiteboarding</a></div>
                     <div><a  href="#dialogue-flow">Dialogue Flow</a></div>
                 </div>
             </div>
             <div class="flex-h">
                 <div class="icon" style="-webkit-mask: url(images/nav/testing.svg) no-repeat center"></div>
                 <div class="items">
-                    <div><a href="#sec-test"><b>Testing</b></a></div>
+                    <div><a href="#sec-test"><b>Iterate</b></a></div>
                     <div><a href="#wizard-of-oz">Wizard of Oz</a></div>
                     <div><a href="#prototyping">Technical Prototyping</a></div>
                 </div></div>
-            </div>
+        </div>
     </div>
-<!--Research-->
+    <!--Research-->
     <div id="sec-research" class="section-title">
         <div class="section-line"></div>
         <div class="section-index">01</div>
@@ -202,41 +239,88 @@
                 <p>We researched <span class="highlight-content">current technologies</span> in the makeup industry but sadly didn’t find any that are designed for people with visual impairments. In fact, none of the products we found support accessible features as simple as auditory feedback. We listed their main features to benchmark our future design.</p>
                 <p>Since video blog is a mainstream way to learn about makeup, we also researched <span class="highlight-content">makeup videos on Youtube</span>. We found many makeup tutorials made by blind people, but <span class="highlight-content">didn’t see any intended to teach blind people</span>.</p>
             </div>
-            <div class="images right mobile-full">
-                <img class="small" src="images/alexa/competitor.png"/>
+            <div class="images right small mobile-full">
+                <img class="half-vh" src="images/alexa/competitor.png"/>
                 <div class="caption">existing competitors</div>
             </div>
         </div>
         <div id="role-play" class="section-item flex-v">
             <div class="flex-h mobile-v">
-                <div class="images left not-mobile">
-                    <video class="small" autoplay loop>
-                        <source src="videos/alexa/mockup.webm" type="video/webm"> Your browser does not support HTML 5 video tag.
+                <div class="images left small not-mobile">
+                    <video class="small" autoplay="" loop="" muted="" style="border-radius: 500px">
+                        <source src="videos/alexa/Alexa-Mockup.mp4" type="video/mp4"> Your browser does not support HTML 5 video tag.
                     </video>
                 </div>
                 <div>
                     <div class="tag highlight">Role-Play</div>
-                    <div class="title">We tried putting on makeup without vision to better empathize with users.</div>
+                    <div class="title">We tried putting on makeup without vision, and realized tips about the applying the product are extremely important.</div>
                     <p>To better <span class="highlight-content">empathize</span> with people with visual impairments and <span class="highlight-content">prepare for future user interviews</span>, we did role-play makeup sessions, which means we put on makeup with eyes closed. Each of us did two role-plays, one by ourselves, one following a youtube tutorial.</p>
                 </div>
                 <div class="mobile">
                     <video class="small" autoplay loop>
-                        <source src="videos/alexa/mockup.webm" type="video/webm"> Your browser does not support HTML 5 video tag.
+                        <source src="videos/alexa/Alexa-Mockup.mp4" type="video/mp4"> Your browser does not support HTML 5 video tag.
                     </video>
                 </div>
             </div>
-            <img class="insights" src="images/alexa/insights-roleplay.png"/>
+            <div class="insight-cards justify-end">
+                <div class="empty">
+                    <p></p>
+                </div>
+                <div>
+                    <p>Controlling the amount of product and the position of the tools is unexpectedly hard.</p>
+                </div>
+                <div>
+                    <p>Using bone structure as landmark to describe things is better. </p>
+                </div>
+                <div>
+                    <p>Tips for applyng makeup with eyes closed is different and crucial.</p>
+                </div>
+            </div>
         </div>
         <div id="contextual" class="section-item flex-v">
-            <div class="narrow-text">
-                <div class="tag highlight">Contextual Interviews</div>
-                <div class="title">We interviewed target users to validate assumptions and reveal more user needs.</div>
-                <p>We interviewed <span class="highlight-content">three individuals with different types of visual impairments</span> (including blindness), and observed them doing their daily makeup routine or ask them to follow a tutorial if they don’t usually use makeup.</p>
+            <div class="tag highlight">Contextual Interviews</div>
+            <div class="flex-h mobile-v">
+                <div>
+                    <div class="title">We interviewed the visually impaired and realize checking is the true challenge, tips are also important, position guidance is not needed.</div>
+                    <p>We interviewed <span class="highlight-content">three individuals with different types of visual impairments</span> (including blindness), and observed them doing their daily makeup routine or ask them to follow a tutorial if they don’t usually use makeup. See below our key insights:</p>
+                </div>
+                <div class="images right small v-center mobile-full">
+                    <img src="images/alexa/interview.png" style="width: 18vw; height: 18vw; object-fit: cover; border-radius: 50%"/>
+                </div>
             </div>
-            <img class="insights" src="images/alexa/insights-interview.png"/>
+            <div class="insight-cards space-above small">
+                <div>
+                    <p>1. Despite experience level, all interviewees desire feedback on how well they did. </p>
+                </div>
+                <div>
+                    <p>2. Interviewees have special tips and tools based on their vision condition.</p>
+                </div>
+                <div>
+                    <p>3. Interviewees can control tools and apply them at the right position easily.</p>
+                </div>
+                <div>
+                    <p>4. Interviewees tends to stay with the same makeup style to guarantee the best quality.</p>
+                </div>
+                <div>
+                    <p>5. Checking the makeup during the day is hard, that’s why I don’t wear makeup/salient color.</p>
+                </div>
+                <div class="empty">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div id="more-research" class="section-item flex-h mobile-v">
+            <div class="images left v-center mobile-full">
+                <img src="images/alexa/moreresearch.png"/>
+            </div>
+            <div>
+                <div class="tag highlight">Background Research</div>
+                <div class="title">We did more research to build a set of tips tailored to the target users.</div>
+                <p>We looked through <span class="highlight-content">more than 100 makeup videos and articles</span> and compiled a list of proper tips. We organized them into four categories: <span class="highlight-content">“For first-time users,” “How to apply,” “How to fix,”</span> and <span class="highlight-content">“How to self-check.”</span></p>
+            </div>
         </div>
     </div>
-
+    <!--Ideate-->
     <div class="block color-bg trd padding">
         <div id="sec-ideate" class="section-title">
             <div class="section-line"></div>
@@ -258,18 +342,14 @@
             </div>
             <div id="walk-the-wall" class="section-item">
                 <div class="tag highlight">Walking the wall & Ideate</div>
-                <p>For ideation, we used “walking the wall” method. Design ideas were then plotted on a cost/value matrix. </p>
+                <p>For ideation, we used “walking the wall” method. Design ideas were then plotted on a cost/value matrix. See below our final decisions.</p>
                 <div class="images full">
                     <img src="images/alexa/ideation.png"/>
-                </div>
-                <p>In the end, we picked two features as the core features, along with five other features to include in our final design.</p>
-                <div class="images full">
-                    <img src="images/alexa/features.png"/>
                 </div>
             </div>
         </div>
     </div>
-
+    <!--Design-->
     <div id="sec-design" class="section-title">
         <div class="section-line"></div>
         <div class="section-index">03</div>
@@ -282,42 +362,39 @@
                 <div class="title">Facing this unfamiliar platform, we prepared ourselves by building a simple app on it.</div>
                 <p>With no experience designing an Alexa Skill, how can we quickly learn about the capabilities and limitations of this platform? I first looked into design guidelines and development documentations, and then designed and built a simple Alexa Skill. This hands-on experience helped me get to know the <span class="highlight-content">framework, useful resources, and best practices</span> to design for it. I was also able to experiment the <span class="highlight-content">boundaries of its capabilities.</span></p>
             </div>
-            <div class="images right mobile-full">
+            <div class="images right v-center mobile-full">
                 <img src="images/alexa/technical.png"/>
             </div>
         </div>
-        <div id="more-research" class="section-item flex-h mobile-v">
-            <div>
-                <div class="tag highlight">Background Research</div>
-                <div class="title">We did more research to build a set of tips tailored to the target users.</div>
-                <p>We looked through <span class="highlight-content">more than 100 makeup videos and articles</span> and compiled a list of proper tips. We organized them into four categories: <span class="highlight-content">“For first-time users,” “How to apply,” “How to fix,”</span> and <span class="highlight-content">“How to self-check.”</span></p>
-            </div>
-            <div class="images right mobile-full">
-                <img src="images/alexa/moreresearch.png"/>
+        <div id="whiteboarding" class="section-item">
+            <div class="tag highlight">Whiteboarding</div>
+            <div class="title">With the selected features, we sketched out the conversation flow on the whiteboard.</div>
+            <div class="images full">
+                <img src="images/alexa/whiteboarding.jpg"/>
+                <img src="images/alexa/features.png"/>
             </div>
         </div>
         <div id="dialogue-flow" class="section-item">
             <div class="tag highlight">Dialogue Flow</div>
             <div class="title">Finally, we designed the conversation flow and wrote scripts together.</div>
-            <p>For prototyping the conversational UI, we started with a whiteboard, markers, and post-its, and then digitized them as a flow of intents with <span class="highlight-content">Tortu and Lucid Chart</span>. We broke down the flow into several parts and designed anchors to link them. After finalizing the flow, we wrote example utterances with slots for each intent.</p>
-            <div class="images full">
-                <img src="images/alexa/dialogueflow.png"/>
-                <div class="caption">Dialog flow broken down into several parts</div>
+            <p>For prototyping the conversational UI, we started with a whiteboard, markers, and post-its, and then digitized them as a flow of intents with <span class="highlight-content">Tortu</span> and <span class="highlight-content">Lucid Chart</span>. We broke down the flow into several parts and designed anchors to link them. After finalizing the flow, we wrote example utterances with slots for each intent.</p>
+            <div class="images full space-above" style="background-color: white">
+                <img src="images/alexa/dialogue-flow-new.png" style="max-width: 90vw; width: 140%"/>
             </div>
         </div>
     </div>
-
+    <!--Test-->
     <div class="block color-bg trd padding">
         <div id="sec-test" class="section-title">
             <div class="section-line"></div>
             <div class="section-index">04</div>
-            <div class="section-name">Test & Iterate</div>
+            <div class="section-name">Iterate</div>
         </div>
         <div class="section">
             <div id="wizard-of-oz" class="section-item">
                 <div class="tag highlight">Wizard of Oz</div>
-                <div class="title">DON’T OVERKILL in responses.</div>
-                <p>We want to be polite, we want to be helpful, and we want to <span class="highlight-content">guarantee discoverability of key features</span>. However, these are not reasons for having overly verbose responses. Through “Wizard of Oz” testing, we made our responses more concise, and the dialogue flows simpler. Below are <span class="highlight-content">tips we learned:</span></p>
+                <div class="title">Takeaway: be super succinct in auditory responses.</div>
+                <p>We want to be polite, we want to be helpful, and we want to <span class="highlight-content">guarantee discoverability of key features</span>. However, these are not reasons for having overly verbose responses. Through “Wizard of Oz” testing, we made our responses more concise, and the dialogue flows simpler. See below some <span class="highlight-content">tips</span> we concluded: </p>
                 <ul>
                     <li>VUI shouldn’t offer more than two options at a time.</li>
                     <li>Customize response based on user needs.</li>
@@ -325,7 +402,7 @@
                     <li>Reply “Let me know ...” rather than “Do you want ...?” to simplify the flow.</li>
                     <li>Don’t ask, just do. </li>
                 </ul>
-                <p>See below for <span class="highlight-content">examples</span>:</p>
+                <p>See below two <span class="highlight-content">examples</span>:</p>
                 <div class="slides images full flex-v run">
                     <img class="slide active" src="images/alexa/example1.png">
                     <img class="slide" src="images/alexa/example2.png">
@@ -341,63 +418,92 @@
             </div>
             <div id="prototyping" class="section-item">
                 <div class="tag highlight">Technical Prototyping</div>
-                <div class="title">Prototyping reveals more unexpected detail limitations.</div>
-                <p>Building in Alexa and hearing the responses reveals more detailed problems due to the platform and technology. </p>
-                <ul>
-                    <li>Skill name cannot contain “Echo” (our original name is “Echo Beauty”).</li>
-                    <li>Alexa’s tone is limited, with only two punctuations (“,” and “.”) supported. So question marks, dashes, and apostrophes needed to be replaced while remaining similar tones.</li>
-                </ul>
-                <p>See below for <span class="highlight-content">technical details</span>:</p>
-                <div class="slides images full flex-v run">
-                    <img class="slide active" src="images/alexa/technical1.png">
-                    <img class="slide" src="images/alexa/technical2.png">
-                    <img class="slide" src="images/alexa/technical3.png">
-                    <img class="slide" src="images/alexa/technical4.png">
-                    <img class="slide" src="images/alexa/technical5.png">
-                    <div class="demo">
-                        <div class="active" onclick="currentDiv(this,0)">
-                            <img src="images/alexa/technical1.png">
-                        </div>
-                        <div onclick="currentDiv(this,1)" class="">
-                            <img src="images/alexa/technical2.png">
-                        </div>
-                        <div onclick="currentDiv(this,2)" class="">
-                            <img src="images/alexa/technical3.png">
-                        </div>
-                        <div onclick="currentDiv(this,3)" class="">
-                            <img src="images/alexa/technical4.png">
-                        </div>
-                        <div onclick="currentDiv(this,4)" class="">
-                            <img src="images/alexa/technical5.png">
-                        </div>
+                <div class="flex-h space-below mobile-v">
+                    <div>
+                        <div class="title">Due to technical constraints, we refined each character to generate the right tone for Alexa.</div>
+                        <p>Testing in the simulator reveals more detailed problems, even problems with the punctuations we used, because Alexa can only pronounce two punctuations (“,” and “.”). So question marks, dashes, and apostrophes needed to be replaced while remaining similar tones.</p>
+                    </div>
+                    <div class="images narrow right flex-v mobile-full">
+                        <img src="images/alexa/technical-prototyping.png"/>
+                        <div class="caption">Alexa simulation window</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Final-->
+    <div id="sec-final" class="section-title">
+        <div class="section-line"></div>
+        <div class="section-index">05</div>
+        <div class="section-name">Final Design</div>
+    </div>
+    <div class="section">
+        <div id="technical-solution" class="section-item">
+            <div class="tag highlight">Technical Solution</div>
+            <p>See below our technical solution framework and the computer vision solution.</p>
+            <div class="slides images full flex-v run">
+                <img class="slide active" src="images/alexa/technical1.png">
+                <img class="slide" src="images/alexa/technical2.png">
+                <img class="slide" src="images/alexa/technical3.png">
+                <img class="slide" src="images/alexa/technical4.png">
+                <img class="slide" src="images/alexa/technical5.png">
+                <div class="demo">
+                    <div class="active" onclick="currentDiv(this,0)">
+                        <img src="images/alexa/technical1.png">
+                    </div>
+                    <div onclick="currentDiv(this,1)" class="">
+                        <img src="images/alexa/technical2.png">
+                    </div>
+                    <div onclick="currentDiv(this,2)" class="">
+                        <img src="images/alexa/technical3.png">
+                    </div>
+                    <div onclick="currentDiv(this,3)" class="">
+                        <img src="images/alexa/technical4.png">
+                    </div>
+                    <div onclick="currentDiv(this,4)" class="">
+                        <img src="images/alexa/technical5.png">
                     </div>
                 </div>
             </div>
         </div>
+        <div id="final-design" class="section-item">
+            <div class="tag highlight">Prototype Demo</div>
+            <p>Due to time and resouces constraints, we couldn't implement all our designs. See our final prototype showcasing several core functions.</p>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/354428041" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <div id="pitch" class="section-item">
+            <div class="tag highlight">Concept Video</div>
+            <p>We made a pitch at Alexa Day competition with a concept video and <span class="highlight sec">won 2nd awards</span> 🏆! See below our concept video</p>
+            <div>
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/329157553" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </div>
+        <a id="final" href="#solution" class="btn final">View Design Summary ↑</a>
     </div>
-
-    <div id="sec-next" class="section-title">
-        <div class="section-line"></div>
-        <div class="section-index">05</div>
-        <div class="section-name">Next Steps</div>
-    </div>
-    <div class="section">
-        <div class="section-item">
-            <p style="color:#444">As a first step towards accessible makeup for the visually impaired, our solution is still far from perfect. Future steps for this project can be:</p>
-            <ul>
-                <li><span class="highlight-content">Test with more users</span> who have visual impairments to refine current design and scripts.</li>
-                <li><span class="highlight-content">Design a personality</span> for the skill to make it more adorable and memorable.</li>
-                <li>Identify and design for higher-level user needs, e.g. <span class="highlight-content">emotional needs.</span></li>
-                <li>Explore potential ways to incorporate or tackle more <span class="highlight-content">high-value-high-cost features</span>.</li>
-                <li>Expand our target user group and design for <span class="highlight-content">the general crowd.</span></li>
-            </ul>
+    <!--Next-->
+    <div class="block color-bg trd">
+        <div id="sec-next" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">06</div>
+            <div class="section-name">Next Steps</div>
+        </div>
+        <div class="section">
+                <p style="color:#444">As a first step towards accessible makeup for the visually impaired, our solution is still far from perfect. Future steps for this project can be:</p>
+                <ul>
+                    <li><span class="highlight-content">Test with more users</span> who have visual impairments to refine current design and scripts.</li>
+                    <li><span class="highlight-content">Design a personality</span> for the skill to make it more adorable and memorable.</li>
+                    <li>Identify and design for higher-level user needs, e.g. <span class="highlight-content">emotional needs.</span></li>
+                    <li>Explore potential ways to incorporate or tackle more <span class="highlight-content">high-value-high-cost features</span>.</li>
+                    <li>Expand our target user group and design for <span class="highlight-content">the general crowd.</span></li>
+                </ul>
+        </div>
+        <div class="section to-other-projects flex-h">
+            <a class="btn left" href="brandeis.html">← Brandeis</a>
         </div>
     </div>
 
-    <div class="section to-other-projects flex-h">
-        <a class="btn" href="brandeis.html">← Brandeis</a>
-    </div>
-
     <div class="footer">Website designed and developed by @ Qian Wang 2019</div>
+</div>
 </body>
 </html>

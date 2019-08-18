@@ -48,7 +48,7 @@ body {
   align-self: flex-start;
   width: 800px;
   max-width: 100%;
-  margin-left: -50px;
+  margin-left: -10vw;
   position: relative;
   background-color: white;
   padding: 20px 50px;
@@ -77,7 +77,7 @@ body {
   display: flex;
   padding: 30px 0;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .section-title .section-line {
   width: 10%;
@@ -124,70 +124,68 @@ img {
   margin: 20px 0;
 }
 
-.section.intro {
-  position: relative;
-  margin-top: -130px;
-  margin-bottom: 50px;
-}
-.section.summary-card {
-  align-items: flex-start;
-  padding-top: 80px;
-  padding-bottom: 50px;
+.summary-card {
+  width: 85vw;
+  padding: 80px 50px;
   color: white;
   font-size: 16px;
-  margin-bottom: 80px;
   line-height: 1.2em;
 }
-.section.summary-card a {
+.summary-card a {
   color: white;
   cursor: pointer;
   text-decoration: none;
   font-style: normal;
   border: none;
 }
-.section.summary-card .items > div {
+.summary-card .items > div {
   padding: 6px 0;
 }
-.section.summary-card .large-title {
+.summary-card .large-title {
   font-size: 50px;
   font-weight: 400;
   line-height: 1.2em;
 }
-.section.summary-card .large-title.first {
+.summary-card .large-title.first {
   color: #FFD88D;
 }
-.section.summary-card .summary-container {
+.summary-card .summary-container {
   padding: 40px 0;
   justify-content: space-evenly;
   width: 100%;
 }
-.section.summary-card .summary-container .line {
+.summary-card .summary-container .line {
   border-right: 1px solid white;
   margin: 20px 0 20px 10px;
   width: 1px;
   padding: 0;
 }
-.section.summary-card .summary-container .icon {
+.summary-card .summary-container .icon {
   width: 30px;
   height: 26px;
   background-color: white;
   flex-grow: 0;
 }
-.section.summary-card .contrib-title {
+.summary-card .contrib-title {
   margin-top: 2vw;
   width: 100%;
 }
-.section.summary-card .contrib-title .line {
+.summary-card .contrib-title .line {
   border-bottom: white 1px solid;
   height: 9px;
   flex-grow: 1;
 }
-.section.summary-card .contrib-title b {
+.summary-card .contrib-title b {
   margin: 0 10px;
   flex-shrink: 0;
 }
-.section.summary-card p {
+.summary-card p {
   line-height: 1.8em;
+}
+
+.section.intro {
+  position: relative;
+  margin-top: -160px;
 }
 .section .align-prototypes {
   align-items: flex-end;
@@ -210,12 +208,19 @@ img {
   justify-content: center;
   color: white;
 }
+.section .insight-cards .empty {
+  opacity: 0;
+}
+.section .insight-cards.justify-end {
+  justify-content: flex-end;
+}
 .section .insight-cards div {
-  width: 45%;
+  width: 30%;
   max-width: 400px;
+  min-width: 180px;
   background-color: #789CFB;
   padding: 10px 10px;
-  margin: 15px;
+  margin: 10px;
 }
 .section .insight-cards div p {
   font-size: 12px;
@@ -240,7 +245,6 @@ img {
   width: 100%;
 }
 .section video {
-  width: 100%;
   object-fit: cover;
   margin: 0;
 }
@@ -282,10 +286,10 @@ img {
   width: 50px;
 }
 .section .images.left {
-  margin: 0 20px 0 0;
+  margin: 0 30px 0 0;
 }
 .section .images.right {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 30px;
 }
 .section .images.narrow img, .section .images.narrow video {
   width: 80%;
@@ -301,10 +305,12 @@ img {
   width: 40%;
 }
 .section .images img, .section .images video {
-  max-width: 100%;
   object-fit: contain;
 }
-.section .images .small {
+.section .images.small {
+  width: 35%;
+}
+.section .images .half-vh {
   max-height: 50vh;
 }
 .section .caption {
@@ -387,6 +393,21 @@ img {
 .section.collapsible.folded .toggle::before {
   content: "╲╱";
 }
+.section .process-title {
+  color: #222;
+  font-weight: 300;
+  text-align: center;
+  font-size: 14px;
+}
+.section #new-mode {
+  width: 30%;
+  flex-grow: 0;
+  padding: 20px;
+  box-shadow: 2px 2px 10px #00000011;
+}
+.section .portion2 {
+  width: 60%;
+}
 
 .space-below {
   margin-bottom: 50px !important;
@@ -411,14 +432,17 @@ img {
 }
 
 .to-other-projects {
-  margin-bottom: 50px;
-  width: 100%;
-  padding: 50px 10vw 30px;
-  justify-content: space-between;
-  font-weight: 400;
+  margin: 50px 0;
 }
 .to-other-projects a {
+  position: absolute;
   text-decoration: none;
+}
+.to-other-projects a.left {
+  left: 10vw;
+}
+.to-other-projects a.right {
+  right: 10vw;
 }
 
 .container .slideshow-button {
@@ -488,11 +512,17 @@ img {
 .demo.demo-left {
   margin-right: 40px;
 }
+.demo.demo-right {
+  margin-left: 40px;
+}
 .demo video {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   outline: none;
+}
+.demo.alexa-demo video {
+  border-radius: 10%;
 }
 
 .reflection .title {

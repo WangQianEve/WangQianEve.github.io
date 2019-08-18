@@ -20,6 +20,7 @@ html {
 body {
   margin: 0;
   font-family: 'Prompt', 'Helvetica', 'Arial', sans-serif;
+  //font-family: 'Crimson Text', 'Helvetica', 'Arial', serif;
   font-weight: 200;
   color: $text;
   font-size: 16px;
@@ -129,6 +130,7 @@ body {
     }
   }
   .navList {
+    text-transform: uppercase;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
@@ -180,13 +182,15 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  &.center {
-    align-items: center;
-  }
-  &.v-center {
-    justify-content: center;
-  }
 }
+
+.v-center {
+  justify-content: center;
+}
+.center {
+  align-items: center;
+}
+
 .flex-h {
   display: flex !important;
   flex-direction: row !important;
@@ -198,6 +202,9 @@ body {
   }
   &.around {
     justify-content: space-around;
+  }
+  &.between {
+    justify-content: space-between;
   }
   &.even {
     > div {
@@ -218,6 +225,7 @@ body {
   flex-direction: column;
   position: relative;
   z-index: 1;
+  background-color: white;
   &.card {
     z-index: 2;
   }
@@ -225,15 +233,11 @@ body {
     background-color: #EDF1F4;
   }
   &.sec {
-    background-color: #F0F4FB;
-  }
-  &.padding {
-    padding-top: 100px;
-    margin-bottom: 100px;
+    background-color: #F1F6FF; //#F0F4FB;
   }
   &.overflow {
     margin: -200px 0;
-    padding: 300px 0;
+    padding: 300px 0 250px;
     z-index: 0;
     &.no-process {
       margin-bottom: 0;
@@ -272,8 +276,8 @@ body {
 .section {
   display: flex;
   flex-direction: column;
-  max-width: 1300px;
-  width: 85vw;
+  max-width: 1000px;
+  width: 90vw;
   padding: 20px 60px;
   line-height: 2em;
   &.center {
@@ -281,6 +285,9 @@ body {
   }
   &.code {
     padding: 0;
+  }
+  .self-center {
+    align-self: center;
   }
 }
 
@@ -304,6 +311,15 @@ body {
 }
 .b3 {
   font-size: 14px;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+video {
+  width: 100%;
+  object-fit: cover;
 }
 
 //coming soon

@@ -17,6 +17,29 @@
 <body>
 <div class="navbar">
     <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
+    <div id="inpageNav" class="roundedNav">
+        <div id='highlighter' class="roundedNav"></div>
+        <a href="#sec-summary">
+            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center"></div>
+            <div class="nav-section">Summary</div>
+            <span class="tooltip">Summary</span>
+        </a>
+        <a href="#sec-research">
+            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center"></div>
+            <div class="nav-section">Research</div>
+            <span class="tooltip">Research</span>
+        </a>
+        <a href="#sec-design">
+            <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; mask-size: contain"></div>
+            <div class="nav-section">Design</div>
+            <span class="tooltip">Design</span>
+        </a>
+        <a href="#sec-reflection">
+            <div class="icon" style="-webkit-mask: url(images/nav/reflection.svg) no-repeat center"></div>
+            <div class="nav-section">Reflection</div>
+            <span class="tooltip">Reflection</span>
+        </a>
+    </div>
     <div class="navList dark">
         <a href="index.html#design" class="pg-btn active">Work</a>
         <a class='pg-btn' href="about.html">About</a>
@@ -101,7 +124,6 @@
         <div class="section-item flex-h around mobile-v">
             <div class="images demo demo-mobile demo-left mobile-full">
                 <video autoplay="" loop="" muted="">
-                    <source src="videos/brandeis/Brandeis-Homepage.webm" type="video/webm">
                     <source src="videos/brandeis/Brandeis-Homepage.mp4" type="video/mp4">
                 </video>
             </div>
@@ -235,7 +257,7 @@
     </div>
 
     <!--Design Process-->
-    <div class="section color-bg color-summary card summary-card">
+    <div class="color-bg color-summary card summary-card">
         <div class="large-title first">DESIGN</div>
         <div class="large-title">PROCESS</div>
         <div class="flex-h summary-container mobile-v even">
@@ -269,7 +291,7 @@
     </div>
 
     <!--research-->
-    <div id="sec-user-research" class="section-title">
+    <div id="sec-research" class="section-title">
         <div class="section-line"></div>
         <div class="section-index">01</div>
         <div class="section-name">Research Methods</div>
@@ -337,7 +359,72 @@
             <div class="section-index">02</div>
             <div class="section-name">Design</div>
         </div>
+        <div class="section">
+            <div class="title self-center brandeis-color">Privacy Manager</div>
+            <div class="section-item">
+                <div class="label">Homepage</div>
+                <div class="space-below">We designed 2 new parts on the homepage, and refined the global  setting section. See below our process.</div>
+                <img src="images/brandeis/homepage-spec-process.png"/>
+            </div>
+            <div class="section-item">
+                <div class="label">Global Setting</div>
+                <div>We refined the design of the data type page, and added two other levels of setting. See below the changes:</div>
+                <div class="space-above process-title">Before vs. After</div>
+                <img src="images/brandeis/global-spec-process.png"/>
+            </div>
+            <div class="section-item">
+                <div class="label">Privacy Mode</div>
+                <div class="flex-h between mobile-v space-below">
+                    <div class="portion2">
+                        <div>Privacy mode was designed mainly to satisfy organizational need. See below the UI when there is at least one mode, and the UI when there's no mode.</div>
+                        <img src="images/brandeis/privacy-mode-spec.png"/>
+                    </div>
+                    <div id="new-mode" class="flex-v center color-bg">
+                        <div class="space-below">How to add a new mode?</div>
+                        <video autoplay="" loop="" muted="" style="width: 70%">
+                            <source src="videos/brandeis/Brandeis-New-Mode.mp4" type="video/mp4">
+                        </video>
+                        <div class="space-above">We specifically made it long to make sure users understand the consequence.</div>
+                    </div>
+                </div>
+                <img src="images/brandeis/privacy-mode-key%20decisions.png"/>
+            </div>
+        </div>
     </div>
+    <div class="section">
+        <div class="section-item center">
+            <div class="title brandeis-color">Quick Setting</div>
+            <div class="space-below">We designed 2 new parts on the homepage, and refined the global  setting section. See below our process.</div>
+            <img src="images/brandeis/quick-setting-spec.png" style="max-width: 1000px"/>
+            <div class="space-above space-below process-title">Key Design Iterations</div>
+            <img src="images/brandeis/quick-setting-process2.png"/>
+        </div>
+    </div>
+    <div class="block color-bg trd">
+        <div class="section">
+            <div class="section-item center">
+                <div class="title brandeis-color">App Setting</div>
+                <div class="space-below">See below tha configuration page for an App. This page will immediately show up after the user installed an app.</div>
+                <img src="images/brandeis/app-setting-spec-process.png" style="max-width: 1000px"/>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-item center">
+            <div class="title brandeis-color">Runtime Popup</div>
+            <img src="images/brandeis/runtime-spec.png"/>
+            <img class="space-above" src="images/brandeis/runtime-process.png" style="max-width: 900px"/>
+        </div>
+    </div>
+    <div class="block color-bg trd">
+        <div class="section">
+            <div class="section-item center">
+                <div class="title brandeis-color">Notifications</div>
+                <div class="space-below">Users sometimes need to change the access as an exception to use certain function. Currently, we need to dig through the configuration list and change it, and change it back afterwards. We provide a convenient entry point in the notification center to cope with these kind of situation.</div>
+                <img src="images/brandeis/notif-spec-process.png" style="max-width: 1000px"/>
+            </div>
+        <a id="final" href="#solution" class="btn final">View Final Design ↑</a>            </div>
+</div>
 
     <!--Reflection-->
     <div id="sec-reflection" class="section-title">
@@ -364,8 +451,8 @@
     </div>
 
     <div class="section to-other-projects flex-h">
-        <a class="btn" href="liquidnet.html">← Liquidnet</a>
-        <a class="btn" href="beauty_plus.html">Beauty + →</a>
+        <a class="btn left" href="liquidnet.html">← Liquidnet</a>
+        <a class="btn right" href="beauty_plus.html">Beauty + →</a>
     </div>
 
     <div class="footer">Website designed and developed by @ Qian Wang 2019</div>

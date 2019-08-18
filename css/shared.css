@@ -140,6 +140,7 @@ body {
   color: #444;
 }
 .navbar .navList {
+  text-transform: uppercase;
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
@@ -189,11 +190,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-.flex-v.center {
-  align-items: center;
-}
-.flex-v.v-center {
+
+.v-center {
   justify-content: center;
+}
+
+.center {
+  align-items: center;
 }
 
 .flex-h {
@@ -208,6 +211,9 @@ body {
 }
 .flex-h.around {
   justify-content: space-around;
+}
+.flex-h.between {
+  justify-content: space-between;
 }
 .flex-h.even > div {
   width: 100%;
@@ -227,6 +233,7 @@ body {
   flex-direction: column;
   position: relative;
   z-index: 1;
+  background-color: white;
 }
 .color-bg.card {
   z-index: 2;
@@ -235,15 +242,11 @@ body {
   background-color: #EDF1F4;
 }
 .color-bg.sec {
-  background-color: #F0F4FB;
-}
-.color-bg.padding {
-  padding-top: 100px;
-  margin-bottom: 100px;
+  background-color: #F1F6FF;
 }
 .color-bg.overflow {
   margin: -200px 0;
-  padding: 300px 0;
+  padding: 300px 0 250px;
   z-index: 0;
 }
 .color-bg.overflow.no-process {
@@ -278,8 +281,8 @@ body {
 .section {
   display: flex;
   flex-direction: column;
-  max-width: 1300px;
-  width: 85vw;
+  max-width: 1000px;
+  width: 90vw;
   padding: 20px 60px;
   line-height: 2em;
 }
@@ -288,6 +291,9 @@ body {
 }
 .section.code {
   padding: 0;
+}
+.section .self-center {
+  align-self: center;
 }
 
 .section-item {
@@ -313,6 +319,16 @@ body {
 
 .b3 {
   font-size: 14px;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+video {
+  width: 100%;
+  object-fit: cover;
 }
 
 .coming-soon {
