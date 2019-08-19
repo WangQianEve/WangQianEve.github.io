@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <title>Qian Wang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,400&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <link href="css/project.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="js/navbar.js" type="text/javascript"></script>
+    <script src="js/shared.js" type="text/javascript"></script>
     <script src="js/project.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="images/Q.png"/>
 </head>
@@ -21,30 +21,35 @@
     <div id="inpageNav" class="roundedNav">
         <div id='highlighter' class="roundedNav"></div>
         <a href="#sec-summary">
-            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center">
-            </div>
+            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center; -webkit-mask-size: contain;"></div>
             <span class="tooltip">Summary</span>
             <div class="nav-section">Summary</div>
         </a>
+        <a href="#solution">
+            <div class="icon" style="-webkit-mask: url(images/nav/solution.svg) no-repeat center; -webkit-mask-size: contain;">
+            </div>
+            <span class="tooltip">Solution</span>
+            <div class="nav-section">Solution</div>
+        </a>
         <a href="#sec-user-research">
-            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center">
+            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center; -webkit-mask-size: contain;">
             </div>
             <span class="tooltip">User Research</span>
             <div class="nav-section">User Research</div>
         </a>
         <a href="#sec-design-research">
-            <div class="icon" style="-webkit-mask: url('images/nav/design-research.svg') no-repeat center">
+            <div class="icon" style="-webkit-mask: url('images/nav/design-research.svg') no-repeat center; -webkit-mask-size: contain;">
             </div>
             <span class="tooltip">Design Research</span>
             <div class="nav-section">Design Research</div>
         </a>
         <a href="#sec-design">
-            <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; mask-size: contain"></div>
+            <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; -webkit-mask-size: contain;"></div>
             <div class="nav-section">Design</div>
             <span class="tooltip">Design</span>
         </a>
         <a href="#sec-reflection">
-            <div class="icon" style="-webkit-mask: url(images/nav/reflection.svg) no-repeat center"></div>
+            <div class="icon" style="-webkit-mask: url(images/nav/reflection.svg) no-repeat center; -webkit-mask-size: contain;"></div>
             <div class="nav-section">Reflection</div>
             <span class="tooltip">Reflection</span>
         </a>
@@ -100,14 +105,14 @@
         </div>
         <div class="section section-item">
             <div class="summary">
-                <div class="tag narrow highlight">Problem Framing</div>
+                <div class="tag highlight">Problem Framing</div>
                 <div>
-                    <div class="title highlight liquidnet">Design an alert system to get traders' attention and draw them to Liquidnet.</div>
+                    <div class="title">Design an alert system to get traders' attention and draw them to Liquidnet.</div>
                     <div>Liquidnet is a FinTech company that provides a dark-pool trading platform to institutional traders and asset managers. The problem is that traders usually use Liquidnet solely as a trading platform, so they minimize it most of the time, and wouldn't utilize the newer analytics technologies. So, recently, Liquidnet designed an alert system to actively push trading suggestions and opportunities to  increase exposure and user engagement. The goal of this project is to explore the best ways to design this alert system.</div>
                 </div>
             </div>
             <div class="summary space-above">
-                <div class="tag narrow highlight">Solution</div>
+                <div class="tag highlight">Solution</div>
                 <div>
                     <div class="title highlight liquidnet">A comprehensive set of alert design guidelines along with proof-of-concept prototypes.</div>
                     <div>After thorough research, we concluded a set of design guidelines for Liquidnet. We presented them on a website along with the supporting research and prototypes demonstrating the guideline. We generated 4 sets of guidelines/designs answering 3 questions: How to get traders' attention? How to convince them to take action on Liquidnet? How to engage them even when they are not trading?</div>
@@ -116,15 +121,16 @@
                 </div>
             </div>
         </div>
+        <!--Solution-->
         <div id="solution" class="section-title">
             <div class="section-line"></div>
             <div class="section-index">01</div>
             <div class="section-name">Solution</div>
         </div>
         <div class="block color-bg sec card section">
-            <div class="section">
-                <div class="tag highlight space-above small">Guideline Website</div>
-                <div class="flex-v center space-above">
+            <div class="section-item">
+                <div class="tag highlight">Guideline Website</div>
+                <div class="flex-v center space-above small">
                     <div class="">We built this <a target="_blank" href="https://wangqianeve.github.io/MHCI-Trufflin-Website/">website</a> to show our research findings in analogous domains, the design guidelines we concluded, the prototypes we built based on the guidelines, and the relations among them.</div>
                     <div class="demo demo-desktop space-above space-below small" >
                         <video autoplay="" loop="" muted="">
@@ -133,16 +139,16 @@
                         </video>
                     </div>
                 </div>
-                <div class="divider space-above"></div>
             </div>
+            <div class="divider"></div>
             <!--Set 1-->
-            <div class="section collapsible expand">
-                <div class="space-below small flex-h toggle-wrapper" onclick="collapsible(this)">
+            <div class="collapsible expand">
+                <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
                     <div class="tag highlight">Prototype | Set 1: Grab Attention</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
-                <div class="section-item">
+                <div class="section-item space-above">
                     <div class="title">1. Apply large area of salient color.</div>
                     <div>We tested the effects of different combinations of <span class="highlight-content">color, animation, and sound</span> at a simulated trading desk, and discovered that salient colors can best attract attention.</div>
                     <div class="flex-h around space-above small mobile-v">
@@ -168,8 +174,8 @@
                             <source src="videos/Capstone/Urgency.mp4" type="video/webm">
                         </video>
                     </div>
-                    <div>
-                        <div class="title space-above">2. Provide multiple levels of urgency to avoid alert fatigue, and provide affordance of the alert type through colors.</div>
+                    <div class="flex-v v-center">
+                        <div class="title">2. Provide multiple levels of urgency to avoid alert fatigue, and provide affordance of the alert type through colors.</div>
                         <div>Providing multiple levels of urgency can help avoid getting too much attention and causing <span class="highlight-content">alert fatigue or cognitive blindness</span>. Color is also used to indicate the type of the alert, so that traders can know what is happening even before reading any text. This can improve efficiency. </div>
                     </div>
                     <div class="space-above mobile-full mobile">
@@ -178,7 +184,7 @@
                         </video>
                     </div>
                 </div>
-                <div class="section-item flex-h tablet-mobile-v space-below">
+                <div class="section-item flex-h tablet-mobile-v">
                     <div>
                         <div class="title">3. A minimized view keeps Liquidnet visible, and brings users back to Liquidnet.</div>
                         <div>Considering currently many users don't allocate screen property to Liquidnet, we designed a minimized view to ensure users can notice and access Liquidnet alerts. In the long term, this minimized view can increase exposure, thus bringing users back to Liquidnet and winning more screen property.</div>
@@ -189,12 +195,13 @@
                         </video>
                     </div>
                 </div>
-                <div class="divider"></div>
             </div>
+            <div class="divider"></div>
             <!--Set 2-->
-            <div class="section collapsible folded">
-                <div class="space-below small flex-h toggle-wrapper" onclick="collapsible(this)">
-                    <div class="tag highlight">Prototype | Set 2: Guide Action Through Information Architecture</div>
+            <div class="collapsible folded">
+                <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
+                    <div class="tag highlight not-mobile">Prototype | Set 2: Guide Action Through Information Architecture</div>
+                    <div class="tag highlight mobile">Prototype | Set 2: Information Hierarchy</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
@@ -234,11 +241,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="divider"></div>
             </div>
+            <div class="divider"></div>
             <!--Set 3-->
-            <div class="section collapsible folded">
-                <div class="space-below small flex-h toggle-wrapper" onclick="collapsible(this)">
+            <div class="collapsible folded">
+                <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
                     <div class="tag highlight">Prototype | Set 3: Support individualizatione</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
@@ -273,12 +280,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="divider"></div>
             </div>
+            <div class="divider"></div>
             <!--Set 4-->
-            <div class="section collapsible folded">
-                <div class="space-below small flex-h toggle-wrapper" onclick="collapsible(this)">
-                    <div class="tag highlight">Prototype | Set 4: Increase User Engagement Besides Alerts</div>
+            <div class="collapsible folded">
+                <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
+                    <div class="tag highlight not-mobile">Prototype | Set 4: Increase User Engagement Besides Alerts</div>
+                    <div class="tag highlight mobile">Prototype | Set 4: Besides Alerts</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
@@ -315,11 +323,11 @@
             </div>
         </div>
         <!--Validation-->
-        <div class="block color-bg trd overflow">
+        <div class="block color-bg dark overflow">
             <div class="section">
                 <div class="tag highlight space-below">Validation</div>
                 <div class="paragraph">We gained our understanding of the problem space and target users through 30 interviews and shadowings. Combined with the abundant case studies we did in different domains, we generated our design ideas. Through 3 rounds, in total 22 testings, we refined and validated our design guidelines and prototypes.</div>
-                <div class="section-item flex-h mobile-v">
+                <div class="section-item flex-h mobile-v mobile-item-padding">
                     <div class="flex-v center">
                         <div class="large">40+</div>
                         <div>Case Studies</div>
@@ -374,7 +382,7 @@
         <!--user research-->
         <div id="sec-user-research" class="section-title">
             <div class="section-line"></div>
-            <div class="section-index">01</div>
+            <div class="section-index">02</div>
             <div class="section-name">User Research</div>
         </div>
         <div class="section">
@@ -416,7 +424,7 @@
             </div>
             <div class="section-item" id="stakeholder">
                 <div class="tag highlight">Stakeholder Interview</div>
-                <div class="flex-h space-below mobile-v">
+                <div class="flex-h mobile-v">
                     <div>
                         <div class="title">With no direct access to our target users, we interviewed 22 stakeholders and proxy users.</div>
                         <p>Having no access to target users, we instead interviewed stakeholders and proxy users. A <span class="highlight-content">technique we used with extremely busy interviewees</span> is to bring pre-made artifacts like customer journey maps for them to correct.</p>
@@ -426,8 +434,11 @@
                         <div class="caption">me interviewing a stakeholder</div>
                     </div>
                 </div>
-                <div class="flex-h tablet-mobile-v mobile-v">
-                    <div class="title tablet-mobile">Trader's life: 6 busy screens, a fast-pace workflow, keep calm, and make wise decisions.</div>
+                <div class="flex-h space-above tablet-mobile-v mobile-v">
+                    <div class="tablet">
+                        <div class="title">Trader's life: 6 busy screens, a fast-pace workflow, keep calm, and make wise decisions.</div>
+                        <p>We learned about the trader’s day-to-day work, like people they work with, a typical workflow, and their digital workspace. The <span class="highlight-content">key user needs</span> we identified includes: consume information rapidly, collaborate efficiently, remain rational in failures, and control risks.
+                    </div>
                     <div class="slides run images left tablet-mobile-full">
                         <img class='slide active' src="images/Capstone/digital-workspace.png"/>
                         <img class='slide' src="images/Capstone/stakeholder-map.png"/>
@@ -448,8 +459,8 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="title desktop">Trader's life: 6 busy screens, a fast-pace workflow, keep calm, and make wise decisions.</div>
+                    <div class="desktop">
+                        <div class="title">Trader's life: 6 busy screens, a fast-pace workflow, keep calm, and make wise decisions.</div>
                         <p>We learned about the trader’s day-to-day work, like people they work with, a typical workflow, and their digital workspace. The <span class="highlight-content">key user needs</span> we identified includes: consume information rapidly, collaborate efficiently, remain rational in failures, and control risks.
                     </div>
                 </div>
@@ -497,7 +508,7 @@
         <div class="block color-bg trd">
             <div id="sec-design-research" class="section-title">
                 <div class="section-line"></div>
-                <div class="section-index">02</div>
+                <div class="section-index">03</div>
                 <div class="section-name">Design Research</div>
             </div>
             <div class="section">
@@ -546,6 +557,10 @@
                 <div id="experience-prototyping" class="section-item">
                     <div class="tag highlight">Experience Prototyping / Research Through Design</div>
                     <div class="flex-h space-below tablet-mobile-v">
+                        <div class="tablet">
+                            <div class="title">Prototypes were built to validate design principles and test acceptance of conventional ideas.</div>
+                            <p>We rapidly built prototypesbased on previous research. Then we tested traders’ reactions to our concepts in a simulated trading environment. This allowed us to generate tailored design principles in the future.</p>
+                        </div>
                         <div class="slides images left flex-v tablet-mobile-full">
                             <video class='slide active' autoplay loop muted>
                                 <source src="videos/Capstone/prototype2.webm" type="video/webm">
@@ -584,13 +599,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="desktop">
                             <div class="title">Prototypes were built to validate design principles and test acceptance of conventional ideas.</div>
                             <p>We rapidly built prototypesbased on previous research. Then we tested traders’ reactions to our concepts in a simulated trading environment. This allowed us to generate tailored design principles in the future.</p>
                         </div>
-
                     </div>
-                    <div class="flex-h mobile-v">
+                    <div class="flex-h tablet-mobile-v">
                         <div class="flex-v">
                             <div class="title">User testing at a simulated trading desk with traders in our only chance with target users.</div>
                             <div class="images left flex-v mobile mobile-full">
@@ -599,7 +613,7 @@
                             </div>
                             <p>We only had one chance to talk with our target users in person, and we decided to use the <span class="highlight-content">“research through design”</span> approach rather than exploratory research, so that we can gain a more precise understanding of their needs and preferences. We learned a lot expected/unexpected things, like "Animation isn't as effective as we thought in terms of grabbing attention", etc.</p>
                         </div>
-                        <div class="images right flex-v not-mobile">
+                        <div class="images right flex-v not-mobile tablet-mobile-full">
                             <img src="images/Capstone/simulated.JPG"/>
                             <div class="caption">simulated trading desk</div>
                         </div>
@@ -631,6 +645,8 @@
                             <p class="insight-sum">Hierarchical views are important</p>
                             <p>Traders are faced with an overwhelming amount of information. A hierarchical view that displays details and quick actions on hover can be less obtrusive.</p>
                         </div>
+                        <div class="empty tablet2-only">
+                        </div>
                     </div>
                     <a target="_blank" href="https://paper.dropbox.com/doc/NYC-Trip-Synthesis-P69ZAjxuV67ZaPbw6x5PE" class="right-link">View All Guidelines</a>
                 </div>
@@ -639,7 +655,7 @@
         <!--design-->
         <div id="sec-design" class="section-title">
             <div class="section-line"></div>
-            <div class="section-index">03</div>
+            <div class="section-index">04</div>
             <div class="section-name">Design</div>
         </div>
         <div class="section">
@@ -690,13 +706,13 @@
                     </div>
                 </div>
             </div>
-            <a id='final' href="#solution" class="btn final">View Final Design ↑</a>
+            <a id='final' href="#solution" class="btn final fadein">View Final Design ↑</a>
         </div>
         <!--last section-->
         <div class="block color-bg trd">
             <div id="sec-reflection" class="section-title">
                 <div class="section-line"></div>
-                <div class="section-index">04</div>
+                <div class="section-index">06</div>
                 <div class="section-name">Reflection</div>
             </div>
             <div class="section">
@@ -718,11 +734,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="section to-other-projects flex-h right">
-                <a href="brandeis.html" class="btn right">Brandeis →</a>
+            <div class="section to-other-projects flex-h">
+                <a class="btn left" href="brandeis.html">← Brandeis</a>
+                <a class="btn right" href="beauty_plus.html">Beauty + →</a>
             </div>
         </div>
-        <div class="footer">Website designed and developed by @ Qian Wang 2019</div>
+        <div class="footer"></div>
     </div>
 </div>
 </body>

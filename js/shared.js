@@ -27,7 +27,7 @@ function updateNav($sections, $links, $highlighter, $inpageNav) {
         let $section = $sections.eq(i);
         if (yPosition >= $section.offset().top) {
             $inpageNav.addClass('visible');
-            $highlighter.css({'left': i * 45 + 210});
+            $highlighter.css({'left': i * 40 + 205});
             return $links
                 .removeClass('active')
                 .filter(`[href="#${$section.attr('id')}"]`)
@@ -48,9 +48,20 @@ function highlight(hls) {
     }
 }
 
+function fadein(fadeins) {
+    const yPosition = window.pageYOffset;
+    for (let i = 0; i < fadeins.length; i++) {
+        var positionFromTop = fadeins.eq(i).offset().top;
+        if (positionFromTop < yPosition + window.innerHeight - 300) {
+            fadeins.eq(i).css({'transform': 'translateY(0)', 'opacity': 1});
+        }
+    }
+}
+
 $highlighterShow = false;
 
 $(document).ready(function () {
+    // project page
     const $links = $('#inpageNav > a');
     const $inpageNav = $('#inpageNav');
     const $sections = getSections($links);
@@ -58,11 +69,14 @@ $(document).ready(function () {
     const $navbar = $('.navbar');
     const $navAnchor = $('#nav_anchor');
     const hls = $('.highlight-content');
+    const fadeins = $('.fadein');
     $('.parallax').scroll(function () {
         updateNav($sections, $links, $highlighter, $inpageNav);
         updateNavColor($navAnchor, $navbar);
         highlight(hls);
+        fadein(fadeins);
     });
+    // homepage & about page
     $(window).scroll(function () {
         updateNav($sections, $links, $highlighter, $inpageNav);
         updateNavColor($navAnchor, $navbar);

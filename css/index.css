@@ -69,7 +69,7 @@ body {
 }
 
 .navbar {
-  font-family: "Prompt", sans-serif;
+  font-family: "Montserrat", sans-serif;
   height: 50px;
   padding: 0 50px;
   position: fixed;
@@ -116,6 +116,7 @@ body {
 .navbar #inpageNav a {
   color: white;
   display: flex;
+  align-items: center;
 }
 .navbar #inpageNav a:hover .tooltip {
   visibility: visible;
@@ -125,14 +126,13 @@ body {
 }
 .navbar #inpageNav a .icon {
   margin-left: 20px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-color: #bbb;
 }
 .navbar #inpageNav a .nav-section {
   width: 100px;
   display: none;
-  padding-top: 3px;
   text-align: center;
 }
 .navbar #inpageNav a.active .icon {
@@ -188,6 +188,9 @@ body {
   text-align: center;
   padding-top: 10px;
   width: 100%;
+}
+.footer::before {
+  content: "Website designed and developed by Qian Wang @ 2019.8";
 }
 
 .block {
@@ -249,13 +252,13 @@ body {
 }
 .color-bg.dark {
   background-color: #222;
-  color: white;
+  color: #ccc;
 }
 .color-bg.card {
   z-index: 2;
 }
 .color-bg.trd {
-  background-color: #EDF1F4;
+  background-color: #f3f3f3;
 }
 .color-bg.sec {
   background-color: #F1F6FF;
@@ -280,10 +283,19 @@ body {
 }
 
 .highlight-content {
-  background-color: #E0EBFF;
+  background-image: linear-gradient(#E0EBFF, #E0EBFF);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition: 0.8s;
 }
-.highlight-content.with-bg {
-  background-color: #D8E6FF;
+.highlight-content.dark-bg {
+  background-image: linear-gradient(#666, #666);
+}
+
+.color-text {
+  color: white;
+  font-weight: 500;
 }
 
 .highlight {
@@ -333,7 +345,6 @@ body {
 
 .b2 {
   font-size: 16px;
-  font-weight: 300;
 }
 
 .b3 {
@@ -357,10 +368,6 @@ video {
   margin-top: 40vh;
 }
 
-.tablet-mobile {
-  display: none;
-}
-
 .desktop {
   display: flex;
 }
@@ -369,26 +376,45 @@ video {
   display: none !important;
 }
 
+.tablet {
+  display: none !important;
+}
+
+.tablet2 {
+  display: none !important;
+}
+
 .even > div, .even img {
   flex-shrink: 1;
 }
 
-@media (max-width: 1023px) {
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.8s;
+}
+
+.space-below {
+  margin-bottom: 50px !important;
+}
+.space-below.small {
+  margin-bottom: 20px !important;
+}
+
+.space-above {
+  margin-top: 50px !important;
+}
+.space-above.small {
+  margin-top: 20px !important;
+}
+
+.tablet2-only {
+  display: none;
+}
+
+@media (max-width: 1024px) {
   #inpageNav {
     display: none !important;
-  }
-
-  .section {
-    width: 100%;
-  }
-  .section .tag {
-    font-size: 12px;
-  }
-  .section .summary .title {
-    font-size: 16px;
-  }
-  .section .title {
-    font-size: 18px;
   }
 
   body {
@@ -399,21 +425,67 @@ video {
     flex-direction: column !important;
   }
 
-  .tablet-mobile {
-    display: flex;
-  }
-
-  .images.tablet-mobile-full {
-    width: 80%;
-    margin: 0 !important;
-    align-self: center;
+  .tablet {
+    display: initial;
   }
 
   .desktop {
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 800px) {
+  .desktop-tablet {
+    display: none !important;
+  }
+
+  .tablet2 {
+    display: flex;
+  }
+
+  .tablet2-only {
+    display: flex;
+  }
+
+  .tablet2-mobile-v {
+    flex-direction: column !important;
+  }
+
+  .tablet2-mobile-center {
+    align-self: center;
+  }
+
+  .tablet2-mobile-full {
+    max-width: initial !important;
+    width: 90% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-self: center;
+  }
+}
+@media (max-width: 500px) {
+  .tablet2-only {
+    display: none;
+  }
+
+  .space-above {
+    margin-top: 20px !important;
+  }
+
+  .space-below {
+    margin-bottom: 20px !important;
+  }
+
+  .color-bg.overflow {
+    margin-top: -250px;
+  }
+
+  .summary-card {
+    padding: 40px 15px !important;
+  }
+  .summary-card .large-title {
+    padding-left: 10px;
+  }
+
   .navbar {
     padding: 0 20px;
   }
@@ -425,10 +497,15 @@ video {
   .mobile-v {
     flex-direction: column !important;
   }
+  .mobile-v.mobile-item-padding > div {
+    padding: 10px 0;
+  }
 
   .mobile-full {
-    width: 80% !important;
-    margin: 0 !important;
+    max-width: initial !important;
+    width: 90% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     align-self: center;
   }
 
@@ -437,11 +514,11 @@ video {
   }
 
   .mobile {
-    display: block !important;
+    display: flex !important;
   }
 
   .section {
-    padding: 30px;
+    padding: 20px 30px;
   }
 
   .slideshow-sec {
@@ -459,6 +536,10 @@ video {
 
   .static {
     position: static !important;
+  }
+
+  ul {
+    padding-left: 15px;
   }
 }
 @keyframes fadeIn {
@@ -491,6 +572,10 @@ html {
   scroll-behavior: auto;
 }
 
+body {
+  font-family: "Prompt", sans-serif;
+}
+
 #landing {
   width: 100%;
   height: 100vh;
@@ -513,6 +598,8 @@ html {
   outline: 2px solid #fff;
 }
 #landing .text {
+  font-weight: 200;
+  color: #888;
   position: absolute;
   top: 36vw;
   display: flex;
@@ -681,7 +768,7 @@ html {
   display: none;
   /* Hidden by default */
   opacity: 0;
-  margin: 50px 50px;
+  margin: 30px;
   text-decoration: none;
   color: gray;
 }
@@ -816,17 +903,18 @@ html {
   margin: 10px 0;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1000px) {
   .banner {
-    height: 45vw;
+    height: 50vw;
   }
   .banner .slogan {
-    font-size: 18px;
-    margin-top: calc(45vw - 200px);
-    margin-left: 80px;
+    margin-top: calc(50vw - 300px);
   }
-  .banner .slogan .small {
-    font-size: 14px;
+  .banner .slogan #slogan-header {
+    font-size: 24px;
+  }
+  .banner .slogan #slogan-content {
+    font-size: 16px;
   }
 
   .section-title {
@@ -848,7 +936,7 @@ html {
     margin: 20px 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   #landing {
     display: none;
   }
@@ -862,7 +950,7 @@ html {
   }
 
   .banner {
-    height: 60vh;
+    height: 530px;
   }
   .banner .banner-video {
     height: 100%;
@@ -871,18 +959,19 @@ html {
     margin-left: 0px;
     align-self: center;
     width: 90%;
-    margin-top: 20vw;
+    margin-top: 100px;
   }
   .banner .slogan.hidden {
     opacity: 1;
   }
 
   #filter {
+    flex-flow: wrap;
     margin: 0 !important;
     padding: 20px;
     width: 100%;
   }
-  #filter .tag {
+  #filter .btn {
     font-size: 12px !important;
     margin: 5px !important;
   }
@@ -905,7 +994,7 @@ html {
     padding: 40px 0;
   }
   .flex-h.code .code-image {
-    width: 90%;
+    width: 100%;
   }
   .flex-h.code .code-actions {
     font-size: 12px;

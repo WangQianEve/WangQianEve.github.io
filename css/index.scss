@@ -6,6 +6,10 @@ html {
   scroll-behavior: auto;
 }
 
+body {
+  font-family: 'Prompt', sans-serif;
+}
+
 //landing page zoom effect
 $a_scroll_dist: 20vw;
 $scroll_anchor_height: 100px;
@@ -31,6 +35,8 @@ $scroll_anchor_height: 100px;
     outline: 2px solid #fff;
   }
   .text {
+    font-weight: 200;
+    color: #888;
     position: absolute;
     top: 36vw;
     display: flex;
@@ -198,7 +204,7 @@ $scroll_anchor_height: 100px;
     display: none; /* Hidden by default */
     opacity: 0;
     //padding: 40px 30px;
-    margin: 50px 50px;
+    margin: 30px;
     text-decoration: none;
     color: gray;
     .project-image {
@@ -354,16 +360,17 @@ $scroll_anchor_height: 100px;
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1000px) {
   .banner {
-    height: 45vw;
+    height: 50vw;
     .slogan {
-      font-size: 18px;
-      margin-top: calc(45vw - 200px);
-      margin-left: 80px;
-      .small {
-        font-size: 14px;
+      #slogan-header {
+        font-size: 24px;
       }
+      #slogan-content {
+        font-size: 16px;
+      }
+      margin-top: calc(50vw - 300px);
     }
   }
   .section-title {
@@ -386,7 +393,7 @@ $scroll_anchor_height: 100px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   #landing {
     display: none;
   }
@@ -397,7 +404,7 @@ $scroll_anchor_height: 100px;
     display: none;
   }
   .banner {
-    height: 60vh;
+    height: 530px;
     .banner-video {
       height: 100%;
     }
@@ -405,17 +412,18 @@ $scroll_anchor_height: 100px;
       margin-left: 0px;
       align-self: center;
       width: 90%;
-      margin-top: 20vw;
+      margin-top: 100px;
       &.hidden {
         opacity: 1;
       }
     }
   }
   #filter {
+    flex-flow: wrap;
     margin: 0 !important;
     padding: 20px;
     width: 100%;
-    .tag {
+    .btn {
       font-size: 12px !important;
       margin: 5px !important;
     }
@@ -438,7 +446,7 @@ $scroll_anchor_height: 100px;
     align-items: center;
     padding: 40px 0;
     .code-image {
-      width: 90%;
+      width: 100%;
     }
     .code-actions {
       font-size: 12px;
