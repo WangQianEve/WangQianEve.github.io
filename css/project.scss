@@ -574,6 +574,7 @@ img {
   .title {
     height: 1.9em;
     width: fit-content;
+    width: -moz-fit-content;
     &.correct {
       border-bottom: 8px #86E9BD solid;
     }

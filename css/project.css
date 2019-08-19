@@ -585,6 +585,7 @@ img {
 .reflection .title {
   height: 1.9em;
   width: fit-content;
+  width: -moz-fit-content;
 }
 .reflection .title.correct {
   border-bottom: 8px #86E9BD solid;
