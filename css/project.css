@@ -388,7 +388,6 @@ img {
   border-radius: 30px;
   background-color: #789CFB;
   color: white;
-  width: fit-content;
   width: -moz-fit-content;
   align-self: flex-end;
   font-weight: 300;
