@@ -283,7 +283,7 @@ body {
 }
 
 .highlight-content {
-  background-image: linear-gradient(#E0EBFF, #E0EBFF);
+  background-image: linear-gradient(#CADDFF, #CADDFF);
   background-size: 0%;
   background-repeat: no-repeat;
   background-position: 0% 100%;
@@ -684,6 +684,7 @@ body {
 }
 
 .banner {
+  background-color: black;
   display: flex;
   flex-direction: column;
   height: 35vw;

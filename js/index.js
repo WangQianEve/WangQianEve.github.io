@@ -86,7 +86,7 @@ $(document).ready(function () {
     //nav bar
     const $navbar = $(".navbar");
     const $navAnchor = $("#nav_anchor");
-    const $bannerImg = $(".banner img");
+    const $bannerImg = $(".banner video");
     const $scrollDown = $(".scroll_down");
     const $slogan = $(".slogan");
 
@@ -133,8 +133,10 @@ $(document).ready(function () {
     }
 
     $landing.on("transitionend", function () {
-        if (!firstTimeScroll || window.pageYOffset > maxYPos)
+        if (!firstTimeScroll || window.pageYOffset > maxYPos) {
             $landing.css("display", "none");
+            $bannerImg.css("opacity", ".5");
+        }
     });
 
     function toggleLandingAndNavbar() {

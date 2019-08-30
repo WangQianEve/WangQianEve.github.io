@@ -64,7 +64,7 @@
             <div class="intro-card card">
                 <div class="details">
                     <div class="item">Sponsor</div>
-                    <div class="content">DARPA / BBN / Google (potential)</div>
+                    <div class="content"><a href="https://en.wikipedia.org/wiki/DARPA">DARPA</a> / <a href="https://en.wikipedia.org/wiki/BBN_Technologies">BBN</a> / <a href="https://en.wikipedia.org/wiki/Google">Google (under discussion)</a></div>
                 </div>
                 <div class="details">
                     <div class="item">Advisor</div>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="details">
                     <div class="item">Contribution</div>
-                    <div class="content">Designed the information hierarchy, part of the interfaces, and the interactions.<br/>Determined the control logic together with the developer.<br>Conducted multiple rounds of user testing to refine the design. </div>
+                    <div class="content">UI/interaction design, information architecture, control logic, and multiple rounds of user testing. </div>
                 </div>
             </div>
         </div>
@@ -102,15 +102,15 @@
             <div class="summary">
                 <div class="tag highlight">Problem</div>
                 <div>
-                    <div class="title">How might we help people protect their mobile privacy easily in both personal and organizational settings?</div>
-                    <div>Current mobile systems let users control each app’s access to sensors/data at a certain level. However, this is not enough. Based on our research, many applications request more data than they need, or even leak user data to other companies. This can jeopardize the user’s properties, or even put lives under threat for those working in particular fields (e.g., military).</div>
+                    <div class="title">How might we help people manage their mobile data access in a more knowledgeable way?</div>
+                    <div>Currently, mobile OSs allow users to configure data access to an App. However, this is not enough. Apps may request users' data for unexpected purposes or leak to a third party. This can damage users' property, or even put lives in danger for certain occupations (e.g., military). So how can we let users know how their data will be used, and have control over it?</div>
                 </div>
             </div>
             <div class="summary space-above">
                 <div class="tag highlight">Solution</div>
                 <div>
-                    <div class="title">A privacy-enhanced Android system that helps you control and understand your privacy settings.</div>
-                    <div>We designed 5 different touchpoints to configure privacy settings. Privacy manager is the most important one, it is a centralized configuration app. The 5 touchpoints together manages 4 layers of settings.</div>
+                    <div class="title">A modified Android system that helps you have finer control of your data access easily.</div>
+                    <div>To give users finer control and more information about their data accesses, we designed an App called "Privacy Manager" and modified 4 parts of Android OS. Our system consists of 4 types of settings to satisfy user needs under different circumstances.</div>
                     <div class="flex-h even">
                         <div>
                             <img src="images/brandeis/touchpoints.png" style="max-width: 300px">
@@ -119,7 +119,6 @@
                             <img src="images/brandeis/levels.png" style="max-width: 300px">
                         </div>
                     </div>
-                    <div>See details below.</div>
                 </div>
             </div>
         </div>
@@ -133,11 +132,11 @@
         <div class="block color-bg sec card section">
             <div class="collapsible expand">
                 <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
-                    <div class="tag highlight">Touch Point 1 - Privacy Manager</div>
+                    <div class="tag highlight">Privacy Manager</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
-                <p>Privacy Manager is where users can manage their privacy settings. </p>
+                <p>Privacy Manager is an App similar to system preferences nowadays, where users can manage their privacy settings. </p>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo demo-mobile demo-left mobile-full">
                         <video autoplay="" loop="" muted="">
@@ -146,7 +145,8 @@
                     </div>
                     <div class="flex-v v-center text-too-long">
                         <div class="title brandeis-color">Homepage</div>
-                        <p>From the homepage, users can access global settings, app settings, and privacy modes. Besides that, there’s a privacy overview section showing how users’ data is currently being accessed. There's also a <span class="highlight-content">recommended setting</span> section to help users quickly configure their settings.</p>
+                        <p>In the "privacy overview" section of the homepage, users can <span class="highlight-content">review how their data is accessed</span>. They can also quickly improve their settings by <span class="highlight-content">adopting recommendations</span>, which are based on other people's settings and their previous behavior. (See demo video)</p>
+                        <p>From the homepage, they can also access global settings to configure for all Apps, app settings to configure for individual App, or privacy modes to adopt a set of pre-defined configurations.</p>
                     </div>
                 </div>
                 <div class="section-item flex-h around mobile-v">
@@ -157,8 +157,7 @@
                     </div>
                     <div class="flex-v v-center text-too-long">
                         <div class="title brandeis-color">Global Setting</div>
-                        <div style="color: #000; font-weight: 300">“What-Why-Where” Setting</div>
-                        <div>Users can manage access globally in 3 levels: “what data is being requested,” “why it’s requested,” and “where is the data used.” This order is determined through a user research method called "card sorting". The settings are presented in a <span class="highlight-content">progressive disclosure fashion</span>.</div>
+                        <div>"Global Setting" means configuring for all Apps. Based on user research, we decided on a <span class="highlight-content">"what-why-where" information hierarchy</span>: "what data is accessed," "why it is accessed," and "where is it used." We also used a <span class="highlight-content">progressive disclosure</span> fashion to avoid overwhelming users.</div>
                     </div>
                 </div>
                 <div class="section-item flex-h around mobile-v">
@@ -169,15 +168,14 @@
                     </div>
                     <div class="flex-v v-center text-too-long">
                         <div class="title brandeis-color">Privacy Mode</div>
-                        <div style="color: #000; font-weight: 300">Organizational Need</div>
-                        <p>Organizations often need to prevent data leaks from its employees or visitors. For instance, DARPA’s military people may need to hide their location from all apps when they are out on a mission. The privacy mode allows users to apply different set of permissions in different contexts.</p>
+                        <p>We designed privacy mode for <span class="highlight-content">organizations that need to prevent data leakage</span> from its employees or visitors. Users can easily switch to different mode to apply the set of configurations under different circumstances. For instance, DARPA’s military people may need to hide their location from all apps when they are out on a mission.</p>
                     </div>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="collapsible folded">
                 <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
-                    <div class="tag highlight">Touch Point 2 - Quick Setting</div>
+                    <div class="tag highlight">Modification 1 - Quick Setting</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
@@ -197,7 +195,7 @@
             <div class="divider"></div>
             <div class="collapsible folded">
                 <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
-                    <div class="tag highlight">Touch Point 3 - App Installation</div>
+                    <div class="tag highlight">Modification 2 - App Installation</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
@@ -218,7 +216,7 @@
             <div class="divider"></div>
             <div class="collapsible folded">
                 <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
-                    <div class="tag highlight">Touch Point 4 - App Running</div>
+                    <div class="tag highlight">Modification 3 - App Running</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
@@ -237,7 +235,7 @@
             <div class="divider"></div>
             <div class="collapsible folded">
                 <div class="small flex-h toggle-wrapper" onclick="collapsible(this)">
-                    <div class="tag highlight">Touch Point 5 - Notification Center</div>
+                    <div class="tag highlight">Modification 4 - Notification Center</div>
                     <div class="toggle to-fold">Click to Fold</div>
                     <div class="toggle to-unfold">Click to Unfold</div>
                 </div>
@@ -403,7 +401,7 @@
                     <div class="label">Privacy Mode</div>
                     <div class="flex-h between mobile-v space-below">
                         <div class="portion2">
-                            <div>Privacy mode was designed mainly to satisfy organizational need. See below the UI when there is at least one mode, and the UI when there's no mode.</div>
+                            <div>We designed privacy mode to satisfy organizational need. See below the UI when there is at least one mode, and the UI when there's no mode.</div>
                             <div class="space-above process-title">Design Spec</div>
                             <img src="images/brandeis/privacy-mode-spec.png"/>
                         </div>
