@@ -75,7 +75,9 @@ $(document).ready(function () {
     document.querySelector('.banner-video').playbackRate = 1;
     filterSelection("featured");
     createFilter();
-
+    if (window.location.hash === "#design") {
+        $('.banner').css("background-color", "black");
+    }
     // landing page
     const $landingAnchor = $("#landing_anchor");
     const $landing = $("#landing");
@@ -135,7 +137,7 @@ $(document).ready(function () {
     $landing.on("transitionend", function () {
         if (!firstTimeScroll || window.pageYOffset > maxYPos) {
             $landing.css("display", "none");
-            $bannerImg.css("opacity", ".5");
+            $('.banner').css("background-color", "black");
         }
     });
 
@@ -159,10 +161,10 @@ $(document).ready(function () {
                     "transform": "scale(" + landingScale + ")",
                     "transform-origin": zoomCenter.left + "px " + (zoomCenter.top + topOffset) + "px",
                 });
-                const bannerScale = 1 + contentScale * (1 - progress);
-                $bannerImg.css({
-                    "transform": "scale(" + bannerScale + ")",
-                });
+                // const bannerScale = 1 + contentScale * (1 - progress);
+                // $bannerImg.css({
+                //     "transform": "scale(" + bannerScale + ")",
+                // });
             } else {
                 if (yPosition >= maxYPos2) {
                     $content.removeClass('static');

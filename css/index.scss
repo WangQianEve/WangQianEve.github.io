@@ -121,7 +121,7 @@ $scroll_anchor_height: 100px;
   }
 }
 .banner {
-  background-color: black;
+  background-color: #223B7C;
   display: flex;
   flex-direction: column;
   height: 35vw;
@@ -153,6 +153,7 @@ $scroll_anchor_height: 100px;
     }
   }
   .banner-video {
+    opacity: .5;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
