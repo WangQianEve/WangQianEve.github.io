@@ -21,7 +21,7 @@
     <div id="inpageNav" class="roundedNav">
         <div id='highlighter' class="roundedNav"></div>
         <a href="#sec-summary">
-            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center"></div>
+            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center; -webkit-mask-size: contain;"></div>
             <div class="nav-section">Summary</div>
             <span class="tooltip">Summary</span>
         </a>
@@ -168,7 +168,7 @@
         <div class="block color-bg dark overflow">
             <div class="section">
                 <div class="tag highlight">Market Value</div>
-                <div class="paragraph">There are 285 million visually impaired people around the world, and this is a unexplored market. What's more, although designed for the visually impaired, the guidance/tips feature of Beauty Plus actually can serves anyone who want to improve their makeup skills. This enabled Beauty Plus to enter the larger market (the makeup industry has a 48.3-billion-dollar market value, and it's robustly growing at a speed of 5.5% per year).</div>
+                <div class="paragraph">There are 285 million visually impaired people around the world, and this is <span class="highlight-content dark-bg">a huge unexplored market</span>. What's more, although designed for the visually impaired, many of our features are actually <span class="highlight-content dark-bg">applicable to the general crowd</span>. This enabled Beauty Plus to enter the larger market (the makeup industry has a 48.3-billion-dollar market value, and it's robustly growing at a speed of 5.5% per year).</div>
                 <div class="section-item flex-h mobile-v mobile-item-padding">
                     <div class="flex-v center">
                         <img src="images/alexa/icon-cosmetic.svg" style="max-width: 80px">
@@ -339,13 +339,11 @@
                 <div id="personas" class="section-item ">
                     <div class="tag highlight">Personas</div>
                     <p>We summarized two primary personas. One is an experienced makeup user who needs help mainly for the final check; the other is a novice user who needs more guidance and tips.</p>
-                    <div class="flex-h mobile-v">
-                        <div class="images left even mobile-full">
-                            <img src="images/alexa/persona1.png"/>
-                        </div>
-                        <div  class="images right even mobile-full">
-                            <img  src="images/alexa/persona2.png"/>
-                        </div>
+                    <div class="images full">
+                        <img src="images/alexa/persona1.png"/>
+                    </div>
+                    <div class="images full">
+                        <img  src="images/alexa/persona2.png"/>
                     </div>
                 </div>
                 <div id="walk-the-wall" class="section-item">
@@ -353,6 +351,10 @@
                     <p>For ideation, we used “walking the wall” method. Design ideas were then plotted on a cost/value matrix. See below our final decisions.</p>
                     <div class="images full">
                         <img src="images/alexa/ideation.png"/>
+                    </div>
+                    <p>See below the selected 6 features:</p>
+                    <div class="images full">
+                        <img src="images/alexa/features.png"/>
                     </div>
                 </div>
             </div>
@@ -379,15 +381,14 @@
                 <div class="title">With the selected features, we sketched out the conversation flow on the whiteboard.</div>
                 <div class="images full">
                     <img src="images/alexa/whiteboarding.jpg"/>
-                    <img src="images/alexa/features.png"/>
                 </div>
             </div>
             <div id="dialogue-flow" class="section-item">
                 <div class="tag highlight">Dialogue Flow</div>
                 <div class="title">Finally, we designed the conversation flow and wrote scripts together.</div>
-                <p>For prototyping the conversational UI, we started with a whiteboard, markers, and post-its, and then digitized them as a flow of intents with <span class="highlight-content">Tortu</span> and <span class="highlight-content">Lucid Chart</span>. We broke down the flow into several parts and designed anchors to link them. After finalizing the flow, we wrote example utterances with slots for each intent.</p>
+                <p>For prototyping the conversational UI, we started with a whiteboard, markers, and post-its, and then digitized them as a flow of intents with <a href="https://tortu.io/" target="_blank">Tortu</a> and <a href="https://www.lucidchart.com" target="_blank">Lucid Chart</a>. We broke down the flow into several parts and designed anchors to link them. After finalizing the flow, we wrote example utterances with slots for each intent.</p>
                 <div class="images full space-above" style="background-color: white">
-                    <img src="images/alexa/dialogue-flow-new.png" style="max-width: 90vw; width: 140%"/>
+                    <img src="images/alexa/dialogue-flow-new.png" style="max-width: 95vw; width: 1600px"/>
                 </div>
             </div>
         </div>
@@ -401,8 +402,8 @@
             <div class="section">
                 <div id="wizard-of-oz" class="section-item">
                     <div class="tag highlight">Wizard of Oz</div>
-                    <div class="title">Takeaway: be super succinct in auditory responses.</div>
-                    <p>We want to be polite, we want to be helpful, and we want to <span class="highlight-content">guarantee discoverability of key features</span>. However, these are not reasons for having overly verbose responses. Through “Wizard of Oz” testing, we made our responses more concise, and the dialogue flows simpler. See below some <span class="highlight-content">tips</span> we concluded: </p>
+                    <div class="title">Takeaway: be succinct in auditory responses.</div>
+                    <p>We want to be polite, we want to be helpful, and we want to guarantee discoverability of key features. However, these are not reasons for having overly verbose responses. Through “Wizard of Oz” testing, we made our responses more concise, and the dialogue flows simpler. See below some tips we concluded: </p>
                     <ul>
                         <li>VUI shouldn’t offer more than two options at a time.</li>
                         <li>Customize response based on user needs.</li>
@@ -410,7 +411,7 @@
                         <li>Reply “Let me know ...” rather than “Do you want ...?” to simplify the flow.</li>
                         <li>Don’t ask, just do. </li>
                     </ul>
-                    <p>See below two <span class="highlight-content">examples</span>:</p>
+                    <p>See below two examples:</p>
                     <div class="slides images full flex-v run">
                         <img class="slide active" src="images/alexa/example1.png">
                         <img class="slide" src="images/alexa/example2.png">

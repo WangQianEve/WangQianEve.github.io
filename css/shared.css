@@ -289,7 +289,7 @@ body {
   transition: 0.8s;
 }
 .highlight-content.dark-bg {
-  background-image: linear-gradient(#666, #666);
+  background-image: linear-gradient(#556FB2, #556FB2);
 }
 
 .color-text {
@@ -368,7 +368,7 @@ video {
 }
 
 .desktop {
-  display: flex;
+  display: initial;
 }
 
 .mobile {
