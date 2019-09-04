@@ -170,7 +170,7 @@
   position: absolute;
   right: 15vw;
   top: 200px;
-  width: 40vw;
+  width: 35vw;
   z-index: -1;
 }
 
@@ -188,7 +188,7 @@
 }
 
 .process-banner-text {
-  width: 600px;
+  width: 550px;
   max-width: 100%;
   margin-top: 40px;
   font-weight: 400;

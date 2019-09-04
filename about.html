@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="images/Q.png"/>
 </head>
 <body>
-<div class="navbar">
+<div class="navbar active">
     <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
     <div class="navList dark">
         <a class="pg-btn" href="index.html#design">Work</a>
@@ -109,17 +109,8 @@
 <div class="footer"></div>
 <script type="text/javascript">
   $(document).ready(function () {
-    let $navbar = $(".navbar");
-    let $anchor = $(".about-card");
     let hls = $('.about-highlight');
 
-    function updateNavColor(yPosition) {
-      if (yPosition + $navbar.height() >= $anchor.offset().top) {
-        $navbar.addClass('active');
-      } else {
-        $navbar.removeClass('active');
-      }
-    }
     function highlight(yPosition) {
       for (let i = 0; i < hls.length; i++) {
         var positionFromTop = hls.eq(i).offset().top;
@@ -130,7 +121,6 @@
     }
     function scrollHandler () {
       const yPosition = window.pageYOffset;
-      updateNavColor(yPosition);
       highlight(yPosition);
     }
     $(window).scroll(scrollHandler);
