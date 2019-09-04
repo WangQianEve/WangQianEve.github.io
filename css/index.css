@@ -54,18 +54,18 @@ body {
 }
 
 .tooltip {
+  transition: all 0s;
   visibility: hidden;
-  height: 26px;
-  background-color: #00000066;
+  background-color: #000000;
+  opacity: 0.8;
   color: #fff;
+  margin-top: 30px;
   text-align: center;
-  top: 40px;
   padding: 5px 10px;
   border-radius: 13px;
   position: absolute;
   z-index: 1;
-  font-weight: 200;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .navbar {
@@ -326,6 +326,13 @@ body {
 .section .self-center {
   align-self: center;
 }
+.section a {
+  color: #789CFB;
+  border-bottom: 1px dashed #789CFB;
+  height: 2em;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .section-item {
   padding-top: 5vw;
@@ -366,6 +373,36 @@ video {
   text-align: center;
   font-size: 50px;
   margin-top: 40vh;
+}
+
+.section-title {
+  align-self: flex-start;
+  display: flex;
+  padding: 30px 0;
+  width: 100%;
+  margin-top: 80px;
+}
+.section-title .section-line {
+  width: 10%;
+  border-bottom: 2px solid black;
+  position: relative;
+  top: -30px;
+}
+.section-title .section-index {
+  font-size: 40px;
+  font-family: "Playfair Display", "Georgia", serif;
+  font-weight: 700;
+  padding: 0 10px;
+  position: relative;
+  top: -14px;
+  color: #FD6161;
+}
+.section-title .section-name {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
 }
 
 .desktop {
@@ -540,6 +577,17 @@ video {
 
   ul {
     padding-left: 15px;
+  }
+
+  .section-title {
+    margin-top: 25px;
+    padding: 15px 0;
+  }
+  .section-title .section-name {
+    font-size: 20px;
+  }
+  .section-title .section-index {
+    font-size: 30px;
   }
 }
 @keyframes fadeIn {

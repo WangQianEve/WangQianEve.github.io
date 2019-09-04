@@ -58,12 +58,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  a {
-    color: $link-color;
-    border-bottom: 1px dashed $link-color;
-    height: 2em;
-    text-decoration: none;
-  }
 }
 .intro-card {
   align-self: flex-start;
@@ -84,35 +78,6 @@ body {
       width: 120px;
       flex-shrink: 0;
     }
-  }
-}
-.section-title {
-  align-self: flex-start;
-  display: flex;
-  padding: 30px 0;
-  width: 100%;
-  margin-top: 80px;
-  .section-line {
-    width: 10%;
-    border-bottom: 2px solid black;
-    position: relative;
-    top: -30px;
-  }
-  .section-index {
-    font-size: 40px;
-    font-family: "Playfair Display", "Georgia", serif;
-    font-weight: 700;
-    padding: 0 10px;
-    position: relative;
-    top: -14px;
-    color: $primary-color;
-  }
-  .section-name {
-    font-size: 30px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    color: black;
-    text-transform: uppercase;
   }
 }
 
@@ -683,16 +648,6 @@ img {
         width: 100%;
         height: 100%;
       }
-    }
-  }
-  .section-title {
-    margin-top: 25px;
-    padding: 15px 0;
-    .section-name {
-      font-size: 20px;
-    }
-    .section-index {
-      font-size: 30px;
     }
   }
   .to-other-projects {

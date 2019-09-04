@@ -29,18 +29,18 @@ body {
 }
 
 .tooltip {
+  transition: all 0s;
   visibility: hidden;
-  height: 26px;
-  background-color: #00000066;
+  background-color: #000000;
+  opacity: .8;
   color: #fff;
+  margin-top: 30px;
   text-align: center;
-  top: 40px;
   padding: 5px 10px;
   border-radius: 13px;
   position: absolute;
   z-index: 1;
-  font-weight: 200;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .navbar {
@@ -305,6 +305,13 @@ body {
   .self-center {
     align-self: center;
   }
+  a {
+    color: $link-color;
+    border-bottom: 1px dashed $link-color;
+    height: 2em;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .section-item {
@@ -345,6 +352,35 @@ video {
   margin-top: 40vh;
 }
 
+.section-title {
+  align-self: flex-start;
+  display: flex;
+  padding: 30px 0;
+  width: 100%;
+  margin-top: 80px;
+  .section-line {
+    width: 10%;
+    border-bottom: 2px solid black;
+    position: relative;
+    top: -30px;
+  }
+  .section-index {
+    font-size: 40px;
+    font-family: "Playfair Display", "Georgia", serif;
+    font-weight: 700;
+    padding: 0 10px;
+    position: relative;
+    top: -14px;
+    color: $primary-color;
+  }
+  .section-name {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+  }
+}
 
 .desktop {
   display: initial;
@@ -496,5 +532,15 @@ video {
   }
   ul {
     padding-left: 15px;
+  }
+  .section-title {
+    margin-top: 25px;
+    padding: 15px 0;
+    .section-name {
+      font-size: 20px;
+    }
+    .section-index {
+      font-size: 30px;
+    }
   }
 }

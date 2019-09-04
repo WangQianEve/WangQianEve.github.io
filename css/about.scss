@@ -27,7 +27,6 @@
   color: #444;
 }
 
-
 .about-section-title {
   font-size: 18px;
   font-weight: 500;
@@ -103,8 +102,100 @@
   }
   p {
     color: #222;
-    opacity: .5;
+    opacity: .7;
   }
+}
+
+.process-ai {
+  color: white;
+  &#process-ai-1 {
+    background-image: url("../images/process/ai-bg1.jpg");
+  }
+  &#process-ai-2 {
+    background-image: url("../images/process/ai-bg2.jpg");
+  }
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin: 30px 0 80px;
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    align-self: center;
+    font-weight: 600;
+    margin: 30px 0;
+  }
+  p {
+    color: #ddd;
+  }
+}
+
+.section.ending {
+  font-size: 20px;
+  margin-bottom: 100px;
+  font-weight: 600;
+}
+.title-deco {
+  width: 10px;
+  background-color: $primary-color;
+  height: 1em;
+  align-self: center;
+  margin-right: 5px;
+}
+
+.process-banner {
+  position: absolute;
+  right: 15vw;
+  top: 200px;
+  width: 40vw;
+  z-index: -1;
+}
+
+.tooltip-toggle {
+  font-style: italic;
+  color: #aaa;
+  &:hover {
+    .tooltip {
+      visibility: visible;
+    }
+  }
+  .tooltip {
+    font-style: normal;
+    width: 250px;
+    margin-left: -200px;
+  }
+}
+
+.process-banner-text {
+  width: 600px;
+  max-width: 100%;
+  margin-top: 40px;
+  font-weight: 400;
+}
+.process-page-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  margin-top: 150px;
+}
+.process-small-title {
+  font-weight: 600;
+  &.left {
+    width: 150px;
+    flex-shrink: 0;
+    margin-top: 16px;
+    span {
+      font-size: 20px;
+    }
+  }
+}
+.process-section-title {
+  font-size: 24px;
+  color: $primary-color;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-top: 50px;
 }
 .qian {
   cursor: pointer;
