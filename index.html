@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Qian Wang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,400&display=swap" rel="stylesheet">
     <link href="css/shared.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
     <div class="navbar">
         <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
         <div class="navList">
-            <a class="pg-btn active" href="index.html">Work</a>
+            <a class="pg-btn active not-mobile" href="index.html">Work</a>
             <a class="pg-btn" href="process.html">Process</a>
             <a class='pg-btn' href="about.html">About</a>
             <a class='pg-btn' href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
@@ -39,14 +39,11 @@
                 <p id="slogan-content">I just finished my master’s of HCI at <span class="hl">Carnegie Mellon University</span>, and I’m looking for full-time product designer opportunities. My passion lies in tackling <span class="hl">complex problems</span>, creating <span class="hl">delightful human experiences</span>, and envisioning <span class="hl">future interactions</span>.</p>
             </div>
         </div>
-        <div class="section-title">
-            <div class="flex-h switch">
-                <div class="title active design" onclick="turnOnDesign()">Design</div>
-                <div class="v-line"></div>
-                <div class="title code" onclick="turnOnCode()">Code</div>
+        <div id="design" class="container design">
+            <div class="hp-section-title flex-h">
+                <a class="title active design" href="#design">Design Work</a>
+                <a class="title code" href="#code">Technical Work ↓</a>
             </div>
-        </div>
-        <div class="container design">
             <div id="filter">
                 <button class="btn active" onclick="filterSelection('featured')"> Featured (6)</button>
                 <button class="btn" onclick="filterSelection('filterDiv')"> All (10)</button>
@@ -56,33 +53,31 @@
                 <button class="btn" onclick="filterSelection('vui')"> VUI (2)</button>
             </div>
             <a href="brandeis.html" class="featured filterDiv ui">
+                <div class="project-image-container">
                 <div class="project-image">
                     <img src="images/brandeis.png" alt=""/>
                 </div>
-                <div class="project-title">Brandeis</div>
-                <div class="title">
-                    Privacy / Mobile
                 </div>
+                <div class="project-title">Brandeis <span class="title">• Privacy / Mobile</span></div>
+
                 <div class="description">A privacy-enhanced Android system that helps you control and understand your privacy settings.</div>
             </a>
             <a href="liquidnet.html" class="featured filterDiv ui ai">
+                <div class="project-image-container">
                 <div class="project-image">
                     <img src="images/capstone.png" alt=""/>
                 </div>
-                <div class="project-title">Liquidnet</div>
-                <div class="title">
-                    Fintech / Desktop App / AI
                 </div>
+                <div class="project-title">Liquidnet<span class="title"> • Fintech / Desktop App / AI</span></div>
                 <div class="description">Re-designing a trading alert system to increase user engagement and improve individualization.</div>
             </a>
             <a href="beauty_plus.html" class="featured filterDiv vui ai">
+                <div class="project-image-container">
                 <div class="project-image">
                     <img src="images/alexa.png" alt=""/>
                 </div>
-                <div class="project-title">Beauty +</div>
-                <div class="title">
-                    AI / VUI / Inclusive Design
                 </div>
+                <div class="project-title">Beauty Plus <span class="title"> • AI / VUI / Inclusive Design</span></div>
                 <div class="description">A voice assistant that provides guidance applying makeup and checks the makeup for the visually impaired people.</div>
             </a>
             <!--href="venmo.html"-->
@@ -95,10 +90,7 @@
                         <div class="coming-soon-label">Coming Soon</div>
                     </div>
                 </div>
-                <div class="project-title">AI-Adapted Venmo</div>
-                <div class="title">
-                    AI / Mobile
-                </div>
+                <div class="project-title">AI-Adapted Venmo<span class="title"> • AI / Mobile</span></div>
                 <div class="description">Adapting the Venmo interface with AI technology.</div>
             </a>
             <!--href="iml-quiz.html" -->
@@ -111,10 +103,7 @@
                         <div class="coming-soon-label">Coming Soon</div>
                     </div>
                 </div>
-                <div class="project-title">Aimage Quiz</div>
-                <div class="title">
-                    Game / Responsive Web / Data Labeling
-                </div>
+                <div class="project-title">Aimage Quiz<span class="title"> • Game / Data Labeling</span></div>
                 <div class="description">A quiz game to generate labeled data for an interpretable machine learning project.</div>
             </a>
             <!--href="lane.html" -->
@@ -127,10 +116,7 @@
                         <div class="coming-soon-label">Coming Soon</div>
                     </div>
                 </div>
-                <div class="project-title">Lane Scope</div>
-                <div class="title">
-                    Construction / Mobile
-                </div>
+                <div class="project-title">Lane Scope<span class="title"> • Construction / Mobile</span></div>
                 <div class="description">Promote public reputation for a construction company through a fun showcase website.</div>
             </a>
             <!--href="sleepy-game.html" -->
@@ -143,11 +129,7 @@
                         <div class="coming-soon-label">Coming Soon</div>
                     </div>
                 </div>
-                <div class="project-title">Sleepy Game</div>
-                <div class="title">
-                    <div class="tag">Transformational Game</div>
-                    <div class="tag">Design Research</div>
-                </div>
+                <div class="project-title">Sleepy Game<span class="title"> • CHI Play 2019 / Transformational Game</span></div>
                 <div class="description">A design research project exploring how to use games to help improve sleep quality.</div>
             </a>
             <!--href="iml-pick.html" -->
@@ -160,12 +142,7 @@
                         <div class="coming-soon-label">Coming Soon</div>
                     </div>
                 </div>
-                <div class="project-title">Pick-A-Viz</div>
-                <div class="title">
-                    <div class="tag">Game Design</div>
-                    <div class="tag">Responsive Web</div>
-                    <div class="tag">Data Labeling</div>
-                </div>
+                <div class="project-title">Pick-A-Viz<span class="title"> • Game Design / Data Labeling</span></div>
                 <div class="description">A "Draw something" style game that gathers labeled data for interpretable machine learning research.</div>
             </a>
             <!--href="morgan.html" -->
@@ -178,12 +155,7 @@
                         <div class="coming-soon-label">Coming Soon</div>
                     </div>
                 </div>
-                <div class="project-title">Morgan</div>
-                <div class="title">
-                    <div class="tag">Real Estate</div>
-                    <div class="tag">AI</div>
-                    <div class="tag">VUI</div>
-                </div>
+                <div class="project-title">Morgan<span class="title"> • VUI / AI / Real Estate</span></div>
                 <div class="description">A clip-on voice assistant to free your hands in a house tour.</div>
             </a>
             <!--href="scotty.html" -->
@@ -196,141 +168,87 @@
                         <div class="coming-soon-label">Coming Soon</div>
                     </div>
                 </div>
-                <div class="project-title">Scotty Stop</div>
-                <div class="title">
-                    <div class="tag">Bus Stop Redesign</div>
-                    <div class="tag">Data-driven Design</div>
-                    <div class="tag">User Research</div>
-                </div>
+                <div class="project-title">Scotty Stop<span class="title"> • Data-driven Design / Research</span></div>
                 <div class="description">CMU bus stop redesign that helps riders use the service in a more knowledgable way.</div>
             </a>
             <!--href="dlog.html" -->
         </div>
-        <div class="container code">
-            <div class="section-item flex-h code">
-                <div class="code-image">
-                    <video autoplay loop muted>
+        <div id="code" class="container code">
+            <div class="hp-section-title flex-h">
+                <a class="title active code" href="#code">Technical Work</a>
+                <a class="title design" href="#design">Design Work ↑</a>
+            </div>
+            <a href="code/Forceboard.html">
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <video autoplay loop muted>
                         <source src="videos/code/forceboard.mp4" type="video/mp4">
                         Your browser doesn’t support HTML video.
                     </video>
-                </div>
-                <div class="flex-v">
-                    <div class="code-title">Forceboard: Pressure-based Text Entry</div>
-                    <i class="collaboration"><b>Advisors</b>: Prof. Yuanchun Shi, Prof. Chun Yu <b>Collaborators</b>: Mingyuan Zhong, Xuhai Xu</i>
-                    <div>ForceTouch describes the idea of leveraging pressure to type. Users apply pressure on the interface to position a sliding cursor over the desired letter and confirm the selection with a quick release.</div>
-                    <div class="flex-h code-actions">
-                        <div class="tag">Google Glass Dev</div>
-                        <a class="right" target="_blank" href="https://dl.acm.org/citation.cfm?id=3174102">SIGCHI 2018 Paper</a>
-                        <a target="_blank" href="https://github.com/WangQianEve/ForceBoard">Source Code</a>
                     </div>
                 </div>
-            </div>
-            <div class="section-item flex-h code">
-                <div class="code-image">
-                    <video autoplay loop muted>
+                <div class="project-title">Forceboard<span class="title"> • CHI 2018 / Interaction Technique</span></div>
+            </a>
+            <a href="code/PointCloudLabeling.html">
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <video autoplay loop muted>
                         <source src="videos/code/Labeling.mp4" type="video/mp4">
                         Your browser doesn’t support HTML video.
                     </video>
-                </div>
-                <div class="flex-v">
-                    <div class="code-title">Point Cloud Labeling Technique</div>
-                    <i class="collaboration"><b>Collaborators</b>: Jun Peng, Tiancheng Lou, Wenchao Zheng, Bocong Liu, Ruidong Tang</i>
-                    <div>A machine learning-empowered interaction method that helps people rapidly labeling point cloud data for autonomous driving technologies.</div>
-                    <div class="flex-h code-actions">
-                        <div class="tag">Qt</div>
-                        <div class="tag">OpenGL</div>
-                        <a class="right">Patent No. CN201810075279.8</a>
                     </div>
                 </div>
-            </div>
-            <div class="section-item flex-h code">
-                <div class="code-image">
-                    <video autoplay loop muted>
-                        <source src="videos/code/SpeechExplosion.mp4" type="video/mp4">
-                        Your browser doesn’t support HTML video.
-                    </video>
-                </div>
-                <div class="flex-v">
-                    <div class="code-title">Speech Explosion: A Voice-Interactive Wall Installation with Infrared Sensors</div>
-                    <i class="collaboration"><b>Collaborators</b>: Ran Shu, Hanzheng Wang</i>
-                    <p>Speech Explosion is part of an exhibition at an AI company illustrating the evolution of human intelligence. It’s composed of a projected screen, a voice recognition engine, and an infrared sensor to activate the system only when people are around. I helped implementing the project and improving the user experience.</p>
-                    <div class="flex-h code-actions">
-                        <div class="tag">Web</div>
-                        <div class="tag">Arduino</div>
-                        <a class="right" target="_blank" href="https://github.com/WangQianEve/SpeechExplosion">Source Code</a>
+                <div class="project-title">Point Cloud Labeling<span class="title"> • Chinese Patent / Qt</span></div>
+            </a>
+            <a href="code/SpeechExplosion.html">
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/SpeechExplosion.mp4" type="video/mp4">
+                            Your browser doesn’t support HTML video.
+                        </video>
                     </div>
                 </div>
-            </div>
-            <div class="section-item flex-h code">
-                <div class="code-image">
-                    <video autoplay loop muted>
-                        <source src="videos/code/KSI.mp4" type="video/mp4">
-                        Your browser doesn’t support HTML video.
-                    </video>
-                </div>
-                <div class="flex-v">
-                    <div class="code-title">Index Sense: Keyboard Surface as a Trackpad</div>
-                    <i class="collaboration"><b>Advisor</b>: Prof. Anind Dey <b>Collaborator</b>: Julian Ramos</i>
-                    <div>We explored a new space for interaction on laptops -- the keyboard surface. We employed computer vision technology to detect the 3D position of the fingertip, thus converting the keyboard surface to a trackpad. Fitts law experiments show that the speed of our design is much faster than the trackpad, almost as fast as the mouse.</div>
-                    <div class="flex-h code-actions">
-                        <div class="tag">Computer Vision</div>
-                        <a class="right" target="_blank" href="videos/code/ksi_paper.pdf">Paper</a>
-                        <a target="_blank" href="https://github.com/WangQianEve/KSI">Source Code</a>
+                <div class="project-title">Speech Explosion<span class="title"> • Web / Arduino</span></div>
+            </a>
+            <a href="code/IndexSense.html">
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/KSI.mp4" type="video/mp4">
+                            Your browser doesn’t support HTML video.
+                        </video>
                     </div>
                 </div>
-            </div>
-            <div class="section-item flex-h code">
-                <div class="code-image">
-                    <video autoplay loop muted>
-                        <source src="videos/code/Jitters.mp4" type="video/mp4">
-                        Your browser doesn’t support HTML video.
-                    </video>
-                </div>
-                <div class="flex-v">
-                    <div class="code-title">Detection and User Perception Modeling of Jitters in Mobile Phone Transition Animations</div>
-                    <i class="collaboration"><b>Advisors</b>: Prof. Yuanchun Shi, Prof. Chun Yu <b>Collaborators</b>: Mingyuan Zhong<b> Sponsor</b>: Huawei</i>
-                    <div>To guarantee smoother user experience on mobile phones, we built an animation evaluation system. The system utilizes computer vision technology to detect jitters and employs machine learning methods to predict users’ perception of jitters, providing insights on how to improve the user experience. The machine learning model is trained using data from an online user study of more than 2000 people.</div>
-                    <div class="flex-h code-actions">
-                        <div class="tag">Computer Vision</div>
-                        <div class="tag">Machine Learning</div>
-                        <div class="tag">Android</div>
-                        <a target="_blank" href="doc/thesis.pdf" class="right">Thesis (Chinese)</a>
+                <div class="project-title">Index Sense<span class="title"> • CV / Interaction Technique</span></div>
+            </a>
+            <a href="code/Jitters.html">
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <video autoplay loop muted>
+                            <source src="videos/code/Jitters.mp4" type="video/mp4">
+                            Your browser doesn’t support HTML video.
+                        </video>
                     </div>
                 </div>
-            </div>
-            <div class="section-item flex-h code">
-                <div class="code-image">
-                    <img src="videos/code/gesture-controlled-animation.png">
-                </div>
-                <div class="flex-v">
-                    <div class="code-title">Gesture-Controlled Animation Generation</div>
-                    <i class="collaboration"><b>Advisors</b>: Prof. Yuanchun Shi, Prof. Chun Yu <b>Collaborators</b>: Yudong Chen, Guangbin Chen</i>
-                    <div>We built an animation generation tool to experiment with how well can one use their hands to control the movement of the avatar. The system is built on Unity, with Leap Motion as the gesture recognition component. Results show that using gesture alone is not accurate enough and is tiring for the user.</div>
-                    <div class="flex-h code-actions">
-                        <div class="tag">Unity</div>
-                        <div class="tag">Leap Motion</div>
-                        <a target="_blank" href="videos/code/gca_demo.mp4" class="right">Demo Video</a>
-                        <a target="_blank" href="doc/gca_report.pdf" class="">Documentation (Chinese)</a>
-                        <a target="_blank" href="https://github.com/WangQianEve/GestureControlledAnimation" class="">Source Code</a>
+                <div class="project-title">Jitter UX Evaluator<span class="title"> • CV / ML / Android</span></div>
+            </a>
+            <a href="code/GestureControlledAnimation.html">
+                <div class="project-image-container">
+                    <div class="project-image">
+                        <img src="videos/code/gca.png">
                     </div>
                 </div>
-            </div>
-            <div class="section-item flex-h code">
-                <div class="code-image">
-                    <img src="videos/code/gooseberry.png">
-                </div>
-                <div class="flex-v">
-                    <div class="code-title">Gooseberry: Group Meeting Scheduling Tool</div>
-                    <i class="collaboration"><b>Advisor</b>: Jie Tang <b>Collaborator</b>: Xinran Wang</i>
-                    <div>The core idea is to display the overlap of a group’s available time slots with color. Users can add their schedule through drag and drop and can import their calendars. Yes, it sounds and looks a lot like when2meet.com, which I like a lot. However, back in 2017 when I did this project, there weren’t similar products to my knowledge.</div>
-                    <div class="flex-h code-actions">
-                        <div class="tag">Web Frontend + Backend</div>
-                        <div class="tag">OAuth + Mysql</div>
-                        <a target="_blank" href="videos/code/Gooseberry.mp4" class="right">Core Features</a>
-                        <a target="_blank" href="https://github.com/WangQianEve/Gooseberry">Source Code</a>
-                    </div>
-                </div>
-            </div>
+                <div class="project-title">Gesture-Controlled Animation<span class="title"> • Unity / Leap Motion</span></div>
+            </a>
+<!--            <a>-->
+<!--                <div class="project-image-container">-->
+<!--                    <div class="project-image">-->
+<!--                        <img src="videos/code/gooseberry.png">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="project-title">Gooseberry<span class="title"> • Web Frontend + Backend</span></div>-->
+<!--            </a>-->
         </div>
         <div class="footer"></div>
     </div>

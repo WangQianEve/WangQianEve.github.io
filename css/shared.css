@@ -52,6 +52,19 @@ body {
   align-items: center;
 }
 
+.bg-shape {
+  position: absolute;
+  width: 15vw;
+}
+.bg-shape.right {
+  right: 0;
+  top: 100px;
+}
+.bg-shape.left {
+  left: 0;
+  top: 800px;
+}
+
 .tooltip {
   transition: all 0s;
   visibility: hidden;
@@ -237,6 +250,9 @@ body {
 .flex-h.wrap {
   flex-wrap: wrap;
 }
+.flex-h .to-the-right {
+  margin-left: auto;
+}
 
 .card {
   box-shadow: 2px 2px 10px #00000011;
@@ -331,6 +347,10 @@ body {
   height: 2em;
   text-decoration: none;
   cursor: pointer;
+}
+.section a.low {
+  color: inherit;
+  opacity: 0.5;
 }
 
 .section-item {
