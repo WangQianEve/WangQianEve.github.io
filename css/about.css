@@ -44,13 +44,6 @@
   font-style: normal;
 }
 
-.about-page-title {
-  margin-top: 3em;
-  font-size: 30px;
-  line-height: 2em;
-  color: #444;
-}
-
 .about-section-title {
   font-size: 18px;
   font-weight: 500;
@@ -96,15 +89,6 @@
     background-size: 100%;
   }
 }
-.about-highlight {
-  background-image: linear-gradient(#CADDFF, #CADDFF);
-  background-size: 0%;
-  background-repeat: no-repeat;
-  background-position: 0% 100%;
-  cursor: pointer;
-  transition: 0.8s;
-}
-
 #designer {
   animation: 0.5s 0.3s backgroundSlideIn forwards;
 }
@@ -114,17 +98,6 @@
 
 #engineer {
   animation: 0.5s 0.6s backgroundSlideIn forwards;
-}
-
-.about-content a {
-  color: #222;
-  text-decoration: none;
-  border-bottom: 1px dashed #789CFB;
-  height: 2em;
-}
-.about-content p {
-  color: #222;
-  opacity: 0.7;
 }
 
 .process-ai {
@@ -190,16 +163,16 @@
 .process-banner-text {
   width: 550px;
   max-width: 100%;
-  margin-top: 40px;
-  font-weight: 400;
 }
 
-.process-page-title {
+.page-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 36px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 2em;
   margin-top: 150px;
+  margin-bottom: 30px;
 }
-
 .process-small-title {
   font-weight: 600;
 }

@@ -8,8 +8,7 @@ function getSections($links) {
     );
 }
 
-function updateNavColor($anchor, $navbar) {
-    const yPosition = window.pageYOffset;
+function updateNavColor($anchor, $navbar, yPosition) {
     if (yPosition >= $anchor.offset().top) {
         $navbar.addClass('active');
     } else {
@@ -38,8 +37,7 @@ function updateNav($sections, $links, $highlighter, $inpageNav) {
     $links.removeClass('active');
 }
 
-function highlight(hls) {
-    const yPosition = window.pageYOffset;
+function highlight(hls, yPosition) {
     for (let i = 0; i < hls.length; i++) {
         var positionFromTop = hls.eq(i).offset().top;
         if (positionFromTop < yPosition + window.innerHeight - 200) {
@@ -76,10 +74,13 @@ $(document).ready(function () {
         highlight(hls);
         fadein(fadeins);
     });
-    // homepage & about page
-    $(window).scroll(function () {
+    // about & process & project page
+    function scrollHandler () {
+        const yPosition = window.pageYOffset;
+        highlight(hls, yPosition);
         updateNav($sections, $links, $highlighter, $inpageNav);
-        updateNavColor($navAnchor, $navbar);
-    });
-    updateNav($sections, $links, $highlighter, $inpageNav);
+        updateNavColor($navAnchor, $navbar, yPosition);
+    }
+    $(window).scroll(scrollHandler);
+    scrollHandler();
 });

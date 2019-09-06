@@ -20,13 +20,6 @@
   }
 }
 
-.about-page-title {
-  margin-top: 3em;
-  font-size: 30px;
-  line-height: 2em;
-  color: #444;
-}
-
 .about-section-title {
   font-size: 18px;
   font-weight: 500;
@@ -73,14 +66,7 @@
     background-size: 100%;
   }
 }
-.about-highlight {
-  background-image: linear-gradient($link-bg-color, $link-bg-color);
-  background-size: 0%;
-  background-repeat: no-repeat;
-  background-position: 0% 100%;
-  cursor: pointer;
-  transition: .8s;
-}
+
 #designer {
   animation: .5s .3s backgroundSlideIn forwards;
   &:hover {
@@ -91,19 +77,6 @@
 }
 #engineer {
   animation: .5s .6s backgroundSlideIn forwards;
-}
-
-.about-content {
-  a {
-    color: #222;
-    text-decoration: none;
-    border-bottom: 1px dashed $link-color;
-    height: 2em;
-  }
-  p {
-    color: #222;
-    opacity: .7;
-  }
 }
 
 .process-ai {
@@ -170,14 +143,21 @@
 .process-banner-text {
   width: 550px;
   max-width: 100%;
-  margin-top: 40px;
-  font-weight: 400;
 }
-.process-page-title {
+
+.page-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 36px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 2em;
   margin-top: 150px;
+  margin-bottom: 30px;
+  &.process {
+  }
+  &.about {
+  }
 }
+
 .process-small-title {
   font-weight: 600;
   &.left {

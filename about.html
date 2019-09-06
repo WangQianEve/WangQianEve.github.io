@@ -10,9 +10,10 @@
     <link href="css/about.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link rel="icon" type="image/png" href="images/Q.png"/>
+    <script src="js/shared.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="navbar active">
+<div class="navbar">
     <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
     <div class="navList dark">
         <a class="pg-btn not-mobile" href="index.html#design">Work</a>
@@ -22,7 +23,7 @@
     </div>
 </div>
 <div class="section section-item">
-    <div class="about-page-title">Hi! I'm <span class="qian">Qian<span class="chi-an">[chi'an]</span></span> Wang, a <span class="about-highlight" id="designer" onmouseover="highlightDesign(false)" onmouseout="highlightDesign(true)">designer</span> and an <span class="about-highlight" id="engineer"  onmouseover="highlightEngineer(false)" onmouseout="highlightEngineer(true)">engineer</span>.</div>
+    <div id="nav_anchor" class="about page-title">Who am I ?</div>
     <div class="about-card mobile" style="margin-top: 30px">
         <img src="images/about/photo.png"/>
         <div class="about-items">
@@ -45,11 +46,9 @@
         </div>
     </div>
     <div class="flex-h tablet2-mobile-v">
-        <div class="about-content">
-            <div>
-            </div>
-            <p id="engineer-content">Before coming to CMU, I majored in Computer Science at Tsinghua University and has worked in HCI lab under guidance of Prof <a href="http://media.cs.tsinghua.edu.cn/~pervasive/shiyc/" target="_blank">Yuanchun Shi</a>, <a href="http://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/" target="_blank">Chun Yu</a>, and <a href="https://scholar.google.com/citations?user=ydA8Q5AAAAAJ&hl=en&oi=ao" target="_blank">Anind Dey</a>. I also worked in autonomous driving industry <a target="_blank" href="https://www.pony.ai/">(Pony.ai)</a>, and computer vision industry <a target="_blank" href="https://www.yitutech.com/en">(Yitu)</a>. These experiences give me a wide horizon, familiarity with various technologies, and the ability to work as a liaison between design and engineer teams. <a style="color: #336BFF; font-style: italic" href="index.html#code">View my technical works -></a> </p>
-            <p id="designer-content">Now, I am finishing my <a target="_blank" href="https://hcii.cmu.edu/academics/mhci">master's of HCI</a> at Carnegie Mellon University. At CMU, I systematically learned about UX research, UX design, and avant-garde topics like designing with AI. With this balanced skill set, I am ready to solve “real-world” problems and share my knowledge/passion with others.</p>
+        <div class="">
+            <p>Before coming to CMU, I majored in <span class="highlight-content">Computer Science</span> at Tsinghua University and has worked in HCI lab under guidance of Prof <a class="low" href="http://media.cs.tsinghua.edu.cn/~pervasive/shiyc/" target="_blank">Yuanchun Shi</a>, <a class="low" href="http://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/" target="_blank">Chun Yu</a>, and <a class="low" href="https://scholar.google.com/citations?user=ydA8Q5AAAAAJ&hl=en&oi=ao" target="_blank">Anind Dey</a>. I also worked in autonomous driving industry <a class="low" target="_blank" href="https://www.pony.ai/">(Pony.ai)</a>, and computer vision industry <a class="low" target="_blank" href="https://www.yitutech.com/en">(Yitu)</a>. These experiences give me a wide horizon, familiarity with various technologies, and the ability to work as a liaison between design and engineer teams. </p>
+            <p>Now, I am finishing my <a class="low" target="_blank" href="https://hcii.cmu.edu/academics/mhci">master's of HCI</a> at Carnegie Mellon University. At CMU, I systematically learned about <span class="highlight-content" >product design</span>, user research, and avant-garde topics like designing with AI. With this balanced skill set, I am ready to solve “real-world” problems and share my knowledge/passion with others. </p>
         </div>
         <div class="about-card not-mobile">
             <img src="images/about/photo.png"/>
@@ -94,52 +93,18 @@
     <div class="flex-h evenly about-content tablet2-mobile-v">
         <div class="about-story" style="padding-left: 0">
             <img src="images/about/fact1.png">
-            <div>During my four-year-long <span class="about-highlight">amateur theatre training</span>, I've been an actress, director, and producer in 6 plays/musicals. (e.g. "the twelfth night", "next to normal")</div>
+            <div>During my four-year-long <span class="highlight-content">amateur theatre training</span>, I've been an actress, director, and producer in 6 plays/musicals. (e.g. "the twelfth night", "next to normal")</div>
         </div>
         <div class="about-story">
             <img src="images/about/fact2.png">
-            <div><span class="about-highlight">I love challenges!</span>  Having crossed out things like high diving, underwater diving, marathon, piano, and ukelele on my list, the next ones on my list are skateboarding, surfing, rock climbing, and parachute.</div>
+            <div><span class="highlight-content">I love challenges!</span>  Having crossed out things like high diving, underwater diving, marathon, piano, and ukelele on my list, the next ones on my list are skateboarding, surfing, rock climbing, and parachute.</div>
         </div>
         <div class="about-story" style="padding-right: 0">
             <img src="images/about/fact3.png">
-            <div>I've been <span class="about-highlight">traveled to 10 countries</span>, and want to have a year-long trip around the world before 30 to have a deeper understanding of the world and people's needs.</div>
+            <div>I've been <span class="highlight-content">traveled to 10 countries</span>, and want to have a year-long trip around the world before 30 to have a deeper understanding of the world and people's needs.</div>
         </div>
     </div>
 </div>
 <div class="footer"></div>
-<script type="text/javascript">
-  $(document).ready(function () {
-    let hls = $('.about-highlight');
-
-    function highlight(yPosition) {
-      for (let i = 0; i < hls.length; i++) {
-        var positionFromTop = hls.eq(i).offset().top;
-        if (positionFromTop < yPosition + window.innerHeight - 200) {
-          hls.eq(i).css('background-size', '100%');
-        }
-      }
-    }
-    function scrollHandler () {
-      const yPosition = window.pageYOffset;
-      highlight(yPosition);
-    }
-    $(window).scroll(scrollHandler);
-
-  });
-  function highlightDesign(reverse) {
-    if (reverse) {
-      $('#designer-content').css({"opacity": ".5"})
-    } else {
-      $('#designer-content').css({"opacity": "1"})
-    }
-  }
-  function highlightEngineer(reverse) {
-    if (reverse) {
-      $('#engineer-content').css("opacity", ".5")
-    } else {
-      $('#engineer-content').css("opacity", "1")
-    }
-  }
-</script>
 </body>
 </html>

@@ -45,7 +45,7 @@ html {
 body {
   margin: 0;
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   color: #444;
   font-size: 16px;
   display: flex;
@@ -640,10 +640,6 @@ html {
   scroll-behavior: auto;
 }
 
-body {
-  font-family: "Prompt", sans-serif;
-}
-
 #landing {
   width: 100%;
   height: 100vh;
@@ -666,7 +662,8 @@ body {
   outline: 2px solid #fff;
 }
 #landing .text {
-  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   color: #888;
   position: absolute;
   top: 36vw;
@@ -710,6 +707,7 @@ body {
 
 .scroll_down::before {
   margin-left: -1em;
+  color: #888;
   opacity: 0;
   content: "╲╱";
   position: fixed;
@@ -768,19 +766,18 @@ body {
   opacity: 0;
 }
 .banner .slogan #slogan-header {
+  font-family: "Prompt", sans-serif;
   transition-delay: 0.3s;
-  font-size: 34px;
-  font-weight: 200;
+  font-size: 36px;
 }
 .banner .slogan #slogan-content {
   line-height: 2em;
-  font-size: 18px;
+  font-size: 20px;
   color: #ffffff99;
   transition-delay: 0.5s;
 }
-.banner .slogan .hl {
+.banner .slogan #slogan-content .hl {
   color: #ffffff;
-  font-weight: 200;
 }
 .banner .banner-video {
   opacity: 0.5;
@@ -799,7 +796,6 @@ body {
   padding-bottom: 100px;
 }
 .container > a {
-  font-family: "Open Sans", sans-serif;
   width: 33.3%;
   padding: 20px 10px;
   color: gray;
@@ -887,9 +883,10 @@ body {
   width: 100%;
   margin-top: 80px;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 2em;
   margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
 }
 .container .hp-section-title .title {
   text-decoration: none;
