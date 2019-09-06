@@ -46,8 +46,7 @@ function highlight(hls, yPosition) {
     }
 }
 
-function fadein(fadeins) {
-    const yPosition = window.pageYOffset;
+function fadein(fadeins, yPosition) {
     for (let i = 0; i < fadeins.length; i++) {
         var positionFromTop = fadeins.eq(i).offset().top;
         if (positionFromTop < yPosition + window.innerHeight - 300) {
@@ -55,8 +54,6 @@ function fadein(fadeins) {
         }
     }
 }
-
-$highlighterShow = false;
 
 $(document).ready(function () {
     // project page
@@ -68,19 +65,15 @@ $(document).ready(function () {
     const $navAnchor = $('#nav_anchor');
     const hls = $('.highlight-content');
     const fadeins = $('.fadein');
-    $('.parallax').scroll(function () {
-        updateNav($sections, $links, $highlighter, $inpageNav);
-        updateNavColor($navAnchor, $navbar);
-        highlight(hls);
-        fadein(fadeins);
-    });
     // about & process & project page
     function scrollHandler () {
         const yPosition = window.pageYOffset;
         highlight(hls, yPosition);
         updateNav($sections, $links, $highlighter, $inpageNav);
         updateNavColor($navAnchor, $navbar, yPosition);
+        fadein(fadeins, yPosition);
     }
     $(window).scroll(scrollHandler);
+    $('.parallax').scroll(scrollHandler);
     scrollHandler();
 });
