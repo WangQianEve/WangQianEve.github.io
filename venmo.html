@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Qian Wang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet" type="text/css">
+    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/shared.js" type="text/javascript"></script>
+    <script src="js/project.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="images/Q.png"/>
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
+    <div id="inpageNav" class="roundedNav">
+        <div id='highlighter' class="roundedNav"></div>
+        <a href="#sec-summary">
+            <div class="icon" style="-webkit-mask: url(images/nav/summary.svg) no-repeat center; -webkit-mask-size: contain;"></div>
+            <div class="nav-section">Summary</div>
+            <span class="tooltip">Summary</span>
+        </a>
+        <a href="#solution">
+            <div class="icon" style="-webkit-mask: url(images/nav/solution.svg) no-repeat center; -webkit-mask-size: contain;"></div>
+            <div class="nav-section">Solution</div>
+            <span class="tooltip">Solution</span>
+        </a>
+        <a href="#sec-research">
+            <div class="icon" style="-webkit-mask: url(images/nav/user.svg) no-repeat center; -webkit-mask-size: contain;"></div>
+            <div class="nav-section">Research</div>
+            <span class="tooltip">Research</span>
+        </a>
+        <a href="#sec-design">
+            <div class="icon" style="-webkit-mask: url(images/nav/design.svg) no-repeat center; -webkit-mask-size: contain;"></div>
+            <div class="nav-section">Design</div>
+            <span class="tooltip">Design</span>
+        </a>
+        <a href="#sec-reflection">
+            <div class="icon" style="-webkit-mask: url(images/nav/reflection.svg) no-repeat center; -webkit-mask-size: contain;"></div>
+            <div class="nav-section">Reflection</div>
+            <span class="tooltip">Reflection</span>
+        </a>
+    </div>
+    <div class="navList dark">
+        <a class="pg-btn not-mobile" href="index.html#design">Work</a>
+        <a class="pg-btn" href="process.html">Process</a>
+        <a class='pg-btn' href="about.html">About</a>
+        <a class='pg-btn' href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
+    </div>
+</div>
+<div class="parallax">
+    <div class="banner">
+        <img src="images/venmo/banner.png" alt=""/>
+        <div class="banner-text venmo">
+            <img src="images/venmo/banner-text.svg" style="width: 60%; margin-bottom: 30px">
+            <img src="images/venmo/banner-text2.svg" style="animation-delay: 500ms">
+        </div>
+    </div>
+    <div class="container flex-v">
+        <div id="nav_anchor"></div>
+        <div class="section intro">
+            <div class="intro-card card">
+                <div class="details">
+                    <div class="item">Advisor</div>
+                    <div class="content"><a href="https://hcii.cmu.edu/people/john-zimmerman">John Zimmerman</a></div>
+                </div>
+                <div class="details">
+                    <div class="item">Time</div>
+                    <div class="content">April. 2019 (1 month)</div>
+                </div>
+                <div class="details">
+                    <div class="item">Tools</div>
+                    <div class="content">Sketch / InVision</div>
+                </div>
+                <div class="details">
+                    <div class="item">Team</div>
+                    <div class="content">Ja Young Lee / Qian Wang / Ethan Ye </div>
+                </div>
+                <div class="details">
+                    <div class="item">Role</div>
+                    <div class="content">UX Designer</div>
+                </div>
+                <div class="details">
+                    <div class="item">Background</div>
+                    <div class="content">Course project of <a href="https://hcii.cmu.edu/courses/design-ai-products-and-services">Design with AI</a> class. The goal is to practice AI adaptation for mobile Apps.</div>
+                </div>
+            </div>
+        </div>
+        <!--summary-->
+        <div id="sec-summary" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">00</div>
+            <div class="section-name">Summary</div>
+        </div>
+        <div class="section section-item">
+            <div class="summary">
+                <div class="tag highlight">Prompt</div>
+                <div>
+                    <div class="title">How can we further simplify millions of daily Venmo transactions through AI adaptation?</div>
+                    <div>Up to Dec 2018, Venmo has adopted around 27 million total users with around 66 % of American young adults are currently using the app. While people are making payments and requests every day, many of the transactions are frequent, which means they occur repetitively with the same amount, description and recipients. How can we utilize AI technology to make the experience more efficient? </div>
+                </div>
+                <img src="images/venmo/problem.png" class="space-above">
+            </div>
+            <div class="summary space-above">
+                <div class="tag highlight">Solution</div>
+                <div>
+                    <div class="title highlight liquidnet">Suggest transactions in different stages and in different forms.</div>
+                    <div>We designed two types of suggestions: one is the list view, the other is the pop-up view. Pop-up view is used for more certain suggestions, which can be location-based, or user-configured. We also designed suggestions at two stages: one is transaction-level, the other is more detailed on the transaction page.</div>
+                    <img src="images/venmo/summary.png" class="space-above">
+                </div>
+            </div>
+        </div>
+
+        <!--Solution-->
+        <div class="block color-bg dark">
+            <div id="solution" class="section-title dark-bg">
+                <div class="section-line"></div>
+                <div class="section-index">01</div>
+                <div class="section-name">Solution Details</div>
+            </div>
+            <div class="section">
+            <div class="section-item flex-h around mobile-v">
+                <div class="images demo demo-mobile demo-left mobile-full">
+                    <img src="images/IPhone_X.png" class="phone-frame">
+                    <video autoplay="" loop="" muted="" controls>
+                        <source src="images/venmo/venmo_pay.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="flex-v v-center text-too-long">
+                    <div class="title venmo-color">List View: Suggested Transactions</div>
+                    <div>On the "Add Recipients" page, we designed a section showing suggested transactions based time, date, location, history transactions etc. The amount and comment message will be automatically filled. </div>
+                    <br/>
+                    <div class="title venmo-color">Error Recovery</div>
+                    <div>Because the workflow is extremely fast, users can accidentally make a transaction, we also designed a recall button for error recovery.</div>
+                </div>
+            </div>
+            <div class="section-item flex-h around mobile-v">
+                <div class="images demo demo-mobile demo-left mobile-full">
+                    <img src="images/IPhone_X.png" class="phone-frame">
+                    <video autoplay="" loop="" muted="" controls>
+                        <source src="images/venmo/venmo_in_store.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="flex-v v-center text-too-long">
+                    <div class="title venmo-color">Pop-up: Location-based Transactions</div>
+                    <div>The system may prompt a quick action to pay your friends or split the bill with your friends based on your location. This feature is designed for <span class="highlight-content dark-bg"> in-store payments</span> such at restaurants. If your friends also enabled location access, the system can adjust the list to show friends near you at the top.</div>
+                    <br>
+                    <div class="title venmo-color">Suggest Amount and Comments</div>
+                    <div>On the transaction page, the system can also suggest amounts and comments for users to quickly choose from.</div>
+                </div>
+            </div>
+            <div class="section-item flex-h around mobile-v">
+                <div class="images demo demo-mobile demo-left mobile-full">
+                    <img src="images/IPhone_X.png" class="phone-frame">
+                    <video autoplay="" loop="" muted="" controls>
+                        <source src="images/venmo/venmo_request.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="flex-v v-center text-too-long">
+                    <div class="title venmo-color">Pop-up: Reminders & Suggested Requests</div>
+                    <div>We used the pop-up window to show suggested requests with higher confidence. User can also set reminders themselves to pay friends the rent, utilities, phone bills etc periodically. </div>
+                </div>
+            </div>
+            <div class="section-item flex-h around mobile-v">
+                <div class="images demo demo-mobile demo-left mobile-full">
+                    <img src="images/venmo/venmo_privacy.jpg">
+                    <img src="images/IPhone_X.png" class="phone-frame">
+                </div>
+                <div class="flex-v v-center text-too-long">
+                    <div class="title venmo-color">Privacy Settings</div>
+                    <div>User might be concerned with their data being used, so all the adaptations are opt-in, and can be configured in the privacy setting. User can also specify which data to grand access for.</div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!--research-->
+        <div id="sec-research" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">02</div>
+            <div class="section-name">Research</div>
+        </div>
+        <div class="section">
+            <span class="highlight-content"></span>
+            <p>We first did secondary research and a few user interviews to determine the project focus.</p>
+            <div class="section-item">
+                <div class="tag highlight">Major Insight</div>
+                <div class="title"><div class="bolded">People have recurrent transactions and the workflow can be tiresome.</div></div>
+                <p>Through user interviews we learned that people often have recurrent transactions such as monthly rent, phone bills etc. The repeated transactions can be payments or requests. So we concluded the typical payment/request workflow as shown below, and <span class="highlight-content">decided to use AI to make the process more efficient.</span></p>
+                <div class="process-title space-above" >Payment Workflow</div>
+                <img src="images/venmo/workflow1.png" style="width: 1000px; max-width: 95vw; align-self: center">
+                <div class="process-title space-above">Request Workflow</div>
+                <img src="images/venmo/workflow2.png" style="width: 1000px; max-width: 95vw; align-self: center">
+            </div>
+            <div class="section-item">
+                <p class="space-below">There're also other findings inspired us for more specific design ideas:</p>
+                <div class="tag highlight">Key Insight 1</div>
+                <div class="flex-h tablet2-mobile-v">
+                    <div>
+                        <div class="title">People often use Venmo to pay friends for food or drinks.</div>
+                        <p>We don't have the actual log data to identify the most common purpose for transactions on Venmo. But based on our interviews, the No.1 reason for Venmo transactions is paying friends for food. This align with a study we found online, which shows more than half of the top 15 emojis in Venmo are food or drinks. <span class="highlight-content">This inspired us to specifically design for payments at restaurants</span>.</p>
+                    </div>
+                    <div class="images right flex-v tablet2-mobile-full small">
+                        <img src="images/venmo/data.png"/>
+                        <div class="caption">top 14 emojis on Venmo</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-item">
+                <div class="flex-h tablet2-mobile-v">
+                    <div class="images left flex-v desktop-tablet small">
+                        <img src="images/venmo/regular.png"/>
+                    </div>
+                    <div>
+                        <div class="tag highlight">Key Insight 2</div>
+                        <div class="title">Many people have very regular transactions.</div>
+                        <p>Through the interviews, we discovered that people often have transactions like rents, phone bills, utilities etc. on a regular basis. <span class="highlight-content">This inspired us to allow user set reminders on their own.</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-item">
+                <div class="flex-h tablet2-mobile-v">
+                    <div>
+                        <div class="tag highlight">Key Insight 3</div>
+                        <div class="title">People tend to use the same message for transactions.</div>
+                        <p>Interestingly, we discovered that people often use the same comment message for transactions, especially emojis. And they find typing the same amount and description once and once again annoying. <span class="highlight-content">This inspired us to design the suggestions for amound and comments</span>.</p>
+                    </div>
+                    <div class="images right flex-v tablet2-mobile-full small">
+                        <img src="images/venmo/repeats.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="section-item">
+                <div class="flex-h tablet2-mobile-v">
+                    <div class="images left flex-v desktop-tablet small">
+                        <img src="images/venmo/diff.png"/>
+                    </div>
+                    <div>
+                        <div class="tag highlight">Key Insight 4</div>
+                        <div class="title">People have higher tolerance for wrong requests rather than payments.</div>
+                        <p>We asked users about using AI to make suggestions, and discovered that people more tolenrance for error if the system is suggesting requests, ranther than payments. This inspired us to design different forms showing <span class="highlight-content"> different levels of intrusiveness</span> while making suggestions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Design-->
+        <div id="sec-design" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">03</div>
+            <div class="section-name">Design</div>
+        </div>
+        <div class="block">
+            <div class="section">
+                <div class="section-item">
+                    <div class="label highlight self-center">List View: Suggested Transactions</div>
+                    <img class="space-above" src="images/venmo/ListViewProcess.png" style="width: 1200px; max-width: 95vw; align-self: center">
+                </div>
+                <div class="section-item">
+                    <div class="label highlight self-center">Pop-up View: Suggested Regular Requests</div>
+                    <img class="space-above" src="images/venmo/RequestProcess.png" style="width: 1000px; max-width: 95vw; align-self: center">
+                </div>
+                <div class="section-item">
+                    <div class="label highlight self-center">Transaction Page: Suggested Amount and Comments</div>
+                    <img class="space-above" src="images/venmo/TypeProcess.png" style="width: 1000px; max-width: 95vw; align-self: center">
+                </div>
+            </div>
+        </div>
+
+        <!--Reflection-->
+        <div id="sec-reflection" class="section-title">
+            <div class="section-line"></div>
+            <div class="section-index">04</div>
+            <div class="section-name">Reflection</div>
+        </div>
+
+        <div class="section">
+            <div class="reflection">
+                <div class="title correct">Things we did correctly 😉</div>
+                <p>This project is about practicing a method to apply AI on simplifying workflows. We successfully identified the workflow with potentials and iterated to find the right way for adaptation.</p>
+            </div>
+            <div class="reflection">
+                <div class="title wrong">Things we can improve 🤔</div>
+                <p>Due to the short time of this project and the educational purpose, we couldn't do thorough research to validate the user value of our idea. We also couldn't do enough user testing on the adapted workflow. So if given more time, I'd focus on these two part more.</p>
+            </div>
+        </div>
+        <div class="section to-other-projects flex-h left">
+            <a href="beauty_plus.html" class="btn left">← Beauty Plus</a>
+        </div>
+
+        <div class="footer"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -239,6 +239,7 @@ body {
 .card {
   box-shadow: 2px 2px 10px #00000011;
 }
+
 .color-bg {
   display: flex;
   flex-direction: column;
@@ -246,7 +247,7 @@ body {
   z-index: 1;
   background-color: white;
   &.dark {
-    background-color: #222;
+    background-color: #111;
     color: #ccc;
   }
   &.card {
@@ -378,6 +379,15 @@ video {
   padding: 30px 0;
   width: 100%;
   margin-top: 80px;
+  &.dark-bg {
+    .section-line {
+      border-bottom: 2px solid white;
+    }
+    .section-name {
+      color: white;
+    }
+  }
+
   .section-line {
     width: 10%;
     border-bottom: 2px solid black;
@@ -542,7 +552,8 @@ video {
     padding: 0;
   }
   .section .images.demo {
-    margin-bottom: 0;
+    margin-bottom: 30px;
+    margin-top: 50px;
   }
   .footer {
     font-size: 10px;

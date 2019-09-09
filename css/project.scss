@@ -24,13 +24,15 @@ body {
   transform: translateZ(-1px) scale(2);
   z-index: -1;
   height: 100vh;
-  img {
+  > img {
     position: absolute;
   }
   .banner-text {
-    opacity: 0;
     position: absolute;
-    animation: .6s .3s fadeInUp forwards;
+    > img {
+      opacity: 0;
+      animation: .6s .3s fadeInUp forwards;
+    }
     // default liquidnet
     left: 10vw;
     top: 25vw;
@@ -40,6 +42,12 @@ body {
       max-width: 400px;
       left: 60vw;
       top: 30vw;
+    }
+    &.venmo {
+      width: 30%;
+      max-width: 400px;
+      left: 10vw;
+      top: 18vw;
     }
     &.alexa {
       width: 35%;
@@ -90,6 +98,10 @@ img {
 //colors
 .brandeis-color {
   color: $brandeis-color !important;
+}
+.venmo-color {
+  color: #609BCA !important;
+  font-weight: 500 !important;
 }
 
 //
@@ -164,6 +176,8 @@ img {
     line-height: 1.8em;
   }
 }
+
+
 
 .section {
   &.intro {
@@ -427,6 +441,9 @@ img {
   .portion2 {
     width: 60%;
   }
+  .small-text {
+    font-size: 14px;
+  }
 }
 
 .background {
@@ -502,6 +519,7 @@ img {
 }
 
 .demo {
+  position: relative;
   flex-shrink: 0;
   &.demo-desktop {
     max-width: 800px;
@@ -513,6 +531,9 @@ img {
   }
   &.demo-mobile {
     width: 28%;
+    video {
+      border-radius: 30px;
+    }
   }
   &.demo-left {
     margin-right: 40px;
@@ -531,6 +552,13 @@ img {
     video {
       border-radius: 10%;
     }
+  }
+  .phone-frame {
+    position: absolute;
+    width: 115%;
+    margin-top: -17px;
+    z-index: 1;
+    pointer-events:none;
   }
 }
 
@@ -601,6 +629,9 @@ img {
       &.alexa {
         width: 40%;
         top: 15vw;
+      }
+      &.venmo {
+        width: 60%;
       }
     }
   }

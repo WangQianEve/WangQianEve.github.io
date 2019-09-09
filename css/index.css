@@ -267,7 +267,7 @@ body {
   background-color: white;
 }
 .color-bg.dark {
-  background-color: #222;
+  background-color: #111;
   color: #ccc;
 }
 .color-bg.card {
@@ -401,6 +401,12 @@ video {
   padding: 30px 0;
   width: 100%;
   margin-top: 80px;
+}
+.section-title.dark-bg .section-line {
+  border-bottom: 2px solid white;
+}
+.section-title.dark-bg .section-name {
+  color: white;
 }
 .section-title .section-line {
   width: 10%;
@@ -583,7 +589,8 @@ video {
   }
 
   .section .images.demo {
-    margin-bottom: 0;
+    margin-bottom: 30px;
+    margin-top: 50px;
   }
 
   .footer {
@@ -788,7 +795,7 @@ html {
 
 .container {
   display: flex;
-  width: 80%;
+  width: 75%;
   max-width: 1300px;
   flex-wrap: wrap;
 }
@@ -797,7 +804,7 @@ html {
 }
 .container > a {
   width: 33.3%;
-  padding: 20px 10px;
+  padding: 25px 10px;
   color: gray;
   text-decoration: none;
   display: flex;
