@@ -769,22 +769,20 @@ html {
   width: 80%;
   color: white;
 }
-.banner .slogan.hidden p {
+.banner .slogan.hidden div {
   opacity: 0;
 }
 .banner .slogan #slogan-header {
   font-family: "Prompt", sans-serif;
   transition-delay: 0.3s;
   font-size: 36px;
+  margin-bottom: 0.8em;
 }
-.banner .slogan #slogan-content {
-  line-height: 2em;
-  font-size: 20px;
-  color: #ffffff99;
-  transition-delay: 0.5s;
-}
-.banner .slogan #slogan-content .hl {
-  color: #ffffff;
+.banner .slogan .slogan-content {
+  line-height: 1.8em;
+  font-size: 22px;
+  opacity: 0.8;
+  margin-bottom: 0.8em;
 }
 .banner .banner-video {
   opacity: 0.5;
@@ -917,10 +915,10 @@ html {
     margin-top: calc(50vw - 300px);
   }
   .banner .slogan #slogan-header {
-    font-size: 24px;
+    font-size: 28px;
   }
-  .banner .slogan #slogan-content {
-    font-size: 16px;
+  .banner .slogan .slogan-content {
+    font-size: 18px;
   }
 
   .section-title {

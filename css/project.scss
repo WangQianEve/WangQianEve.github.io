@@ -446,6 +446,12 @@ img {
   }
 }
 
+.x-wide-image {
+  max-width: 95vw;
+  align-self: center;
+  width: 1300px;
+}
+
 .background {
   position: relative;
   z-index: -1;

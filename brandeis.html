@@ -110,7 +110,7 @@
             <div class="summary space-above">
                 <div class="tag highlight">Solution</div>
                 <div>
-                    <div class="title">A modified Android system that helps you have very fine control of your data access easily.</div>
+                    <div class="title">A privacy-enhanced Android system that helps you control and understand your privacy settings.</div>
                     <div>To give users finer control and more information about their data accesses, we designed an App called "Privacy Manager" and modified 4 parts of Android OS. Our system consists of 4 types of settings to satisfy user needs under different circumstances.</div>
                     <div class="flex-h even">
                         <div>
@@ -140,7 +140,7 @@
                 <p>Privacy Manager is an App similar to system preferences nowadays. It's where users can manage their privacy settings. </p>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo demo-mobile demo-left mobile-full">
-                        <video autoplay="" loop="" muted="">
+                        <video autoplay="" loop="" muted="" controls>
                             <source src="videos/brandeis/Brandeis-Homepage.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -152,7 +152,7 @@
                 </div>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo demo-mobile demo-left mobile-full">
-                        <video autoplay="" loop="" muted="">
+                        <video autoplay="" loop="" muted="" controls>
                             <source src="videos/brandeis/Brandeis-GlobalSetting.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -163,7 +163,7 @@
                 </div>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo demo-mobile demo-left mobile-full">
-                        <video autoplay="" loop="" muted="">
+                        <video autoplay="" loop="" muted="" controls>
                             <source src="videos/brandeis/Brandeis-Privacy%20Mode.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo-left demo demo-mobile mobile-full">
-                        <video class="slide active" autoplay="" loop="" muted="">
+                        <video class="slide active" autoplay="" loop="" muted="" controls>
                             <source src="videos/brandeis/Brandeis-QuickSetting.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo-left demo demo-mobile mobile-full">
-                        <video class="slide active" autoplay="" loop="" muted="">
+                        <video class="slide active" autoplay="" loop="" muted="" controls>
                             <source src="videos/brandeis/Brandeis-Install.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -220,7 +220,7 @@
                 </div>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo-left demo demo-mobile mobile-full">
-                        <video class="slide active" autoplay="" loop="" muted="">
+                        <video class="slide active" autoplay="" loop="" muted="" controls>
                             <source src="videos/brandeis/Brandeis-Runtime.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -239,7 +239,7 @@
                 </div>
                 <div class="section-item flex-h around mobile-v">
                     <div class="images demo-left demo demo-mobile mobile-full">
-                        <video class="slide active" autoplay="" loop="" muted="">
+                        <video class="slide active" autoplay="" loop="" muted="" controls>
                             <source src="videos/brandeis/Brandeis-Notification.webm" type="video/webm">
                             <source src="videos/brandeis/Brandeis-Notification.mp4" type="video/mp4">
                         </video>
@@ -333,6 +333,19 @@
                 </div>
             </div>
             <div class="section-item">
+                <div class="tag highlight">Modeling Control Logic</div>
+                <div class="flex-h tablet2-mobile-v">
+                    <div>
+                        <div class="title">Simplify the control logic of the complex system.</div>
+                        <p>I worked together with the developer to simplify the control logic of our complicated system. We considered as many edge cases as possible to make the decision. I also transformed our decision into the flow model to help development.</p>
+                    </div>
+                    <div class="images right flex-v tablet2-mobile-full">
+                        <img src="images/brandeis/flow-model.png"/>
+                        <div class="caption">flow model of control logic</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-item">
                 <div class="tag highlight">A/B Testing + Think-Alouds</div>
                 <div class="flex-h tablet2-mobile-v">
                     <div>
@@ -381,18 +394,24 @@
                 <div class="section-name">Design</div>
             </div>
             <div class="section">
-                <div class="title self-center brandeis-color">Privacy Manager</div>
+                <div class="title brandeis-color self-center">Privacy Manager</div>
                 <div class="section-item">
                     <div class="label">Homepage</div>
                     <div class="space-below">We designed 2 new parts on the homepage, and refined the global  setting section. See below our process.</div>
                     <div class="process-title">Key Iterations</div>
-                    <img src="images/brandeis/homepage-spec-process.png"/>
+                    <img class="x-wide-image" src="images/brandeis/homepage-spec-process.png"/>
+                </div>
+                <div class="section-item">
+                    <div class="divider"></div>
                 </div>
                 <div class="section-item">
                     <div class="label">Global Setting</div>
                     <div>We refined the design of the data type page, and added two other levels of setting. See below the changes:</div>
                     <div class="space-above process-title">Before vs. After and Key Iterations</div>
-                    <img src="images/brandeis/global-spec-process.png"/>
+                    <img class="x-wide-image" src="images/brandeis/global-spec-process.png"/>
+                </div>
+                <div class="section-item">
+                    <div class="divider"></div>
                 </div>
                 <div class="section-item">
                     <div class="label">Privacy Mode</div>
@@ -404,14 +423,14 @@
                         </div>
                         <div id="new-mode" class="flex-v center color-bg">
                             <div class="space-below">How to add a new mode?</div>
-                            <video autoplay="" loop="" muted="" style="width: 70%">
+                            <video autoplay="" loop="" muted="" style="width: 70%" controls>
                                 <source src="videos/brandeis/Brandeis-New-Mode.mp4" type="video/mp4">
                             </video>
                             <div class="space-above">We specifically made it long to make sure users understand the consequence.</div>
                         </div>
                     </div>
                     <div class="space-above process-title">Key Decisions</div>
-                    <img src="images/brandeis/privacy-mode-key%20decisions.png"/>
+                    <img class="x-wide-image" src="images/brandeis/privacy-mode-key%20decisions.png"/>
                 </div>
             </div>
         </div>
@@ -422,7 +441,7 @@
                 <div class="process-title">Before vs. After</div>
                 <img src="images/brandeis/quick-setting-spec.png" style="max-width: 1000px"/>
                 <div class="space-above space-below process-title">Key Design Iterations</div>
-                <img src="images/brandeis/quick-setting-process2.png"/>
+                <img class="x-wide-image" src="images/brandeis/quick-setting-process2.png"/>
             </div>
         </div>
         <div class="block color-bg trd">

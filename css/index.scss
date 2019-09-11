@@ -130,7 +130,7 @@ $scroll_anchor_height: 100px;
     width: 80%;
     color: white;
     &.hidden {
-      p {
+      div {
         opacity: 0;
       }
     }
@@ -138,15 +138,13 @@ $scroll_anchor_height: 100px;
       font-family: "Prompt", sans-serif;
       transition-delay: .3s;
       font-size: 36px;
+      margin-bottom: .8em;
     }
-    #slogan-content {
-      line-height: 2em;
-      font-size: 20px;
-      color: #ffffff99;
-      transition-delay: .5s;
-      .hl {
-        color: #ffffff;
-      }
+    .slogan-content {
+      line-height: 1.8em;
+      font-size: 22px;
+      opacity: .8;
+      margin-bottom: .8em;
     }
   }
   .banner-video {
@@ -281,10 +279,10 @@ $scroll_anchor_height: 100px;
     height: 50vw;
     .slogan {
       #slogan-header {
-        font-size: 24px;
+        font-size: 28px;
       }
-      #slogan-content {
-        font-size: 16px;
+      .slogan-content {
+        font-size: 18px;
       }
       margin-top: calc(50vw - 300px);
     }
