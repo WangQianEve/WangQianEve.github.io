@@ -126,8 +126,10 @@
 }
 
 .tooltip-toggle {
-  font-style: italic;
-  color: #aaa;
+  &.note {
+    font-style: italic;
+    color: #aaa;
+  }
   &:hover {
     .tooltip {
       visibility: visible;
@@ -137,6 +139,11 @@
     font-style: normal;
     width: 250px;
     margin-left: -200px;
+    &.large {
+      width: 800px;
+      max-width: 90vw;
+      opacity: 1;
+    }
   }
 }
 
