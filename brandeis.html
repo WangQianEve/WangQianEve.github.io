@@ -56,7 +56,8 @@
     <div class="banner">
         <img src="images/brandeis/banner.png" alt=""/>
         <div class="banner-text brandeis">
-            <img src="images/brandeis/banner-text.svg">
+            <img src="images/brandeis/banner-text.svg" style="width: 60%; margin-bottom: 30px">
+            <img src="images/brandeis/banner-text2.svg" style="animation-delay: 500ms">
         </div>
     </div>
     <div class="container flex-v">
@@ -89,7 +90,7 @@
                 </div>
                 <div class="details">
                     <div class="item">Contribution</div>
-                    <div class="content">UI/interaction design, information architecture, control logic, and multiple rounds of user testing. </div>
+                    <div class="content">UI/interaction design, information architecture, product logic, and usability testing. </div>
                 </div>
             </div>
         </div>
@@ -105,6 +106,7 @@
                 <div>
                     <div class="title">How might we help people manage their mobile data access in a more knowledgeable way?</div>
                     <div>Currently, mobile OSs allow users to configure data access to an App. However, this is not enough. Apps may request users' data for unexpected purposes or leak to a third party. This can damage users' property, or even put lives in danger for certain occupations (e.g., military). So how can we let users know how their data will be used, and have control over it?</div>
+                    <img src="images/brandeis/problem.png" class="space-above">
                 </div>
             </div>
             <div class="summary space-above">
@@ -113,12 +115,7 @@
                     <div class="title">A privacy-enhanced Android system that helps you control and understand your privacy settings.</div>
                     <div>To give users finer control and more information about their data accesses, we designed an App called "Privacy Manager" and modified 4 parts of Android OS. Our system consists of 4 types of settings to satisfy user needs under different circumstances.</div>
                     <div class="flex-h even">
-                        <div>
-                            <img src="images/brandeis/touchpoints.png" style="max-width: 300px">
-                        </div>
-                        <div>
-                            <img src="images/brandeis/levels.png" style="max-width: 300px">
-                        </div>
+                        <img src="images/brandeis/solution.png">
                     </div>
                 </div>
             </div>
@@ -324,7 +321,7 @@
                 <div class="flex-h tablet2-mobile-v">
                     <div>
                         <div class="title">Decide the information hierarchy: "what-why-where"</div>
-                        <p>We used card sorting to figure out the right information hierarchy. We printed out permission cards with "what data this is for", "why it was requested", and "who'll be using it" on each one. Then we asked users to organize them. The result shows <span class="highlight-content">80%</span> of users sorted them in a “what-why-where” sequence.</p>
+                        <p>We used card sorting to figure out the right information hierarchy. We printed out permission cards with "what data this is for", "why it was requested", and "who'll be using it" on each one. Then we asked users to organize them. The result shows <span class="highlight-content">80% of users sorted them in a “what-why-where” sequence</span>.</p>
                     </div>
                     <div class="images right flex-v tablet2-mobile-full">
                         <img src="images/brandeis/card-sorting.png"/>
@@ -334,10 +331,12 @@
             </div>
             <div class="section-item">
                 <div class="tag highlight">Modeling Control Logic</div>
+                <div class="title">Simplify the control logic of the complex system.</div>
+                <p>I worked together with the developer to simplify the control logic of our complicated system. We considered as many edge cases as possible to make the decision. I also transformed our decision into the flow model to help development.</p>
                 <div class="flex-h tablet2-mobile-v">
-                    <div>
-                        <div class="title">Simplify the control logic of the complex system.</div>
-                        <p>I worked together with the developer to simplify the control logic of our complicated system. We considered as many edge cases as possible to make the decision. I also transformed our decision into the flow model to help development.</p>
+                    <div class="images left flex-v tablet2-mobile-full v-center center" style="max-width: 300px">
+                        <img src="images/brandeis/levels.png"/>
+                        <div class="caption">flow model of control logic</div>
                     </div>
                     <div class="images right flex-v tablet2-mobile-full">
                         <img src="images/brandeis/flow-model.png"/>

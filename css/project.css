@@ -56,26 +56,27 @@ body {
   position: absolute;
   left: 10vw;
   top: 25vw;
-  width: 40%;
+  width: 600px;
+  max-width: 85vw;
 }
 .banner .banner-text > img {
   opacity: 0;
   animation: 0.6s 0.3s fadeInUp forwards;
 }
 .banner .banner-text.brandeis {
-  width: 35%;
-  max-width: 400px;
+  width: 400px;
+  max-width: 35vw;
   left: 60vw;
   top: 30vw;
 }
 .banner .banner-text.venmo {
-  width: 30%;
-  max-width: 400px;
+  width: 400px;
+  max-width: 85vw;
   left: 10vw;
   top: 18vw;
 }
 .banner .banner-text.alexa {
-  width: 35%;
+  width: 400px;
   top: 15vw;
 }
 
@@ -189,12 +190,12 @@ img {
   width: 100%;
 }
 .summary-card .contrib-title .line {
-  border-bottom: white 1px solid;
+  border-bottom: white 1px dashed;
   height: 9px;
   flex-grow: 1;
 }
 .summary-card .contrib-title b {
-  margin: 0 10px;
+  margin-right: 10px;
   flex-shrink: 0;
 }
 .summary-card p {
@@ -549,7 +550,7 @@ img {
 .demo.demo-mobile {
   width: 28%;
 }
-.demo.demo-mobile video {
+.demo.demo-rounded video {
   border-radius: 30px;
 }
 .demo.demo-left {

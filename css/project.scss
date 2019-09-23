@@ -36,21 +36,22 @@ body {
     // default liquidnet
     left: 10vw;
     top: 25vw;
-    width: 40%;
+    width: 600px;
+    max-width: 85vw;
     &.brandeis {
-      width: 35%;
-      max-width: 400px;
+      width: 400px;
+      max-width: 35vw;
       left: 60vw;
       top: 30vw;
     }
     &.venmo {
-      width: 30%;
-      max-width: 400px;
+      width: 400px;
+      max-width: 85vw;
       left: 10vw;
       top: 18vw;
     }
     &.alexa {
-      width: 35%;
+      width: 400px;
       top: 15vw;
     }
   }
@@ -163,12 +164,12 @@ img {
     margin-top: 2vw;
     width: 100%;
     .line {
-      border-bottom: white 1px solid;
+      border-bottom: white 1px dashed;
       height: 9px;
       flex-grow: 1;
     }
     b {
-      margin: 0 10px;
+      margin-right: 10px;
       flex-shrink: 0;
     }
   }
@@ -537,6 +538,8 @@ img {
   }
   &.demo-mobile {
     width: 28%;
+  }
+  &.demo-rounded {
     video {
       border-radius: 30px;
     }
