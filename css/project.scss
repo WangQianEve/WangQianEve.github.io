@@ -29,6 +29,8 @@ body {
   }
   .banner-text {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     > img {
       opacity: 0;
       animation: .6s .3s fadeInUp forwards;

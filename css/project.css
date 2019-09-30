@@ -54,6 +54,8 @@ body {
 }
 .banner .banner-text {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   left: 10vw;
   top: 25vw;
   width: 600px;
