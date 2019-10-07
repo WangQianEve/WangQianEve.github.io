@@ -49,6 +49,9 @@ $scroll_anchor_height: 100px;
       font-size: 18px;
       line-height: 1.8em;
       color: #aaa;
+      .highlight-landing {
+        border-bottom: 1px solid #194DB4;
+      }
     }
     > div {
       opacity: 0;
@@ -120,38 +123,41 @@ $scroll_anchor_height: 100px;
     margin-top: 0;
   }
 }
+
 .banner {
   background-color: #223B7C;
   display: flex;
   flex-direction: column;
-  height: 35vw;
+  height: 55vw; //change slogan height
   align-items: center;
-  .slogan {
+  z-index: 0;
+  &:hover {
+    .banner-video {
+      opacity: .4;
+    }
+    .play-btn {
+      opacity: 1;
+    }
+  }
+  .play-btn {
+    opacity: 0;
     position: absolute;
-    margin-top: calc(30vw - 260px);
-    width: 80%;
+    height: 55vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     color: white;
-    &.hidden {
-      div {
-        opacity: 0;
-      }
-    }
-    #slogan-header {
-      font-family: "Prompt", sans-serif;
-      transition-delay: .3s;
-      font-size: 36px;
-      margin-bottom: .8em;
-    }
-    .slogan-content {
-      line-height: 1.8em;
-      font-size: 22px;
-      opacity: .8;
-      margin-bottom: .8em;
+    text-decoration: none;
+    img {
+      width: 100px;
     }
   }
   .banner-video {
-    opacity: .5;
-    width: 100%;
+    opacity: 1;
+    width: 100vw;
     object-fit: cover;
     overflow: hidden;
   }
@@ -164,22 +170,24 @@ $scroll_anchor_height: 100px;
   &.code {
     padding-bottom: 100px;
   }
-  > a {
+  > .project {
     width: 33.3%;
     padding: 25px 10px;
-    color: gray;
+    color: #666;
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    font-weight: 400;
     .project-title {
-      color: #666;
       font-size: 16px;
-      font-weight: 400;
       padding-top: 10px;
-      .title {
-        font-weight: 300;
+      &.coming-soon {
         opacity: .6;
       }
+    }
+    .title {
+      font-size: 14px;
+      opacity: .4;
     }
     .description {
       display: none;
@@ -187,22 +195,6 @@ $scroll_anchor_height: 100px;
     }
     .project-image-container {
       position: relative;
-      .coming-soon-container {
-        position: absolute;
-        width: 100%;
-        bottom: 20px;
-
-        .coming-soon-label {
-          padding: 5px 10px;
-          background-color: #ffffffdd;
-          color: #666;
-          font-size: 14px;
-          border-radius: 30px;
-          width: fit-content;
-          width: -moz-fit-content;
-          margin: 0 auto;
-        }
-      }
       .project-image {
         &:hover {
           img, video {
@@ -276,19 +268,16 @@ $scroll_anchor_height: 100px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1366px)  {
   .banner {
-    height: 50vw;
-    .slogan {
-      #slogan-header {
-        font-size: 28px;
-      }
-      .slogan-content {
-        font-size: 18px;
-      }
-      margin-top: calc(50vw - 300px);
-    }
+    margin-top: 50px;
   }
+  #nav_anchor {
+    margin-top: -15vw;
+  }
+}
+
+@media (max-width: 1000px) {
   .section-title {
     margin-top: 40px;
     #filter {
@@ -296,7 +285,7 @@ $scroll_anchor_height: 100px;
     }
   }
   .container {
-    > a {
+    .project {
       width: 50%;
     }
   }
@@ -319,21 +308,6 @@ $scroll_anchor_height: 100px;
   #landing_move {
     display: none;
   }
-  .banner {
-    height: 530px;
-    .banner-video {
-      height: 100%;
-    }
-    .slogan {
-      margin-left: 0px;
-      align-self: center;
-      width: 90%;
-      margin-top: 100px;
-      &.hidden {
-        opacity: 1;
-      }
-    }
-  }
   .container {
     #filter {
       flex-flow: wrap;
@@ -343,10 +317,7 @@ $scroll_anchor_height: 100px;
         margin: 5px !important;
       }
     }
-    > a {
-      &:hover {
-        box-shadow: 0 2px 10px #00000000;
-      }
+    .project {
       width: 100%;
       margin: 40px 0;
       padding: 0;

@@ -54,7 +54,6 @@ function createFilter() {
 }
 
 $(document).ready(function () {
-    document.querySelector('.banner-video').playbackRate = 1;
     filterSelection("featured");
     createFilter();
     // landing page
