@@ -1,281 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Qian Wang</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prompt:300&display=swap" rel="stylesheet">
-    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/playground.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/png" href="images/Q.png"/>
+    <link href="css/shared.css" rel="stylesheet" type="text/css">
+    <link href="css/index_new.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="js/cubic-bezier.js" type="text/javascript"></script>
-    <script src="js/index.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
-<div class="navbar">
-    <a href="index.html"><img class="logo" src="images/Qian.svg"></a>
-    <div class="navList">
-        <a class="pg-btn active not-mobile" href="index.html">Work</a>
-        <a class="pg-btn" href="process.html">Process</a>
-        <a class='pg-btn' href="about.html">About</a>
-        <a class='pg-btn' href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
+    <div id="banner">
+        <img src="images/homepage-banner-new.svg">
     </div>
-</div>
-<div id="landing_anchor"></div>
-<div id="landing_move"></div>
-<div id="content" class="content static">
-    <div class="banner">
-        <div id="nav_anchor"></div>
-        <img src="images/homepage-banner.svg">
+    <div id="content">
+        <div class="navbar">
+            <a class="home" href="index.html"><img class="logo" src="images/logo-new.svg"></a>
+            <div class="navList">
+                <a class="pg-btn active not-mobile" href="index.html#content">Work</a>
+                <a class='pg-btn' href="about.html">About</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hp-section-title">
+                I'm a UX Designer at Lutron, designing smart-home lighting experiences
+            </div>
+            <div class="project-new main-project flex-v" style="background-image: url('images/activation.webp'); background-size: cover">
+                <div class="company">Lutron</div>
+                <div class="project-name">Lighting System Activation</div>
+                <div class="project-detail">Design the next-gen activation experience for Lutron’s high-end home systems</div>
+                <div class="project-btn">Under NDA</div>
+            </div>
+            <div class="project-new main-project flex-v dark-image" style="background-image: url('images/ring.webp'); background-size: cover">
+                <div class="company">Lutron x Ring</div>
+                <div class="project-name">Automate lights with security cameras</div>
+                <div class="project-detail">Design for the integration of Ring security system with Lutron lighting system</div>
+                <div class="project-btn">View Case Study</div>
+            </div>
+            <div class="hp-section-title" style="font-weight: 400">
+                🎲 Outside of work, I enjoy playing boardgames. And I’m doing a personal project <b> <a href=""> redesigning their rulebooks! </a></b>
+            </div>
+        </div>
+        <div class="full-width" style="background-color: #fafafa">
+            <div class="container">
+                <div class="hp-section-title" style="font-weight: 400">2018-2019, I designed user experiences across screens, voices, spaces, wearables, games... </div>
+            </div>
+            <div class="horizontal-scroll design-projects">
+                <a class="project-new flex-v" href="brandeis.html">
+                    <img src="images/brandeis.webp">
+                    <div class="company">DARPA</div>
+                    <div class="project-name">Mobile Privacy Manager</div>
+                </a>
+                <a class="project-new flex-v" href="liquidnet.html">
+                    <img src="images/liquidnet.webp">
+                    <div class="company">Liquidnet</div>
+                    <div class="project-name">Trading alerts</div>
+                </a>
+                <a class="project-new flex-v" href="beauty_plus.html">
+                    <img src="images/alexa.webp">
+                    <div class="company">Alexa Day at CMU</div>
+                    <div class="project-name">VUI makeup assistant for the visually impaired</div>
+                    <div class="project-btn">Won 2nd Place</div>
+                </a>
+                <a class="project-new flex-v" href="venmo.html">
+                    <img src="images/venmo.webp">
+                    <div class="company">CMU</div>
+                    <div class="project-name">AI-empowered Venmo</div>
+                </a>
+                <a class="project-new flex-v" href="IoT.html">
+                    <img src="images/IoT.webp">
+                    <div class="company">Design challenge</div>
+                    <div class="project-name">Energy-saving Smarthome</div>
+                </a>
+                <div class="project-new flex-v">
+                    <img src="images/sleepy-game.webp">
+                    <div class="company">CMU x Phillips</div>
+                    <div class="project-name">Games that help you get better sleeps</div>
+                    <div class="project-btn">Published on CHIPLAY</div>
+                </div>
+                <div class="project-new flex-v">
+                    <img src="images/samsung-watch.webp">
+                    <div class="company">Design challenge</div>
+                    <div class="project-name">Smartwatch for health</div>
+                </div>
+                <div class="project-new flex-v">
+                    <img src="images/scotty.webp">
+                    <div class="company">CMU</div>
+                    <div class="project-name">Bus Stop Redesign</div>
+                </div>
+                <div class="project-new flex-v">
+                    <img src="images/airport.webp">
+                    <div class="company">CMU</div>
+                    <div class="project-name">Themed experience at airport</div>
+                </div>
+                <div class="project-new flex-v">
+                    <img src="images/pick-a-viz.webp">
+                    <div class="company">CMU</div>
+                    <div class="project-name">Games for Interpretable Machine Learning research</div>
+                </div>
+                <div style="width: 20%; height: 100px"></div>
+            </div>
+        </div>
+        <div class="full-width">
+            <div class="container">
+                <div class="hp-section-title" style="font-weight: 400">2014-2018, I was mainly doing technical HCI work </div>
+            </div>
+            <div class="horizontal-scroll tech-projects">
+                <a class="project-new flex-v" href="code/Forceboard.html">
+                    <img src="images/code/forceboard.webp">
+                    <div class="company">Tsinghua University</div>
+                    <div class="project-name">Pressure-based Text Entry</div>
+                </a>
+                <a class="project-new flex-v" href="code/IndexSense.html">
+                    <img src="images/code/ksi.webp">
+                    <div class="company">Carnegie Mellon University</div>
+                    <div class="project-name">Invisible trackpad over keyboard</div>
+                </a>
+                <a class="project-new flex-v" href="code/SpeechExplosion.html">
+                    <img src="images/code/SpeechExplosion.webp">
+                    <div class="company">Yitu Tech</div>
+                    <div class="project-name">Voice-interactive Display</div>
+                </a>
+                <a class="project-new flex-v" href="code/PointCloudLabeling.html">
+                    <img src="images/code/Labeling.webp">
+                    <div class="company">Pony.ai</div>
+                    <div class="project-name">Point Cloud Labeling</div>
+                </a>
+                <a class="project-new flex-v" href="code/GestureControlledAnimation.html">
+                    <img src="images/code/gca.webp">
+                    <div class="company">Tsinghua University</div>
+                    <div class="project-name">Generate animation with hand tracking</div>
+                </a>
+                <a class="project-new flex-v" href="code/Jitters.html">
+                    <img src="images/code/Jitters.webp">
+                    <div class="company">Tsinghua University</div>
+                    <div class="project-name">Jitter UX evaluator</div>
+                </a>
+                <div class="project-new flex-v">
+                    <img src="images/code/travel-diary.webp">
+                    <div class="company">CMU</div>
+                    <div class="project-name">Travel Diary Website</div>
+                </div>
+                <div class="project-new flex-v">
+                    <img src="images/code/gooseberry.webp">
+                    <div class="company">Tsinghua University</div>
+                    <div class="project-name">Schedule meeting web service</div>
+                </div>
+                <div style="width: 12.5%; height: 200px"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
     </div>
-    <div id="design" class="container design">
-        <div class="hp-section-title flex-h">
-            <a class="title active design" href="#design">Design Work</a>
-            <a class="title code" href="#code">Technical Work ↓</a>
-        </div>
-        <div id="filter">
-            <button class="btn active" onclick="filterSelection('featured')"> Featured (6)</button>
-            <button class="btn" onclick="filterSelection('filterDiv')"> All (13)</button>
-            <button class="btn" onclick="filterSelection('ai')"> AI (6)</button>
-            <button class="btn" onclick="filterSelection('game')"> Game (3)</button>
-            <button class="btn" onclick="filterSelection('vui')"> VUI (2)</button>
-            <button class="btn" onclick="filterSelection('service')"> Service (2)</button>
-            <button class="btn" onclick="filterSelection('research')"> Research (3)</button>
-            <button class="btn" onclick="filterSelection('challenge')"> Design Challenges (2)</button>
-        </div>
-        <div class="project featured filterDiv ui">
-            <a href="brandeis.html" class="project-image-container">
-                <div class="project-image">
-                    <img src="images/brandeis.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title">Brandeis </div>
-            <div class="title">Privacy / Material Design</div>
-        </div>
-        <div class="project featured filterDiv vui ai">
-            <a href="beauty_plus.html" class="project-image-container">
-                <div class="project-image">
-                    <img src="images/alexa.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title">Beauty Plus </div>
-            <div class="title">AI / VUI / Inclusive Design</div>
-        </div>
-        <div class="project featured filterDiv ui research">
-            <a href="liquidnet.html" class="project-image-container">
-                <div class="project-image">
-                    <img src="images/capstone.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title">Liquidnet Alerts</div>
-            <div class="title">Fintech / Desktop / Design Research</div>
-        </div>
-        <!--href="venmo.html"-->
-        <div class="project featured filterDiv ai ui">
-            <a href="venmo.html" class="project-image-container">
-                <div class="project-image">
-                    <img src="images/venmo.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title">Adapted Venmo</div>
-            <span class="title">Course Project / AI / Mobile</span>
-        </div>
-        <!--href="c3.html" -->
-        <div class="project featured filterDiv ui ai challenge">
-            <a href="IoT.html" class="project-image-container">
-                <div class="project-image">
-                    <img src="images/c3.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title">Energy-saving Smart Home</div>
-            <div class="title">Design Challenge / AI / IoT</div>
-        </div>
-        <!--href="iml-quiz.html" -->
-        <div class="project filterDiv ai ui game">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/aimage-quiz.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Aimage Quiz (Coming Soon)</div>
-            <div class="title">Game / Data Labeling for AI</div>
-        </div>
-        <!--href="lane.html" -->
-        <div class="project featured filterDiv ui">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/lane.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Lane Scope (Coming Soon)</div>
-            <span class="title">Course Project / Construction / Mobile</span>
-        </div>
-        <!--href="iml-pick.html" -->
-        <div class="project filterDiv game ai ui">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/pick-a-viz.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Pick-A-Viz (Coming Soon)</div>
-            <div class="title">Game Design / Data Labeling</div>
-        </div>
-        <!--href="samsung.html" -->
-        <div class="project filterDiv ui challenge">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/samsung-watch.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Smartwatch Interface (Coming Soon)</div>
-            <div class="title">Design Challenge / Smart Watch / Fitness</div>
-        </div>
-        <!--href="scotty.html" -->
-        <div class="project filterDiv research service">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/scotty1.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Scotty Stop (Coming Soon)</div>
-            <span class="title">Course Project / Service Design / User Research</span>
-        </div>
-        <!--href="airport.html" -->
-        <div class="project filterDiv service">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/airport.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Themed Experience at Airport (Coming Soon)</div>
-            <div class="title">Course Project / Service Design / Themed Experience</div>
-        </div>
-        <!--href="morgan.html" -->
-        <div class="project filterDiv vui ai">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/morgan1.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Morgan (Coming Soon)</div>
-            <div class="title">Course Project / VUI / AI / Real Estate</div>
-        </div>
-        <!--href="sleepy-game.html" -->
-        <div class="project filterDiv game research">
-            <a class="project-image-container">
-                <div class="project-image">
-                    <img src="images/sleepy-game.png" alt=""/>
-                </div>
-            </a>
-            <div class="project-title coming-soon">Sleepy Game (Coming Soon)</div>
-            <div class="title">CHI Play 2019 / Transformational Game</div>
-        </div>
+    <div id="landing">
+        <div class="white-space"></div>
+        <img src="images/landing_window.svg">
+        <div class="white-space"></div>
     </div>
-    <div id="code" class="container code">
-        <div class="hp-section-title flex-h">
-            <a class="title active code" href="#code">Technical Work</a>
-            <a class="title design" href="#design">Design Work ↑</a>
-        </div>
-        <div class="project">
-            <a class="project-image-container" href="code/Forceboard.html">
-                <div class="project-image">
-                    <video autoplay loop muted>
-                        <source src="videos/code/forceboard.mp4" type="video/mp4">
-                        Your browser doesn’t support HTML video.
-                    </video>
-                </div>
-            </a>
-            <div class="project-title">Forceboard</div>
-            <div class="title"><a href="https://dl.acm.org/citation.cfm?id=3174102">CHI 2018</a> / Interaction Technique</div>
-        </div>
-        <div class="project">
-            <a href="code/PointCloudLabeling.html"class="project-image-container">
-                <div class="project-image">
-                    <video autoplay loop muted>
-                        <source src="videos/code/Labeling.mp4" type="video/mp4">
-                        Your browser doesn’t support HTML video.
-                    </video>
-                </div>
-            </a>
-            <div class="project-title">Point Cloud Labeling<span class="title"> • Chinese Patent / Qt</span></div>
-        </div>
-        <div class="project">
-            <a href="code/SpeechExplosion.html"class="project-image-container">
-                <div class="project-image">
-                    <img src="videos/code/speech-explosion.png"/>
-                </div>
-            </a>
-            <div class="project-title">Speech Explosion<span class="title"> • Web / Arduino</span></div>
-        </div>
-        <div class="project">
-            <a href="code/IndexSense.html" class="project-image-container">
-                <div class="project-image">
-                    <video autoplay loop muted>
-                        <source src="videos/code/KSI.mp4" type="video/mp4">
-                        Your browser doesn’t support HTML video.
-                    </video>
-                </div>
-            </a>
-            <div class="project-title">Index Sense<span class="title"> • CV / Interaction Technique</span></div>
-        </div>
-        <div class="project">
-            <a href="code/Jitters.html" class="project-image-container">
-                <div class="project-image">
-                    <video autoplay loop muted>
-                        <source src="videos/code/Jitters.mp4" type="video/mp4">
-                        Your browser doesn’t support HTML video.
-                    </video>
-                </div>
-            </a>
-            <div class="project-title">Jitter UX Evaluator<span class="title"> • CV / ML / Android</span></div>
-        </div>
-        <div class="project">
-            <a href="code/GestureControlledAnimation.html" class="project-image-container">
-                <div class="project-image">
-                    <img src="videos/code/gca.png">
-                </div>
-            </a>
-            <div class="project-title">Gesture-Controlled Animation<span class="title"> • Unity / Leap Motion</span></div>
-        </div>
-<!--        <div href="https://wangqianeve.github.io/TravelDiary/" target="_blank">-->
-<!--            <div class="project-image-container">-->
-<!--                <div class="project-image">-->
-<!--                    <video autoplay loop muted>-->
-<!--                        <source src="videos/code/React480.mp4" type="video/mp4">-->
-<!--                        Your browser doesn’t support HTML video.-->
-<!--                    </video>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="project-title">Travel Diary<span class="title"> • React</span></div>-->
-<!--        </div>-->
-        <!--            <a>-->
-        <!--                <div class="project-image-container">-->
-        <!--                    <div class="project-image">-->
-        <!--                        <img src="videos/code/gooseberry.png">-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="project-title">Gooseberry<span class="title"> • Web Frontend + Backend</span></div>-->
-        <!--            </a>-->
-    </div>
-    <div class="footer"></div>
-</div>
-<a class="up-btn" href="#content">
-    <img src="images/up-arrow.svg"/>
-</a>
-<div id="zoom_anchor"></div>
-<div id="landing">
-    <img src="images/Landing.svg">
-    <div class="text">
-        <div class="main">Product Designer</div>
-        <div class="small-text">Master's of <span class="highlight-landing">Human-Computer Interaction</span> at Carnegie Mellon University. </div>
-        <div class="small-text">Bachelor's of <span class="highlight-landing">Computer Science</span> at Tsinghua University. </div>
-        <div class="small-text">Actively looking for fulltime opportunities.</div>
-    </div>
-    <div class="white-space"></div>
-</div>
-<a class="scroll_down"></a>
 </body>
 </html>

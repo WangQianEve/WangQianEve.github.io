@@ -324,7 +324,7 @@ img {
   width: 40%;
 }
 .section .images img, .section .images video {
-  object-fit: contain;
+  object-fit: cover;
 }
 .section .images.small {
   width: 35%;

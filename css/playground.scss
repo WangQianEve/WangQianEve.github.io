@@ -1,0 +1,55 @@
+@import "shared";
+
+* {
+  transition: inherit;
+}
+
+body { //use as anchor for landing svg
+  width: 100vw;
+  height: 100vh;
+}
+
+#banner {
+  position: fixed;
+  z-index: 0;
+  img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+#content {
+  //placeholder
+  min-height: 200vh;
+  width: 100vw;
+  background-color: white;
+  //initial state
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  top: 80vh; //scrolling distance for it to show up
+  display: flex; //to center containter
+  flex-direction: column;
+}
+
+#landing {
+  //basic size and position
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+    object-fit: cover;
+    outline: 2px solid #fff;
+  }
+  //fill the screen when screen is longer than img
+  .white-space {
+    flex-grow: 1;
+    background-color: white;
+    outline: 2px solid #fff;
+  }
+}

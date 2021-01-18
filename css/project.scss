@@ -308,7 +308,7 @@ img {
       width: 40%;
     }
     img, video {
-      object-fit: contain;
+      object-fit: cover;
     }
     &.small {
       width: 35%;
