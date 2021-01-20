@@ -7,7 +7,7 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: "body",
       start: "center center",
-      end: "50%",
+      end: "center top",
       scrub: true,
     }
   }).to("#landing", {scale: 4, duration: 2})

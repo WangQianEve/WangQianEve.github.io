@@ -6,33 +6,6 @@ html {
   scroll-behavior: auto;
 }
 
-//landing page zoom effect
-$a_scroll_dist: 20vw;
-$scroll_anchor_height: 100px;
-
-#landing_anchor {
-  position: absolute;
-  top: $a_scroll_dist;
-  height: $scroll_anchor_height;
-}
-
-#landing_move {
-  height: calc(40vw + 50px + 100vh);
-  width: 100%;
-}
-
-#zoom_anchor {
-  margin-left: 52.7vw;
-  margin-top: 23vw; // 29.3vw is half height of landing
-  position: absolute;
-  left: 0;
-  top: 0;
-  //background-color: red;
-  //z-index: 1000;
-  //width: 10px;
-  //height: 10px;
-}
-
 .scroll_down::before {
   margin-left: -1em;
   color: #888;
@@ -47,12 +20,6 @@ $scroll_anchor_height: 100px;
 
 .scroll_down.scroll-hidden::before {
   display: none;
-}
-
-// nav and back
-#nav_anchor {
-  position: absolute;
-  margin-top: 15vw;
 }
 
 //actual content
@@ -79,10 +46,9 @@ $scroll_anchor_height: 100px;
 }
 
 .container {
-  padding-top: 100px;
   display: flex;
   width: 75%;
-  max-width: 1300px;
+  max-width: 950px;
   flex-wrap: wrap;
   align-self: center;
 
@@ -185,9 +151,6 @@ $scroll_anchor_height: 100px;
 @media (max-width: 1366px) {
   .banner {
     margin-top: 50px;
-  }
-  #nav_anchor {
-    margin-top: -15vw;
   }
 }
 

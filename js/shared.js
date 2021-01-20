@@ -26,7 +26,7 @@ function updateNav($sections, $links, $highlighter, $inpageNav) {
         let $section = $sections.eq(i);
         if (yPosition >= $section.offset().top) {
             $inpageNav.addClass('visible');
-            $highlighter.css({'left': i * 40 + 205});
+            $highlighter.css({'left': i * 40 + 238});
             return $links
                 .removeClass('active')
                 .filter(`[href="#${$section.attr('id')}"]`)
@@ -76,4 +76,5 @@ $(document).ready(function () {
     $(window).scroll(scrollHandler);
     $('.parallax').scroll(scrollHandler);
     scrollHandler();
+
 });

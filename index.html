@@ -7,10 +7,12 @@
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <link href="css/index_new.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,400,600,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/navbar.js"></script>
 </head>
 <body>
     <div id="banner">
@@ -24,35 +26,35 @@
                 <a class='pg-btn' href="about.html">About</a>
             </div>
         </div>
-        <div class="container">
+        <div class="container space-above space-below">
             <div class="hp-section-title">
-                I'm a UX Designer at Lutron, designing smart-home lighting experiences
+                I'm a UX Designer at Lutron, designing smart-home lighting experiences and tools
             </div>
-            <div class="project-new main-project flex-v" style="background-image: url('images/activation.webp'); background-size: cover">
+            <div id="nav_anchor"></div>
+            <div class="project-new main-project flex-v">
+                <img class="no-zoom" src="images/activation.webp">
                 <div class="company">Lutron</div>
-                <div class="project-name">Lighting System Activation</div>
-                <div class="project-detail">Design the next-gen activation experience for Lutron’s high-end home systems</div>
+                <div class="project-name">Activate a lighting system</div>
+                <div class="project-detail">An app that easily activates lighting controls, lights, shades and sensors in a home</div>
                 <div class="project-btn">Under NDA</div>
             </div>
-            <div class="project-new main-project flex-v dark-image" style="background-image: url('images/ring.webp'); background-size: cover">
+            <a class="project-new main-project flex-v dark-image" href="#">
+                <img src="images/ring.webp">
                 <div class="company">Lutron x Ring</div>
                 <div class="project-name">Automate lights with security cameras</div>
                 <div class="project-detail">Design for the integration of Ring security system with Lutron lighting system</div>
-                <div class="project-btn">View Case Study</div>
-            </div>
-            <div class="hp-section-title" style="font-weight: 400">
-                🎲 Outside of work, I enjoy playing boardgames. And I’m doing a personal project <b> <a href=""> redesigning their rulebooks! </a></b>
-            </div>
+<!--                <div class="project-btn">View Case Study</div>-->
+            </a>
         </div>
-        <div class="full-width" style="background-color: #fafafa">
-            <div class="container">
+        <div class="full-width" style="background-color: #f8f8f8">
+            <div class="container space-above">
                 <div class="hp-section-title" style="font-weight: 400">2018-2019, I designed user experiences across screens, voices, spaces, wearables, games... </div>
             </div>
             <div class="horizontal-scroll design-projects">
                 <a class="project-new flex-v" href="brandeis.html">
                     <img src="images/brandeis.webp">
                     <div class="company">DARPA</div>
-                    <div class="project-name">Mobile Privacy Manager</div>
+                    <div class="project-name">Manage Data Privacy</div>
                 </a>
                 <a class="project-new flex-v" href="liquidnet.html">
                     <img src="images/liquidnet.webp">
@@ -63,7 +65,7 @@
                     <img src="images/alexa.webp">
                     <div class="company">Alexa Day at CMU</div>
                     <div class="project-name">VUI makeup assistant for the visually impaired</div>
-                    <div class="project-btn">Won 2nd Place</div>
+                    <div class="project-detail">Won 2nd Place</div>
                 </a>
                 <a class="project-new flex-v" href="venmo.html">
                     <img src="images/venmo.webp">
@@ -73,13 +75,13 @@
                 <a class="project-new flex-v" href="IoT.html">
                     <img src="images/IoT.webp">
                     <div class="company">Design challenge</div>
-                    <div class="project-name">Energy-saving Smarthome</div>
+                    <div class="project-name">Save Energy with Smart Home</div>
                 </a>
                 <div class="project-new flex-v">
                     <img src="images/sleepy-game.webp">
                     <div class="company">CMU x Phillips</div>
                     <div class="project-name">Games that help you get better sleeps</div>
-                    <div class="project-btn">Published on CHIPLAY</div>
+                    <div class="project-detail">Published on CHIPLAY</div>
                 </div>
                 <div class="project-new flex-v">
                     <img src="images/samsung-watch.webp">
@@ -105,7 +107,7 @@
             </div>
         </div>
         <div class="full-width">
-            <div class="container">
+            <div class="container space-above">
                 <div class="hp-section-title" style="font-weight: 400">2014-2018, I was mainly doing technical HCI work </div>
             </div>
             <div class="horizontal-scroll tech-projects">

@@ -1,44 +1,95 @@
-.project-new {
-  border-radius: 50px;
-  overflow: hidden;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 90px;
-  padding-right: 90px;
-  color: black;
-  background-color: #eeeeee;
-  text-decoration: none;
-}
-.project-new.main-project {
+.main-project {
   margin-top: 50px;
   margin-bottom: 50px;
   width: 100%;
-  height: 400px;
+  height: 350px;
+  padding: 60px 10%;
+}
+
+.design-projects {
+  height: 780px;
+}
+.design-projects .project-new {
+  margin: 20px;
+  width: 600px;
+  max-width: 80%;
+  height: 300px;
+  padding: 60px 6%;
+}
+.design-projects .project-new .project-name {
+  font-size: 20px;
+}
+
+.tech-projects {
+  height: 680px;
+}
+.tech-projects .project-new {
+  height: 260px;
+  margin: 15px;
+  min-width: 450px;
+  max-width: 80%;
+  padding: 60px 4%;
+}
+.tech-projects .project-new .project-name {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.project-new {
+  border-radius: 50px;
+  overflow: hidden;
+  color: black;
+  background-color: #eeeeee;
+  position: relative;
 }
 .project-new.dark-image {
   color: white;
   background-color: black;
 }
+.project-new:hover .project-btn {
+  opacity: 1;
+  margin-bottom: 0;
+}
+.project-new:hover img {
+  transform: scale(1.05);
+}
+.project-new:hover img.no-zoom {
+  transform: scale(1);
+}
 .project-new .company {
-  font-weight: 700;
-  opacity: 50%;
+  font-weight: 600;
+  opacity: 0.3;
 }
 .project-new .project-name {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 10px;
   margin-top: 20px;
 }
 .project-new .project-detail {
+  opacity: 0.5;
   width: 420px;
-  max-width: 100%;
+  max-width: max-content;
   flex-grow: 1;
 }
 .project-new .project-btn {
   font-size: 18px;
   font-weight: 100;
-  opacity: 80%;
   font-style: italic;
+  margin-bottom: -10px;
+  opacity: 0;
+  width: fit-content;
+  border-bottom: 1px solid #cccccc;
+}
+.project-new img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project-new div {
+  z-index: 1;
 }
 
 .full-width {
@@ -49,60 +100,21 @@
 
 .horizontal-scroll {
   display: flex;
-  width: 100%;
-  padding-left: 12.5%;
-  padding-right: 12.5%;
-  padding-top: 50px;
-  padding-bottom: 50px;
   flex-direction: column;
   overflow-x: scroll;
   flex-wrap: wrap;
+  width: 100%;
+  padding-left: max(12.5%, calc((100% - 1000px)/2));
+  padding-right: 12.5%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .horizontal-scroll .project-new {
   color: white;
   background-color: black;
-  position: relative;
-}
-.horizontal-scroll .project-new img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.horizontal-scroll .project-new div {
-  z-index: 1;
 }
 .horizontal-scroll .project-new img {
   opacity: 0.3;
-}
-.horizontal-scroll a.project-new:hover {
-  transition: transform 1.5s;
-}
-.horizontal-scroll a.project-new:hover img {
-  transform: scale(1.05);
-}
-.horizontal-scroll.design-projects {
-  height: 900px;
-}
-.horizontal-scroll.design-projects .project-new {
-  margin: 20px;
-  width: 60%;
-  height: 360px;
-}
-.horizontal-scroll.tech-projects {
-  height: 680px;
-}
-.horizontal-scroll.tech-projects .project-new {
-  height: 260px;
-  margin: 15px;
-  width: 40%;
-  padding-left: 60px;
-  padding-right: 60px;
-}
-.horizontal-scroll.tech-projects .project-new .project-name {
-  font-size: 20px;
-  margin-top: 10px;
 }
 
 .hp-section-title {

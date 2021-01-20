@@ -196,9 +196,9 @@ a {
 }
 
 .footer {
+  font-size: 14px;
   height: 50px;
-  background-color: #222;
-  color: white;
+  color: #ccc;
   text-align: center;
   padding-top: 10px;
   width: 100%;
