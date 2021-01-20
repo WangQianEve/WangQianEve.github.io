@@ -4,7 +4,8 @@
   transition: inherit;
 }
 
-body { //use as anchor for landing svg
+//use as anchor for landing svg
+body {
   width: 100vw;
   height: 100vh;
 }
@@ -20,11 +21,7 @@ body { //use as anchor for landing svg
 }
 
 #content {
-  //placeholder
-  min-height: 200vh;
-  width: 100vw;
   background-color: white;
-  //initial state
   z-index: 1;
   opacity: 0;
   position: absolute;

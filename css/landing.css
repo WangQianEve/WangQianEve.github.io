@@ -634,8 +634,6 @@ body {
 }
 
 #content {
-  min-height: 200vh;
-  width: 100vw;
   background-color: white;
   z-index: 1;
   opacity: 0;
@@ -664,4 +662,4 @@ body {
   outline: 2px solid #fff;
 }
 
-/*# sourceMappingURL=playground.css.map */
+/*# sourceMappingURL=landing.css.map */

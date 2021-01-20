@@ -1,11 +1,176 @@
-// for homepage
-@import "shared";
-@import "variables";
-
 html {
   scroll-behavior: auto;
 }
 
+//basic styles
+.hp-section-title {
+  width: 100%;
+  margin-top: 50px;
+  padding-left: 40px;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.container {
+  display: flex;
+  width: 75%;
+  max-width: 950px;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+//project style & hover behavior
+.project-new {
+  //shape
+  border-radius: 50px;
+  overflow: hidden;
+
+  //default font color and reversed
+  color: black;
+  background-color: #eeeeee;
+
+  &.dark-image {
+    color: white;
+    background-color: black;
+  }
+
+  //show btn, zoom on hover
+  &:hover {
+    .project-btn {
+      opacity: 1;
+      margin-bottom: 0;
+    }
+
+    img {
+      transform: scale(1.05);
+
+      &.no-zoom {
+        transform: scale(1);
+      }
+    }
+  }
+
+  //font styles
+  .company {
+    font-weight: 600;
+    opacity: 0.3;
+  }
+
+  .project-name {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .project-detail {
+    opacity: 0.5;
+    width: 420px;
+    max-width: max-content;
+    flex-grow: 1; // push the button to the bottom
+  }
+
+  .project-btn {
+    font-size: 18px;
+    font-weight: 100;
+    font-style: italic;
+    //show on hover
+    margin-bottom: -10px;
+    opacity: 0;
+    // underline
+    width: fit-content;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  //set background image position
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  div {
+    z-index: 1;
+  }
+}
+
+//project sizing
+$design-project-height: 300px;
+$tech-project-height: 260px;
+.design-projects {
+  height: $design-project-height * 2 + 180; //20 margin + 50 container padding
+  .project-new {
+    margin: 20px;
+    width: 600px;
+    max-width: 80%;
+    height: $design-project-height;
+    padding: 60px 6%;
+
+    .project-name {
+      font-size: 20px;
+    }
+  }
+}
+.tech-projects {
+  height: $tech-project-height * 2 + 160;
+
+  .project-new {
+    height: $tech-project-height;
+    margin: 15px;
+    min-width: 450px;
+    max-width: 80%;
+    padding: 60px 4%;
+
+    .project-name {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+}
+.main-project {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 350px;
+  padding: 60px 10%;
+}
+
+//section size with background
+.full-width {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+//scroll and project style
+.horizontal-scroll {
+  //flex scrollable
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+  width: 100%;
+
+  //padding
+  padding-left: max(12.5%, calc((100% - 1000px) / 2));
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  //style: black transparent
+  .project-new {
+    color: white;
+    background-color: black;
+
+    img {
+      opacity: 0.3;
+    }
+  }
+}
+
+//scroll indicator
 .scroll_down::before {
   margin-left: -1em;
   color: #888;
@@ -17,201 +182,15 @@ html {
   animation: .7s fadeIn .8s ease-in forwards, bounce 1s ease infinite;
   z-index: 100;
 }
-
 .scroll_down.scroll-hidden::before {
   display: none;
 }
 
-//actual content
-.content {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  &.static {
-    position: fixed;
-    margin-top: 0;
-  }
-}
-
-.banner {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  height: 30vw; //change slogan height
-  align-items: center;
-  z-index: 0;
-}
-
-.container {
-  display: flex;
-  width: 75%;
-  max-width: 950px;
-  flex-wrap: wrap;
-  align-self: center;
-
-  &.code {
-    padding-bottom: 100px;
-  }
-
-  > .project {
-    width: 33.3%;
-    padding: 25px 10px;
-    color: #666;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-
-    .project-title {
-      font-size: 16px;
-      padding-top: 10px;
-
-      &.coming-soon {
-        opacity: .6;
-      }
-    }
-
-    .title {
-      font-size: 14px;
-      opacity: .4;
-    }
-
-    .description {
-      display: none;
-      font-size: 16px;
-    }
-
-    .project-image-container {
-      position: relative;
-
-      .project-image {
-        &:hover {
-          img, video {
-            transition: transform 1s;
-            transform: scale(1.2);
-          }
-        }
-
-        width: 100%;
-        overflow: hidden;
-      }
-    }
-  }
-
-  .filterDiv {
-    display: none; /* Hidden by default */
-    opacity: 0;
-
-    &.show {
-      display: initial;
-    }
-
-    &.visible {
-      opacity: 1;
-    }
-  }
-
-  #filter {
-    width: 100%;
-    display: flex;
-    margin-bottom: 40px;
-
-    .btn {
-      border: none;
-      //border-radius: 20px;
-      color: #666;
-      opacity: .5;
-      //background-color: #F5F7F8;
-      cursor: pointer;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 1.5em;
-      margin: 0 4px;
-
-      &:focus {
-        outline: none;
-      }
-
-      &.active {
-        opacity: 1;
-        border-bottom: 1px solid $primary-color;
-      }
-
-      &:not(.active):hover {
-        opacity: .8;
-      }
-    }
-  }
-
-}
-
 @media (max-width: 1366px) {
-  .banner {
-    margin-top: 50px;
-  }
 }
 
 @media (max-width: 1000px) {
-  .section-title {
-    margin-top: 40px;
-
-    #filter {
-      margin: 25px 0;
-    }
-  }
-  .container {
-    .project {
-      width: 50%;
-    }
-  }
-  .section-item.code {
-    flex-direction: column !important;
-
-    .code-image {
-      width: 100%;
-      margin: 20px 0;
-    }
-  }
 }
 
 @media (max-width: 500px) {
-  #landing {
-    display: none;
-  }
-  .scroll_down {
-    display: none;
-  }
-  #landing_move {
-    display: none;
-  }
-  .container {
-    #filter {
-      flex-flow: wrap;
-      margin-bottom: 0;
-
-      .btn {
-        font-size: 12px !important;
-        margin: 5px !important;
-      }
-    }
-
-    .project {
-      width: 100%;
-      margin: 40px 0;
-      padding: 0;
-    }
-
-    .hp-section-title {
-      font-size: 14px;
-
-      .title {
-        &.active {
-          font-size: 18px;
-        }
-      }
-    }
-  }
 }
