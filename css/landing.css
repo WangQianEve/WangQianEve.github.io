@@ -614,10 +614,6 @@ video {
     font-size: 30px;
   }
 }
-* {
-  transition: inherit;
-}
-
 body {
   width: 100vw;
   height: 100vh;
