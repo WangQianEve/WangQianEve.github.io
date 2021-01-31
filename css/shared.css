@@ -94,6 +94,7 @@ a {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   display: flex;
   z-index: 100;
 }
@@ -552,11 +553,7 @@ video {
   }
 
   .navbar {
-    padding: 0 20px;
-  }
-  .navbar .logo {
-    height: 15px;
-    margin-top: 18px;
+    padding: 0 30px;
   }
 
   .mobile-v {
@@ -593,11 +590,6 @@ video {
   .section .images.demo {
     margin-bottom: 30px;
     margin-top: 50px;
-  }
-
-  .footer {
-    font-size: 10px;
-    height: 35px !important;
   }
 
   .static {

@@ -1,14 +1,11 @@
-@charset "UTF-8";
+@import "landing.css";
+@import "shared.css";
 html {
   scroll-behavior: auto;
 }
 
-.hp-section-title {
-  width: 100%;
-  margin-top: 50px;
-  padding-left: 40px;
-  font-size: 20px;
-  margin-bottom: 50px;
+#content {
+  padding-top: 50px;
 }
 
 .container {
@@ -19,16 +16,26 @@ html {
   align-self: center;
 }
 
+.full-width {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.hp-section-title {
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
 .project-new {
   border-radius: 50px;
   overflow: hidden;
+  position: relative;
   color: black;
   background-color: #eeeeee;
-  position: relative;
-}
-.project-new.dark-image {
-  color: white;
-  background-color: black;
 }
 .project-new .image {
   width: 100%;
@@ -52,12 +59,9 @@ html {
 .project-new .blue-gc {
   background-image: linear-gradient(to right, #E2EAF2, #E2EAF2, #E2EAF280, #E2EAF200);
 }
-.project-new:hover .project-btn {
-  opacity: 1;
-  margin-bottom: 0;
-}
-.project-new:hover img {
-  transform: scale(1.05);
+.project-new.dark-image {
+  color: white;
+  background-color: black;
 }
 .project-new .company {
   font-weight: 600;
@@ -71,11 +75,10 @@ html {
 }
 .project-new .project-detail {
   opacity: 0.5;
-  width: 420px;
-  max-width: max-content;
-  flex-grow: 1;
+  max-width: 420px;
 }
 .project-new .project-btn {
+  margin-top: auto;
   font-size: 18px;
   font-weight: 100;
   font-style: italic;
@@ -87,6 +90,13 @@ html {
 .project-new div {
   z-index: 1;
 }
+.project-new:hover .project-btn {
+  opacity: 1;
+  margin-bottom: 0;
+}
+.project-new:hover img {
+  transform: scale(1.05);
+}
 
 .design-projects {
   height: 780px;
@@ -94,7 +104,7 @@ html {
 .design-projects .project-new {
   margin: 20px;
   width: 650px;
-  max-width: 80%;
+  max-width: 95%;
   height: 300px;
   padding: 60px 6%;
 }
@@ -108,8 +118,8 @@ html {
 .tech-projects .project-new {
   height: 260px;
   margin: 15px;
-  min-width: 500px;
-  max-width: 80%;
+  width: 500px;
+  max-width: 95%;
   padding: 60px 4%;
 }
 .tech-projects .project-new .project-name {
@@ -118,17 +128,10 @@ html {
 }
 
 .main-project {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   width: 100%;
   height: 350px;
   padding: 60px 10%;
-}
-
-.full-width {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
 }
 
 .horizontal-scroll {
@@ -137,38 +140,67 @@ html {
   overflow-x: scroll;
   flex-wrap: wrap;
   width: 100%;
-  padding-left: max(12.5%, calc((100% - 1000px) / 2));
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px max(12.5vw, calc((100vw - 1000px) / 2));
+}
+.horizontal-scroll .rightmost-filler {
+  width: max(12.5vw, calc((100vw - 1000px) / 2));
+  height: 100px;
+  flex-shrink: 0;
 }
 .horizontal-scroll a.project-new:hover div {
   opacity: 0;
 }
-.landing_text {
-  position: fixed;
-  top: calc(50vh - 20vw);
-  width: 100%;
-  text-align: center;
-  font-family: "Prompt", sans-serif;
-  font-size: 24px;
-  color: #aaa;
-  animation: 0.5s fadeIn ease-in forwards;
+.horizontal-scroll div.project-new:hover {
+  filter: grayscale(1);
 }
 
-.scroll_down::before {
-  position: fixed;
-  margin-left: -1em;
-  left: 50vw;
-  bottom: 50px;
-  color: #888;
-  font-size: 20px;
-  opacity: 0;
-  content: "╲╱";
-  animation: 0.7s fadeIn 0.3s ease-in forwards, bounce 1s ease infinite;
+@media (max-width: 1000px) {
+  .project-new .project-btn {
+    margin-bottom: 0;
+    opacity: 1;
+  }
 }
+@media (max-width: 500px) {
+  .project-new {
+    border-radius: 10px;
+  }
+  .project-new .project-detail {
+    display: none;
+  }
+  .project-new .project-name {
+    font-size: 20px;
+    margin-top: 10px;
+  }
 
-.scroll_down.scroll-hidden::before {
-  display: none;
+  .main-project {
+    height: 220px;
+    margin: 30px 0;
+    padding: 30px 10%;
+  }
+
+  .design-projects {
+    height: 500px;
+  }
+  .design-projects .project-new {
+    margin: 10px;
+    height: 160px;
+    padding: 30px;
+  }
+
+  .tech-projects {
+    height: 460px;
+  }
+  .tech-projects .project-new {
+    height: 150px;
+    margin: 10px;
+    padding: 30px;
+  }
+  .tech-projects .project-new .project-name {
+    font-size: 18px;
+  }
+  .tech-projects .project-new .project-btn {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

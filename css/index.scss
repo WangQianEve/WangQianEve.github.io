@@ -1,14 +1,14 @@
+@import "landing.css";
+@import "shared.css";
+
+// disable smooth scroll
 html {
   scroll-behavior: auto;
 }
 
-//basic styles
-.hp-section-title {
-  width: 100%;
-  margin-top: 50px;
-  padding-left: 40px;
-  font-size: 20px;
-  margin-bottom: 50px;
+// content and heading styles
+#content {
+  padding-top: 50px;
 }
 .container {
   display: flex;
@@ -17,22 +17,29 @@ html {
   flex-wrap: wrap;
   align-self: center;
 }
+.full-width {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.hp-section-title {
+  //size and position
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  //font
+  font-size: 20px;
+}
 
-//project style & hover behavior
+// project style & hover behavior
 .project-new {
-  //shape
+
+  // shape
   border-radius: 50px;
   overflow: hidden;
 
-  //default font color and reversed
-  color: black;
-  background-color: #eeeeee;
-  &.dark-image {
-    color: white;
-    background-color: black;
-  }
-
-  //set background image position
+  // image position and gradient overlay
   position: relative;
   .image {
     width: 100%;
@@ -57,38 +64,30 @@ html {
     background-image: linear-gradient(to right, #E2EAF2, #E2EAF2, #E2EAF280, #E2EAF200);
   }
 
-  //show btn, zoom on hover
-  &:hover {
-    .project-btn {
-      opacity: 1;
-      margin-bottom: 0;
-    }
-    img {
-      transform: scale(1.05);
-    }
-  }
-
   //font styles
+  color: black;
+  background-color: #eeeeee;
+  &.dark-image {
+    color: white;
+    background-color: black;
+  }
   .company {
     font-weight: 600;
     opacity: 0.3;
   }
-
   .project-name {
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 10px;
     margin-top: 20px;
   }
-
   .project-detail {
     opacity: 0.5;
-    width: 420px;
-    max-width: max-content;
-    flex-grow: 1; // push the button to the bottom
+    max-width: 420px;
   }
-
   .project-btn {
+    margin-top: auto;
+    //font
     font-size: 18px;
     font-weight: 100;
     font-style: italic;
@@ -100,12 +99,23 @@ html {
     border-bottom: 1px solid #cccccc;
   }
 
+  // text and gradient are above image
   div {
     z-index: 1;
   }
-}
 
-//project sizing
+  // show btn and zoom on hover
+  &:hover {
+    .project-btn {
+      opacity: 1;
+      margin-bottom: 0;
+    }
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+}
 $design-project-height: 300px;
 $tech-project-height: 260px;
 .design-projects {
@@ -113,10 +123,9 @@ $tech-project-height: 260px;
   .project-new {
     margin: 20px;
     width: 650px;
-    max-width: 80%;
+    max-width: 95%;
     height: $design-project-height;
     padding: 60px 6%;
-
     .project-name {
       font-size: 20px;
     }
@@ -124,12 +133,11 @@ $tech-project-height: 260px;
 }
 .tech-projects {
   height: $tech-project-height * 2 + 160;
-
   .project-new {
     height: $tech-project-height;
     margin: 15px;
-    min-width: 500px;
-    max-width: 80%;
+    width: 500px;
+    max-width: 95%;
     padding: 60px 4%;
 
     .project-name {
@@ -139,82 +147,85 @@ $tech-project-height: 260px;
   }
 }
 .main-project {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   width: 100%;
   height: 350px;
   padding: 60px 10%;
 }
-
-//section size with background
-.full-width {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
-//scroll and project style
 .horizontal-scroll {
-  //flex scrollable
+  // flex scrollable
   display: flex;
   flex-direction: column;
   overflow-x: scroll;
   flex-wrap: wrap;
   width: 100%;
 
-  //padding
-  padding-left: max(12.5%, calc((100% - 1000px) / 2));
-  padding-top: 50px;
-  padding-bottom: 50px;
+  // padding
+  padding: 50px max(12.5vw, calc((100vw - 1000px) / 2));
+  .rightmost-filler {
+    width: max(12.5vw, calc((100vw - 1000px) / 2));
+    height: 100px;
+    flex-shrink: 0;
+  }
 
+  // show img on hover
   a.project-new:hover {
     div {
       opacity: 0;
     }
   }
   div.project-new:hover {
-    div.image {
-      //opacity: 0.8;
+    filter: grayscale(1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-new {
+    .project-btn {
+      margin-bottom: 0;
+      opacity: 1;
     }
   }
 }
 
-.landing_text {
-  // position
-  position: fixed;
-  top: calc(50vh - 20vw);
-  width: 100%;
-  text-align: center;
-  // font
-  font-family: "Prompt", sans-serif;
-  font-size: 24px;
-  color: #aaa;
-  animation: .5s fadeIn ease-in forwards;
-}
-
-//scroll indicator
-.scroll_down::before {
-  // position
-  position: fixed;
-  margin-left: -1em;
-  left: 50vw;
-  bottom: 50px;
-  //text and animation
-  color: #888;
-  font-size: 20px;
-  opacity: 0;
-  content: '╲╱';
-  animation: .7s fadeIn .3s ease-in forwards, bounce 1s ease infinite;
-}
-.scroll_down.scroll-hidden::before {
-  display: none;
-}
-
-@media (max-width: 1366px) {
-}
-
-@media (max-width: 1000px) {
-}
-
 @media (max-width: 500px) {
+  .project-new {
+    border-radius: 10px;
+    .project-detail {
+      display: none;
+    }
+    .project-name {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+  .main-project {
+    height: 220px;
+    margin: 30px 0;
+    padding: 30px 10%;
+  }
+  $design-project-height: 160px;
+  $tech-project-height: 150px;
+  .design-projects {
+    height: $design-project-height * 2 + 180; //20 margin + 50 container padding
+    .project-new {
+      margin: 10px;
+      height: $design-project-height;
+      padding: 30px;
+    }
+  }
+  .tech-projects {
+    height: $tech-project-height * 2 + 160;
+    .project-new {
+      height: $tech-project-height;
+      margin: 10px;
+      padding: 30px;
+      .project-name {
+        font-size: 18px;
+      }
+      .project-btn {
+        font-size: 16px;
+      }
+    }
+  }
 }

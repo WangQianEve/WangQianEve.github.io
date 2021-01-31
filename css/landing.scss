@@ -1,5 +1,3 @@
-@import "shared";
-
 //use as anchor for landing svg
 body {
   width: 100vw;
@@ -15,7 +13,6 @@ body {
     object-fit: cover;
   }
 }
-
 #content {
   background-color: white;
   z-index: 1;
@@ -25,24 +22,51 @@ body {
   display: flex; //to center containter
   flex-direction: column;
 }
-
 #landing {
-  //basic size and position
-  z-index: 99;
+  z-index: 2;
   width: 100vw;
   height: 100vh;
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   img {
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
+    //object-position: center;
     outline: 2px solid #fff;
   }
-  //fill the screen when screen is longer than img
   .white-space {
     flex-grow: 1;
     background-color: white;
     outline: 2px solid #fff;
+  }
+  .landing_text {
+    // position
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    // font
+    font-family: "Prompt", sans-serif;
+    font-size: 24px;
+    color: #aaa;
+    animation: .5s fadeIn ease-in forwards;
+  }
+  .scroll_down::before {
+    // position
+    position: fixed;
+    margin-left: -1em;
+    left: 50vw;
+    bottom: 50px;
+    //text and animation
+    color: #888;
+    font-size: 20px;
+    opacity: 0;
+    content: '╲╱';
+    animation: .7s fadeIn .3s ease-in forwards, bounce 1s ease infinite;
+  }
+  .scroll_down.scroll-hidden::before {
+    display: none;
   }
 }

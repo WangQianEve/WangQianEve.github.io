@@ -55,24 +55,25 @@
 }
 #designer {
   position: absolute;
-  top: 220px;
+  top: 240px;
   left: 65vw;
   max-width: 30vw;
 }
 #background {
   position: absolute;
   top: 440px;
-  left: 70vw;
-  max-width: 25vw;
+  left: 60vw;
+  max-width: 35vw;
   font-size: 14px;
 }
 #motivation {
   position: absolute;
-  top: 350px;
+  top: 320px;
   right: 70vw;
-  max-width: 33vw;
+  max-width: 35vw;
   .show-on-hover {
-    margin-right: -8vw;
+    margin-right: -5vw;
+    margin-left: 5vw;
   }
 }
 #outside-of-work {
@@ -102,8 +103,9 @@
   height: 0;
   width: 0;
   overflow: hidden;
+  z-index: 1;
   p {
-    margin: 10px 0;
+    margin: 5px 0;
   }
 }
 .bubble {
@@ -145,11 +147,47 @@ body {
   border-radius: 50vh;
   object-fit: contain;
 }
+.navbar {
+  background-color: #f8f8f8 !important;
+}
 
 @media (max-width: 800px) {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-height: 500px) {
+  .my-image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+  .hover {
+    position: inherit !important;
+    width: 80vw !important;
+    max-width: 80vw !important;
+    margin: 0 !important;
+    .show-on-hover {
+      height: inherit !important;
+      opacity: 1 !important;
+      width: inherit !important;
+      margin: 0 !important;
+    }
+  }
+  .bubble {
+    border-radius: 30px !important;
+    margin-top: 30px;
+    align-self: flex-start !important;
+    padding: 0;
+    font-weight: 700;
+    background-color: #fff0;
+    box-shadow: 0 0 0 #0000;
+    //color: white;
 
+  }
+  #hello {
+    display: none;
+  }
+  .footer {
+    position: inherit !important;
+  }
 }
