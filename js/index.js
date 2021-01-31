@@ -11,16 +11,17 @@ $(document).ready(function () {
       scrub: true,
     }
   }).to("#landing", {scale: 4, duration: 2})
-    .to("#landing", {autoAlpha: 0, duration: 0.5}, 1.5);
+    .to("#landing", {autoAlpha: 0, duration: 0.2}, 1.5);
 
 
   //load content
   gsap.timeline({
     scrollTrigger: {
       trigger: "#content",
-      start: "top 22%",
-      end: "top 20%",
+      start: "top 27%",
+      end: "top 25%",
       scrub: true,
+      // markers: true,
     }
   })
     .to("#content", {
@@ -32,7 +33,7 @@ $(document).ready(function () {
   gsap.timeline({
     scrollTrigger: {
       trigger: "#content",
-      start: "top 20%",
+      start: "top 27%", //should be same or higher than load's start position to avoid stop in transparent state
       end: "top top",
       scrub: true,
       snap: {

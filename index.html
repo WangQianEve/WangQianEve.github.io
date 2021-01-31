@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Qian Wang</title>
+    <link rel="icon" href="images/icon.png" />
     <link href="css/landing.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/shared.css" rel="stylesheet" type="text/css">
+
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:300&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
@@ -19,7 +23,10 @@
     </div>
     <div id="content">
         <div class="navbar">
-            <a class="home" href="index.html"><img class="logo" src="images/logo-new.svg"></a>
+            <a class="home" href="index.html">
+                <img class="logo" src="images/icon.png">
+                <span>Qian Wang</span>
+            </a>
             <div class="navList">
                 <a class="pg-btn active not-mobile" href="index.html#content">Work</a>
                 <a class='pg-btn' href="about.html">About</a>
@@ -31,76 +38,95 @@
             </div>
             <div id="nav_anchor"></div>
             <div class="project-new main-project flex-v">
-                <img class="no-zoom" src="images/activation.webp">
+                <img class="image" src="images/activation.webp">
                 <div class="company">Lutron</div>
                 <div class="project-name">Activate a lighting system</div>
                 <div class="project-detail">An app that easily activates lighting controls, lights, shades and sensors in a home</div>
                 <div class="project-btn">Under NDA</div>
             </div>
             <div class="project-new main-project flex-v dark-image">
-                <img src="images/ring.webp">
+                <img class="image" src="images/ring.webp">
                 <div class="company">Lutron x Ring</div>
                 <div class="project-name">Automate lights with security cameras</div>
                 <div class="project-detail">Design for the integration of Ring security system with Lutron lighting system</div>
                 <div class="project-btn">Coming Soon</div>
             </div>
         </div>
-        <div class="full-width" style="background-color: #f8f8f8">
+        <div class="full-width" style="background-color: #fafafa">
             <div class="container space-above">
                 <div class="hp-section-title" style="font-weight: 400">2018-2019, I designed user experiences across screens, voices, spaces, wearables, games... </div>
             </div>
             <div class="horizontal-scroll design-projects space-below">
                 <a class="project-new flex-v" href="brandeis.html">
-                    <img src="images/brandeis.webp">
+                    <div class="image grey-gc"></div>
+                    <img class="image" src="images/brandeis.webp">
                     <div class="company">DARPA</div>
-                    <div class="project-name">Manage Data Privacy</div>
+                    <div class="project-name">Mobile Privacy Manager</div>
                 </a>
-                <a class="project-new flex-v" href="liquidnet.html">
-                    <img src="images/liquidnet.webp">
+                <a class="project-new dark-image flex-v" href="liquidnet.html">
+                    <div class="image black-gc"></div>
+                    <img class="image" src="images/liquidnet.webp">
                     <div class="company">Liquidnet</div>
                     <div class="project-name">Trading alerts</div>
                 </a>
                 <a class="project-new flex-v" href="beauty_plus.html">
-                    <img src="images/alexa.webp">
+                    <div class="image blue-gc"></div>
+                    <img class="image" src="images/alexa.webp">
                     <div class="company">Alexa Day at CMU</div>
                     <div class="project-name">VUI makeup assistant for the visually impaired</div>
                     <div class="project-detail">Won 2nd Place</div>
                 </a>
                 <a class="project-new flex-v" href="venmo.html">
-                    <img src="images/venmo.webp">
+                    <div class="image chill-white-gc"></div>
+                    <img class="image" src="images/venmo.webp">
                     <div class="company">CMU</div>
-                    <div class="project-name">AI-empowered Venmo</div>
+                    <div class="project-name">Improve Venmo experience with AI</div>
                 </a>
-                <a class="project-new flex-v" href="IoT.html">
-                    <img src="images/IoT.webp">
+                <a class="project-new dark-image flex-v" href="IoT.html">
+                    <div class="image black-gc"></div>
+                    <img class="image" src="images/IoT.webp">
                     <div class="company">Design challenge</div>
                     <div class="project-name">Save Energy with Smart Home</div>
                 </a>
                 <div class="project-new flex-v">
-                    <img src="images/sleepy-game.webp">
+                    <div class="image warm-white-gc"></div>
+                    <img class="image" src="images/sleepy-game.webp">
                     <div class="company">CMU x Phillips</div>
                     <div class="project-name">Games that help you get better sleeps</div>
                     <div class="project-detail">Published on CHIPLAY</div>
+                    <div class="project-btn">Coming Soon</div>
                 </div>
-                <div class="project-new flex-v">
-                    <img src="images/samsung-watch.webp">
+                <div class="project-new dark-image flex-v">
+                    <div class="image black-gc"></div>
+                    <img class="image" src="images/samsung-watch.webp">
                     <div class="company">Design challenge</div>
                     <div class="project-name">Smartwatch for health</div>
+                    <div class="project-detail"></div>
+                    <div class="project-btn">Coming Soon</div>
                 </div>
                 <div class="project-new flex-v">
-                    <img src="images/scotty.webp">
+                    <div class="image chill-white-gc"></div>
+                    <img class="image" src="images/scotty.webp">
                     <div class="company">CMU</div>
                     <div class="project-name">Bus Stop Redesign</div>
+                    <div class="project-detail"></div>
+                    <div class="project-btn">Coming Soon</div>
                 </div>
                 <div class="project-new flex-v">
-                    <img src="images/airport.webp">
+                    <div class="image warm-white-gc"></div>
+                    <img class="image" src="images/airport.webp">
                     <div class="company">CMU</div>
                     <div class="project-name">Themed experience at airport</div>
+                    <div class="project-detail"></div>
+                    <div class="project-btn">Coming Soon</div>
                 </div>
                 <div class="project-new flex-v">
-                    <img src="images/pick-a-viz.webp">
+                    <div class="image chill-white-gc"></div>
+                    <img class="image" src="images/pick-a-viz.webp">
                     <div class="company">CMU</div>
                     <div class="project-name">Games for Interpretable Machine Learning research</div>
+                    <div class="project-detail"></div>
+                    <div class="project-btn">Coming Soon</div>
                 </div>
                 <div style="width: 20%; height: 100px"></div>
             </div>
@@ -111,44 +137,59 @@
             </div>
             <div class="horizontal-scroll tech-projects space-below">
                 <a class="project-new flex-v" href="code/Forceboard.html">
-                    <img src="images/code/forceboard.webp">
+                    <div class="image chill-white-gc"></div>
+                    <img class="image" src="images/code/forceboard.webp">
                     <div class="company">Tsinghua University</div>
                     <div class="project-name">Pressure-based Text Entry</div>
+                    <div class="project-detail">Published on CHI</div>
                 </a>
-                <a class="project-new flex-v" href="code/IndexSense.html">
-                    <img src="images/code/ksi.webp">
+                <a class="project-new dark-image flex-v" href="code/IndexSense.html">
+                    <div class="image black-gc"></div>
+                    <img class="image" src="images/code/ksi.webp">
                     <div class="company">Carnegie Mellon University</div>
                     <div class="project-name">Invisible trackpad over keyboard</div>
+                    <div class="project-detail">Published</div>
                 </a>
                 <a class="project-new flex-v" href="code/SpeechExplosion.html">
-                    <img src="images/code/SpeechExplosion.webp">
+                    <div class="image warm-white-gc"></div>
+                    <img class="image" src="images/code/SpeechExplosion.webp">
                     <div class="company">Yitu Tech</div>
                     <div class="project-name">Voice-interactive Display</div>
                 </a>
-                <a class="project-new flex-v" href="code/PointCloudLabeling.html">
-                    <img src="images/code/Labeling.webp">
+                <a class="project-new dark-image flex-v" href="code/PointCloudLabeling.html">
+                    <div class="image black-gc"></div>
+                    <img class="image" src="images/code/Labeling.webp">
                     <div class="company">Pony.ai</div>
                     <div class="project-name">Point Cloud Labeling</div>
+                    <div class="project-detail">Patented</div>
                 </a>
                 <a class="project-new flex-v" href="code/GestureControlledAnimation.html">
-                    <img src="images/code/gca.webp">
+                    <div class="image chill-white-gc"></div>
+                    <img class="image" src="images/code/gca.webp">
                     <div class="company">Tsinghua University</div>
                     <div class="project-name">Generate animation with hand tracking</div>
                 </a>
-                <a class="project-new flex-v" href="code/Jitters.html">
-                    <img src="images/code/Jitters.webp">
+                <a class="project-new dark-image flex-v" href="code/Jitters.html">
+                    <div class="image black-gc"></div>
+                    <img class="image" src="images/code/Jitters.webp">
                     <div class="company">Tsinghua University</div>
                     <div class="project-name">Jitter UX evaluator</div>
                 </a>
-                <div class="project-new flex-v">
-                    <img src="images/code/travel-diary.webp">
+                <div class="project-new dark-image flex-v">
+                    <div class="image black-gc"></div>
+                    <img class="image" src="images/code/travel-diary.webp">
                     <div class="company">CMU</div>
                     <div class="project-name">Travel Diary Website</div>
+                    <div class="project-detail"></div>
+                    <div class="project-btn">Coming Soon</div>
                 </div>
                 <div class="project-new flex-v">
-                    <img src="images/code/gooseberry.webp">
+                    <div class="image chill-white-gc"></div>
+                    <img class="image" src="images/code/gooseberry.webp">
                     <div class="company">Tsinghua University</div>
                     <div class="project-name">Schedule meeting web service</div>
+                    <div class="project-detail"></div>
+                    <div class="project-btn">Coming Soon</div>
                 </div>
                 <div style="width: 12.5%; height: 200px"></div>
             </div>
@@ -159,6 +200,8 @@
         <div class="white-space"></div>
         <img src="images/landing_window.svg">
         <div class="white-space"></div>
+        <div class="landing_text">Hi, I'm Qian Wang</div>
+        <a class="scroll_down"></a>
     </div>
 </body>
 </html>
