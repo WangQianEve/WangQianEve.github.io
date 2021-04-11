@@ -17,7 +17,7 @@ function closePopup () {
 function openProject() {
   $('#wrongpsw').removeClass('show');
   if ($('#psw').val() === 'watermelon') {
-    window.location.href = './.projects/' + projectUrl[projectName];
+    window.location.href = './projects/' + projectUrl[projectName];
   } else {
     $('#wrongpsw').addClass('show');
   }
