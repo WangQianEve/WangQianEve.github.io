@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qian Wang</title>
+    <link rel="icon" href="../images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <link href="../css/shared.css" rel="stylesheet" type="text/css">
+    <link href="../css/project.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/scroll.js"></script>
+    <script src="../js/project.js"></script>
+</head>
+<body>
+<div class="navbar">
+    <div class="navList dark-bg">
+        <a class="pg-btn" href="../index.html">Work</a>
+        <a class='pg-btn' href="../play.html">Play</a>
+        <a class='pg-btn' href="../about.html">About</a>
+    </div>
+</div>
+
+<div class="banner dark-bg" style="margin-bottom: 150px;">
+    <img src="../images/lutron/ring/banner.webp" alt=""/>
+    <div class="project-content">
+        <div class="project-name fadein">LUTRON + RING</div>
+        <div class="project-detail fadein" style="transition-delay: 300ms;">A safer and smarter home</div>
+        <div class="intro-card card fadein" style="transition-delay: 600ms; margin-top: 180px;">
+            <div class="details">
+                <div class="item">Time</div>
+                <div class="content">April - June 2020 (2 months)</div>
+            </div>
+            <div class="details">
+                <div class="item">My Role</div>
+                <div class="content">
+                    As the UX lead of this feature, I leaded interaction design, user research, and worked closely with a visual designer, a PM, multiple developers, as well as data scientists.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="nav_anchor"></div>
+
+<div id="background" class="container">
+    <!--        background-->
+    <div class="part-title">
+        <div class="title">Background</div>
+        <div class="line"></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <img src="../images/lutron/ring/lutron.webp"/>
+            <div class="detail">Lutron sells smart lighting systems, which includes lighting controls, sensors, shades, and lighting fixtures.</div>
+        </div>
+        <div class="block right">
+            <img src="../images/lutron/ring/ring.webp"/>
+            <div class="detail">Ring sells home security systems, which includes video doorbells, security cameras, sensors, and other devices.</div>
+        </div>
+    </div>
+
+    <!--        how it started-->
+    <div class="part-title">
+        <div class="title">How it started ?</div>
+        <div class="line"></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">This was a long-requested feature</div>
+            <div class="detail">Lutron dealers often also sells Ring, and we hear a lot of requests from them for the integration. In 2020, Lutron and Ring business teams agreed to provide it first with Ring's security cameras and camera doorbells. More specifically <span class="highlight-content blue">to signal Lutron when doorbell was ringed or motion was detected.</span></div>
+        </div>
+        <div class="block right"><img src="../images/lutron/ring/triggers.webp"/></div>
+    </div>
+
+    <!--        the mission-->
+    <div class="summary-card">
+        <div class="title">The Mission</div>
+        <div>HMW help homeowners and dealers set up and use the integration easily ?</div>
+    </div>
+
+    <!--        the process-->
+    <div class="part-title">
+        <div class="title">The Process</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">With a tight schedule, we took a LEAN approach</div>
+        <p class="detail">We only have <b>8 weeks and time for 1 round of user research</b> in order to meet the Amazon Prime Day release. So we took a LEAN approach, started to <span class="highlight-content blue" style="transition-delay: 300ms">develop concepts even before the interviews</span> based on assumptions . And we conducted the user research as a combination of generative learning and validation.</p>
+        <div style="max-width: 700px"><img src="../images/lutron/ring/process.webp"/></div>
+    </div>
+</div>
+
+<!--        research-->
+<div id="research" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">01</div>
+        <div class="section-name">Research</div>
+    </div>
+
+    <!--        prior-->
+    <div class="part-title">
+        <div class="title">Prior to User Interview</div>
+        <div class="line"></div>
+    </div>
+    <div>We first did some secondary research, defined hypothetical persona and user journeys, and started to develop concepts for setting up the integration.</div>
+    <div class="group" style="align-items: flex-end">
+        <div class="block">
+            <img src="../images/lutron/ring/build-empathy.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            <div class="pic-subtitle">pic 1</div>
+        </div>
+        <div class="block">
+            <img src="../images/lutron/ring/ifttt.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            <div class="pic-subtitle">pic 2</div>
+        </div>
+        <div class="block">
+            <img src="../images/lutron/ring/persona-1.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            <div class="pic-subtitle">pic 3</div>
+        </div>
+        <div class="block">
+            <img src="../images/lutron/ring/wireframing-1.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            <div class="pic-subtitle">pic 4</div>
+        </div>
+    </div>
+    <div class="block">
+        <p>
+            <b>Pic 1: Build empathy by using Ring products</b><br/>
+            We used Ring doorbell and cameras ourselves to build empathy. A key insight gained from this activity is that, motion detection can get overly sensitive under certain situations like a windy weather.
+        </p>
+        <p>
+            <b>Pic 2: Online research</b><br/>
+            We found online that people are already hacking Lutron and Ring together with IFTTT. The most popular function is to activate a Lutron scene with Ring doorbell.
+        </p>
+        <p>
+            <b>Pic 3: Hypothetical persona and user journey</b><br/>
+            We gathered persona information from existing research. Then we developed a user journey based on assumptions, which were captured as things to validation in the user research, along with other questions and unknowns.
+        </p>
+        <p>
+            <b>Pic 4: Develop "pretotype" for setting up the integration</b><br/>
+            Guided by the lean approach, and to get some validation from real users, we developed 2 concepts for the setup experience (task analysis, information architecture design, and wireframing). We chose setup not only because it's the most fundamental function, but also because Lutron App has more precedence to reference for different kinds of setup.
+        </p>
+    </div>
+    <div class="block" style="text-align: center">
+        <div class="title">...<p>Then we conducted 6 online user interviews</p></div>
+    </div>
+
+    <!--        learnings-->
+    <div class="part-title" style="padding: 100px 0 60px 0">
+        <div class="title">Top learnings from users</div>
+        <div class="line"></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">1. Users want to known what an integration can do before adding it</div>
+            <div class="detail">With Lutron's existing integrations, users can't easily figure out what an integration can do until after they added it. Users want that information upfront <span class="highlight-content blue">because it helps them decide whether to add the integration or not</span> .</div>
+        </div>
+        <div class="block right"><img src="../images/lutron/ring/notknowing.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">2. Users decides what to setup as they do it</div>
+            <div class="detail">Users don't decide everything upfront or have a clear goal in mind while setting up. Instead, it's a continuous process. Users explore what the feature can do and decide what to set up as they do it. <span class="highlight-content blue">This is because combining security products and lighting is a newer concept that most people don't have a lot of idea or expectation of</span>.</div>
+        </div>
+        <div class="block right"><img src="../images/lutron/ring/explore.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">3. Security is the top value proposition for this integration</div>
+            <div class="detail">Through showing user drawings of different use cases along with the value propositions, we learned that security is more resonating than convenience and energy saving. <span class="highlight-content blue"> We also learned that ideas to relieve annoyance aren't welcomed if it reduces sense of security.</span> For instance, if motion detection gets too sensitive and keeps turning lights on, after user switched lights off, user don't want them to ignore new signals and stay off for any time because they would feel less secure.</div>
+        </div>
+        <div class="block right"><img src="../images/lutron/ring/security.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">4. Social aspect is a key factor </div>
+            <div class="detail">Although security is important, <span class="highlight-content blue">ideas to enhance security aren’t welcomed if it can easily annoys the neighbors / visitors under a “false alarm” scenario.</span>  For instance, users don't like the idea of flashing lights when motion detected during sleep hours because that may annoys the neighbors.</div>
+        </div>
+        <div class="block right"><img src="../images/lutron/ring/social.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+    </div>
+</div>
+
+<!--        define-->
+<div id="define" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">02</div>
+        <div class="section-name">Define</div>
+    </div>
+
+    <!--        persona-->
+    <div class="block" >
+        <p><b>Based on the insights, we updated the personas:</b></p>
+        <img src="../images/lutron/ring/personas-updated.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+    </div>
+
+    <!--        principle-->
+    <div class="block" >
+        <p><b>Concluded design principles:</b></p>
+        <div class="summary-card design-principle" >
+            <div class="title">Design Principles</div>
+            <div class="details">
+                <div class="item">😌</div>
+                <div>Easy to understand and take action throughout the journey</div>
+            </div>
+            <div class="details">
+                <div class="item">🕒</div>
+                <div>Efficient to set up and troubleshoot</div>
+            </div>
+            <div class="details">
+                <div class="item">❤️</div>
+                <div>Intrigue user to try through speaking to user's value</div>
+            </div>
+        </div>
+    </div>
+
+    <!--        brainstorm-->
+    <div class="group">
+        <div class="block left">
+            <b>Did another round of brainstorm, prioritization, and planned out the ideas into phases</b>
+        </div>
+        <div class="block right" ><img src="../images/lutron/ring/phases.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+    </div>
+
+    <!--        user journey-->
+    <div class="block" >
+        <p><b>Updated the ideal user journey</b></p>
+        <img src="../images/lutron/ring/" style="height: 300px; background-color: #eee" onclick="showImage(this.src)" style="cursor: pointer;"/>
+    </div>
+</div>
+
+<!--    design-->
+<div id="design" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">03</div>
+        <div class="section-name">Design</div>
+    </div>
+
+    <!--        discover-->
+    <div class="part-title">
+        <div class="title">1. Discover</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="group">
+        <div class="block demo-mobile left"><img src="../images/lutron/ring/design/discover-1.webp"/></div>
+        <div class="block" style="max-width: 360px; margin-right: auto">
+            <b>User discovers the integration</b> through notification when both Ring App and Lutron App are installed.
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="block left" style="max-width: 360px">
+            <b>User gets an idea of what the integration is</b> and get interested through viewing example use cases, along with key value propositions. User can also get inspired from the examples.
+        </div>
+        <div class="block demo-mobile right">
+            <video muted controls>
+                <source src="../images/lutron/ring/design/onboarding.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!--        setup-->
+    <div class="part-title">
+        <div class="title">2. Setup</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="group">
+        <div class="block demo-mobile left">
+            <video muted controls>
+                <source src="../images/lutron/ring/design/setup.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="block">
+            <b> 3 steps to setup an automation</b> <br/>
+            1. Select a device <br/>
+            2. Select a trigger <br/>
+            3. Select lights and save
+        </div>
+    </div>
+
+    <div class="block decision">
+        <div class="title"><span>Design decisions 1</span> Why lights? not scenes?</div>
+        <div class="content">During initial online research, we found activating a scene is more popular on IFTTT than activating lights. However, through user interviews, we learned the opposite. We decided on lights because on IFTTT it could be people are preferring doorbells over motion detection, rather than scenes over lights.</div>
+        <div><img src="../images/lutron/ring/decision1.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+    </div>
+
+    <div class="block decision">
+        <div class="title"><span>Design decisions 2</span> Alternative concept for setup</div>
+        <div><img src="../images/lutron/ring/decision2-event.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+        <div class="content">We also explored an “event-based” concept for setting up the integration, and got user feedback as above. We decided on the “device-based” concept because:</div>
+        <div class="content"> 1) Setting up the same effect for multiple triggers is a minority case. We learned that most Ring systems has < 5 devices, plus we are targeting at smaller homes for this feature, meaning less Ring devices.</div>
+        <div class="content"> 2) The “event” concept is an additional layer of thinking, especially for some users who are on the older side or aren’t as tech-savy. While the “device-based” concept is more straightforward and easier to understand especially for the first time.</div>
+    </div>
+
+    <div class="block decision">
+        <div class="title"><span>Design decision 3</span> Simplify the setup flow</div>
+        <div class="content">The feedback we got on the initial version is: first, It’s a lot of information to consume on screen 1, second, the “same as” options on screen 2 make it complex to understand. So we made some simplification:</div>
+        <div class="content"> 1. Removed the “same as” options on screen 2 because we believe is it’s not a common need.</div>
+        <div class="content"> 2. Simplify “effective time” options because we learned people hardly need the “daytime”option. And integrate it into “select light” screen because that’s where this information is more important.</div>
+        <div class="content"> 3. Apply progressive disclosure principle on the “enable” status. Only show it when it is set up already.</div>
+        <div><img src="../images/lutron/ring/decision3-1.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+        <div class="group">
+            <div class="block content"> We also explored alternative flows and layouts while seeking ways to make it simpler and easier to consume. But still decided on the layout that containts both triggers because it’s the easiest for users to learn about how it works while setting things up.</div>
+            <div style="width: 52%"><img src="../images/lutron/ring/decision3-2.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="block">
+            <b> After setup: get a clear overview </b> <br/>
+            On both the device page and the homepage, user can see a summary of the setting. <br/> On homepage, user can show only devices configured with the current Lutron system to get a clearer overview. This also helps user filter out devices at other homes (e.g., vacation homes, parents' home under the same account etc) </div>
+        <div class="block demo-mobile left">
+            <video muted controls>
+                <source src="../images/lutron/ring/design/finish.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!--        setup-->
+    <div class="part-title">
+        <div class="title">3. Troubleshoot</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="group">
+        <div class="block demo-mobile left"><img src="../images/lutron/ring/design/identify1.webp"/></div>
+        <div class="block demo-mobile left"><img src="../images/lutron/ring/design/identify2.webp"/></div>
+        <div class="block right" style="max-width: 360px; margin-right: auto">
+            <b>Identify</b> whether the integration was triggered
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="block left" style="max-width: 360px; margin-right: auto">
+            <b>Resolve issue</b> by adjusting sensitivity on Ring App OR snooze for a short time.
+        </div>
+        <div class="block demo-mobile right">
+            <video muted controls>
+                <source src="../images/lutron/ring/design/gotoring.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="block demo-mobile right">
+            <video muted controls>
+                <source src="../images/lutron/ring/design/snooze.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+</div>
+
+<!--    shipping-->
+<div id="shipping" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">04</div>
+        <div class="section-name">Shipping</div>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <div class="title">Localization and Accessibility spec</div>
+            <div class="detail">In prep for shipping, we co-ordinated with translators for localization work, the visual designers did color contrast check and created large-font spec. <span class="highlight-content blue">I also pioneered the "voice-over" spec in the company guided by the accessibility champion.</span></div>
+        </div>
+        <div class="block right"><img src="../images/lutron/ring/accessibility.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
+    </div>
+
+    <div class="block">
+        <div class="title">Data Tracking and Measurement</div>
+        <div class="detail">I also pioneered a 6-step data tracking process at Lutron UX, which was also adopted and built on in future projects. See key data learnings below: </div>
+        <div class=""><img src="../images/lutron/ring/data.webp"/></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="block">
+        <div class="title" style="text-align: center; margin: 150px 0;">Interested in more details? Reach out and let's chat!</div>
+    </div>
+</div>
+
+<div class="footer"></div>
+
+<div id="menu" class="menu">
+    <a href="#background" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Background</div>
+    </a>
+    <a href="#research" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Research</div>
+    </a>
+    <a href="#define" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Define</div>
+    </a>
+    <a href="#design" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Design</div>
+    </a>
+    <a href="#shipping" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Shipping</div>
+    </a>
+</div>
+
+<div id="image-modal">
+    <div id="close" onclick="$('#image-modal').css('display', 'none');"><i class="material-icons">close</i></div>
+    <img src="../images/lutron/ring/data.webp"/>
+</div>
+</body>
+</html>
