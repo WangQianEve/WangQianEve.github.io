@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qian Wang</title>
+    <link rel="icon" href="../images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <link href="../css/shared.css" rel="stylesheet" type="text/css">
+    <link href="../css/project.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/scroll.js"></script>
+    <script src="../js/project.js"></script>
+</head>
+<body>
+<div class="navbar">
+    <a id="back" href="../index.html">
+        <span class="material-icons">arrow_back_ios</span>
+    </a>
+</div>
+
+<div class="banner">
+    <img src="../images/cmu/beauty/banner.webp" alt=""/>
+    <div class="project-content">
+        <div class="project-name fadein">
+            <img src="../images/cmu/beauty/banner-text.webp" style="width: 20vw; object-fit: contain;"/>
+        </div>
+        <div class="project-detail fadein" style="transition-delay: 300ms;font-weight: 300; max-width: 500px; font-size: 24px">Bring makeup-independence to the visually impaired</div>
+    </div>
+</div>
+<div class="intro-card card fadein" style="transition-delay: 600ms;">
+    <div style="font-size: 20px; font-weight: 400"> <span style="color: #EE5B5B">2nd Place</span>&nbsp;in Alexa Day Competition</div>
+    <div class="details">
+        <div class="item">Time</div>
+        <div class="content">Feb. 2019 - Apr. 2019 (2 months)</div>
+    </div>
+    <div class="details">
+        <div class="item">VUI Design</div>
+        <div class="content">Tortu / Lucid Chart / Alexa Dev Tools</div>
+    </div>
+    <div class="details">
+        <div class="item">Team</div>
+        <div class="content">Melissa Shi / Ally Liu / Qian Wang / Paopao Ge / Sijia Li / Menghan Zhang / Mengqing Jiang / Wei Wang</div>
+    </div>
+    <div class="details">
+        <div class="item">Role</div>
+        <div class="content">VUI Designer, Researcher</div>
+    </div>
+    <div class="details">
+        <div class="item">Contribution</div>
+        <div class="content">Lead the design of the conversation flow.<br/>Responsible for handing over and communicating with the development team.</br>Conduct research following the research lead.</div>
+    </div>
+</div>
+
+<div id="nav_anchor"></div>
+
+<!--summary-->
+<div id="summary" class="container">
+    <div class="part-title">
+        <div class="title">Problem</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">HMW help the visually impaired apply makeup more easily and independently?</div>
+        <div class="detail">Currently, there are 285 million people in the world who are visually impaired, with two-thirds of whom are female. It’s not easy for them to apply makeup on their own. However, <span class="highlight-content blue">they have been ignored and under-served in the current makeup industry</span>. We believe, “Everyone has the right to wear makeup, be confident and beautiful.”</div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Solution</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">An Alexa Skill that checks the makeup application for users and provides guidance and tips</div>
+        <div class="detail">With the help of 4 girls with different kinds of visual impairment, we learned that the most challenging step of all is to check if things are well done. So we designed a voice user interface (VUI), an Alexa Skill, that can check users' makeup application and provides guidance and tips.</div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/329157553" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <div class="block right">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/354428041" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+    </div>
+</div>
+
+<!--Research-->
+<div id="research" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">01</div>
+        <div class="section-name">User Research</div>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <div class="title">Learn from the industry</div>
+            <div class="detail">We researched current technologies in the makeup industry. Although we didn't find any product or services for people with visual impairments. <span class="highlight-content blue">We did found some makeup tutorials on Youtube where the blind blogger is demonstrating how she applies makeup.</span>. While we found her techniques amazingly good, we also watched her video again and again to observe and take note of how she does it.</div>
+        </div>
+        <a href="https://www.youtube.com/watch?v=cYc7D9n8R0U" class="block right demo-mobile">
+            <img src="../images/cmu/beauty/youtuber.webp"/>
+        </a>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <div class="title">Try it ourselves: eyes closed</div>
+            <div class="detail">
+                <p>To better empathize with the user, we tried applying makeups with our eyes closed. Things we found the hardest are:</p>
+                1. Knowing how much of the product is poured out.<br/>
+                2. Knowing where the tip of the pen/brush is.
+            </div>
+        </div>
+        <div class="block right demo-mobile">
+            <video controls muted>
+                <source src="../images/cmu/beauty/roleplay.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <div class="title">Contextual Interview: Turns out we were very wrong</div>
+            <div class="detail">
+                <p>We interviewed three people with different types of visual impairments (including blindness). We observed them doing their daily makeup routine, and learned:</p>
+            </div>
+        </div>
+        <div class="block right demo-mobile">
+            <img src="../images/cmu/beauty/interview.webp"/>
+        </div>
+    </div>
+
+    <div class="block decision">
+        <div style="color: #EE5B5B; font-weight: 700; ">Key insights</div>
+        <div class="group">
+        <div class="block left">
+            <p><span style="color: #EE5B5B; font-weight: 700; font-size: 24px">1. </span>Unlike us, our users have no trouble knowing how much product is poured out or where the tip of the pen/brush is, they also know their faces very well that they can apply product at the exact area they want.</p>
+            <p><span style="color: #EE5B5B; font-weight: 700; font-size: 24px">2. </span> The No. 1 thing that even experienced users still need everyday from another person is to check if there is no stains etc.</p>
+        </div>
+        <div class="block right">
+           <p><span style="color: #EE5B5B; font-weight: 700; font-size: 24px">3. </span> Certain type of product containers/tools are easier to use than others</p>
+            <p><span style="color: #EE5B5B; font-weight: 700; font-size: 24px">4. </span> Users often prefer more neutral look because they can't easily check the face during the day, and neutral colors are less likely to be messed up after different activities. Another reason some mentioned is that she doesn't want to draw attention on the eyes because of the uncontrollable eye movement.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <img src="../images/cmu/beauty/moreresearch.webp"/>
+        </div>
+        <div class="block right">
+            <div class="title">More online research</div>
+            <div class="detail">Based the insights, we did more online research about fixing issues, applying makeups, and picking products. We concluded a library of tips.</div>
+        </div>
+    </div>
+</div>
+
+<div id="design" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">02</div>
+        <div class="section-name">Design Process</div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Persona</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="detail">We summarized two primary personas. One is an experienced makeup user who needs help mainly for the final check; the other is a novice user who needs more guidance and tips.</div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <img src="../images/cmu/beauty/persona1.webp"  onclick="showImage(this.src)" style="border: 1px #ccc solid; cursor: pointer;"/>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/beauty/persona2.webp" onclick="showImage(this.src)" style="border: 1px #ccc solid; cursor: pointer;"/>
+        </div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Ideation</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="detail">We brainstormed together and prioritized ideas from a cost/value matrix..</div>
+        <img src="../images/cmu/beauty/ideation.webp"/>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Preparation</div>
+        <div class="line"></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Without prior experience designing VUI, we prepared ourselves through implementing one</div>
+            <div class="detail">With no experience designing an Alexa Skill, how can we quickly learn about the capabilities and limitations of this platform? I first looked into design guidelines and development documentations, and then designed and built a simple Alexa Skill. This hands-on experience helped me get to know better the framework, useful resources, and best practices to design for it. I was also able to experiment the boundaries of its capabilities.</div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/beauty/technical.webp"/>
+        </div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Dialogue Flow Design</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <p>For prototyping the conversational UI, we started with a whiteboard, markers, and post-its, and then digitized them as a flow of intents with Tortu and Lucid Chart. We broke down the flow into several parts and designed anchors to link them. After finalizing the flow, we wrote example utterances with slots for each intent.</p>
+        <img src="../images/cmu/beauty/whiteboarding.webp"/>
+        <img src="../images/cmu/beauty/dialogue-flow-new.webp" style="margin-top: 30px; cursor: pointer;"  onclick="showImage(this.src)"/>
+    </div>
+    <div class="block decision">
+        <p>We iterated the dialogues with multiple rounds of "Wizard-of-Oz" testing. The main iterating direction is to shorten the responses and make sure we don't provide more than 2 options at a time because user can only process and remember so much through hearing.</p>
+        <img src="../images/cmu/beauty/example.webp"/>
+    </div>
+</div>
+
+<div id="final" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">03</div>
+        <div class="section-name">Final Product</div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Technical Solution</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <img src="../images/cmu/beauty/technical1.webp" onclick="showImage(this.src)" style="border: 1px #ccc solid; cursor: pointer;"/>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/beauty/technical2.webp" onclick="showImage(this.src)" style="border: 1px #ccc solid; cursor: pointer;"/>
+        </div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Key features</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <div class="title">Check if the makeup is done well</div>
+            <div class="detail">Users can ask Beauty+ to check their current makeup at any time. Beauty+ will take a picture and use computer vision technologies to check if the product is blended well or if there is any unexpected color (e.g., not fully covered acne, mascara stains, eyebrow mistakes)</div>
+        </div>
+        <div class="block right demo-mobile">
+            <video controls muted>
+                <source src="../images/cmu/beauty/demo1.mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="block left">
+            <div class="title">Tailored guidance and tips</div>
+            <div class="detail">Beauty+ can guide users step by step, and provide tailored tips when needed. We gathered 121 tips, and many of them are especially designed for people with no or limited vision.</div>
+        </div>
+        <div class="block right demo-mobile">
+            <video controls muted>
+                <source src="../images/cmu/beauty/demo2.mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="detail">There are 4 more ideas that we designed but didn't get to complete the implementation</div>
+        <img src="../images/cmu/beauty/features.webp"/>
+    </div>
+</div>
+
+<div class="footer"></div>
+
+<div id="menu" class="menu">
+    <a href="#summary" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Summary</div>
+    </a>
+    <a href="#research" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Research</div>
+    </a>
+    <a href="#design" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Design Process</div>
+    </a>
+    <a href="#final" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Final Deliverable</div>
+    </a>
+</div>
+
+<div id="image-modal">
+    <div id="close" onclick="$('#image-modal').css('display', 'none');"><i class="material-icons">close</i></div>
+    <img src=""/>
+</div>
+
+</body>
+</html>

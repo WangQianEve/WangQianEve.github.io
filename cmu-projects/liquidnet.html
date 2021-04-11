@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Qian Wang</title>
+    <link rel="icon" href="../images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <link href="../css/project.css" rel="stylesheet" type="text/css">
+    <link href="../css/shared.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/scroll.js"></script>
+    <script src="../js/project.js"></script>
+</head>
+<body>
+
+<div class="navbar dark-bg">
+    <a id="back" href="../index.html">
+        <span class="material-icons">arrow_back_ios</span>
+    </a>
+</div>
+
+<div class="banner dark-bg">
+    <img src="../images/cmu/liquidnet/capstone-banner.webp" alt=""/>
+    <div class="project-content" style="left: 15vw">
+        <div class="project-name fadein"><img src="../images/cmu/liquidnet/banner-text.svg" style="width: 260px; object-fit: contain"/></div>
+        <div class="project-detail fadein" style="transition-delay: 300ms; ">Alert system for institutional traders</div>
+    </div>
+</div>
+
+<div class="intro-card card fadein" style="transition-delay: 600ms;">
+    <div class="details">
+        <div class="item">Client</div>
+        <div class="content"><a href="https://liquidnet.com">Liquidnet</a></div>
+    </div>
+    <div class="details">
+        <div class="item">Time</div>
+        <div class="content">Feb. - Aug. 2019 (7 months)</div>
+    </div>
+    <div class="details">
+        <div class="item">Team</div>
+        <div class="content">Emily Gong - PM  |  June Liu - Quant Researcher  |  Yingli Sieh - Qual Researcher  |  Nina Yang - Design Lead  |  Qian Wang - Designer + Tech Lead</div>
+    </div>
+    <div class="details">
+        <div class="item">My Role</div>
+        <div class="content">
+            <div style="margin-bottom: 10px">Designer / Tech Lead / Researcher</div>
+            <div>As one of the two main designers on the team, I designed half of the features. Due to my technical background, I also took more responsibilities for the technical work (building the deliverable website and project website). I was also part of almost all the user research and testings.</div>
+        </div>
+    </div>
+</div>
+
+<div id="nav_anchor"></div>
+
+<!--summary-->
+<div id="summary" class="container">
+    <div class="section-title" style="margin-top: 30px">
+        <div class="line"></div>
+        <div class="section-index">00</div>
+        <div class="section-name">Summary</div>
+    </div>
+
+    <div class="detail">Liquidnet is a FinTech company that provides a dark-pool trading platform for institutional traders and asset managers. </div>
+
+    <div class="part-title">
+        <div class="title">Mission</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">HMW design an alert system that brings traders onto Liquidnet effectively?</div>
+        <div class="detail"><span class="highlight-content blue">Traders' digital and physical work space is extremely busy. 6 monitors is not uncommon.</span> Liquidnet wants its alerting system to draw traders' attention effectively on order updates and new trading opportunities. This way traders don't miss out opportunities on Liquidnet. The goal of this project is to explore best practices for designing this alerting system.</div>
+        <img src="../images/cmu/liquidnet/screens.webp">
+    </div>
+
+    <div class="part-title">
+        <div class="title">Solution</div>
+        <div class="line"></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Alert design playboook</div>
+            <div class="detail">After thorough research, we concluded a set of design guidelines for Liquidnet. We composed them into a playbook website along with supporting user research, academic research and prototypes that demos the guidelines.</div>
+        </div>
+        <div class="block right">
+            <video muted controls>
+                <source src="../images/cmu/liquidnet/Playbook.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Alert design proposal</div>
+            <div class="detail">We made some design proposals for our client. Design ideas are aimed at 3 goals:<br/>
+            1. How to get trader's attention? <br/>
+            2. How to help trader take action? <br/>
+            3. How to maintain the engagement even when trader is not trading?
+            </div>
+        </div>
+        <div class="block right">
+            <img onclick="showImage(this.src)" style="cursor: pointer;" src="../images/cmu/liquidnet/demo.webp">
+        </div>
+    </div>
+
+</div>
+
+<!--Research-->
+<div id="research" class="container">
+    <div class="section-title" style="margin-top: 30px">
+        <div class="line"></div>
+        <div class="section-index">01</div>
+        <div class="section-name">User Research</div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Secondary Research</div>
+        <div class="line"></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Learn about the domain and speak users' language</div>
+            <div class="detail">
+                To quickly get familiar with the domain, we utilized a wide range of resources. We did gorilla research with friends at finance school, watched videos/documentaries/movies about trading and trader, and played games that simulates the trading experience. Through these activities, we quickly learned lots of jargons, which helped us greatly in communicating with interviewees later.
+            </div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/liquidnet/userresearch1.webp"/>
+        </div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Learn about competitor products and design styles</div>
+            <div class="detail">
+                Through learning about competitors and other domain-specific design paradigms, we realized that in general, <span class="highlight-content blue">the design styles are more traditional, a little dated, and data-heavy.</span> Although later we found out that many users actually prefer a more modern style.
+            </div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/liquidnet/competitors.webp"/>
+        </div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Learn about Liquidnet: alerts are to increase adoption of new features</div>
+            <div class="detail">
+                Through talking with subject matter experts at Liquidnet, we learned that Liquidnet is building more and more analytics features, but not a lot of users discovered and make use of them. That's also one of the main reasons there is an alert system. Through feature mapping and heuristic evaluations, we realized a lot of those features are burried deep under a complex structure, which could be part of the reason.
+            </div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/liquidnet/product-model.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+        </div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Primary Research</div>
+        <div class="line"></div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">20 interviews with stakeholders and proxy users</div>
+            <div class="detail">
+                We did multiple rounds of interview with stakeholders and in-house traders to understand traders' work environment and journey. During the interviews, <span class="highlight-content blue">we brought pre-made artifacts for them to iterate on so that we won't get the same information repeatedly from every person. </span>
+            </div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/liquidnet/interview1.webp"/>
+        </div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Shadowing in-house traders</div>
+            <div class="detail">
+                We observed the trading desk in our client’s company during the market opening, mid-day, and market closing time. While observing, <span class="highlight-content blue">we used the AEIOU framework</span> to capture activities (A), events (E), interactions (I), objects (O), and users (U). We discovered several pain points that was not revealed in our interviews.
+            </div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/liquidnet/shadowing.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+        </div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Insight 1</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">Everything is about efficiency</div>
+        <div class="detail">
+            <div>• Traders need to consume information efficiently among 6 screens and a fast-pace schedule</div>
+            <div>• Traders need to collaborate with colleagues efficiently</div>
+            <div>• "If you can make building report easier, I'll be VERY happy."</div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <img src="../images/cmu/liquidnet/digital-workspace.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+            <div class="block">
+                <img src="../images/cmu/liquidnet/stakeholder-map.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+            <div class="block right">
+                <img src="../images/cmu/liquidnet/customer-journey.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Insight 2</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">The key to be successful is to remain rational in failures, and positive reinforcement helps maintain a healthy and rational trading mindsets</div>
+        <div class="detail">
+            To understand the mindset and emotions of traders, we conducted contextual interviews with online poker players, because <span class="highlight-content blue">online poker is a very similar domain to trading, and is even often used to train young traders</span>. We reviewed our observations on a matrix, which gave us inspiration for potential solutions to the emotional problems of traders. One major insight we got is “Positive reinforcement helps maintain a healthy and rational trading mindset.”
+        </div>
+        <div class="group">
+            <div class="block left">
+                <img src="../images/cmu/liquidnet/poker-interview.webp"/>
+            </div>
+            <div class="block right">
+                <img src="../images/cmu/liquidnet/poker-map.webp"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Design research-->
+<div id="design-research" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">02</div>
+        <div class="section-name">Design Research</div>
+    </div>
+    <div>
+        <p>After having a holistic understanding of the domain, users, and product, we start to focus more on the <span class="highlight-content blue">alert system design</span>. This section talks about how we generated a set of design guidelines based on analogous domain research and evaluative research. </p>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Analogous Domain Research</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">We learned about general design principles for alerts and best practices.</div>
+        <div class="detail">We broke down our research question in to 3: how to attracting attention? how to initiative action? and how to gain user trust on the system recommendation? We researched in the academic/design field, and also looked widely into different domains for inspiration (including retail, advertisement, emergencies, gaming, notifications, autonomous driving, etc.),
+        </div>
+        <div class="group">
+            <div class="block left" style="border: 1px grey solid">
+                <img src="../images/cmu/liquidnet/case-study1.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+            <div class="block" style="border: 1px grey solid">
+                <img src="../images/cmu/liquidnet/case-study2.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+            <div class="block right" style="border: 1px grey solid">
+                <img src="../images/cmu/liquidnet/case-study3.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left" style="border: 1px grey solid">
+                <img src="../images/cmu/liquidnet/case-study4.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+            <div class="block" style="border: 1px grey solid">
+                <img src="../images/cmu/liquidnet/case-study5.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+            <div class="block right" style="border: 1px grey solid">
+                <img src="../images/cmu/liquidnet/case-study6.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="part-title">
+        <div class="title">Research through design</div>
+        <div class="line"></div>
+    </div>
+    <div class="block">
+        <div class="title">Applied guidelines and build prototypes for Liquidnet</div>
+        <div class="group">
+            <div class="block left">
+                <video controls muted>
+                    <source src="../images/cmu/liquidnet/prototype1.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+            <div class="block">
+                <video controls muted>
+                    <source src="../images/cmu/liquidnet/prototype2.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+            <div class="block right" style="border: 1px grey solid">
+                <img src="../images/cmu/liquidnet/prototype3.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <video controls muted>
+                    <source src="../images/cmu/liquidnet/prototype4.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+            <div class="block">
+                <video controls muted>
+                    <source src="../images/cmu/liquidnet/prototype5.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+            <div class="block right">
+                <video controls muted>
+                    <source src="../images/cmu/liquidnet/prototype6.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>        </div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">And tested at a simulated trading desk with traders</div>
+            <div class="detail">We setup a simulated trading desk and tested different concepts. We learned a lot expected/unexpected things, like "Animation isn't as effective as we thought in terms of grabbing attention", etc.</div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/liquidnet/simulated.webp"/>
+        </div>
+    </div>
+    <div class="group">
+        <div class="block left">
+            <div class="title">Synthesize and conclude design guidelines with feedback grid</div>
+            <div class="detail">For synthesizing, we used the feedback grid method and modified the 4th quadrant to better fit our research. Our feedback grid has four quadrants: “what worked”, “what should be changed”, “new ideas”, and “general behaviors”. This helped us quickly generate design guidelines from each quadrant. For instance, from quadrant 1 and 2, we concluded DOs and DON’Ts, from quadrant 3, we extracted design limits and preferences.
+
+            </div>
+        </div>
+        <div class="block right">
+            <img src="../images/cmu/liquidnet/feedback-grid.webp"/>
+        </div>
+    </div>
+
+</div>
+
+<!--Design-->
+<div id="design" class="full-width" style="background-color: #EEF2FB; margin-top: 80px;">
+    <div class="container">
+        <div class="section-title">
+            <div class="line"></div>
+            <div class="section-index">03</div>
+            <div class="section-name">Final Design</div>
+        </div>
+
+        <div class="part-title">
+            <div class="title">Get User Attention</div>
+            <div class="line"></div>
+        </div>
+        <div class="block">
+            <div class="title">1. Large areas of salient color</div>
+            <div class="detail">After testing different combinations of color, animation, and sound at a simulated trading desk, we discovered that salient colors is the most effective to attract attention on a trader desk, where many parts of the screen might be changing.</div>
+            <div class="detail">Try to focus on the black tables when you play the video, and see if you noticed the alerts</div>
+            <div class="group">
+                <div class="block left">
+                    <video controls muted>
+                    <source src="../images/cmu/liquidnet/Color-original.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+                    <div class="pic-subtitle">Before applying color</div>
+                </div>
+                <div class="block right">
+                    <video controls muted>
+                    <source src="../images/cmu/liquidnet/Color-after.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+                    <div class="pic-subtitle">Before applying color</div>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <div class="title">2. Multiple levels of urgency</div>
+                <div class="detail">...to prevent "alert fatigue" and "cognitive blindness".</div>
+            </div>
+            <div class="block right demo-mobile">
+                <video controls muted style="border-radius: 0;">
+                    <source src="../images/cmu/liquidnet/Urgency.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <div class="title">3. Smaller window, larger impact</div>
+                <div class="detail">Today, many users don't keep Liquidnet visible on their desktop all the time. <span class="highlight-content">A minimized view has a higher chance to be kept visible all the time.</span> This way:
+                    <p>
+                    <div>1) Users won't miss out important information and has a higher chance to trade on Liquidnet</div>
+                    <div>2) User won't feel forced to handle every single alert</div>
+                    <div>3) Eventually, more engagement with Liquidnet can win us more screen property.</div>
+                    </p>
+                </div>
+            </div>
+            <div class="block right">
+                <video controls muted style="border-radius: 0;">
+                    <source src="../images/cmu/liquidnet/Minimized.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+
+        <div class="part-title">
+            <div class="title">Guide user action</div>
+            <div class="line"></div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <div class="title">1. Feedforward: different color for different alert types</div>
+                <div class="detail">This way, before reading any text on the alert, user can know what is happening and whether they want to switch focus.</div>
+            </div>
+            <div class="block right demo-mobile">
+                <video controls muted style="border-radius: 0;">
+                    <source src="../images/cmu/liquidnet/Urgency.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <div class="title">2. Progressive disclosure</div>
+                <div class="detail">After getting intrigued to read an alert, traders hardly want to take an action immediately because their decision-making process needs lots of evidence. So we designed a progressive disclosure way to show more evidence and details of the alert when the user expanded it, and provide an action button after that.</div>
+            </div>
+            <div class="block right demo-mobile">
+                <video controls muted style="border-radius: 0;">
+                    <source src="../images/cmu/liquidnet/Liquidnet-Progressive.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <div class="title">3. Grouping</div>
+                <div class="detail">The frequency of the alerts can be high based on users blotter size. Groupped alerts can help users maintain a more manageable alert stream, and easier for user to decide what action to take first.</div>
+            </div>
+            <div class="block right demo-mobile">
+                <video controls muted style="border-radius: 0;">
+                    <source src="../images/cmu/liquidnet/Grouping.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+
+        <div class="part-title">
+            <div class="title">Customization</div>
+            <div class="line"></div>
+        </div>
+        <div class="block">
+            <div class="title">1. Tweak alert settings more easily</div>
+            <div class="detail">A trader's need for alert can change frequently. Today, Liquidnet has an alert setting page, but users hardly use them. We made two proposals to make settings more easily accessible. One idea is to allow user change settings with a right click when he receives an alert. Another idea is to suggest settings based on user behavior.</div>
+            <div class="group">
+                <div class="block left">
+                    <video controls muted>
+                        <source src="../images/cmu/liquidnet/Customization.mp4" type="video/mp4">
+                        Your browser doesn't support HTML video.
+                    </video>
+                    <div class="pic-subtitle">Change settings with right click</div>
+                </div>
+                <div class="block right">
+                    <video controls muted>
+                        <source src="../images/cmu/liquidnet/Liquidnet-prompt.mp4" type="video/mp4">
+                        Your browser doesn't support HTML video.
+                    </video>
+                    <div class="pic-subtitle">Suggest settings based on user action</div>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left">
+                <div class="title">2. Customized alerts</div>
+                <div class="detail">Through user research, we learned that self-defined alert is needed. Some traders prefer to scroll and click when setting, while others prefer to type as if in a command line tool. So both methods are supported in our design. </div>
+            </div>
+            <div class="block right demo-mobile">
+                <video controls muted style="border-radius: 0;">
+                    <source src="../images/cmu/liquidnet/user-defined-alert.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+
+        <div class="part-title">
+            <div class="title">More engagement</div>
+            <div class="line"></div>
+        </div>
+        <div class="">We also identified several untended pain points that can get more engagement from traders.</div>
+        <div class="group">
+            <div class="block left">
+                <div class="title">1. Share alerts with others</div>
+                <div class="detail">When traders need to take a short leave, s/he would want a colleague to get certain alerts. </div>
+            </div>
+            <div class="block right demo-mobile">
+                <video controls muted style="border-radius: 0;">
+                    <source src="../images/cmu/liquidnet/sharing.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left sm">
+                <div class="title">2. Quickly compile a report</div>
+                <div class="detail">Compile a report is a task traders do everyday repeatedly. Traders expressed strong desire to make it easier during our interviews.</div>
+            </div>
+            <div class="block right lg">
+                <video controls muted>
+                    <source src="../images/cmu/liquidnet/report_building.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+        <div class="group">
+            <div class="block left sm">
+                <div class="title">3. Search for relevant information</div>
+                <div class="detail">Traders often need to research on one stock. Provide a way to quickly search for relevant alerts, analytics in Liquidnet was a strong desire.</div>
+            </div>
+            <div class="block right lg">
+                <video controls muted>
+                    <source src="../images/cmu/liquidnet/search_and_nav.mp4" type="video/mp4">
+                    Your browser doesn't support HTML video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Reflection-->
+<div id="reflection" class="container">
+    <div class="section-title">
+        <div class="line"></div>
+        <div class="section-index">04</div>
+        <div class="section-name">Reflection</div>
+    </div>
+    <div class="block">
+        <div class="title" style="color: mediumseagreen">Things we did correctly 😉</div>
+        <ul>
+            <li>We quickly learned about the unfamiliar domain and picked suitable research methods.</li>
+            <li>We managed to proceed through proxy users and analogous domains when we don't have enough access to target users.</li>
+            <li>The design research and our "research through design" played well and greatly boosted creativity.</li>
+            <li>We overcame all the challenges working as a team from different backgrounds.</li>
+        </ul>
+        <div class="title" style="color: #EE5B5B">Things we can improve 🤔</div>
+        <ul>
+            <li>Our designs are conceptual and fragmented. Given access to actual data and product, we can integrate it into the main product.</li>
+            <li>We couldn't do enough validation due to time and resource limits. After integration, more A/B testing can further validate the design.</li>
+            <li>We couldn't clarify the goal and success metrics with client in the first few months, which made us abandoned all our designs halfway through the project. We will make sure things are crystal clear next time.</li>
+        </ul>
+    </div>
+</div>
+<div class="footer"></div>
+
+<div id="menu" class="menu">
+    <a href="#summary" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Summary</div>
+    </a>
+    <a href="#research" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Research</div>
+    </a>
+    <a href="#design-research" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Design Research</div>
+    </a>
+    <a href="#design" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Final Design</div>
+    </a>
+    <a href="#reflection" class="menu-item">
+        <div class="line"></div>
+        <div class="content">Reflection</div>
+    </a>
+</div>
+
+<div id="image-modal">
+    <div id="close" onclick="$('#image-modal').css('display', 'none');"><i class="material-icons">close</i></div>
+    <img src=""/>
+</div>
+
+</body>
+</html>

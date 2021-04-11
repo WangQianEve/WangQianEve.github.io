@@ -1,137 +1,126 @@
-@import "landing.css";
-@import "shared.css";
-html {
-  scroll-behavior: auto;
-}
-
-#content {
-  padding-top: 50px;
-}
-
-.container {
-  display: flex;
-  width: 75%;
-  max-width: 950px;
-  flex-wrap: wrap;
+#introduction {
+  width: 45%;
   align-self: center;
-}
-
-.full-width {
-  width: 100vw;
+  margin: 260px 0 160px 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-
-.hp-section-title {
-  width: 100%;
-  margin-top: 50px;
-  padding: 0 20px;
-  margin-bottom: 50px;
+#introduction img {
+  width: 150px;
+  opacity: 0.07;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+}
+#introduction #intro-detail {
+  margin-top: 20px;
+  font-weight: 300;
   font-size: 20px;
 }
-
-.project-new {
-  border-radius: 50px;
-  overflow: hidden;
-  position: relative;
-  color: black;
-  background-color: #eeeeee;
+#introduction #hi {
+  font-size: 55px;
+  font-weight: 700;
 }
-.project-new .image {
+
+.bodytext {
+  color: #444;
+  margin: 80px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.bodytext .line {
+  border-top: 1px solid black;
+  position: relative;
+  top: 20px;
+  left: -103%;
+}
+
+.project {
+  height: 380px;
+  cursor: pointer;
+  margin-bottom: 150px;
+  z-index: 0;
+  position: relative;
+}
+.project.dark-bg {
+  color: white;
+}
+.project .project-content {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 300px 50px 30px;
+  height: 100%;
+}
+.project .project-content .company {
+  font-weight: 700;
+  opacity: 0.3;
+}
+.project .project-content .project-name {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 10px 0;
+}
+.project .project-content .project-detail {
+  opacity: 0.5;
+}
+.project .project-content .project-btn {
+  margin-top: auto;
+  font-size: 15px;
+  padding: 3px 15px;
+  background-color: #444;
+  color: #fff;
+  width: fit-content;
+  margin-bottom: -10px;
+  opacity: 0;
+}
+.project.main-project .image {
+  width: 106%;
+  left: -3%;
+}
+.project .image {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: cover;
+  border-radius: 30px;
+  z-index: -1;
 }
-.project-new .grey-gc {
+.project .product_image {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 300px;
+}
+.project .grey-gc {
   background-image: linear-gradient(to right, #eee, #eee, #eee8, #eee0);
 }
-.project-new .black-gc {
+.project .black-gc {
   background-image: linear-gradient(to right, #000, #000, #0008, #0000);
 }
-.project-new .chill-white-gc {
+.project .chill-white-gc {
   background-image: linear-gradient(to right, #f3f4f5, #f3f4f5, #f3f4f580, #f3f4f500);
 }
-.project-new .warm-white-gc {
+.project .warm-white-gc {
   background-image: linear-gradient(to right, #F1EDE6, #F1EDE6, #F1EDE680, #F1EDE600);
 }
-.project-new .blue-gc {
+.project .blue-gc {
   background-image: linear-gradient(to right, #E2EAF2, #E2EAF2, #E2EAF280, #E2EAF200);
 }
-.project-new.dark-image {
-  color: white;
-  background-color: black;
-}
-.project-new .company {
-  font-weight: 600;
-  opacity: 0.3;
-}
-.project-new .project-name {
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-.project-new .project-detail {
-  opacity: 0.5;
-  max-width: 420px;
-}
-.project-new .project-btn {
-  margin-top: auto;
-  font-size: 18px;
-  font-weight: 100;
-  font-style: italic;
-  margin-bottom: -10px;
-  opacity: 0;
-  width: fit-content;
-  border-bottom: 1px solid #cccccc;
-}
-.project-new div {
-  z-index: 1;
-}
-.project-new:hover .project-btn {
+.project:hover .project-btn {
   opacity: 1;
   margin-bottom: 0;
 }
-.project-new:hover img {
+.project:hover img, .project:hover .gradient {
   transform: scale(1.05);
 }
-
-.design-projects {
-  height: 780px;
+.project.coming-soon:hover {
+  cursor: initial;
 }
-.design-projects .project-new {
-  margin: 20px;
-  width: 650px;
-  max-width: 95%;
-  height: 300px;
-  padding: 60px 6%;
-}
-.design-projects .project-new .project-name {
-  font-size: 20px;
-}
-
-.tech-projects {
-  height: 680px;
-}
-.tech-projects .project-new {
-  height: 260px;
-  margin: 15px;
-  width: 500px;
-  max-width: 95%;
-  padding: 60px 4%;
-}
-.tech-projects .project-new .project-name {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.main-project {
-  margin: 50px 0;
-  width: 100%;
-  height: 350px;
-  padding: 60px 10%;
+.project.coming-soon:hover img, .project.coming-soon:hover .gradient {
+  transform: scale(1);
 }
 
 .horizontal-scroll {
@@ -140,66 +129,145 @@ html {
   overflow-x: scroll;
   flex-wrap: wrap;
   width: 100%;
-  padding: 50px max(12.5vw, calc((100vw - 1000px) / 2));
+  padding: 0 max(14vw, calc((100vw - 1000px) / 2));
+  margin-bottom: 80px;
+  z-index: 0;
 }
 .horizontal-scroll .rightmost-filler {
-  width: max(12.5vw, calc((100vw - 1000px) / 2));
+  width: max(14vw, calc((100vw - 1000px) / 2));
   height: 100px;
   flex-shrink: 0;
 }
-.horizontal-scroll a.project-new:hover div {
+.horizontal-scroll .project:hover .gradient, .horizontal-scroll .project:hover .project-content div {
   opacity: 0;
 }
-.horizontal-scroll div.project-new:hover {
-  filter: grayscale(1);
+.horizontal-scroll .project:hover .project-content .project-btn {
+  background-color: #333;
+  opacity: 1;
+}
+.horizontal-scroll .project .project-content {
+  padding: 50px 8%;
+}
+.horizontal-scroll .project .project-content .company {
+  opacity: 1;
+  font-weight: 300;
+}
+.horizontal-scroll .project .project-content .project-name {
+  font-size: 20px;
+}
+.horizontal-scroll.mid-projects {
+  height: 680px;
+}
+.horizontal-scroll.mid-projects .project {
+  margin: 20px;
+  width: 650px;
+  max-width: 85%;
+  height: 300px;
+}
+.horizontal-scroll.sm-projects {
+  height: 580px;
+}
+.horizontal-scroll.sm-projects .project {
+  height: 260px;
+  margin: 15px;
+  width: 500px;
+  max-width: 95%;
 }
 
-@media (max-width: 1000px) {
-  .project-new .project-btn {
-    margin-bottom: 0;
-    opacity: 1;
-  }
+#more {
+  margin-bottom: 100px;
 }
-@media (max-width: 500px) {
-  .project-new {
-    border-radius: 10px;
+
+#popup {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000000cc;
+  border: none;
+}
+#popup div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#popup div div {
+  width: 85%;
+  height: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#popup div div input, #popup div div button, #popup div div div {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  width: 300px;
+  max-width: 90%;
+  height: 50px;
+  text-align: center;
+  border: none;
+}
+#popup div div #psw {
+  background-color: #eeeeee;
+}
+#popup div div #wrongpsw {
+  color: red;
+  font-size: 16px;
+  display: none;
+}
+#popup div div #wrongpsw.show {
+  display: inherit;
+}
+#popup div div #submit {
+  margin-top: 20px;
+}
+#popup div div #close {
+  width: 50px;
+  cursor: pointer;
+  background-color: #00000000;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 766px) {
+  #introduction {
+    width: 80%;
   }
-  .project-new .project-detail {
+
+  .project .project-content {
+    padding: 50px 20px;
+  }
+  .project .product_image {
     display: none;
   }
-  .project-new .project-name {
-    font-size: 20px;
-    margin-top: 10px;
+  .project .image {
+    border-radius: 5px;
   }
 
-  .main-project {
-    height: 220px;
-    margin: 30px 0;
-    padding: 30px 10%;
+  .horizontal-scroll.mid-projects {
+    height: 580px;
   }
-
-  .design-projects {
-    height: 500px;
+  .horizontal-scroll.mid-projects .project {
+    margin: 20px;
+    width: 650px;
+    max-width: 85%;
+    height: 250px;
   }
-  .design-projects .project-new {
-    margin: 10px;
-    height: 160px;
-    padding: 30px;
+  .horizontal-scroll.sm-projects {
+    height: 580px;
   }
-
-  .tech-projects {
-    height: 460px;
-  }
-  .tech-projects .project-new {
-    height: 150px;
-    margin: 10px;
-    padding: 30px;
-  }
-  .tech-projects .project-new .project-name {
-    font-size: 18px;
-  }
-  .tech-projects .project-new .project-btn {
-    font-size: 16px;
+  .horizontal-scroll.sm-projects .project {
+    height: 260px;
+    margin: 15px;
+    width: 500px;
+    max-width: 95%;
   }
 }
 

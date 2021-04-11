@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Qian Wang</title>
+    <link rel="icon" href="../images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <link href="../css/project.css" rel="stylesheet" type="text/css">
+    <link href="../css/shared.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/scroll.js"></script>
+    <script src="../js/project.js"></script>
+</head>
+<body>
+<div class="navbar dark-bg">
+    <a id="back" href="../index.html">
+        <span class="material-icons">arrow_back_ios</span>
+    </a>
+</div>
+
+<div class="banner dark-bg">
+    <img src="../images/cmu/smarthome/banner.webp" alt=""/>
+    <div class="project-content" style="left: 10vw">
+        <div class="project-name fadein" style="font-size: 36px">Energy-saving Smart Home</div>
+        <div class="project-detail fadein" style="transition-delay: 300ms; font-weight: 300; font-size: 22px">A Design Challenge</div>
+    </div>
+</div>
+
+<div id="nav_anchor"></div>
+
+<div class="container" style="padding: 100px 0">
+    <div class="block">
+        <div class="detail">This is a design challenge that I did by myself within 16 hours.</div>
+        <div class="title" style="margin-top: 40px">User Journey Map</div>
+        <img src="../images/cmu/smarthome/customer-journey.webp" onclick="showImage(this.src)" style="cursor: pointer; border: 1px #ccc solid; margin-top: 15px"/>
+    </div>
+
+    <div class="block" style="margin-top: 100px">
+        <div class="title">1. Welcome screen on a home-display</div>
+        <img src="../images/cmu/smarthome/hub1.webp" onclick="showImage(this.src)" style="cursor: pointer; margin-top: 15px"/>
+    </div>
+
+    <div class="block" style="margin-top: 100px">
+        <div class="title">2. Home dashboard with energy-related updates</div>
+        <img src="../images/cmu/smarthome/hub2.webp" onclick="showImage(this.src)" style="cursor: pointer; margin-top: 15px"/>
+    </div>
+
+    <div class="block" style="margin-top: 100px">
+        <div class="title">3. Desktop / App dashboard with data analysis</div>
+        <img src="../images/cmu/smarthome/desktop1.webp" onclick="showImage(this.src)" style="cursor: pointer; margin-top: 15px"/>
+        <img src="../images/cmu/smarthome/mobile1.webp" onclick="showImage(this.src)" style="cursor: pointer; margin-top: 15px"/>
+    </div>
+
+</div>
+
+<div class="footer"></div>
+
+<div id="image-modal">
+    <div id="close" onclick="$('#image-modal').css('display', 'none');"><i class="material-icons">close</i></div>
+    <img src=""/>
+</div>
+
+</body>
+</html>

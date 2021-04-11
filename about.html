@@ -1,85 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <title>Qian Wang</title>
-    <link rel="icon" href="images/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Prompt:300,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <link href="css/shared.css" rel="stylesheet" type="text/css">
-    <link href="css/about.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="js/shared.js" type="text/javascript"></script>
-    <script src="js/navbar.js" type="text/javascript"></script>
+
+    <link href="css/about.css" rel="stylesheet" type="text/css">
+    <link href="css/shared.css" rel="stylesheet" type="text/css">
+
+<!--    <script src="js/psw_protect.js"></script>-->
+    <script src="js/scroll.js"></script>
+
 </head>
 <body>
-<div id="nav_anchor"></div>
-<div class="navbar">
-    <a class="home" href="index.html">
-        <img class="logo" src="images/icon.png">
-        <span>Qian Wang</span>
-    </a>
-    <div class="navList dark">
-        <a class="pg-btn" href="index.html#content">Work</a>
-        <a class='pg-btn active not-mobile' href="about.html">About</a>
+    <div id="nav_anchor"></div>
+    <div class="navbar">
+        <div class="navList">
+            <a class="pg-btn" href="index.html">Work</a>
+            <a class='pg-btn' href="play.html">Play</a>
+            <a class='pg-btn active not-mobile' href="about.html">About</a>
+        </div>
     </div>
-</div>
 
-<img class="my-image" src="images/about/me.png"/>
+    <div class="container group" style="margin-top: 60px">
+        <div class="block left">
+            <div id="image"><img src="images/about/about.webp"></div>
+        </div>
+        <div class="block right">
+            <div id="hi" ><span style="margin-right: 20px">👋</span>Hi there~</div>
+            <div id="statement">As a designer, my biggest interest is to <span class="highlight-content">make user happier in meaningful ways.</span> </div>
+            <div class="contacts">
+                <a class="" id="resume" target="_blank" href="Qian-Wang-Resume.pdf">
+                    <div class="">CV</div>
+                </a>
+                <a class="" target="_blank" href="mailto:wangqian.evelyn@gmail.com">
+                    <img  class="" src="images/about/email.svg"/>
+                </a>
+                <a class="" target="_blank" href="https://www.linkedin.com/in/qian-wang-11513314a/">
+                    <img class="" src="images/about/linkedin.svg"/>
+                </a>
+            </div>
+        </div>
+    </div>
 
-<div class="contacts">
-    <a class="" target="_blank" href="Qian-Wang-Resume.pdf">
-        <div id="resume" class="">Resume</div>
-    </a>
-    <a class="" target="_blank" href="mailto:wangqian.evelyn@gmail.com">
-        <img  class="" src="images/about/email.svg"/>
-    </a>
-    <a class="" target="_blank" href="https://www.linkedin.com/in/qian-wang-11513314a/">
-        <img class="" src="images/about/linkedin.svg"/>
-    </a>
-</div>
+    <div class="container block">
+        <div class="title">Design topics am I interested in</div>
+        <div class="about-body">I currently work in the smart-home industry, where I constantly think beyond the screens and explore relationship between human and technology. I’m also very interested in other emerging technologies like AI, AR/VR and how they can become great design materials.</div>
+        <div class="title">Education background</div>
+        <div class="about-body">I graduated from Carnegie Mellon University, Master of Human-Computer Interaction program. Before that, I got my Bachlor’s of Computer Science at Tsinghua University (China), with a focus on HCI technologies. This background has not only given me more solid understanding of technologies but also a stronger logical thinking.</div>
+        <div class="title">Outside of work!</div>
+        <div class="about-body">🎵 Music is my panacea! I cover songs with piano, guitar, kalimba. I’m also a kareoke lover.</div>
+        <div class="about-body">🎭 I’m a big theatre fan. I always enjoy good plays and musicals, and I’ve performed / directed a few back in college.
+        </div>
+        <div class="about-body">👣 I’m a traveller, having been to 10 countries in the past 5 years.
+        </div>
+        <div class="about-body">🎲 I’m very into board games since COVID. Checkout the 32 games I owns and more that I love.</div>
+    </div>
 
-<!--bubbles-->
-<div id="hello" class="bubble upper-left flex-v right-align">
-    <span>Hellooo, I’m</span>
-    <span id="about-main-Qian">Qian</span>
-    <span id="about-main-chan">/tʃæn/</span>
-</div>
-<div id="designer" class="hover">
-    <div class="bubble upper-right">🤗 End-to-end Product Designer ↓ </div>
-    <div class="show-on-hover">
-        <p>I have experience and skills throughout the design process from generative research all the way till post-launch measurements. </p>
-    </div>
-</div>
-<div id="background" class="hover">
-    <div class="bubble upper-right">HCI + CS background ↓ </div>
-    <div class="show-on-hover">
-        <p>MHCI @ Carnegie Mellon + CS @ Tsinghua (China) gives me a technical background. This helped me collaborate with engineers very smoothly. It also enabled me to do hands-on work like coding or data analysis when needed.</p>
-    </div>
-</div>
-<div id="motivation" class="hover">
-    <div class="bubble upper-left">What motivates me? ↓ </div>
-    <div class="show-on-hover">
-        <p>❤️ Design for social good.</p>
-        <p>🚀 Work with emerging technologies.</p>
-        <p>🙌 Work with passionate people and build off each others’ ideas.</p>
-        <p>✔️ Learn new knowledge.</p>
-    </div>
-</div>
-<div id="outside-of-work" class="hover">
-    <div class="bubble bottom-left">Outside of work ↓ </div>
-    <div class="show-on-hover">
-        <p>🌎 I'm a traveller. My footprints crossed 10 countries in the past 5 years.
-        </p>
-        <p>🎭 I'm a big theatre fan. Not only watched plays/musicals, but also performed/directed some in college.
-        </p>
-        <p>🎲 I'm a board game geek (recently). My bf and I own 32 games now.
-        </p>
-        <p>... and I’m constantly seeking new experiences, recently learning Japanese and music accompaniment ;)</p>
-    </div>
-</div>
+    <div class="footer"></div>
 
-<div class="footer"></div>
 </body>
 </html>

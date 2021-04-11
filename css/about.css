@@ -1,25 +1,30 @@
 .contacts {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: absolute;
-  top: 100px;
-  right: 50px;
+  justify-content: flex-end;
+  margin-top: 50px;
 }
 .contacts a {
-  margin-bottom: 10px;
-  opacity: 0.5;
-  height: 33px;
+  opacity: 0.4;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+}
+.contacts a#resume {
+  position: relative;
+  left: -3px;
+  width: fit-content;
 }
 .contacts a div {
   padding: 6px 14px;
-  font-size: 14px;
+  font-size: 15px;
   color: #000000;
   font-weight: 700;
+  align-self: center;
 }
 .contacts a img {
-  width: 33px;
-  height: 33px;
+  width: 36px;
+  height: 36px;
   align-self: center;
 }
 .contacts a:hover {
@@ -27,168 +32,32 @@
   background-color: white;
   border-radius: 30px;
 }
-.contacts #email-text :hover {
-  opacity: 0;
+
+.about-body {
+  margin-top: 10px;
+  color: #666;
 }
 
-#hello {
-  position: absolute;
-  top: 120px;
-  left: 30vw;
+.title {
+  margin-top: 50px;
+  color: #000;
   font-weight: 400;
 }
-#hello #about-main-Qian {
-  font-family: "Prompt", sans-serif;
+
+#hi {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+#statement {
   font-size: 24px;
-  font-weight: 500;
-}
-#hello #about-main-chan {
-  font-size: 14px;
-  opacity: 0.5;
 }
 
-#designer {
-  position: absolute;
-  top: 240px;
-  left: 65vw;
-  max-width: 30vw;
-}
-
-#background {
-  position: absolute;
-  top: 440px;
-  left: 60vw;
-  max-width: 35vw;
-  font-size: 14px;
-}
-
-#motivation {
-  position: absolute;
-  top: 320px;
-  right: 70vw;
-  max-width: 35vw;
-}
-#motivation .show-on-hover {
-  margin-right: -5vw;
-  margin-left: 5vw;
-}
-
-#outside-of-work {
-  position: absolute;
-  top: 75vh;
-  margin-top: -60px;
-  left: 26vw;
-  max-width: 70vw;
-}
-
-.hover {
-  display: flex;
-  flex-direction: column;
-}
-.hover:hover {
-  cursor: pointer;
-}
-.hover:hover .show-on-hover {
-  height: fit-content;
-  width: fit-content;
-  opacity: 1;
-}
-
-.show-on-hover {
-  padding: 10px 0;
-  font-size: 15px;
-  opacity: 0;
-  cursor: auto;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  z-index: 1;
-}
-.show-on-hover p {
-  margin: 5px 0;
-}
-
-.bubble {
-  font-size: 16px;
-  box-shadow: 0 0 20px #00000010;
-  border-radius: 30px;
-  background-color: white;
-  padding: 14px 24px;
-  width: fit-content;
-  line-height: 1.2;
-}
-.bubble.upper-left {
-  border-bottom-right-radius: 0;
-  align-self: flex-end;
-}
-.bubble.upper-right {
-  border-bottom-left-radius: 0;
-}
-.bubble.bottom-left {
-  border-top-right-radius: 0;
-}
-.bubble.bottom-right {
-  border-top-left-radius: 0;
-}
-
-body {
-  background-color: #f8f8f8;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-}
-
-.my-image {
-  height: 60vh;
-  width: 60vh;
-  margin-top: 15vh;
-  background-color: #F0F4F4;
-  border-radius: 50vh;
-  object-fit: contain;
-}
-
-.navbar {
-  background-color: #f8f8f8 !important;
-}
-
-@media (max-width: 500px), (max-height: 500px) {
-  .my-image {
-    width: 300px;
+@media (max-width: 766px) {
+  #image > img {
     height: 300px;
-    margin-bottom: 50px;
-  }
-
-  .hover {
-    position: inherit !important;
-    width: 80vw !important;
-    max-width: 80vw !important;
-    margin: 0 !important;
-  }
-  .hover .show-on-hover {
-    height: inherit !important;
-    opacity: 1 !important;
-    width: inherit !important;
-    margin: 0 !important;
-  }
-
-  .bubble {
-    border-radius: 30px !important;
-    margin-top: 30px;
-    align-self: flex-start !important;
-    padding: 0;
-    font-weight: 700;
-    background-color: #fff0;
-    box-shadow: 0 0 0 #0000;
-  }
-
-  #hello {
-    display: none;
-  }
-
-  .footer {
-    position: inherit !important;
+    object-fit: cover;
   }
 }
 
