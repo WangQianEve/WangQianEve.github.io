@@ -4,6 +4,7 @@ import sys, os
 import re
 
 def main(path):
+	print(path)
 	p = re.compile('.+\.png')
 	v = re.compile('.+\.mov')
 	for file in os.listdir(path):
