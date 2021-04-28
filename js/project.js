@@ -41,7 +41,7 @@ $(document).ready(function () {
   scrollHandler();
 });
 
-function showImage(src) {
+function showImage(src, theme = 'dark') {
   $('#image-modal > img')[0].src = src;
   $('#image-modal').css('display', 'flex');
 }

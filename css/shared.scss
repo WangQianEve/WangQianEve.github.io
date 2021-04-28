@@ -206,13 +206,14 @@ body {
     max-height: 90%;
     max-width: 90%;
     z-index: 2;
+    background-color: white;
   }
   #close {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #000000dd;
-    color: white;
+    color: black;
+    background-color: #ffffff;
     &:hover {
       cursor: pointer;
     }
@@ -224,13 +225,10 @@ body {
       padding: 20px;
     }
   }
-  &.white {
-    img {
-      background-color: white;
-    }
+  &.black {
     #close {
-      color: black;
-      background-color: white;
+      background-color: #000000dd;
+      color: white;
     }
   }
 }
