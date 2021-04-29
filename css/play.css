@@ -1,8 +1,9 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 90%;
+  max-width: 1360px;
 }
 .projects img {
   width: 310px;
