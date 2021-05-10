@@ -18,18 +18,6 @@
   font-size: 16px;
   color: #666;
 }
-.technical-project.container .youtube-container {
-  padding: 56.25% 0 0 0;
-  position: relative;
-}
-.technical-project.container .youtube-container .video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
 .technical-project.container .video-container {
   max-width: 600px;
 }
