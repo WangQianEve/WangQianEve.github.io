@@ -149,6 +149,10 @@ body {
   border: 0;
 }
 
+ol {
+  padding-left: 20px;
+}
+
 .fadein {
   opacity: 0;
   transform: translateY(20px);
