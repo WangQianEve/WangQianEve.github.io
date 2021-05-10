@@ -7,13 +7,14 @@ $(document).ready(function () {
   // const videos = $('video');
   // let played = Array.apply(null, Array(5)).map(function () {return false;});
 
-  function scrollHandler () {
+  function scrollHandler() {
     const yPosition = window.pageYOffset;
     updateNavColor($navAnchor, $navbar, yPosition);
     autoHideNav($navbar, yPosition);
     highlight(hls, yPosition);
     fadein(fadeins, yPosition);
   }
+
   $(window).scroll(scrollHandler);
   scrollHandler();
 
@@ -30,6 +31,7 @@ function updateNavColor($anchor, $navbar, yPosition) {
 
 // scroll down to hide navbar
 let prev_yPosition = window.pageYOffset;
+
 function autoHideNav($navbar, yPosition) {
   if (prev_yPosition >= yPosition) {
     $navbar.css("top", 0);
@@ -38,7 +40,7 @@ function autoHideNav($navbar, yPosition) {
     $navbar.css("top", "-50px");
     $navbar.css("opacity", 0);
   }
-  prev_yPosition= yPosition;
+  prev_yPosition = yPosition;
 }
 
 // reveal effect to highlight text

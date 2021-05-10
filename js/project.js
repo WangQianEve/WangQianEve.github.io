@@ -33,10 +33,11 @@ $(document).ready(function () {
   const $sections = getSections($links);
 
   // about & process & project page
-  function scrollHandler () {
+  function scrollHandler() {
     const yPosition = window.pageYOffset;
     updateNav($sections, $links, $inpageNav, yPosition);
   }
+
   $(window).scroll(scrollHandler);
   scrollHandler();
 });

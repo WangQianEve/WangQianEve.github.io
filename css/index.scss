@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   img {
     width: 150px;
     opacity: 0.07;
@@ -12,11 +13,13 @@
     top: 100px;
     left: 150px;
   }
+
   #intro-detail {
     margin-top: 20px;
     font-weight: 300;
     font-size: 24px;
   }
+
   #hi {
     font-size: 55px;
     font-weight: 700;
@@ -28,6 +31,7 @@
   margin: 80px 0;
   font-size: 20px;
   font-weight: 400;
+
   .line {
     //width: 300px;
     border-top: 1px solid black;
@@ -42,26 +46,32 @@
   cursor: pointer;
   margin-bottom: 150px;
   z-index: 0;
+
   &.dark-bg {
     color: white;
   }
+
   .project-content {
     display: flex;
     flex-direction: column;
     padding: 50px 300px 50px 30px;
     height: 100%;
+
     .company {
       font-weight: 700;
       opacity: 0.3;
     }
+
     .project-name {
       font-weight: 400;
       font-size: 24px;
       margin: 10px 0;
     }
+
     .project-detail {
       opacity: 0.5;
     }
+
     .project-btn {
       margin-top: auto;
       //font
@@ -84,7 +94,9 @@
       left: -3%;
     }
   }
+
   position: relative;
+
   .image {
     width: 100%;
     height: 100%;
@@ -95,6 +107,7 @@
     border-radius: 30px;
     z-index: -1; // to show text normally
   }
+
   .product_image {
     position: absolute;
     top: 30px;
@@ -106,15 +119,19 @@
   .grey-gc {
     background-image: linear-gradient(to right, #eee, #eee, #eee8, #eee0);
   }
+
   .black-gc {
     background-image: linear-gradient(to right, #000, #000, #0008, #0000);
   }
+
   .chill-white-gc {
     background-image: linear-gradient(to right, #f3f4f5, #f3f4f5, #f3f4f580, #f3f4f500);
   }
+
   .warm-white-gc {
     background-image: linear-gradient(to right, #F1EDE6, #F1EDE6, #F1EDE680, #F1EDE600);
   }
+
   .blue-gc {
     background-image: linear-gradient(to right, #E2EAF2, #E2EAF2, #E2EAF280, #E2EAF200);
   }
@@ -125,12 +142,15 @@
       opacity: 1;
       margin-bottom: 0;
     }
+
     img, .gradient {
       transform: scale(1.05);
     }
   }
+
   &.coming-soon:hover {
     cursor: initial;
+
     img, .gradient {
       transform: scale(1);
     }
@@ -148,6 +168,7 @@
   // padding
   padding: 0 max(14vw, calc((100vw - 1000px) / 2));
   margin-bottom: 80px;
+
   .rightmost-filler {
     width: max(14vw, calc((100vw - 1000px) / 2));
     height: 100px;
@@ -163,17 +184,21 @@
       .gradient, .project-content div {
         opacity: 0;
       }
+
       .project-content .project-btn {
         background-color: #333;
         opacity: 1;
       }
     }
+
     .project-content {
       padding: 50px 8%;
+
       .company {
         opacity: 1;
         font-weight: 300;
       }
+
       .project-name {
         font-size: 20px;
       }
@@ -201,6 +226,7 @@
   &.sm-projects {
     $sm-project-height: 260px;
     height: $sm-project-height * 2 + 60;
+
     .project {
       height: $sm-project-height;
       margin: 15px;
@@ -224,11 +250,13 @@
   background-color: #000000cc;
   border: none;
   display: none;
+
   div {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+
     div {
       width: 85%;
       height: 50%;
@@ -238,6 +266,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
+
       input, button, div {
         font-family: "Lato", sans-serif;
         font-size: 18px;
@@ -247,20 +276,25 @@
         text-align: center;
         border: none;
       }
+
       #psw {
         background-color: #eeeeee;
       }
+
       #wrongpsw {
         color: red;
         font-size: 16px;
         display: none;
+
         &.show {
           display: inherit;
         }
       }
+
       #submit {
         margin-top: 20px;
       }
+
       #close {
         width: 50px;
         cursor: pointer;
@@ -272,6 +306,7 @@
 
     }
   }
+
   .show {
     display: initial;
   }
@@ -285,9 +320,11 @@
     .project-content {
       padding: 50px 20px;
     }
+
     .product_image {
       display: none;
     }
+
     .image {
       border-radius: 5px;
     }
@@ -307,6 +344,7 @@
     &.sm-projects {
       $sm-project-height: 260px;
       height: $sm-project-height * 2 + 60;
+
       .project {
         height: $sm-project-height;
         margin: 15px;

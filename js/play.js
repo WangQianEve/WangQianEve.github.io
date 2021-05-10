@@ -35,10 +35,11 @@ $(document).ready(function () {
   const anchorPos = $('#menu').offset().top;
 
   // about & process & project page
-  function scrollHandler () {
+  function scrollHandler() {
     const yPosition = window.pageYOffset;
     updateNav($sections, $links, $inpageNav, anchorPos, yPosition);
   }
+
   $(window).scroll(scrollHandler);
   scrollHandler();
 });

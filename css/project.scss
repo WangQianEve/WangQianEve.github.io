@@ -3,32 +3,39 @@
 .banner {
   width: 100%;
   background-color: white;
+
   > img {
     width: 100%;
     height: 48vw;
     min-height: 500px;
     object-fit: cover;
   }
+
   &.dark-bg {
     background-color: black;
+
     .project-content {
       .project-name {
         color: white;
       }
+
       .project-detail {
         color: #ddd;
       }
     }
   }
+
   .project-content {
     position: absolute;
     top: max(15vw, 150px);
     left: 10vw;
+
     .project-name {
       font-size: 42px;
       font-weight: 700;
       color: black;
     }
+
     .project-detail {
       font-size: 24px;
       font-weight: 400;
@@ -49,13 +56,16 @@
   max-width: 80%;
   background-color: white;
   padding: 20px 50px;
+
   a {
     color: #216EBE;
     text-decoration: underline;
   }
+
   .details {
     display: flex;
     margin: 24px 0;
+
     .item {
       font-weight: 400;
       width: 120px;
@@ -71,6 +81,7 @@
   margin: 150px 0 50px 0;
   position: relative;
   left: -5%;
+
   .line {
     left: -100%;
     width: 100%;
@@ -78,6 +89,7 @@
     position: absolute;
     top: 24px;
   }
+
   .section-index {
     font-size: 40px;
     font-family: "Playfair Display", "Georgia", serif;
@@ -87,6 +99,7 @@
     position: relative;
     top: -14px;
   }
+
   .section-name {
     font-size: 30px;
     font-weight: 400;
@@ -103,9 +116,11 @@
   font-weight: 700;
   text-transform: uppercase;
   padding: 60px 0 20px 0;
+
   .title {
     flex-shrink: 0;
   }
+
   .line {
     width: 100%;
     margin-left: 40px;
@@ -120,6 +135,7 @@
   width: 30% !important;
   min-width: 250px;
   flex-shrink: 0;
+
   img, video {
     border-radius: 20px;
   }
@@ -128,31 +144,38 @@
 .block {
   width: 100%;
   margin: 40px 0;
+
   .title {
     font-size: 23px;
     font-weight: 400;
   }
+
   .detail {
     margin: 20px 0;
     color: #666;
   }
+
   .pic-subtitle {
     text-align: center;
     color: #888;
     font-size: 16px;
     margin-top: -3px;
   }
+
   &.decision {
     background-color: $secondary-color-light;
     padding: 50px;
+
     .title {
       font-weight: 700;
       font-size: 18px;
       padding-bottom: 20px;
+
       span {
         color: $primary-color;
       }
     }
+
     .content {
       padding-bottom: 20px;
     }
@@ -174,6 +197,7 @@
   font-size: 22px;
   font-weight: 400;
   text-align: center;
+
   .title {
     color: $primary-color;
     text-transform: uppercase;
@@ -181,8 +205,10 @@
     font-size: 18px;
     font-weight: 700;
   }
+
   &.design-principle {
     padding: 100px 10%;
+
     .details {
       // left align
       align-self: stretch;
@@ -192,6 +218,7 @@
       // two parts
       display: flex;
       flex-direction: row;
+
       .item {
         width: 50px;
         flex-shrink: 0;
@@ -206,6 +233,7 @@
   position: fixed;
   left: 0;
   top: 32vh;
+
   &:hover {
     .menu-item {
       .content {
@@ -213,12 +241,15 @@
       }
     }
   }
+
   &.invisible {
     display: none;
   }
+
   .menu-item {
     display: flex;
     opacity: .3;
+
     .line {
       border-top: 1px solid #666;
       position: relative;
@@ -227,18 +258,22 @@
       height: 2px;
       margin-right: 15px;
     }
+
     .content {
       font-size: 16px;
       line-height: 280%;
       opacity: 0;
     }
+
     &.active {
       opacity: 1;
       color: $primary-color;
+
       .line {
         border-color: $primary-color;
       }
     }
+
     &:hover {
       .line {
         width: 30px;
@@ -263,6 +298,7 @@
     img {
       opacity: .3;
     }
+
     .project-content {
       top: max(15vw, 150px) !important;
       left: 10vw !important;

@@ -4,6 +4,7 @@
   justify-content: flex-start;
   width: 90%;
   max-width: 1360px;
+
   img {
     width: 310px;
     max-width: 100%;
@@ -16,10 +17,12 @@
 .projects-placeholder {
   height: 1px;
   width: 90%;
+
   &.border {
     border-top: 1px #ddd solid;
     margin-top: 50px;
   }
+
   margin-bottom: 45px;
 }
 
@@ -36,18 +39,22 @@
   position: absolute;
   top: 480px;
   transition: top 0s;
+
   a {
     opacity: 0.3;
     padding: 20px 5px 15px 5px;
     text-align: center;
+
     &:hover {
       opacity: 1;
     }
+
     &.active {
       opacity: 1;
       font-weight: 400;
     }
   }
+
   &.stick {
     position: fixed;
     top: 0;

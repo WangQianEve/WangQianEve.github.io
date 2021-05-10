@@ -5,12 +5,12 @@ let projectUrl = {
   'ring': 'XRgb9bwf.html',
 };
 
-function openPopup (project) {
+function openPopup(project) {
   document.getElementById("popup").open = true;
   projectName = project;
 }
 
-function closePopup () {
+function closePopup() {
   document.getElementById("popup").open = false;
 }
 

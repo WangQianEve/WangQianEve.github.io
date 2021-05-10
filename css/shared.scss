@@ -7,6 +7,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
   *, *:before, *:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
@@ -15,6 +16,7 @@ html {
 
   // animation
   scroll-behavior: smooth;
+
   * {
     transition: all .3s;
   }
@@ -72,11 +74,13 @@ body {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+
     .pg-btn {
       padding: 0 20px;
       // active and hover opacity
       opacity: 0.3;
-      &:hover, &.active{
+
+      &:hover, &.active {
         opacity: 1;
       }
     }
@@ -93,6 +97,7 @@ body {
   &.active {
     background-color: #ffffff;
     color: black;
+
     &.dark-content {
       background-color: #4440;
       color: white;
@@ -120,6 +125,7 @@ body {
 
 .space-above {
   margin-top: 50px !important;
+
   &.small {
     margin-top: 20px !important;
   }
@@ -142,9 +148,11 @@ body {
   background-repeat: no-repeat;
   background-position: 0% 100%;
   transition: .8s;
+
   &.dark-bg {
     background-image: linear-gradient(#556FB2, #556FB2);
   }
+
   &.blue {
     background-image: linear-gradient($secondary-color-light, $secondary-color-light);
   }
@@ -154,6 +162,7 @@ body {
   &::before {
     content: 'Designed & Developed by Qian Wang';
   }
+
   font-size: 14px;
   height: 50px;
   color: #ccc;
@@ -173,20 +182,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   > div {
     width: 100%;
     margin-left: 20px;
     margin-right: 20px;
+
     &.left {
       margin-left: 0;
     }
+
     &.right {
       margin-right: 0;
     }
   }
+
   .sm {
     width: 30%;
   }
+
   .lg {
     width: 60%;
   }
@@ -200,6 +214,7 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
+
   img {
     object-fit: contain;
     width: fit-content;
@@ -208,15 +223,18 @@ body {
     z-index: 2;
     background-color: white;
   }
+
   #close {
     position: fixed;
     width: 100%;
     height: 100%;
     color: black;
     background-color: #ffffff;
+
     &:hover {
       cursor: pointer;
     }
+
     i {
       font-size: 30px;
       position: absolute;
@@ -225,6 +243,7 @@ body {
       padding: 20px;
     }
   }
+
   &.black {
     #close {
       background-color: #000000dd;
@@ -239,9 +258,11 @@ body {
   }
   .group.pp {
     flex-direction: column;
+
     > div {
       margin-left: 0;
       margin-right: 0;
+
       &.left {
         margin-bottom: -30px;
       }
@@ -252,9 +273,11 @@ body {
 @media (max-width: 766px) {
   .group {
     flex-direction: column;
+
     > div {
       margin-left: 0;
       margin-right: 0;
+
       &.left {
         margin-bottom: -30px;
       }
