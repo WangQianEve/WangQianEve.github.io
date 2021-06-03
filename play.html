@@ -14,7 +14,7 @@
     <link href="css/shared.css" rel="stylesheet" type="text/css">
 
     <script src="js/play.js"></script>
-    <!--<script src="js/project.js"></script>-->
+    <script src="js/project.js"></script>
 
 </head>
 <body>
@@ -34,24 +34,27 @@
 <div id="menu" class="">
     <div class="container">
         <div class="group block">
-            <a href="#ui">UI Practices</a>
+            <a href="#ui">UI Practice</a>
             <a href="#boardgame">Boardgame Rulebook</a>
-            <a href="#hackathon">Lutron Hackathon</a>
+            <a href="#hackathon">Lutron</a>
         </div>
     </div>
 </div>
 
 <div class="projects-placeholder" id="ui"></div>
 <div class="projects">
-    <img src="./images/play/ui1.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui2.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui3.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui4.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui5.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui6.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui7.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui8.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    <img src="./images/play/ui9.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+    <video muted autoplay loop onclick="showImage('images/play/web.mp4', 'video')" style="background-color: black">
+        <source src="images/play/web.mp4" type="video/mp4">
+    </video>
+    <img src="./images/play/ui2.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui1.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui3.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui4.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui5.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui6.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui7.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui8.webp" onclick="showImage(this.src)"/>
+    <img src="./images/play/ui9.webp" onclick="showImage(this.src)"/>
 </div>
 
 <div class="projects-placeholder border" id="boardgame"></div>
@@ -70,7 +73,10 @@
 
 <div id="image-modal">
     <div id="close" onclick="$('#image-modal').css('display', 'none');"><i class="material-icons">close</i></div>
-    <img src="../images/lutron/ring/data.webp"/>
+    <img src=""/>
+    <video muted autoplay>
+        <source src="images/play/web.mp4" type="video/mp4">
+    </video>
 </div>
 
 </body>

@@ -43,8 +43,3 @@ $(document).ready(function () {
   $(window).scroll(scrollHandler);
   scrollHandler();
 });
-
-function showImage(src) {
-  $('#image-modal > img')[0].src = src;
-  $('#image-modal').css('display', 'flex');
-}

@@ -42,7 +42,18 @@ $(document).ready(function () {
   scrollHandler();
 });
 
-function showImage(src, theme = 'dark') {
-  $('#image-modal > img')[0].src = src;
+function showImage(src, format = 'img') {
+  const img = $('#image-modal > img')[0];
+  const video = $('#image-modal > video')[0];
+  console.log(src);
+  if (format === 'img') {
+    img.src = src;
+    $(img).css('display', 'flex');
+    $(video).css('display', 'none');
+  } else {
+    $('#image-modal video source').attr('src', src);
+    $(video).css('display', 'inline');
+    $(img).css('display', 'none');
+  }
   $('#image-modal').css('display', 'flex');
 }

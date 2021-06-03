@@ -49,7 +49,7 @@
 .project .project-content {
   display: flex;
   flex-direction: column;
-  padding: 50px 300px 50px 30px;
+  padding: 50px 50% 50px 30px;
   height: 100%;
 }
 .project .project-content .company {
@@ -92,7 +92,11 @@
   position: absolute;
   top: 30px;
   right: 20px;
-  width: 300px;
+  width: fit-content;
+  max-width: 50%;
+  max-height: 450px;
+  object-fit: contain;
+  object-position: right;
 }
 .project .grey-gc {
   background-image: linear-gradient(to right, #eee, #eee, #eee8, #eee0);
@@ -156,11 +160,9 @@
   font-size: 20px;
 }
 .horizontal-scroll .project .project-content .project-detail {
-  font-weight: 400;
   margin-top: auto;
-  font-size: 16px;
+  font-size: 15px;
   opacity: 0.5;
-  font-style: italic;
 }
 .horizontal-scroll.mid-projects {
   height: 680px;

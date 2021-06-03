@@ -5,12 +5,15 @@
   width: 90%;
   max-width: 1360px;
 
-  img {
+  * {
     width: 310px;
     max-width: 100%;
     margin: 15px;
-    border: 1px #ddd solid;
+    //border: 10px #fff solid;
+    //background-color: black;
     border-radius: 15px;
+    cursor: pointer;
+    z-index: 1;
   }
 }
 

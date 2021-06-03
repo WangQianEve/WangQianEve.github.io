@@ -5,12 +5,13 @@
   width: 90%;
   max-width: 1360px;
 }
-.projects img {
+.projects * {
   width: 310px;
   max-width: 100%;
   margin: 15px;
-  border: 1px #ddd solid;
   border-radius: 15px;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .projects-placeholder {
