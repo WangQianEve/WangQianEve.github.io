@@ -66,6 +66,7 @@
 }
 .project .project-content .project-btn {
   margin-top: auto;
+  margin-right: auto;
   font-size: 15px;
   padding: 3px 15px;
   background-color: #444;
@@ -222,6 +223,7 @@
   height: 50px;
   text-align: center;
   border: none;
+  cursor: pointer;
 }
 #popup div div #psw {
   background-color: #eeeeee;
