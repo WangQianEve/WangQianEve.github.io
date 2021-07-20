@@ -10,10 +10,11 @@
     max-width: 100%;
     margin: 15px;
     //border: 10px #fff solid;
-    //background-color: black;
+    background-color: black;
     border-radius: 15px;
     cursor: pointer;
     z-index: 1;
+    object-fit: contain;
   }
 }
 

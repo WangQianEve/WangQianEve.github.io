@@ -9,9 +9,11 @@
   width: 310px;
   max-width: 100%;
   margin: 15px;
+  background-color: black;
   border-radius: 15px;
   cursor: pointer;
   z-index: 1;
+  object-fit: contain;
 }
 
 .projects-placeholder {
