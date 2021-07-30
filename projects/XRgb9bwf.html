@@ -53,12 +53,10 @@
     </div>
 
     <div class="part-title" style="margin-bottom: -50px">
-        <div class="title">Mission</div>
+        <div class="title">Background</div>
     </div>
 
     <div class="block">
-        <div class="title">HMW help people set up and use their integration of Lutron and Ring easily?
-        </div>
         <img src="../images/lutron/ring/brands.webp" style="margin-bottom: -50px; margin-top: 20px">
         <div class="group" style="align-items: flex-start">
             <div class="block left">
@@ -74,21 +72,7 @@
         </div>
     </div>
 
-    <div class="part-title" style="margin-bottom: -50px">
-        <div class="title">Solution</div>
-    </div>
-
-    <div class="block">
-        <div class="title">An App experience that helps you discover, understand, setup, and troubleshoot your integration easily.
-        </div>
-        <img src="../images/lutron/ring/summary.webp" style="margin-top: 20px">
-    </div>
-
-    <!--        how it started-->
-    <div class="part-title" style="margin-bottom: -50px">
-        <div class="title">How it started</div>
-    </div>
-    <div class="group pp">
+    <div class="group" style="margin-top: -80px">
         <div class="block left">
             <div class="title">It had been a long-requested feature to let Ring security system affect Lutron lights.</div>
             <div class="detail">Many Lutron dealers also sell Ring products, and we’ve received many requests for the
@@ -103,16 +87,20 @@
         </div>
     </div>
 
-    <!--        the process-->
     <div class="part-title" style="margin-bottom: -50px">
-        <div class="title">UX Strategy</div>
-    </div>
-    <div class="block">
-        <div class="title">With a tight schedule, we conducted generative and evaluative research at the same time.</div>
-        <p class="detail">In order to launch by Amazon Primce day, we only have 8 weeks to complete the design. So we started to <span class="highlight-content blue" style="transition-delay: 300ms">develop concepts even before generative research</span>, then tested the design and learned about user motivation, value propositions at the same time.</p>
-        <div style="max-width: 700px"><img src="../images/lutron/ring/process.webp"/></div>
+        <div class="title">Our Mission</div>
     </div>
 
+    <div class="block">
+        <div class="title">HMW help people set up and use their integration of Lutron and Ring easily?
+        </div>
+        <div class="">An App experience that helps you discover, understand, setup, and troubleshoot your integration easily.
+        </div>
+        <img src="../images/lutron/ring/summary.webp" style="margin-top: 20px">
+    </div>
+    <div class="block">
+        <div class="title">So, how did we get there?</div>
+    </div>
 </div>
 
 
@@ -123,6 +111,11 @@
         <div class="section-index">01</div>
         <div class="section-name">Research</div>
     </div>
+    <div class="block">
+        <div class="title">With a tight schedule, we started to design with existing knowledge and assumptions, and conducted generative and evaluative research at the same time.</div>
+        <p class="detail">In order to launch by Amazon Primce day, we only have 8 weeks to complete the design. So we started to <span class="highlight-content blue" style="transition-delay: 300ms">develop concepts even before generative research</span>, then tested the design and learned about user motivation, value propositions at the same time.</p>
+    </div>
+
 
     <!-- prior -->
     <div class="part-title">
@@ -230,8 +223,11 @@
             <img src="../images/lutron/ring/security.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
         </div>
     </div>
+
+    <b>Based on the insights, we updated our persona and set the design goals</b>
+
     <div class="block">
-        <img src="../images/lutron/ring/personas-updated.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            <img src="../images/lutron/ring/personas-updated.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
     </div>
 
     <!--        principle-->
@@ -264,15 +260,14 @@
     </div>
 
     <div class="part-title" style="padding: 60px 0 0 0">
-        <div class="title">User Story Map</div>
+        <div class="title">High-level solution</div>
         <div class="line"></div>
     </div>
 
     <div class="group">
         <div class="block left">
-            <div class="title">Brainstorm and converge on user story map in phases</div>
-            <div class="detail">After another round of ideation, we prioritized the ideas with stakeholders based on
-                user value and task size, and developed a phased implementation plan.
+            <div class="title">Decide on basic ideas based on user feedback</div>
+            <div class="detail">After another round of ideation, we prioritized the ideas with stakeholders based on user value and task size, and developed a phased implementation plan.
             </div>
         </div>
         <div class="block right">
@@ -286,7 +281,7 @@
                  style="cursor: pointer; max-width: 900px"/>
         </div>
         <div class="block right">
-            <div style="font-weight: 400">Example Decision: Select lights instead of scenes</div>
+            <div class="detail" style="font-weight: 400">Example Decision: Select lights instead of scenes</div>
             <div class="detail">Even though IFTTT stats show that people usually activate scenes instead of individual
                 lights, our user interviews actually suggest the opposite. Users prefer to select lights because
                 otherwise it’d take them more work to create a scene first.
@@ -296,37 +291,26 @@
         </div>
     </div>
 
-
     <div class="part-title" style="padding: 60px 0 0 0">
-        <div class="title">Task Analysis</div>
+        <div class="title">Concept and Task Flows</div>
         <div class="line"></div>
     </div>
 
     <div class="block">
-        <div class="title">1. Setup Flow</div>
-        <div class="detail">We developed two concepts with different flows and tested both with users.
+        <div class="title">Decide on one "setup" concept based on user feedback</div>
+        <div class="detail">We developed and tested two concepts with users, one is creating an event, the other is configure for each Ring device. We decided on the "Device-based" concept based on user testing feedback and a data insight. Overall its strength better aligns with the design goal -- make the experience easy to understand as user setup the integration.
         </div>
         <div>
-            <img src="../images/lutron/ring/setup-flow.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-        </div>
-        <div class="detail">We decided on the “device-based” concept because:
-            <ol>
-                <li>People rarely use the same effect for multiple triggers. Also, this feature targets smaller homes,
-                    most of which has fewer than 5 devices in their Ring systems.
-                </li>
-                <li>The “event” concept is an additional layer of abstraction, and is especially confusing for elderly
-                    users who aren’t as tech-savvy. On the other hand, the “device-based” concept is more
-                    straightforward and easier to understand when seen for the first time.
-                </li>
-            </ol>
+            <img src="../images/lutron/ring/2concepts.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
         </div>
     </div>
 
-    <div class="block" style="margin-top: 100px">
-        <div class="title">2. Usage Flow</div>
-        <div class="detail">We also analyzed different long-term usage scenarios and created task flows for them.</div>
+    <div class="block">
+        <div class="title">Task Flow</div>
+        <div class="detail">We developed two concepts with different flows and tested both with users.
+        </div>
         <div>
-            <img src="../images/lutron/ring/usage-flow.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            <img src="../images/lutron/ring/flow.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
         </div>
     </div>
 
@@ -336,73 +320,30 @@
     </div>
 
     <div class="block">
-        <div class="title">Initial version</div>
+        <div class="title">Keep simplifying the experience</div>
+        <div>User's feedback on the initial version we tested was that the device screen is a little overwhelming, and some specific settings are hard to understand. So we explored different ways to simplify the experience, and made 4 simplifications in the end</div>
         <div class="">
-            <img src="../images/lutron/ring/ia1.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
+            <img src="../images/lutron/ring/simplification.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
         </div>
-    </div>
+        <div class="detail">
+            <ol>
+                <li>Remove the two “same as” options because it’s not a common need for smaller-scale systems.</li>
+                <li>Hide the "enabled" setting when there's not light selected to apply the progressive disclosure principle.</li>
+                <li>Reduce “effective time” options from 3 to 2 and move it into the “select lights” page. This is because we learned people hardly need the “daytime” option, and the settings is more useful when user is selecting lights.</li>
+                <li>When user have multiple homes, instead of asking user to select what lights are in the current home, we decided to use a “show all/programmed” toggle. This way it's a simpler experience for both single-home users and also multi-home users.</li>
+            </ol>
+        </div>    </div>
 
     <div class="group">
-        <div class="block left">
-            <div class="title">Explore different approaches to make it less overwhelming</div>
-            <div class="detail">We explored different screen information architectures to make it less overwhelming. In
-                the end, we still decided on the layout that contains both triggers because it allows user to understand
-                what they can do with a device.
+        <div class="block left lg">
+            <div class="detail">We also explored alternative layouts to make it less overwhelming, but still decided to show both settings because it allows user to learn about what the integration can do, which is one top design goal.
             </div>
         </div>
-        <div class="block right">
+        <div class="block right sm">
             <img src="../images/lutron/ring/ia2.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
         </div>
     </div>
 
-
-    <div class="group">
-        <div class="block left">
-            <div class="title">Further simplifications</div>
-            <div class="detail">
-                <ol>
-                    <li>Remove the two “same as” options because it’s not a common need for smaller-scale systems.
-                    </li>
-                    <li>Reduce “effective time” options from 3 to 2 and move it into the “select lights” page. This is
-                        because we learned people hardly need the “daytime” option, and the choice is strongly related
-                        to which lights are selected.
-                    </li>
-                </ol>
-            </div>
-        </div>
-        <div class="block right">
-            <img src="../images/lutron/ring/ia3.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-        </div>
-    </div>
-
-    <div class="group">
-        <div class="block left">
-            <img src="../images/lutron/ring/ia4.webp" onclick="showImage(this.src)" style="cursor: pointer;"/></div>
-        <div class="block right">
-            <div class="detail">
-                <ol start="3">
-                    <li>Apply the progressive disclosure principle, only show “enable” when it’s set up already.</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-    <div class="group">
-        <div class="block left">
-            <div class="detail">
-                <ol start="4">
-                    <li>Use a “show all/programmed” toggle to resolve the multiple-home use case: User might have Ring
-                        devices under different home addresses, and the Lutron App can’t get this information from Ring.
-                        Our initial idea was to let the user select what device to show. Later we simplified it through
-                        a toggle on the homepage.
-                    </li>
-                </ol>
-            </div>
-        </div>
-        <div class="block right">
-            <img src="../images/lutron/ring/ia5.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-        </div>
-    </div>
 </div>
 
 <div id="final-design" class="container">
