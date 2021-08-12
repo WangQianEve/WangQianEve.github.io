@@ -1,5 +1,6 @@
 $primary-color: #EE5B5B;
 $primary-color-light: #EE5B5B18;
+$secondary-color: #789CFB;
 $secondary-color-light: #789CFB22;
 
 html {
@@ -140,6 +141,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border: none;
 }
 
 .highlight-content {

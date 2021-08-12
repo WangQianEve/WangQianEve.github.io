@@ -5,29 +5,16 @@
   width: 90%;
   max-width: 1360px;
 
-  * {
+  video, img {
     width: 310px;
     max-width: 100%;
-    margin: 15px;
+    margin: 50px 15px;
     //border: 10px #fff solid;
-    background-color: black;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     z-index: 1;
-    object-fit: contain;
+    object-fit: fill;
   }
-}
-
-.projects-placeholder {
-  height: 1px;
-  width: 90%;
-
-  &.border {
-    border-top: 1px #ddd solid;
-    margin-top: 50px;
-  }
-
-  margin-bottom: 45px;
 }
 
 .navbar {

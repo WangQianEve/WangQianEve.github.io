@@ -1,7 +1,261 @@
-#introduction {
-  width: 45%;
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8;
+}
+html *, html *:before, html *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html * {
+  transition: all 0.3s;
+}
+html a {
+  text-decoration: none;
+  color: inherit;
+}
+html img, html video {
+  width: 100%;
+  outline: none;
+}
+html video {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 100vw;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 50px;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.navbar.dark-bg {
+  color: white;
+}
+.navbar .navList {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.navbar .navList .pg-btn {
+  padding: 0 20px;
+  opacity: 0.3;
+}
+.navbar .navList .pg-btn:hover, .navbar .navList .pg-btn.active {
+  opacity: 1;
+}
+.navbar #back span {
+  padding: 100px 30px 30px 30px;
+}
+.navbar.active {
+  background-color: #ffffff;
+  color: black;
+}
+.navbar.active.dark-content {
+  background-color: #4440;
+  color: white;
+}
+
+.container {
+  width: 66%;
+  max-width: 950px;
   align-self: center;
-  margin: 260px 0 160px 0;
+}
+
+.card {
+  box-shadow: 2px 2px 10px #00000011;
+}
+
+.full-width {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.space-above {
+  margin-top: 50px !important;
+}
+.space-above.small {
+  margin-top: 20px !important;
+}
+
+.button {
+  color: white;
+  background-color: black;
+  font-size: 18px;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.highlight-content {
+  background-image: linear-gradient(#EE5B5B18, #EE5B5B18);
+  background-size: 0;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: 0.8s;
+}
+.highlight-content.dark-bg {
+  background-image: linear-gradient(#556FB2, #556FB2);
+}
+.highlight-content.blue {
+  background-image: linear-gradient(#789CFB22, #789CFB22);
+}
+
+.footer {
+  font-size: 14px;
+  height: 50px;
+  color: #ccc;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 80px;
+  width: 100%;
+}
+.footer::before {
+  content: "Designed & Developed by Qian Wang";
+}
+
+.external-video-container {
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+.external-video-container iframe.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.group > div {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.group > div.left {
+  margin-left: 0;
+}
+.group > div.right {
+  margin-right: 0;
+}
+.group .sm {
+  width: 30%;
+}
+.group .lg {
+  width: 60%;
+}
+
+#image-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+#image-modal img, #image-modal video {
+  object-fit: contain;
+  width: fit-content;
+  max-height: 80%;
+  max-width: 80%;
+  z-index: 2;
+  background-color: white;
+}
+#image-modal #close {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: #ffffff;
+}
+#image-modal #close:hover {
+  cursor: pointer;
+}
+#image-modal #close i {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+#image-modal.black #close {
+  background-color: #000000dd;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 80%;
+  }
+
+  .group.pp {
+    flex-direction: column;
+  }
+  .group.pp > div {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .group.pp > div.left {
+    margin-bottom: -30px;
+  }
+}
+@media (max-width: 766px) {
+  .group {
+    flex-direction: column;
+  }
+  .group > div {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .group > div.left {
+    margin-bottom: -30px;
+  }
+}
+#introduction {
+  width: 90%;
+  align-self: center;
+  margin: 300px 0 240px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,13 +264,13 @@
   width: 150px;
   opacity: 0.07;
   position: absolute;
-  top: 100px;
-  left: 150px;
+  top: 150px;
+  left: 250px;
 }
 #introduction #intro-detail {
-  margin-top: 20px;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 22px;
+  color: #888888;
 }
 #introduction #hi {
   font-size: 55px;
@@ -26,14 +280,41 @@
 .bodytext {
   color: #444;
   margin: 80px 0;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
+}
+.bodytext a {
+  color: #789CFB;
+  text-decoration: underline;
 }
 .bodytext .line {
   border-top: 1px solid black;
   position: relative;
   top: 20px;
   left: -103%;
+}
+
+#goToPlay {
+  display: flex;
+  margin: 0 auto 200px auto;
+}
+
+.mini-projects {
+  margin-top: -50px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1360px;
+  cursor: pointer;
+  overflow-x: scroll;
+}
+.mini-projects video, .mini-projects img {
+  width: 250px;
+  max-width: 100%;
+  margin: 50px 10px;
+  border-radius: 10px;
+  z-index: 1;
+  object-fit: fill;
 }
 
 .project {
