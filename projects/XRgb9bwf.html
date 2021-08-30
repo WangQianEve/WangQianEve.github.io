@@ -94,8 +94,6 @@
     <div class="block">
         <div class="title">HMW help people set up and use their integration of Lutron and Ring easily?
         </div>
-        <div class="">An App experience that helps you discover, understand, setup, and troubleshoot your integration easily.
-        </div>
         <img src="../images/lutron/ring/summary.webp" style="margin-top: 20px">
     </div>
     <div class="block">
@@ -224,29 +222,9 @@
         </div>
     </div>
 
-    <b>Based on the insights, we updated our persona and set the design goals</b>
-
     <div class="block">
-            <img src="../images/lutron/ring/personas-updated.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-    </div>
-
-    <!--        principle-->
-    <div class="block">
-        <div class="summary-card design-principle">
-            <div class="title">Experience goals</div>
-            <div class="details">
-                <div class="item">😌</div>
-                <div>Easy to understand and take action throughout the journey</div>
-            </div>
-            <div class="details">
-                <div class="item">🕒</div>
-                <div>Efficient to set up and troubleshoot</div>
-            </div>
-            <div class="details">
-                <div class="item">❤️</div>
-                <div>Intrigue the user to try through speaking to the user’s value</div>
-            </div>
-        </div>
+        <div class="title">Based on the insights, we reframed the problem statment<br></br></div>
+            <img src="../images/lutron/ring/reframe.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
     </div>
 
 </div>
@@ -333,17 +311,6 @@
                 <li>When user have multiple homes, instead of asking user to select what lights are in the current home, we decided to use a “show all/programmed” toggle. This way it's a simpler experience for both single-home users and also multi-home users.</li>
             </ol>
         </div>    </div>
-
-    <div class="group">
-        <div class="block left lg">
-            <div class="detail">We also explored alternative layouts to make it less overwhelming, but still decided to show both settings because it allows user to learn about what the integration can do, which is one top design goal.
-            </div>
-        </div>
-        <div class="block right sm">
-            <img src="../images/lutron/ring/ia2.webp" onclick="showImage(this.src)" style="cursor: pointer;"/>
-        </div>
-    </div>
-
 </div>
 
 <div id="final-design" class="container">
@@ -355,23 +322,20 @@
 
 
     <div class="part-title">
-        <div class="title">1. Discover</div>
+        <div class="title">1. Before Setup</div>
         <div class="line"></div>
     </div>
 
-    <div class="group">
-        <div class="block demo-mobile left"><img src="../images/lutron/ring/design/discover-1.webp"/></div>
-        <div class="block" style="max-width: 360px; margin-right: auto">
-            <b>User discovers the integration</b> through notification when both Ring App and Lutron App are installed.
-            (Phase II)
-        </div>
+    <div class="block">
+        <b>User discovers the integration</b> through notification (when both Ring App and Lutron App are installed), or through the "new" tag in the Lutron App. Then user can get an idea of what the integration does and <b>explore its value</b> through use cases.
+
     </div>
 
     <div class="group">
-        <div class="block left" style="max-width: 360px">
-            <b>User gets an idea of what the integration is</b> and get interested through viewing example use cases,
-            along with key value propositions. User can also get inspired from the examples.
+        <div class="block demo-mobile left">
+            <img src="../images/lutron/ring/design/discover-1.webp"/>
         </div>
+        <div class="block demo-mobile"><img src="../images/lutron/ring/design/discover-2.webp"/></div>
         <div class="block demo-mobile right">
             <video muted controls>
                 <source src="../images/lutron/ring/design/onboarding.mp4" type="video/mp4">
@@ -379,35 +343,21 @@
         </div>
     </div>
 
+
     <!-- setup -->
     <div class="part-title">
         <div class="title">2. Setup</div>
         <div class="line"></div>
     </div>
+    <div class="block">
+        User can setup an automation in <b>3 simple steps</b>: 1) Select a device, 2) Select a trigger, 3) Select lights to turn on. After the setup, user can also <b>hide devices that don't control any lights</b>. This does not only give user a clean overview, but also help user filter out devices at another home
+    </div>
 
-    <div class="group">
+    <div class="group" style="justify-content: flex-start">
         <div class="block demo-mobile left">
             <video muted controls>
                 <source src="../images/lutron/ring/design/setup.mp4" type="video/mp4">
             </video>
-        </div>
-        <div class="block">
-            <b>3 steps to setup an automation</b>
-            <ol>
-                <li>Select a device</li>
-                <li>Select a trigger</li>
-                <li>Select lights and save</li>
-            </ol>
-        </div>
-    </div>
-
-    <div class="group">
-        <div class="block">
-            <b> After setup: a clear overview </b> <br/>
-            User can see a summary of the setting on both the device page and the homepage. <br/>
-            On homepage, user can show only devices configured with the current Lutron system to get a clearer overview.
-            This also helps user filter out devices at other homes (e.g., vacation homes, parents’ home under the same
-            account).
         </div>
         <div class="block demo-mobile left">
             <video muted controls>
@@ -418,7 +368,7 @@
 
     <!--        setup-->
     <div class="part-title">
-        <div class="title">3. Troubleshoot</div>
+        <div class="title">3. After Setup / Troubleshoot</div>
         <div class="line"></div>
     </div>
 
