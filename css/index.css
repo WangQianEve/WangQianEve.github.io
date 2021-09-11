@@ -255,12 +255,29 @@ ol {
 #introduction {
   width: 90%;
   align-self: center;
-  margin: 300px 0 240px 0;
+  margin: 300px 0 250px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#introduction img {
+#introduction .contacts {
+  display: flex;
+  margin-top: 100px;
+}
+#introduction .contacts a {
+  padding: 5px;
+  margin: 0px 18px;
+  font-size: 16px;
+  color: #ccc;
+  font-weight: 400;
+  transition: all 0ms;
+  border-bottom: 1px solid #789CFB00;
+}
+#introduction .contacts a:hover {
+  color: #789CFB;
+  border-bottom: 1px solid #789CFB;
+}
+#introduction #logo {
   width: 150px;
   opacity: 0.07;
   position: absolute;
@@ -270,10 +287,10 @@ ol {
 #introduction #intro-detail {
   font-weight: 300;
   font-size: 22px;
-  color: #888888;
+  color: #444;
 }
 #introduction #hi {
-  font-size: 55px;
+  font-size: 60px;
   font-weight: 700;
 }
 
@@ -284,8 +301,10 @@ ol {
   font-weight: 400;
 }
 .bodytext a {
+  border-bottom: 2px solid;
+}
+.bodytext a:hover {
   color: #789CFB;
-  text-decoration: underline;
 }
 .bodytext .line {
   border-top: 1px solid black;
