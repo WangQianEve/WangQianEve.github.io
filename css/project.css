@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -461,18 +462,21 @@ ol {
 .menu .menu-item {
   display: flex;
   opacity: 0.3;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 40px;
 }
 .menu .menu-item .line {
-  border-top: 1px solid #666;
+  width: 35px;
+  margin-right: 10px;
+  text-align: right;
+  font-weight: 700;
   position: relative;
-  top: 22px;
-  width: 25px;
-  height: 2px;
-  margin-right: 15px;
+}
+.menu .menu-item .line::before {
+  content: "•";
 }
 .menu .menu-item .content {
-  font-size: 16px;
-  line-height: 280%;
   opacity: 0;
 }
 .menu .menu-item.active {
@@ -483,7 +487,7 @@ ol {
   border-color: #EE5B5B;
 }
 .menu .menu-item:hover .line {
-  width: 30px;
+  width: 40px;
 }
 
 @media (max-width: 766px) {
