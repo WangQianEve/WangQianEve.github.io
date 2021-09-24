@@ -13,14 +13,15 @@
 
     <script src="js/psw_protect.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/project.js"></script>
 
 </head>
 <body>
 
 <div class="navbar">
     <div class="navList">
+        <a class="pg-btn" href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
         <a class="pg-btn active not-mobile" href="index.html">Work</a>
-        <a class="pg-btn" href="play.html">Play</a>
         <a class="pg-btn" href="about.html">About</a>
     </div>
 </div>
@@ -32,36 +33,16 @@
     </div>
     <div id="nav_anchor"></div>
     <div id="intro-detail">
-        A <span class="highlight-content" style="">product designer</span> doing end-to-end design and research, come from a technical background</div>
-    <div class="contacts">
-        <a class="" id="resume" target="_blank" href="Qian-Wang-Resume.pdf">
-            <div class="">Resume</div>
-        </a>
-        <a class="" target="_blank" href="mailto:wangqian.evelyn@gmail.com">
-<!--            <img class="" src="./images/about/email.svg"/>-->
-            <div class="">Email</div>
-        </a>
-        <a class="" target="_blank" href="https://www.linkedin.com/in/qian-wang-11513314a/">
-<!--            <img class="" src="./images/about/linkedin.svg"/>-->
-            <div class="">LinkedIn</div>
-        </a>
+        A <span class="highlight-content" style="">product designer</span> doing end-to-end design and research. Currently at Lutron, previously studied HCI and computer science.
     </div>
 </div>
 
-<div class="container">
-    <div class="bodytext">
-        <div class="line"></div>
-        Currently I'm a UX designer at Lutron, a smart lighting company.
-        <div style="font-size: 18px; font-weight: 300; margin-top: 30px; color: #888">
-            <p>I'm a lead designer for the Lutron App, which is used by <span class="highlight-content">millions of homeowners and smart-home professionals</span>.</p>
-            <p>I'm also helping to establish Lutron's design system and data measurement practices.</p>
-        </div>
-    </div>
+<div class="hero-projects">
 
     <div class="project main-project" onclick="openPopup('activation')">
         <a>
             <img class="image" src="images/lutron/pj_activation.webp">
-            <img class="product_image" src="images/lutron/pj_activation_design.webp" style="top: auto; bottom: -10%; right: -30px">
+            <img class="product_image" src="images/lutron/pj_activation_design.webp" style="top: auto; bottom: -16%;">
             <div class="project-content">
                 <div class="company">Lutron</div>
                 <div class="project-name">Lighting System Activation</div>
@@ -82,22 +63,55 @@
             </div>
         </a>
     </div>
-    <div class="bodytext" style="padding: 80px 0 0px 0">
-        <span style="font-size: 36px">👩🏻‍🎨 </span> Outside of work, I also do UI mockups and 3D illustrations...
-    </div>
-    <div class="mini-projects" onclick="window.open('play.html','_blank')">
-        <video muted autoplay loop>
-            <source src="images/play/3d-building.mp4" type="video/mp4">
-        </video>
-        <img src="./images/play/3d-room.webp"/>
-        <video muted autoplay loop>
-            <source src="images/play/web.mp4" type="video/mp4">
-        </video>
-        <img src="./images/play/bam.webp""/>
-    </div>
 
-    <button id="goToPlay" class="button" type="button" onclick="window.open('play.html','_blank')">View More</button>
+    <div style="padding: 80px 0 30px 0; text-align: center; font-size: 28px; font-weight: 700; ">
+        More <span style="color: #EE5B5B;">personal & previous</span> work
+    </div>
 </div>
+
+<div class="more-projects">
+    <a><video muted autoplay onclick="showImage('images/play/3d-building.mp4', 'video')" onmouseenter="this.play()" style="background-color: black">
+        <source src="images/play/3d-building.mp4" type="video/mp4">
+    </video></a>
+    <a><img src="./images/play/3d-room.webp" onclick="showImage(this.src)"/></a>
+    <a><video muted autoplay onclick="showImage('images/play/web.mp4', 'video')" onmouseenter="this.play()" style="background-color: black">
+        <source src="images/play/web.mp4" type="video/mp4">
+    </video></a>
+    <a href="./cmu-projects/liquidnet.html" target="_blank">
+        <img class="image" src="images/play/liquidnet.webp">
+    </a>
+    <a href="./cmu-projects/venmo.html" target="_blank">
+        <img class="image" src="images/play/venmo.webp">
+    </a>
+    <a><img src="./images/play/bam.webp" onclick="showImage(this.src)"/></a>
+    <a href="./cmu-projects/energy-saving-smarthome.html" target="_blank">
+        <img class="image" src="images/play/energy-saving-home.webp">
+    </a>
+    <a><img src="./images/play/signin.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/checkout.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/music.webp" onclick="showImage(this.src)"/></a>
+    <a href="./cmu-projects/brandeis.html" target="_blank">
+        <img class="image" src="images/play/darpa.webp">
+    </a>
+    <a><img src="./images/play/aimage.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/smart-watch.webp" onclick="showImage(this.src)"/></a>
+<!--    <a><img src="./images/play/sleepy-game.webp" onclick="showImage(this.src)"/></a>-->
+    <a><img src="./images/play/watch.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/explainable-ai.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/email.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/notification.webp" onclick="showImage(this.src)"/></a>
+    <a href="./cmu-projects/beauty-plus.html" target="_blank">
+        <img class="image" src="images/play/alexa.webp">
+    </a>
+    <a><img src="./images/play/converter.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/widget.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/web-home.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/scotty.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/splendor.webp" onclick="showImage(this.src)"/></a>
+    <a><img src="./images/play/avatar.webp" onclick="showImage(this.src)"/></a>
+</div>
+
+<div class="footer"></div>
 
 <div id="popup">
     <div>
@@ -110,183 +124,13 @@
     </div>
 </div>
 
-<div class="full-width" style="background-color: #fafafa">
-    <div class="container space-above">
-        <div class="bodytext">
-            <div class="line"></div>
-            2018–2019 at <a href="https://www.hcii.cmu.edu/academics/mhci" target="_blank">CMU MHCI</a>, I designed on various platforms and topics...
-        </div>
-    </div>
-    <div class="horizontal-scroll sm-projects space-below">
-        <a class="project dark-bg flex-v" href="./cmu-projects/liquidnet.html">
-            <img class="image" src="images/cmu/liquidnet.webp">
-            <div class="image gradient black-gc"></div>
-            <div class="project-content">
-                <div class="company">Liquidnet</div>
-                <div class="project-name">Trading Alerts</div>
-                <div class="project-detail">Desktop Design</div>
-            </div>
-        </a>
-        <a class="project flex-v" href="./cmu-projects/brandeis.html">
-            <img class="image" src="images/cmu/brandeis.webp">
-            <div class="image gradient grey-gc"></div>
-            <div class="project-content">
-                <div class="company">DARPA</div>
-                <div class="project-name">Mobile Privacy Manager</div>
-            </div>
-        </a>
-        <a class="project flex-v" href="./cmu-projects/venmo.html">
-            <img class="image" src="images/cmu/venmo.webp">
-            <div class="image gradient chill-white-gc"></div>
-            <div class="project-content">
-                <div class="company">CMU</div>
-                <div class="project-name">Improving Venmo Experience with AI</div>
-            </div>
-        </a>
-        <a class="project flex-v" target="_blank" href="https://dig.cmu.edu/publications/2020-aigwap.html">
-            <img class="image" src="images/cmu/pick-a-viz.webp">
-            <div class="image gradient chill-white-gc"></div>
-            <div class="project-content">
-                <div class="company">CMU</div>
-                <div class="project-name">Games for Explainable AI</div>
-                <div class="project-btn">External Link</div>
-                <div class="project-detail">Published on CHI EA</div>
-            </div>
-        </a>
-        <a class="project flex-v" href="./cmu-projects/beauty-plus.html">
-            <img class="image" src="images/cmu/alexa.webp">
-            <div class="image gradient blue-gc"></div>
-            <div class="project-content">
-                <div class="company">Alexa Day</div>
-                <div class="project-name">VUI Makeup Assistant for the Visually Impaired</div>
-                <div class="project-detail">Won 2nd Place</div>
-            </div>
-        </a>
-        <a class="project dark-bg flex-v" href="./cmu-projects/energy-saving-smarthome.html">
-            <img class="image" src="images/cmu/IoT.webp">
-            <div class="image gradient black-gc"></div>
-            <div class="project-content">
-                <div class="company">Design challenge</div>
-                <div class="project-name">Saving Energy with Smart Home</div>
-                <div class="project-detail">Responsive Design</div>
-            </div>
-        </a>
-        <a class="project flex-v" target="_blank" href="https://dl.acm.org/doi/10.1145/3341215.3356268">
-            <img class="image" src="images/cmu/sleepy-game.webp">
-            <div class="image gradient warm-white-gc"></div>
-            <div class="project-content">
-                <div class="company">CMU x Phillips</div>
-                <div class="project-name">Games that Help You Get Better Sleep</div>
-                <div class="project-btn">External Link</div>
-                <div class="project-detail">Published on CHIPLAY</div>
-            </div>
-        </a>
-        <!--            <div class="project coming-soon dark-bg flex-v">-->
-        <!--                <img class="image" src="images/cmu/samsung-watch.webp">-->
-        <!--                <div class="image gradient black-gc"></div>-->
-        <!--                <div class="project-content">-->
-        <!--                <div class="company">Design challenge</div>-->
-        <!--                <div class="project-name">Smartwatch for Health</div>-->
-        <!--                <div class="project-detail"></div>-->
-        <!--                <div class="project-btn">Coming Soon</div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <div class="project coming-soon flex-v">
-            <img class="image" src="images/cmu/scotty.webp">
-            <div class="image gradient chill-white-gc"></div>
-            <div class="project-content">
-                <div class="company">CMU</div>
-                <div class="project-name">Bus Stop Redesign</div>
-                <div class="project-detail"></div>
-                <div class="project-btn">Coming Soon</div>
-            </div>
-        </div>
-        <div class="project coming-soon flex-v">
-            <img class="image" src="images/cmu/airport.webp">
-            <div class="image gradient warm-white-gc"></div>
-            <div class="project-content">
-                <div class="company">CMU</div>
-                <div class="project-name">Themed Experience at Airports</div>
-                <div class="project-detail"></div>
-                <div class="project-btn">Coming Soon</div>
-            </div>
-        </div>
-        <div class="rightmost-filler"></div>
-    </div>
+<div id="image-modal">
+    <div id="modal-close" onclick="$('#image-modal').css('display', 'none');"><i class="material-icons">close</i></div>
+    <img src=""/>
+    <video muted autoplay>
+        <source src="images/play/web.mp4" type="video/mp4">
+    </video>
 </div>
-
-<div class="container space-above">
-    <div class="bodytext">
-        <div class="line"></div>
-        2014–2018 at <a href="https://www.cs.tsinghua.edu.cn/csen/" target="_blank">Tsinghua University CS</a>, I did technical HCI research and interned at <a href="https://www.pony.ai/" target="_blank">Pony.ai</a> and <a href="https://www.yitutech.com/" target="_blank">Yitu</a>.</div>
-</div>
-
-<div class="horizontal-scroll sm-projects space-below">
-    <a class="project flex-v" href="technical-projects/Forceboard.html">
-        <img class="image" src="images/code/forceboard.webp">
-        <div class="image gradient chill-white-gc"></div>
-        <div class="project-content">
-            <div class="company">Tsinghua University</div>
-            <div class="project-name">Pressure-based Text Entry</div>
-            <div class="project-detail">Published on CHI</div>
-        </div>
-    </a>
-    <a class="project dark-bg flex-v" href="technical-projects/IndexSense.html">
-        <img class="image" src="images/code/ksi.webp">
-        <div class="image gradient black-gc"></div>
-        <div class="project-content">
-            <div class="company">Carnegie Mellon University</div>
-            <div class="project-name">Invisible Trackpad over Keyboard</div>
-        </div>
-    </a>
-    <a class="project flex-v" href="technical-projects/SpeechExplosion.html">
-        <img class="image" src="images/code/SpeechExplosion.webp">
-        <div class="image gradient warm-white-gc"></div>
-        <div class="project-content">
-            <div class="company">Yitu Tech</div>
-            <div class="project-name">Voice-Interactive Display</div>
-        </div>
-    </a>
-    <a class="project dark-bg flex-v" href="technical-projects/PointCloudLabeling.html">
-        <img class="image" src="images/code/Labeling.webp">
-        <div class="image gradient black-gc"></div>
-        <div class="project-content">
-            <div class="company">Pony.ai</div>
-            <div class="project-name">Point Cloud Labeling</div>
-            <div class="project-detail">Patented</div>
-        </div>
-    </a>
-    <a class="project dark-bg flex-v" href="technical-projects/Jitters.html">
-        <img class="image" src="images/code/Jitters.webp">
-        <div class="image gradient black-gc"></div>
-        <div class="project-content">
-            <div class="company">Tsinghua University</div>
-            <div class="project-name">Jitter UX Evaluator</div>
-            <div class="project-detail">Bachelor's Thesis</div>
-        </div>
-    </a>
-    <a class="project flex-v" href="technical-projects/GestureControlledAnimation.html">
-        <img class="image" src="images/code/gca.webp">
-        <div class="image gradient chill-white-gc"></div>
-        <div class="project-content">
-            <div class="company">Tsinghua University</div>
-            <div class="project-name">Generating Animation with Hand Tracking</div>
-        </div>
-    </a>
-    <div class="project coming-soon flex-v">
-        <img class="image" src="images/code/gooseberry.webp">
-        <div class="image gradient chill-white-gc"></div>
-        <div class="project-content">
-            <div class="company">Tsinghua University</div>
-            <div class="project-name">SaaS: Online Meeting Scheduler</div>
-            <div class="project-detail"></div>
-            <div class="project-btn">Coming Soon</div>
-        </div>
-    </div>
-    <div class="rightmost-filler"></div>
-</div>
-
-<div class="footer"></div>
 
 </body>
 </html>

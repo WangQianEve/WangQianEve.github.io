@@ -3,41 +3,25 @@
 #introduction {
   width: 90%;
   align-self: center;
-  margin: 300px 0 250px 0;
+  margin: 350px 0 300px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  .contacts {
-    display: flex;
-    margin-top: 100px;
-    a {
-      padding: 5px;
-      margin: 0px 18px;
-      font-size: 16px;
-      color: #ccc;
-      font-weight: 400;
-      transition: all 0ms;
-      border-bottom: 1px solid #789CFB00;
-      &:hover {
-        color: $secondary-color;
-        border-bottom: 1px solid #789CFB;
-      }
-    }
-  }
-
   #logo {
     width: 150px;
-    opacity: 0.07;
+    opacity: 0.06;
     position: absolute;
-    top: 150px;
-    left: 250px;
+    top: 180px;
+    left: 300px;
   }
 
   #intro-detail {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 22px;
     color: #444;
+    text-align: center;
+    max-width: 720px;
   }
 
   #hi {
@@ -65,107 +49,14 @@
   }
 }
 
-#goToPlay {
-  display: flex;
-  margin: 0 auto 200px auto;
-}
-
-.mini-projects {
-  margin-top: -50px;
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1360px;
-  cursor: pointer;
-  overflow-x: scroll;
-
-  video, img {
-    width: 250px;
-    max-width: 100%;
-    margin: 50px 10px;
-    border-radius: 10px;
-    z-index: 1;
-    object-fit: fill;
-  }
-}
-
 .project {
   height: 380px;
   cursor: pointer;
-  margin-bottom: 150px;
   z-index: 0;
+  position: relative; //to set product image
 
   &.dark-bg {
     color: white;
-  }
-
-  .project-content {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 50% 50px 30px;
-    height: 100%;
-
-    .company {
-      font-weight: 700;
-      opacity: 0.3;
-    }
-
-    .project-name {
-      font-weight: 400;
-      font-size: 24px;
-      margin: 10px 0;
-    }
-
-    .project-detail {
-      opacity: 0.5;
-    }
-
-    .project-btn {
-      margin-top: auto;
-      margin-right: auto;
-      //font
-      font-size: 15px;
-      padding: 3px 15px;
-      background-color: #444;
-      color: #fff;
-      width: fit-content;
-      //slide up on hover
-      margin-bottom: -10px;
-      opacity: 0;
-    }
-  }
-
-
-  // image position
-  &.main-project {
-    .image {
-      width: 106%;
-      left: -3%;
-    }
-  }
-
-  position: relative;
-
-  .image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    border-radius: 30px;
-    z-index: -1; // to show text normally
-  }
-
-  .product_image {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    width: fit-content;
-    max-width: 50%;
-    max-height: 450px;
-    object-fit: contain;
-    object-position: right;
   }
 
   // gradients
@@ -286,6 +177,98 @@
       max-width: 95%;
     }
   }
+}
+
+.hero-projects {
+  width: 70vw;
+  max-width: 1320px;
+  .project {
+    height: 450px;
+    margin-bottom: 150px;
+    position: relative; //to set product image
+    .image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      border-radius: 30px;
+      z-index: -1; // to show text normally
+    }
+    .product_image {
+      position: absolute;
+      top: 50px;
+      right: 5%;
+      width: fit-content;
+      max-width: 50%;
+      max-height: 450px;
+      object-fit: contain;
+      object-position: right;
+    }
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 50% 50px 60px;
+      height: 100%;
+
+      .company {
+        font-weight: 700;
+        opacity: 0.3;
+      }
+
+      .project-name {
+        font-weight: 400;
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      .project-detail {
+        opacity: 0.5;
+      }
+
+      .project-btn {
+        margin-top: auto;
+        margin-right: auto;
+        //font
+        font-size: 15px;
+        padding: 3px 15px;
+        background-color: #444;
+        color: #fff;
+        width: fit-content;
+        //slide up on hover
+        margin-bottom: -10px;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.more-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 72vw;
+  max-width: 1320px;
+
+  a {
+    width: 350px;
+    height: 260px;
+    max-width: 100%;
+    margin: 80px 10px;
+    cursor: pointer;
+    z-index: 1;
+    video, img {
+      width: 100%;
+      object-fit: fill;
+      height: 100%;
+      border-radius: 10px;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
 }
 
 #more {
