@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Qian Wang</title>
-    <link rel="icon" href="images/favicon.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+   <title>Qian Wang</title>    <link rel="icon" href="images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
@@ -20,56 +20,50 @@
 
 <div class="navbar">
     <div class="navList">
-        <a class="pg-btn" href="Qian-Wang-Resume.pdf" target="_blank">Resume</a>
-        <a class="pg-btn active not-mobile" href="index.html">Work</a>
+        <a class="pg-btn active not-mobile" href="index.html">Home</a>
         <a class="pg-btn" href="about.html">About</a>
+        <a class="pg-btn" href="resume.pdf" target="_blank">Resume</a>
     </div>
 </div>
 
-<div id="introduction">
-    <img id="logo" src="images/qian.svg">
-    <div id="hi">
-        Hi, I’m <span style="color: #EE5B5B;">Qian</span>
+<div id="introduction" class="container" style="padding: 320px 0 250px 30px;">
+    <img class="fadein" src="images/favicon.png" style="width: 80px"/>
+    <div class="fadein" style="transition-delay: 150ms;">
+        <span style="font-size: 70px;font-weight:700;font-family: 'Cinzel', serif">Qian Wang</span>
     </div>
     <div id="nav_anchor"></div>
-    <div id="intro-detail">
-        A <span class="highlight-content" style="">product designer</span> doing end-to-end design and research. Currently at Lutron, previously studied HCI and computer science.
+    <div class="fadein" style="color: #aaa; font-size: 20px; transition-delay: 350ms">
+        Product designer / Ex-coder/ 3 years of design experience<br>
+        Currently at JP Morgan, previously at Lutron / Yitu / Pony.ai<br>
     </div>
 </div>
 
-<div class="hero-projects">
+<div class="hero-projects container">
 
     <div class="project main-project" onclick="openPopup('activation')">
-        <a>
-            <img class="image" src="images/lutron/pj_activation.webp">
-            <img class="product_image" src="images/lutron/pj_activation_design.webp" style="top: auto; bottom: -16%;">
-            <div class="project-content">
-                <div class="company">Lutron</div>
-                <div class="project-name">Lighting System Activation</div>
-                <div class="project-detail">An easy setup experience for scaled smart-home lighting system</div>
-                <div class="project-btn">Password protected</div>
-            </div>
-        </a>
+        <div class="image" ><img src="images/lutron/pj_activation.webp"></div>
+        <img class="product_image" src="images/lutron/pj_activation_design.webp" style="top: auto; bottom: -16%;">
+        <div class="project-content">
+            <div class="company">Lutron  |  2020</div>
+            <div class="project-name">A New Activation Experience</div>
+            <div class="project-btn">Password protected</div>
+        </div>
     </div>
 
     <div class="project main-project dark-bg">
-        <a href="projects/XRgb9bwf.html">
-            <img class="image" src="images/lutron/pj_ring.webp">
+        <a href="projects/XRgb9bwf.html" target="_blank">
+            <div class="image" ><img src="images/lutron/pj_ring.webp"></div>
             <img class="product_image" src="images/lutron/pj_ring_design.webp">
             <div class="project-content">
-                <div class="company">Lutron</div>
-                <div class="project-name">Ring Integration</div>
-                <div class="project-detail">Automate Lutron lights with Ring security products</div>
+                <div class="company">Lutron  |  2020</div>
+                <div class="project-name">Lights and Security</div>
             </div>
         </a>
     </div>
-
-    <div style="padding: 80px 0 30px 0; text-align: center; font-size: 28px; font-weight: 700; ">
-        More <span style="color: #EE5B5B;">personal & previous</span> work
-    </div>
 </div>
 
-<div class="more-projects">
+
+<div class="more-projects container">
     <a><video muted autoplay onclick="showImage('images/play/3d-building.mp4', 'video')" onmouseenter="this.play()" style="background-color: black">
         <source src="images/play/3d-building.mp4" type="video/mp4">
     </video></a>
@@ -115,6 +109,7 @@
 
 <div id="popup">
     <div>
+        <button id="close-bg" type="button" onclick="closePopup()"></button>
         <div>
             <input id="psw" type="password" placeholder="Enter Password">
             <div id="wrongpsw">Wrong password!</div>
@@ -124,7 +119,7 @@
     </div>
 </div>
 
-<div id="image-modal">
+<div id="image-modal" class="dark">
     <div id="modal-close" onclick="$('#image-modal').css('display', 'none');"><i class="material-icons">close</i></div>
     <img src=""/>
     <video muted autoplay>

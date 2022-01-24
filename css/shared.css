@@ -76,8 +76,8 @@ body {
 }
 
 .container {
-  width: 66%;
-  max-width: 950px;
+  width: 74vw;
+  max-width: 1200px;
   align-self: center;
 }
 
@@ -194,6 +194,12 @@ ol {
   justify-content: center;
   background-color: white;
 }
+#image-modal.dark {
+  background-color: #000000cc;
+}
+#image-modal.dark #modal-close {
+  color: white;
+}
 #image-modal img, #image-modal video {
   object-fit: contain;
   width: fit-content;
@@ -207,7 +213,6 @@ ol {
   width: 100%;
   height: 100%;
   color: black;
-  background-color: #ffffff;
 }
 #image-modal #modal-close:hover {
   cursor: pointer;

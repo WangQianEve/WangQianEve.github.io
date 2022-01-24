@@ -1,57 +1,10 @@
 @import "shared.scss";
 
-#introduction {
-  width: 90%;
-  align-self: center;
-  margin: 350px 0 300px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  #logo {
-    width: 150px;
-    opacity: 0.06;
-    position: absolute;
-    top: 180px;
-    left: 300px;
-  }
-
-  #intro-detail {
-    font-weight: 400;
-    font-size: 22px;
-    color: #444;
-    text-align: center;
-    max-width: 720px;
-  }
-
-  #hi {
-    font-size: 60px;
-    font-weight: 700;
-  }
-}
-
-.bodytext {
-  color: #444;
-  margin: 80px 0;
-  font-size: 22px;
-  font-weight: 400;
-  a{
-    border-bottom: 2px solid;
-    &:hover {
-      color: $secondary-color;
-    }
-  }
-  .line {
-    border-top: 1px solid black;
-    position: relative;
-    top: 20px;
-    left: -103%;
-  }
+a{
+  cursor: pointer;
 }
 
 .project {
-  height: 380px;
-  cursor: pointer;
   z-index: 0;
   position: relative; //to set product image
 
@@ -59,158 +12,59 @@
     color: white;
   }
 
-  // gradients
-  .grey-gc {
-    background-image: linear-gradient(to right, #eee, #eee, #eee8, #eee0);
-  }
-
-  .black-gc {
-    background-image: linear-gradient(to right, #000, #000, #0008, #0000);
-  }
-
-  .chill-white-gc {
-    background-image: linear-gradient(to right, #f3f4f5, #f3f4f5, #f3f4f580, #f3f4f500);
-  }
-
-  .warm-white-gc {
-    background-image: linear-gradient(to right, #F1EDE6, #F1EDE6, #F1EDE680, #F1EDE600);
-  }
-
-  .blue-gc {
-    background-image: linear-gradient(to right, #E2EAF2, #E2EAF2, #E2EAF280, #E2EAF200);
-  }
-
   // show btn and zoom on hover
   &:hover {
-    .project-btn {
-      opacity: 1;
-      margin-bottom: 0;
+    .project-content{
+      .project-btn {
+        transform: scale(1.05);
+        margin-bottom: 0 !important;
+        opacity: 1 !important;
+      }
     }
 
-    img, .gradient {
+    .image > img {
       transform: scale(1.05);
     }
-  }
-
-  &.coming-soon:hover {
-    cursor: initial;
-
-    img, .gradient {
-      transform: scale(1);
+    .product_image {
+      transform: scale(1.05);
     }
-  }
-}
-
-.horizontal-scroll {
-  // flex scrollable
-  display: flex;
-  flex-direction: column;
-  overflow-x: scroll;
-  flex-wrap: wrap;
-  width: 100%;
-
-  // padding
-  padding: 0 max(14vw, calc((100vw - 1000px) / 2));
-  margin-bottom: 80px;
-
-  .rightmost-filler {
-    width: max(14vw, calc((100vw - 1000px) / 2));
-    height: 100px;
-    flex-shrink: 0;
-  }
-
-  // reset z-index to show everything properly
-  z-index: 0;
-
-  .project {
-    // hide all expect img on hover
-    &:hover {
-      .gradient, .project-content div {
-        opacity: 0;
-      }
-
-      .project-content .project-btn {
-        background-color: #333;
-        opacity: 1;
-      }
-    }
-
-    .project-content {
-      padding: 50px 8%;
-
-      .company {
-        opacity: 1;
-        font-weight: 300;
-      }
-
-      .project-name {
-        font-size: 20px;
-      }
-      .project-detail {
-        //font-weight: 400;
-        margin-top: auto;
-        font-size: 15px;
-        opacity: .5;
-      }
-    }
-  }
-
-  &.mid-projects {
-    $mid-project-height: 300px;
-    height: $mid-project-height * 2 + 80; //20 margin
-    .project {
-      margin: 20px;
-      width: 650px;
-      max-width: 85%;
-      height: $mid-project-height;
-    }
-  }
-
-  &.sm-projects {
-    $sm-project-height: 260px;
-    height: $sm-project-height * 2 + 60;
-
-    .project {
-      height: $sm-project-height;
-      margin: 15px;
-      width: 500px;
-      max-width: 95%;
+    .project-name, .company {
+      transform: scale(1.05);
+      transform-origin: top left;
     }
   }
 }
 
 .hero-projects {
-  width: 70vw;
-  max-width: 1320px;
   .project {
-    height: 450px;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
     position: relative; //to set product image
+    cursor: pointer;
+    //height: fit-content;
     .image {
       width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
+      height: fit-content;
       border-radius: 30px;
       z-index: -1; // to show text normally
+      overflow: hidden;
+      img {
+        display: block;
+      }
     }
     .product_image {
       position: absolute;
-      top: 50px;
-      right: 5%;
-      width: fit-content;
-      max-width: 50%;
-      max-height: 450px;
-      object-fit: contain;
-      object-position: right;
+      top: 0;
+      right: 0;
+      width: 60%;
     }
     .project-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 8% 60% 8% 5%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      padding: 50px 50% 50px 60px;
-      height: 100%;
 
       .company {
         font-weight: 700;
@@ -218,7 +72,7 @@
       }
 
       .project-name {
-        font-weight: 400;
+        font-weight: 900;
         font-size: 24px;
         margin: 10px 0;
       }
@@ -229,13 +83,14 @@
 
       .project-btn {
         margin-top: auto;
-        margin-right: auto;
+
         //font
         font-size: 15px;
         padding: 3px 15px;
-        background-color: #444;
-        color: #fff;
+        background-color: black;
+        color: white;
         width: fit-content;
+
         //slide up on hover
         margin-bottom: -10px;
         opacity: 0;
@@ -245,34 +100,28 @@
 }
 
 .more-projects {
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 72vw;
-  max-width: 1320px;
-
   a {
-    width: 350px;
-    height: 260px;
+    width: 320px;
     max-width: 100%;
-    margin: 80px 10px;
+    margin: 60px 6px;
     cursor: pointer;
     z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
     video, img {
       width: 100%;
       object-fit: fill;
       height: 100%;
-      border-radius: 10px;
       &:hover {
         transform: scale(1.05);
       }
     }
   }
 
-}
-
-#more {
-  margin-bottom: 100px;
 }
 
 #popup {
@@ -282,7 +131,6 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: #000000cc;
   border: none;
   display: none;
 
@@ -292,8 +140,15 @@
     align-items: center;
     height: 100%;
 
+    #close-bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #000000cc;
+    }
     div {
       width: 85%;
+      max-width: 800px;
       height: 50%;
       background-color: white;
       display: flex;
@@ -334,8 +189,8 @@
       #close {
         width: 50px;
         cursor: pointer;
-        background-color: #00000000;
         position: absolute;
+        background-color: #00000000;
         top: 10px;
         right: 10px
       }
