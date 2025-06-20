@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Mia Wang</title>    <link rel="icon" href="../images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <link href="../css/shared.css" rel="stylesheet" type="text/css">
+    <link href="../css/project.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/scroll.js"></script>
+    <script src="../js/project.js"></script>
+    <script>
+        function switchTab(index) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+            tabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
+            contents.forEach((content, i) => content.classList.toggle('active', i === index));
+        }
+    </script>
+</head>
+<body>
+
+<a class="navbar project-navbar" href="../jGLMcofrtekH7kq7.html#p2">
+    <div class="material-icons">arrow_back_ios</div>
+</a>
+
+<div class="banner" style="overflow: hidden; position: relative;">
+    <div class="project-content">
+        <img src="../images/lutron/LutronLogo.png" class="fadein" style="width:200px"/>
+        <div class="project-name fadein" style="transition-delay: 150ms">Smart-Home Activation</div>
+        <div class="project-detail fadein" style="transition-delay: 300ms; width: 46vw">
+            <p>In 2021, I designed Lutron's first mobile activation experience for large-scale smart home systems. The feature was one of the key selling points for Lutron's 3rd-Gen home system – RadioRA 3.</p>
+        </div>
+    </div>
+    <img src="../images/lutron/pj_activation_design.webp" class="fadein" style="width: 50vw; object-fit: contain; position:absolute; right: -10vw; top: -20px;"/>
+</div>
+
+<div class="intro-card card" style="transition-delay: 600ms;">
+    <div class="details">
+        <div class="item">My Role</div>
+        <div>Lead Designer</div>
+        <div>User Researcher</div>
+    </div>
+    <div class="details">
+        <div class="item">Team</div>
+        <div>2 Product Managers</div>
+        <div>1 Product Designer</div>
+        <div>1 Visual Designer</div>
+    </div>
+    <div class="details">
+        <div class="item">Time</div>
+        <div class="content">2021</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="block">
+        <div class="large-title">1. Background</div>
+        <div class="group block">
+            <div>
+                <p>Lutron manufactures <b>smart lighting and shading systems</b> for millions of homes and commercial places around the world.</p>
+                <img src="../images/lutron/activation/bg-1.jpg"/>
+            </div>
+            <div>
+                <p>Lutron's high-end system is not on retail market. People get it through home <b>contractors</b>.</p>
+                <img src="../images/lutron/activation/bg-2.jpg"/>
+            </div>
+            <div>
+                <p>Today, contractors use Lutron’s <b>PC software</b> to program and activate a Lutron system.</p>
+                <img src="../images/lutron/activation/bg-3.jpg"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="background: #f6f6f6">
+    <div class="block">
+        <div class="large-title">2. The problem</div>
+        <div class="title">The inconvenience of working with a PC on-site is a top pain point we identified for our contractors.</div>
+        <div>They sometimes even arrange 2 people with walkie-talkies, one on the laptop, the other walking around, to make things easier.</div>
+        <div class="block">
+            <img src="../images/lutron/activation/journey.png"/>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="block">
+        <div class="large-title">3. Tech solution</div>
+        <div class="title">We explored 2 directions, one making the PC method easier, one switching to mobile experience, and decided to invest in mobile experience after validating with 6 users.</div>
+        <img src="../images/lutron/activation/research-1.png"/>
+
+        <div class="title">We also explored various interactions between mobile and smart devices, and narrowed down to 2 based on user feedback</div>
+        <img src="../images/lutron/activation/explore-1.png"/>
+    </div>
+</div>
+
+<div class="container" style="background: #f6f6f6">
+    <div class="block">
+        <div class="large-title">4. Experience design</div>
+        <div class="block group">
+            <div class="title" style="padding-top: 24px">1. User flow design</div>
+            <img style="width: 75%" src="../images/lutron/activation/journey&flow.png"/>
+        </div>
+        <div class="block group">
+            <div class="title" style="padding-top: 24px">2. Information architecture design</div>
+            <img style="width: 75%" src="../images/lutron/activation/low-fi.png"/>
+        </div>
+        <div class="block group">
+            <div class="title" style="padding-top: 24px">3. UX/motion/sound design</div>
+            <img style="width: 75%" src="../images/lutron/activation/high-fi.png"/>
+        </div>
+        <div class="block group">
+            <div class="title" style="padding-top: 24px">4. Adapt to iPad version</div>
+            <img style="width: 75%" src="../images/lutron/activation/ipad.png"/>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="background: black; color: white">
+    <div class="block">
+        <div class="large-title">5. Final designs</div>
+        <div class="block group">
+            <div>
+                <p>Activating light controls</p>
+                <video controls>
+                    <source src="../images/lutron/activation/light-demo.mov" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <p>Activating shades</p>
+                <video controls>
+                    <source src="../images/lutron/activation/shade-demo.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="block">
+        <div class="large-title">6. Launch & results</div>
+        <img src="../images/lutron/activation/result.png"/>
+    </div>
+</div>
+
+<div class="footer"></div>
+
+</body>
+</html>
