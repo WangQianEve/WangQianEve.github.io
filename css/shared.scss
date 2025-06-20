@@ -54,62 +54,54 @@ body {
 
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
   height: 50px;
   width: 100%;
-  padding: 0 30px;
-
+  padding: 0 50px;
+  z-index: 1;
   display: flex;
   align-items: center;
-  text-transform: uppercase;
+  background-color: black;
+  color: white;
 
-  &.dark-bg {
-    color: white;
-  }
-
-  // right
+  // menu
   .navList {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
     display: flex;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    gap: 32px;
 
     .pg-btn {
-      padding: 0 20px;
-      // active and hover opacity
-      opacity: 0.3;
-
+      opacity: 0.5;
       &:hover, &.active {
         opacity: 1;
       }
     }
   }
 
-  // left
-  #back {
-    span {
-      padding: 100px 30px 30px 30px;
-    }
-  }
-
-  // add background when scroll back
-  &.active {
-    background-color: #ffffff;
+  // back
+  &.project-navbar {
+    width: 44px;
+    height: 44px;
+    left: 0px;
+    margin: 16px;
+    padding: 0 0 0 4px;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: #f6f6f6;
     color: black;
-
-    &.dark-content {
-      background-color: #4440;
-      color: white;
+    div {
+      font-size: 16px;
     }
   }
+
 }
 
 .container {
-  width: 74vw;
-  max-width: 1200px;
-  align-self: center;
+  padding: 100px 12vw;
+  width: 100%;
 }
 
 .card {
@@ -161,16 +153,11 @@ body {
 
 .footer {
   &::before {
-    content: 'Designed & Developed by Qian Wang';
+    content: 'Designed & Developed by Mia Wang 😉';
   }
 
-  font-size: 14px;
-  height: 50px;
-  color: #ccc;
-  text-align: center;
-  padding-top: 10px;
-  margin-top: 80px;
-  width: 100%;
+  font-size: 16px;
+  margin: 80px;
 }
 
 .external-video-container {
@@ -200,20 +187,10 @@ ol {
 .group {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  > div {
-    width: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    &.left {
-      margin-left: 0;
-    }
-
-    &.right {
-      margin-right: 0;
-    }
+  align-items: start;
+  gap: 50px;
+  div {
+    flex:1;
   }
 
   .sm {

@@ -4,9 +4,59 @@ a{
   cursor: pointer;
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px 32px;
+
+  .project {
+    flex: 1 1 45%;
+    height: 480px;
+    background: #f6f6f6;
+    border-radius: 20px;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .project-info {
+      display: flex;
+      .company {
+        height:32px;
+        width: auto;
+        object-fit: contain;
+      }
+      .project-time {
+        opacity: 0.5;
+        margin-left: 12px;
+      }
+    }
+
+    .project-name {
+      font-weight: 900;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .product_image {
+      flex: 1;
+      width: 100%;
+      max-width: 500px;
+      object-fit: contain;
+      align-self: center;
+      overflow: hidden;
+      &.mobile {
+        width: 60%;
+        overflow: visible;
+      }
+    }
+  }
+}
+
 .project {
   z-index: 0;
   position: relative; //to set product image
+  overflow: hidden;
 
   &.dark-bg {
     color: white;
@@ -14,193 +64,126 @@ a{
 
   // show btn and zoom on hover
   &:hover {
-    .project-content{
-      .project-btn {
-        transform: scale(1.05);
-        margin-bottom: 0 !important;
-        opacity: 1 !important;
-      }
-    }
-
-    .image > img {
+    * {
       transform: scale(1.05);
-    }
-    .product_image {
-      transform: scale(1.05);
-    }
-    .project-name, .company {
-      transform: scale(1.05);
-      transform-origin: top left;
     }
   }
+
 }
 
 .hero-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
   .project {
-    margin-bottom: 250px;
-    position: relative; //to set product image
-    cursor: pointer;
-    //height: fit-content;
+
     .image {
       width: 100%;
       height: fit-content;
-      border-radius: 30px;
       z-index: -1; // to show text normally
       overflow: hidden;
       img {
         display: block;
       }
-    }
-    .product_image {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60%;
-    }
-    .project-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 8% 60% 8% 5%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
+    } //bg image
 
-      .company {
-        font-weight: 700;
-        opacity: 0.3;
-      }
-
-      .project-name {
-        font-weight: 900;
-        font-size: 24px;
-        margin: 10px 0;
-      }
-
-      .project-detail {
-        opacity: 0.5;
-      }
-
-      .project-btn {
-        margin-top: auto;
-
-        //font
-        font-size: 15px;
-        padding: 3px 15px;
-        background-color: black;
-        color: white;
-        width: fit-content;
-
-        //slide up on hover
-        margin-bottom: -10px;
-        opacity: 0;
-      }
-    }
+    .project-btn {
+      margin-top: auto;
+      font-size: 15px;
+      padding: 3px 15px;
+      background-color: black;
+      color: white;
+      width: fit-content;
+    } // psw btn
   }
 }
 
-.more-projects {
-  margin-top: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  a {
-    width: 320px;
-    max-width: 100%;
-    margin: 60px 6px;
-    cursor: pointer;
-    z-index: 1;
-    overflow: hidden;
-    border-radius: 10px;
-    video, img {
-      width: 100%;
-      object-fit: fill;
-      height: 100%;
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
+.tech {
+  background-color: black; color: white;
+  .title {
+    font-size: 24px;
+    font-weight:700;
+    margin-top: 100px;
+    //text-transform: uppercase;
   }
-
-}
-
-#popup {
-  position: fixed;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  border: none;
-  display: none;
-
-  div {
+  .more-projects {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-
-    #close-bg {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-color: #000000cc;
-    }
-    div {
-      width: 85%;
-      max-width: 800px;
-      height: 50%;
-      background-color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    div { // each project
+      width: 340px;
+      //margin-top: 24px;
+      z-index: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
-      input, button, div {
-        font-family: "Lato", sans-serif;
-        font-size: 18px;
-        width: 300px;
-        max-width: 90%;
-        height: 50px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-      }
-
-      #psw {
-        background-color: #eeeeee;
-      }
-
-      #wrongpsw {
-        color: red;
-        font-size: 16px;
-        display: none;
-
-        &.show {
-          display: inherit;
+      gap: 4px;
+      .media {
+        border-radius: 10px;
+        overflow: hidden;
+        height: 240px;
+        video, img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
-
-      #submit {
-        margin-top: 20px;
+      div {
+        font-weight: 300;
+        margin-top: 8px;
       }
-
-      #close {
-        width: 50px;
-        cursor: pointer;
-        position: absolute;
-        background-color: #00000000;
-        top: 10px;
-        right: 10px
+      p {
+        opacity: 0.6;
+        font-size: 16px;
+        margin: -2px;
       }
+    }
 
+  }
+
+}
+
+#pswblock {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8px;
+
+  input, button {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    width: 400px;
+    max-width: 90%;
+    height: 50px;
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+  }
+
+  #psw {
+    background-color: #eeeeee;
+  }
+
+  #wrongpsw {
+    color: red;
+    font-size: 16px;
+    display: none;
+    &.show {
+      display: inherit;
     }
   }
 
-  .show {
-    display: initial;
+  #submit {
+    margin-top: 16px;
   }
+
 }
 
 @media (max-width: 766px) {
