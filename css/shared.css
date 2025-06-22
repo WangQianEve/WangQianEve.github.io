@@ -37,47 +37,6 @@ body {
   width: 100vw;
 }
 
-.navbar {
-  position: fixed;
-  height: 50px;
-  width: 100%;
-  padding: 0 50px;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  background-color: black;
-  color: white;
-}
-.navbar .navList {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 400;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  gap: 32px;
-}
-.navbar .navList .pg-btn {
-  opacity: 0.5;
-}
-.navbar .navList .pg-btn:hover, .navbar .navList .pg-btn.active {
-  opacity: 1;
-}
-.navbar.project-navbar {
-  width: 44px;
-  height: 44px;
-  left: 0px;
-  margin: 16px;
-  padding: 0 0 0 4px;
-  border-radius: 50px;
-  justify-content: center;
-  background-color: #f6f6f6;
-  color: black;
-}
-.navbar.project-navbar div {
-  font-size: 16px;
-}
-
 .container {
   padding: 100px 12vw;
   width: 100%;
@@ -85,19 +44,6 @@ body {
 
 .card {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.0666666667);
-}
-
-.full-width {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
-.space-above {
-  margin-top: 50px !important;
-}
-.space-above.small {
-  margin-top: 20px !important;
 }
 
 .button {
@@ -129,7 +75,7 @@ body {
 
 .footer {
   font-size: 16px;
-  margin: 80px;
+  margin: 80px 24px;
 }
 .footer::before {
   content: "Designed & Developed by Mia Wang 😉";
@@ -174,55 +120,7 @@ ol {
   width: 60%;
 }
 
-#image-modal {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-#image-modal.dark {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-#image-modal.dark #modal-close {
-  color: white;
-}
-#image-modal img, #image-modal video {
-  object-fit: contain;
-  width: fit-content;
-  max-height: 80%;
-  max-width: 80%;
-  z-index: 2;
-  background-color: white;
-}
-#image-modal #modal-close {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  color: black;
-}
-#image-modal #modal-close:hover {
-  cursor: pointer;
-}
-#image-modal #modal-close i {
-  font-size: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px;
-}
-#image-modal.black #close {
-  background-color: rgba(0, 0, 0, 0.8666666667);
-  color: white;
-}
-
 @media (max-width: 1000px) {
-  .container {
-    width: 80%;
-  }
   .group.pp {
     flex-direction: column;
   }
@@ -234,7 +132,7 @@ ol {
     margin-bottom: -30px;
   }
 }
-@media (max-width: 766px) {
+@media (max-width: 768px) {
   .group {
     flex-direction: column;
   }

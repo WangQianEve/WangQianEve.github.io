@@ -4,20 +4,35 @@ a{
   cursor: pointer;
 }
 
+#intro {
+  padding: 200px 12vw 150px 12vw;
+  font-family: 'Cinzel', serif;
+}
 .project-list {
   display: flex;
   flex-wrap: wrap;
   gap: 44px 32px;
 
   .project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
     flex: 1 1 45%;
     height: 480px;
     background: #f6f6f6;
     border-radius: 20px;
     padding: 44px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+
+    z-index: 0;
+    position: relative; //to set product image
+    overflow: hidden;
+
+    &:hover {
+      * {
+        transform: scale(1.05);
+      }
+    }
 
     .project-info {
       display: flex;
@@ -27,7 +42,6 @@ a{
         object-fit: contain;
       }
       .project-time {
-        opacity: 0.5;
         margin-left: 12px;
       }
     }
@@ -53,67 +67,28 @@ a{
   }
 }
 
-.project {
-  z-index: 0;
-  position: relative; //to set product image
-  overflow: hidden;
-
-  &.dark-bg {
-    color: white;
-  }
-
-  // show btn and zoom on hover
-  &:hover {
-    * {
-      transform: scale(1.05);
-    }
-  }
-
-}
-
-.hero-projects {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-
-  .project {
-
-    .image {
-      width: 100%;
-      height: fit-content;
-      z-index: -1; // to show text normally
-      overflow: hidden;
-      img {
-        display: block;
-      }
-    } //bg image
-
-    .project-btn {
-      margin-top: auto;
-      font-size: 15px;
-      padding: 3px 15px;
-      background-color: black;
-      color: white;
-      width: fit-content;
-    } // psw btn
-  }
-}
-
 .tech {
   background-color: black; color: white;
+  #tech-title {
+    font-size: 40px;
+    font-weight:700;
+    font-family: 'Cinzel', serif;
+    margin-top: 80px
+  }
   .title {
     font-size: 24px;
     font-weight:700;
     margin-top: 100px;
-    //text-transform: uppercase;
+    margin-bottom: 16px;
   }
   .more-projects {
     display: flex;
     flex-wrap: wrap;
+    gap: 44px 32px;
     justify-content: space-between;
+
     div { // each project
       width: 340px;
-      //margin-top: 24px;
       z-index: 1;
       display: flex;
       flex-direction: column;
@@ -132,7 +107,7 @@ a{
         }
       }
       div {
-        font-weight: 300;
+        font-weight: 500;
         margin-top: 8px;
       }
       p {
@@ -186,45 +161,23 @@ a{
 
 }
 
-@media (max-width: 766px) {
-  #introduction {
-    width: 80%;
+@media (max-width: 768px) {
+  #intro {
+    padding-bottom: 0px;
   }
-  .project {
-    .project-content {
-      padding: 50px 20px;
-    }
-
-    .product_image {
-      display: none;
-    }
-
-    .image {
-      border-radius: 5px;
-    }
-  }
-  .horizontal-scroll {
-    &.mid-projects {
-      $mid-project-height: 250px;
-      height: $mid-project-height * 2 + 80; //20 margin
-      .project {
-        margin: 20px;
-        width: 650px;
-        max-width: 85%;
-        height: $mid-project-height;
+  .project-list {
+    .project {
+      flex: 1 1 100%;
+      padding: 24px;
+      height: 320px;
+      .project-name {
+        font-size: 20px;
       }
     }
-
-    &.sm-projects {
-      $sm-project-height: 260px;
-      height: $sm-project-height * 2 + 60;
-
-      .project {
-        height: $sm-project-height;
-        margin: 15px;
-        width: 500px;
-        max-width: 95%;
-      }
+  }
+  .tech {
+    #tech-title {
+      font-size: 32px;
     }
   }
 }
